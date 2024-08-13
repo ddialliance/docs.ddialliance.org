@@ -20,4 +20,4 @@ jobs:
 
       - name: Sync S3 bucket
         run: |
-          aws s3 sync . s3://docs.ddialliance.org --exclude ".git/*"
+          aws s3 sync . s3://docs.ddialliance.org --exclude ".git/*" --exclude ".github/*"
