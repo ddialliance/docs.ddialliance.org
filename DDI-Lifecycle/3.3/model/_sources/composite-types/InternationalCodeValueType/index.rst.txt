@@ -1,0 +1,93 @@
+InternationalCodeValueType
+--------------------------
+
+Allows for string content which may be taken from an externally maintained controlled vocabulary. If the content is from a controlled vocabulary provide the code value, as well as a reference to the code list from which the value is taken. This differs from a CodeValue only by the provision of a language-location specification. DDI uses the International CodeValue in cases where controlled vocabularies are assumed to be highly language specific, such as nationally maintained subject headings, thesauri, or keywords derived from the content of documents. The ability to identify language is especially important when supporting searches by external language-specific search engines. Provide as many of the identifying attributes as needed to adequately identify the controlled vocabulary.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ControlledVocabularyID","string","0..1","The ID of the code controlled vocabulary that the content was taken from."
+   "ControlledVocabularyName","string","0..1","The name of the controlledVocabulary."
+   "ControlledVocabularyAgencyName","string","0..1","The name of the agency maintaining the controlledVocabulary."
+   "ControlledVocabularyVersionID","string","0..1","The version number of the controlledVocabulary."
+   "OtherValue","string","0..1","If the value of the string is ""Other"" or the equivalent from the controlledVocabulary, this attribute can provide a more specific value not found in the codelist."
+   "ControlledVocabularyURN","string","0..1","The URN of the codelist."
+   "ControlledVocabularySchemeURN","string","0..1","If maintained within a scheme, the URN of the scheme containing the controlledVocabulary."
+
+Properties Inherited from StringType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Lang","language","0..1","Indicates the language of content. Note that xml:lang allows for a simple 2 or 3 character language code or a language code extended by a country code , for example en-au for English as used in Australia."
+   "IsTranslated","boolean","0..1","Indicates whether content is a translation (true) or an original (false)."
+   "IsTranslatable","boolean","0..1","Indicates whether content is translatable (true) or not (false). An example of something that is not translatable would be a MNEMONIC of an object or a number."
+   "TranslationSourceLanguage","language","0..n","List the language or language codes in a space delimited array. The language original may or may not be provided in this bundle of language specific strings."
+   "TranslationDate","date","0..1","The date the content was translated. Provision of translation date allows user to verify if translation was available during data collection or other time linked activity."
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * :doc:`/composite-types/StringType/index`
+        * **InternationalCodeValueType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/CategoryGroup/index`
+* :doc:`/item-types/ClassificationSeries/index`
+* :doc:`/item-types/CodeListGroup/index`
+* :doc:`/item-types/ConceptGroup/index`
+* :doc:`/item-types/ConceptualVariableGroup/index`
+* :doc:`/item-types/ControlConstructGroup/index`
+* :doc:`/item-types/DevelopmentActivityGroup/index`
+* :doc:`/item-types/GeographicLocationGroup/index`
+* :doc:`/item-types/GeographicStructureGroup/index`
+* :doc:`/item-types/Individual/index`
+* :doc:`/item-types/InstructionGroup/index`
+* :doc:`/item-types/InstrumentGroup/index`
+* :doc:`/item-types/ManagedRepresentationGroup/index`
+* :doc:`/item-types/MeasurementGroup/index`
+* :doc:`/item-types/NCubeGroup/index`
+* :doc:`/item-types/Organization/index`
+* :doc:`/item-types/OrganizationGroup/index`
+* :doc:`/item-types/OtherMaterialGroup/index`
+* :doc:`/item-types/PhysicalInstanceGroup/index`
+* :doc:`/item-types/PhysicalStructureGroup/index`
+* :doc:`/item-types/ProcessingEventGroup/index`
+* :doc:`/item-types/ProcessingInstructionGroup/index`
+* :doc:`/item-types/QualityStandardGroup/index`
+* :doc:`/item-types/QualityStatementGroup/index`
+* :doc:`/item-types/QuestionGroup/index`
+* :doc:`/item-types/RecordLayoutGroup/index`
+* :doc:`/item-types/Relation/index`
+* :doc:`/item-types/RepresentedVariableGroup/index`
+* :doc:`/item-types/UnitTypeGroup/index`
+* :doc:`/item-types/UniverseGroup/index`
+* :doc:`/item-types/VariableGroup/index`
+* :doc:`/composite-types/ReferenceDateType/index`
+* :doc:`/composite-types/RoleType/index`
+* :doc:`/composite-types/TopicalCoverageType/index`
+* :doc:`/composite-types/VocabularyType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/InternationalCodeValueType.svg
+

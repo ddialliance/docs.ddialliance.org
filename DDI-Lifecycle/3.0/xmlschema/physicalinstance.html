@@ -1,0 +1,194 @@
+<HTML xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>ddi:physicalinstance:3_0</title><style type="text/css">
+			UL  { list-style-type: none }
+		</style></head><BODY><FONT FACE="Arial"><H2>ddi:physicalinstance:3_0</H2><I>Imports: </I>ddi:reusable:3_0 (reusable.xsd)<BR><BR><H3>Global Elements</H3><P><a name="PhysicalInstance" id="PhysicalInstance"></a><B>PhysicalInstance (<a href="physicalinstance.html#PhysicalInstanceType">PhysicalInstanceType</a>): </B>Includes information about the physical instance of a data product (an actual data file). It completes the documentation contained in the Physical Data Product module, which describes the physical layout and other characteristics of the data that do not change when a file is merged with another related file, or split into subsets.</P><P><a name="Fingerprint" id="Fingerprint"></a><B>Fingerprint (<a href="physicalinstance.html#FingerprintType">FingerprintType</a>): </B>Allows for assigning a digital fingerprint to the data file.</P><P><a name="Path" id="Path"></a><B>Path (<a href="physicalinstance.html#PathType">PathType</a>): </B>Provides a machine-readable path expression (e.g., Java). for the data file's location </P><P><a name="URI" id="URI"></a><B>URI (<a href="physicalinstance.html#URIType">URIType</a>): </B>URI for the data file.</P><P><a name="CategoryStatisticType" id="CategoryStatisticType"></a><B>CategoryStatisticType (<a href="reusable.html#CodeValueType">r:CodeValueType</a>): </B>A generic element for specifying the type of category statistic. Note that this element can be substituted with an element that extends the reusable code type to restrict the possible values to an enumeration.</P><P><a name="CategoryStatisticTypeCoded" id="CategoryStatisticTypeCoded"></a><B>CategoryStatisticTypeCoded (<a href="physicalinstance.html#CategoryStatisticTypeCodedType">CategoryStatisticTypeCodedType</a>): <i>[substitution: <a href="physicalinstance.html#CategoryStatisticType">CategoryStatisticType</a>] </i></B>A suggested enumeration of category statistics.</P><P><a name="SummaryStatisticType" id="SummaryStatisticType"></a><B>SummaryStatisticType (<a href="reusable.html#CodeValueType">r:CodeValueType</a>): </B>A generic element for specifying the type of summary statistic. Note that this element can be substituted with an element that extends the reusable code type to restrict the possible values to an enumeration.</P><P><a name="SummaryStatisticTypeCoded" id="SummaryStatisticTypeCoded"></a><B>SummaryStatisticTypeCoded (<a href="physicalinstance.html#SummaryStatisticTypeCodedType">SummaryStatisticTypeCodedType</a>): <i>[substitution: <a href="physicalinstance.html#SummaryStatisticType">SummaryStatisticType</a>] </i></B>A suggested enumeration of summary statistics.</P><P><a name="RecordLayoutReference" id="RecordLayoutReference"></a><B>RecordLayoutReference (<a href="reusable.html#ReferenceType">r:ReferenceType</a>): </B>References the record layout of the data documented in the physical instance.</P><P><a name="DataFileIdentification" id="DataFileIdentification"></a><B>DataFileIdentification (<a href="physicalinstance.html#DataFileIdentificationType">DataFileIdentificationType</a>): </B>Identifies the data file documented in the physical instance and provides information about its location.</P><P><a name="Statistics" id="Statistics"></a><B>Statistics (<a href="physicalinstance.html#StatisticsType">StatisticsType</a>): </B>Includes variable and category statistics data documented in the physical instance, or a reference to a physical instance where the statistics are described or located in line.</P><P><a name="GrossFileStructure" id="GrossFileStructure"></a><B>GrossFileStructure (<a href="physicalinstance.html#GrossFileStructureType">GrossFileStructureType</a>): </B>Includes information about the file structure, as well as other characteristics that are specific to the physical instance.</P><P><a name="CreationSoftware" id="CreationSoftware"></a><B>CreationSoftware (<a href="reusable.html#SoftwareType">r:SoftwareType</a>): </B>Indicates the software that was used to create the data file.</P><P><a name="StatisticalDataFileReference" id="StatisticalDataFileReference"></a><B>StatisticalDataFileReference (<a href="physicalinstance.html#StatisticalDataFileReferenceType">StatisticalDataFileReferenceType</a>): </B>This is a reference to a PhysicalInstance module that describes a data file containing the summary and/or category statistics OR contains the statistics in-line. For example, when the same data are stored as an ascii file and as an ORACLE file, the summary and category statistics would only be listed in one of the physical instance files, and referenced in the other(s).</P><P><a name="DataFileReference" id="DataFileReference"></a><B>DataFileReference (<a href="reusable.html#ReferenceType">r:ReferenceType</a>): </B>References a data file description.</P><P><a name="VariableStatistics" id="VariableStatistics"></a><B>VariableStatistics (<a href="physicalinstance.html#VariableStatisticsType">VariableStatisticsType</a>): </B>One or more statistical measures that describe the responses to a particular variable.</P><P><a name="VariableReference" id="VariableReference"></a><B>VariableReference (<a href="reusable.html#ReferenceType">r:ReferenceType</a>): </B>Reference to the variable to which the statistics apply.</P><P><a name="Filter" id="Filter"></a><B>Filter (<a href="physicalinstance.html#FilterType">FilterType</a>): </B>Provides for a filter on the category statistics. Filter values must be the same type as those for the category statistic.</P><P><a name="FilterVariableReference" id="FilterVariableReference"></a><B>FilterVariableReference (<a href="reusable.html#ReferenceType">r:ReferenceType</a>): </B>A filter value allows for a crosstabulation of one variable by another. For example variable may be crossed with country as is done in the Eurobarometer when reporting category statistics.</P><P><a name="FilterCategoryStatistics" id="FilterCategoryStatistics"></a><B>FilterCategoryStatistics (<a href="physicalinstance.html#FilterCategoryStatisticsType">FilterCategoryStatisticsType</a>): </B>Provides filter category statistics.</P><P><a name="FilterCategoryStatistic" id="FilterCategoryStatistic"></a><B>FilterCategoryStatistic (<a href="physicalinstance.html#FilterCategoryStatisticType">FilterCategoryStatisticType</a>): </B>Can be repeated to provide both weighted and unweighted values.</P><P><a name="SummaryStatistic" id="SummaryStatistic"></a><B>SummaryStatistic (<a href="physicalinstance.html#SummaryStatisticType">SummaryStatisticType</a>): </B>Includes a summary statistic for the referenced variable.</P><P><a name="CategoryStatistics" id="CategoryStatistics"></a><B>CategoryStatistics (<a href="physicalinstance.html#CategoryStatisticsType">CategoryStatisticsType</a>): </B>Includes a category-level statistic for the referenced variable.</P><P><a name="CategoryStatistic" id="CategoryStatistic"></a><B>CategoryStatistic (<a href="physicalinstance.html#CategoryStatisticType">CategoryStatisticType</a>): </B>Includes a statistic for the category value indicated in the sibling CategoryValue element.</P><P><a name="WeightUsedReference" id="WeightUsedReference"></a><B>WeightUsedReference (<a href="reusable.html#ReferenceType">r:ReferenceType</a>): </B>Reference to a weight described in the sample procedure in the mehtodology description.</P><P><a name="WeightVariableReference" id="WeightVariableReference"></a><B>WeightVariableReference (<a href="reusable.html#ReferenceType">r:ReferenceType</a>): </B>Reference to the variable containing a record specific weight used to weight the statistic.</P><P><a name="ExcludedMissingCategoryReference" id="ExcludedMissingCategoryReference"></a><B>ExcludedMissingCategoryReference (<a href="reusable.html#ReferenceType">r:ReferenceType</a>): </B>Indicates the missing values that were excluded from the statistic. Contains a reference to the category. For the missing value.</P><P><a name="ProcessingCheck" id="ProcessingCheck"></a><B>ProcessingCheck (<a href="reusable.html#StructuredStringType">r:StructuredStringType</a>): </B>Documents processing checks and other operations performed on the data file.</P><BR><H3>Complex Types</H3><p><a name="PhysicalInstanceType" id="PhysicalInstanceType"></a><b>PhysicalInstanceType: </b>Includes information about the physical instance of a data product (an actual data file). It completes the documentation contained in the Physical Data Product module, which describes the physical layout and other characteristics of the data that do not change when a file is merged with another related file, or split into subsets.</p><ul><li>Content:
+					<ul><li><I>Extends: </I><a href="reusable.html#MaintainableType">r:MaintainableType</a></li><li>Base Content
+						<ul><li><I>Extends: </I><a href="reusable.html#AbstractMaintainableType">AbstractMaintainableType</a></li><li>Base Content
+						<ul><li><I>Extends: </I><a href="reusable.html#AbstractVersionableType">AbstractVersionableType</a></li><li>Base Content
+						<ul><li><I>Extends: </I><a href="reusable.html#AbstractIdentifiableType">AbstractIdentifiableType</a></li><li>Base Content
+						<ul><li><I>Sequence of: </I><ul><li>[Reference]  (<a href="reusable.html#Name">Name</a>) - min. 0 - max. unbounded<ul><li><small>Human-readable name given the entity being identified. May be repeated to provide language and/or geographic alternatives.</small></li></ul></li></ul></li></ul></li><li>Extended Content
+						<ul><li><I>Sequence of: </I><ul><li>VersionResponsibility  (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>)		 - min. 0<ul><li><small>Person and/or organization within the MaintenanceAgency responsible for the version change. This is primarily intended for internal use.</small></li></ul></li><li>[Reference]  (<a href="reusable.html#VersionRationale">VersionRationale</a>) - min. 0 - max. unbounded<ul><li><small>Textual description of the rationale/purpose for a version change.</small></li></ul></li></ul></li></ul></li><li>Base Attributes
+						<ul><li>id (<a href="reusable.html#BaseIDType">BaseIDType</a>) - required<ul><li><small>Assigned ID, unique within its maintainable object.</small></li></ul></li><li>urn (<a href="http://www.w3.org/TR/xmlschema-2/#anyURI">xs:anyURI</a>) - optional<ul><li><small>DDI-structured URN of the element as described in Part I of the Technical Documentation.</small></li></ul></li><li>action (<a href="reusable.html#ActionCodeType">ActionCodeType</a>) - optional<ul><li><small>Used for inheritance to indicate that the element being described is being added, updated, or deleted at the local level. Add: This element is added to the inherited structure. Update: This element is to be used in place of the inherited element with this ID for local processing. Delete: This element has been removed from the inherited group for local processing. There will be a new ID only in the case of Add.</small></li></ul></li></ul></li><li>Extended Attributes
+						<ul><li>version (<a href="reusable.html#NewVersionType">NewVersionType</a>) - optional<ul><li><small>Restricted string - numeric with optional decimal points.</small></li></ul></li><li>versionDate (<a href="reusable.html#BaseDateType">BaseDateType</a>) - optional<ul><li><small>Date of version. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser.</small></li></ul></li></ul></li></ul></li><li>Extended Attributes
+						<ul><li>agency (<a href="http://www.w3.org/TR/xmlschema-2/#NCName">xs:NCName</a>) - optional<ul><li><small>Maintaining agency as described in Part 1 of the Technical Specification.</small></li></ul></li></ul></li></ul></li><li>Extended Attributes
+						<ul><li>isMaintainable (<a href="http://www.w3.org/TR/xmlschema-2/#boolean">xs:boolean</a>) - fixed: true<ul><li><small></small></li></ul></li></ul></li></ul></li><li>Extended Content
+						<ul><li><I>Sequence of: </I><ul><li>[Reference]  (<a href="reusable.html#Citation">r:Citation</a>) - min. 0<ul><li><small>Includes a citation for the physical instance of a data set.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#Fingerprint">Fingerprint</a>) - min. 0 - max. unbounded<ul><li><small>Allows for assigning a digital fingerprint to the data file.</small></li></ul></li><li>[Reference]  (<a href="reusable.html#Coverage">r:Coverage</a>) - min. 0<ul><li><small>Includes information about the topical, spatial, and temporal coverage of the physical instance.</small></li></ul></li><li>[Reference]  (<a href="reusable.html#OtherMaterial">r:OtherMaterial</a>) - min. 0 - max. unbounded<ul><li><small>Provides information about other resources related to the physical instance.</small></li></ul></li><li>[Reference]  (<a href="reusable.html#Note">r:Note</a>) - min. 0 - max. unbounded<ul><li><small>Note regarding the physical instance.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#RecordLayoutReference">RecordLayoutReference</a>) - max. unbounded<ul><li><small>References the record layout of the data documented in the physical instance.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#DataFileIdentification">DataFileIdentification</a>) - max. unbounded<ul><li><small>Identifies the data file documented in the physical instance and provides information about its location.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#GrossFileStructure">GrossFileStructure</a>) - min. 0<ul><li><small>Includes information about the file structure, as well as other characteristics that are specific to the physical instance.</small></li></ul></li><li>[Reference]  (<a href="reusable.html#ProprietaryInfo">r:ProprietaryInfo</a>) - min. 0<ul><li><small>Contains information proprietary to the software package which produced the data file. This is expressed as a set of name-value pairs. The value may be taken from a controlled vocabulary.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#Statistics">Statistics</a>) - min. 0<ul><li><small>Includes variable and category statistics data documented in the physical instance, or a reference to a physical instance where the statistics are described or located in line.</small></li></ul></li></ul></li></ul></li></ul></li></ul><p><a name="FingerprintType" id="FingerprintType"></a><b>FingerprintType: </b>Allows for assigning a digital fingerprint to the data file.</p><ul><li>Content:
+					<ul><li><I>Sequence of: </I><ul><li>Value  (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>)		<ul><li><small>Contains the value of the digital fingerprint.</small></li></ul></li><li>AlgorithmSpecification  (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>)		<ul><li><small>Specifies the type of the fingerprint (what algorithm or scheme).</small></li></ul></li><li>AlgorithmVersion  (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>)		 - min. 0<ul><li><small>Contains the version of the algorithm.</small></li></ul></li></ul></li></ul></li></ul><p><a name="GrossFileStructureType" id="GrossFileStructureType"></a><b>GrossFileStructureType: </b>Includes information about the file structure, as well as other characteristics that are specific to the physical instance.</p><ul><li>Content:
+					<ul><li><I>Extends: </I><a href="reusable.html#IdentifiableType">r:IdentifiableType</a></li><li>Base Content
+						<ul><li><I>Extends: </I><a href="reusable.html#AbstractIdentifiableType">AbstractIdentifiableType</a></li><li>Base Content
+						<ul><li><I>Sequence of: </I><ul><li>[Reference]  (<a href="reusable.html#Name">Name</a>) - min. 0 - max. unbounded<ul><li><small>Human-readable name given the entity being identified. May be repeated to provide language and/or geographic alternatives.</small></li></ul></li></ul></li></ul></li><li>Base Attributes
+						<ul><li>id (<a href="reusable.html#BaseIDType">BaseIDType</a>) - required<ul><li><small>Assigned ID, unique within its maintainable object.</small></li></ul></li><li>urn (<a href="http://www.w3.org/TR/xmlschema-2/#anyURI">xs:anyURI</a>) - optional<ul><li><small>DDI-structured URN of the element as described in Part I of the Technical Documentation.</small></li></ul></li><li>action (<a href="reusable.html#ActionCodeType">ActionCodeType</a>) - optional<ul><li><small>Used for inheritance to indicate that the element being described is being added, updated, or deleted at the local level. Add: This element is added to the inherited structure. Update: This element is to be used in place of the inherited element with this ID for local processing. Delete: This element has been removed from the inherited group for local processing. There will be a new ID only in the case of Add.</small></li></ul></li></ul></li><li>Extended Attributes
+						<ul><li>isIdentifiable (<a href="http://www.w3.org/TR/xmlschema-2/#boolean">xs:boolean</a>) - fixed: true<ul><li><small></small></li></ul></li></ul></li></ul></li><li>Extended Content
+						<ul><li><I>Sequence of: </I><ul><li>PlaceOfProduction  (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>)		 - min. 0<ul><li><small>Indicates the place where the physical instance was produced.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#ProcessingCheck">ProcessingCheck</a>) - min. 0 - max. unbounded<ul><li><small>Documents processing checks and other operations performed on the data file.</small></li></ul></li><li>ProcessingStatus  (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>)		 - min. 0<ul><li><small>Processing status of the data file.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#CreationSoftware">CreationSoftware</a>) - min. 0<ul><li><small>Indicates the software that was used to create the data file.</small></li></ul></li><li>CaseQuantity  (<a href="http://www.w3.org/TR/xmlschema-2/#integer">xs:integer</a>)		 - min. 0<ul><li><small>Number of cases or observations in the data file.</small></li></ul></li><li>OverallRecordCount  (<a href="http://www.w3.org/TR/xmlschema-2/#integer">xs:integer</a>)		 - min. 0<ul><li><small>Overall record count in the data file.</small></li></ul></li></ul></li></ul></li></ul></li></ul><p><a name="DataFileIdentificationType" id="DataFileIdentificationType"></a><b>DataFileIdentificationType: </b>Identifies the data file documented in the physical instance and provides information about its location.</p><ul><li>Content:
+					<ul><li><I>Extends: </I><a href="reusable.html#IdentifiableType">r:IdentifiableType</a></li><li>Base Content
+						<ul><li><I>Extends: </I><a href="reusable.html#AbstractIdentifiableType">AbstractIdentifiableType</a></li><li>Base Content
+						<ul><li><I>Sequence of: </I><ul><li>[Reference]  (<a href="reusable.html#Name">Name</a>) - min. 0 - max. unbounded<ul><li><small>Human-readable name given the entity being identified. May be repeated to provide language and/or geographic alternatives.</small></li></ul></li></ul></li></ul></li><li>Base Attributes
+						<ul><li>id (<a href="reusable.html#BaseIDType">BaseIDType</a>) - required<ul><li><small>Assigned ID, unique within its maintainable object.</small></li></ul></li><li>urn (<a href="http://www.w3.org/TR/xmlschema-2/#anyURI">xs:anyURI</a>) - optional<ul><li><small>DDI-structured URN of the element as described in Part I of the Technical Documentation.</small></li></ul></li><li>action (<a href="reusable.html#ActionCodeType">ActionCodeType</a>) - optional<ul><li><small>Used for inheritance to indicate that the element being described is being added, updated, or deleted at the local level. Add: This element is added to the inherited structure. Update: This element is to be used in place of the inherited element with this ID for local processing. Delete: This element has been removed from the inherited group for local processing. There will be a new ID only in the case of Add.</small></li></ul></li></ul></li><li>Extended Attributes
+						<ul><li>isIdentifiable (<a href="http://www.w3.org/TR/xmlschema-2/#boolean">xs:boolean</a>) - fixed: true<ul><li><small></small></li></ul></li></ul></li></ul></li><li>Extended Content
+						<ul><li><I>Sequence of: </I><ul><li>Location  (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>)		 - min. 0 - max. unbounded<ul><li><small>Documents the location of the data file as human-readable text.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#Path">Path</a>) - min. 0 - max. unbounded<ul><li><small>Provides a machine-readable path expression for the data file's location (eg Java).</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#URI">URI</a>) - max. unbounded<ul><li><small>URI for the data file.</small></li></ul></li></ul></li></ul></li><li>Extended Attributes
+						<ul><li>isMaster (<a href="http://www.w3.org/TR/xmlschema-2/#boolean">xs:boolean</a>) - optional<ul><li><small>A value of true indicates that the mentioned file is the master file, in the case that there are multiple copies of the file identified.</small></li></ul></li></ul></li></ul></li></ul><p><a name="PathType" id="PathType"></a><b>PathType: </b>Provides a machine-readable path expression for the data file's location (eg Java).</p><ul><li>Content:
+					<ul><li><I>Extends: </I><a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a></li><li>Extended Attributes
+						<ul><li>isPublic (<a href="http://www.w3.org/TR/xmlschema-2/#boolean">xs:boolean</a>) - default: true<ul><li><small>Indicates that the location is publically available.</small></li></ul></li></ul></li></ul></li></ul><p><a name="URIType" id="URIType"></a><b>URIType: </b>URI for the data file.</p><ul><li>Content:
+					<ul><li><I>Extends: </I><a href="http://www.w3.org/TR/xmlschema-2/#anyURI">xs:anyURI</a></li><li>Extended Attributes
+						<ul><li>isPublic (<a href="http://www.w3.org/TR/xmlschema-2/#boolean">xs:boolean</a>) - default: true<ul><li><small>Indicates that the location is publically available.</small></li></ul></li></ul></li></ul></li></ul><p><a name="StatisticsType" id="StatisticsType"></a><b>StatisticsType: </b>Includes variable and category statistics, as well as a reference to the logical product module that describes the intellectual content of the data documented in the physical instance.</p><ul><li>Content:
+					<ul><li><I>Sequence of: </I><ul><li>[Reference]  (<a href="physicalinstance.html#StatisticalDataFileReference">StatisticalDataFileReference</a>) - min. 0 - max. unbounded<ul><li><small>This is a reference to a physicalinstance that describes a data file containing the summary and/or category statistics OR contains the statistics in-line as in the case of the same data stored as an ascii file and as an ORACLE file where the summary and category statistics are listed only in one of the physical instance files.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#VariableStatistics">VariableStatistics</a>) - min. 0 - max. unbounded<ul><li><small>One or more statistical measures that describe the responses to a particular variable.</small></li></ul></li></ul></li></ul></li></ul><p><a name="StatisticalDataFileReferenceType" id="StatisticalDataFileReferenceType"></a><b>StatisticalDataFileReferenceType: </b>References a PhysicalInstance module that describes a data file containing the summary and/or category statistics OR contains the statistics in-line.  For example, when the same data are stored as an ascii file and as an ORACLE file, the summary and category statistics would only be listed in one of the physical instance files, and referenced in the other(s).</p><ul><li>Content:
+					<ul><li><I>Sequence of: </I><ul><li>[Reference]  (<a href="physicalinstance.html#DataFileReference">DataFileReference</a>)<ul><li><small>References a data file description.</small></li></ul></li></ul></li></ul></li><li>Attributes:
+					<ul><li>isInline (<a href="http://www.w3.org/TR/xmlschema-2/#boolean">xs:boolean</a>) - required<ul><li><small>Boolean attribute where true indicates that the summary/category statistics are found inline in the referenced physical instance, false indicates that they are in the datafile associated with the physical instance.</small></li></ul></li></ul></li></ul><p><a name="VariableStatisticsType" id="VariableStatisticsType"></a><b>VariableStatisticsType: </b>Includes statistical measures that describe responses to individual variables.</p><ul><li>Content:
+					<ul><li><I>Sequence of: </I><ul><li>[Reference]  (<a href="physicalinstance.html#VariableReference">VariableReference</a>)<ul><li><small>Reference to the variable to which the statistics apply.</small></li></ul></li><li>TotalResponses  (<a href="http://www.w3.org/TR/xmlschema-2/#integer">xs:integer</a>)		 - min. 0<ul><li><small>The total number of responses to this variable. This element is especially useful if the number of responses does not match added case counts. It may also be used to sum the frequencies for variable categories.</small></li></ul></li><li><i>Choice Of: </i><ul><li>[Reference]  (<a href="physicalinstance.html#WeightUsedReference">WeightUsedReference</a>) - min. 0<ul><li><small>Reference to a weight described in the sample procedure in the methodology description that was used to create the statisitic.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#WeightVariableReference">WeightVariableReference</a>) - min. 0<ul><li><small>Reference to a variable to use for weight.</small></li></ul></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#ExcludedMissingCategoryReference">ExcludedMissingCategoryReference</a>) - min. 0 - max. unbounded<ul><li><small>Indicates the missing values that were excluded from the statistic. Contains a reference to the category. For the missing value.Indicates the missing values that were excluded from the statistic. Contains a reference to the category for the missing value.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#SummaryStatistic">SummaryStatistic</a>) - min. 0 - max. unbounded<ul><li><small>Includes a summary statistic for the referenced variable.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#CategoryStatistics">CategoryStatistics</a>) - min. 0 - max. unbounded<ul><li><small>Includes a category-level statistic for the referenced variable.</small></li></ul></li></ul></li></ul></li></ul><p><a name="CategoryStatisticsType" id="CategoryStatisticsType"></a><b>CategoryStatisticsType: </b>Includes a category-level statistic.</p><ul><li>Content:
+					<ul><li><I>Sequence of: </I><ul><li>CategoryValue  (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>)		<ul><li><small>Includes a category value.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#CategoryStatistic">CategoryStatistic</a>) - max. unbounded<ul><li><small>Includes a statistic for the category value indicated in the sibling CategoryValue element.</small></li></ul></li></ul></li></ul></li></ul><p><a name="CategoryStatisticType" id="CategoryStatisticType"></a><b>CategoryStatisticType: </b>Includes a statistic for a category value.</p><ul><li>Content:
+					<ul><li><I>Sequence of: </I><ul><li>[Reference]  (<a href="physicalinstance.html#CategoryStatisticType">CategoryStatisticType</a>)<ul><li><small>Type of category statistic.</small></li></ul></li><li>Weighted  (<a href="http://www.w3.org/TR/xmlschema-2/#boolean">xs:boolean</a>)		<ul><li><small>Value of true indicates that the weight referenced at the variable statistics level was used.</small></li></ul></li><li>Value  (<a href="http://www.w3.org/TR/xmlschema-2/#decimal">xs:decimal</a>)		<ul><li><small>Container for the statistic.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#Filter">Filter</a>) - min. 0<ul><li><small>Provides for a filter on the category statistic. Filter values must be the same type as those for the category statistic.</small></li></ul></li></ul></li></ul></li></ul><p><a name="CategoryStatisticTypeCodedType" id="CategoryStatisticTypeCodedType"></a><b>CategoryStatisticTypeCodedType: </b>A suggested enumeration of category statistics.</p><ul><li>Content:
+					<ul><li><I>Restricts: </I><a href="reusable.html#CodeValueType">r:CodeValueType</a></li><ul><li>Code: Frequency - 
+               
+                  Frequency
+               
+            </li><li>Code: Percent - 
+               
+                  Percent
+               
+            </li><li>Code: CrossTabulation - 
+               
+                  Cross Tabulation
+               
+            </li><li>Code: ValidCases - 
+               
+                  Valid Cases
+               
+            </li><li>Code: InvalidCases - 
+               
+                  Invalid Cases
+               
+            </li><li>Code: Minimum - 
+               
+                  Mimimum
+               
+            </li><li>Code: Maximum - 
+               
+                  Maximum
+               
+            </li><li>Code: StandardDeviation - 
+               
+                  Standard Deviation
+               
+            </li><li>Code: CumulativePercent - 
+               
+                  CumulativePercent
+               
+            </li><li>Code: UseOther - 
+               
+                  See otherValue attribute Other
+               
+            </li><li>Attributes:
+					<ul><li>codeListID (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>) - required - fixed: Category Statistic Type<ul><li><small>Identification of the code list that this value is taken from.</small></li></ul></li><li>codeListAgency (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>) - required - fixed: DDI<ul><li><small>Agency maintaining the code list.</small></li></ul></li><li>codeListVersion (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>) - fixed: 1.0<ul><li><small>Version of the code list.</small></li></ul></li><li>otherValue (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>) - optional<ul><li><small>Other Value.</small></li></ul></li></ul></li></ul></ul></li></ul><p><a name="FilterType" id="FilterType"></a><b>FilterType: </b>Provides for a filter on the category statistics. Filter values must be the same type as those for the category statistic.</p><ul><li>Content:
+					<ul><li><I>Sequence of: </I><ul><li>[Reference]  (<a href="physicalinstance.html#FilterVariableReference">FilterVariableReference</a>) - min. 0<ul><li><small>A filter value allows for a crosstabulation of one variable by another. For example variable may be crossed with country as is done in the Eurobarometer when reporting category statistics.</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#FilterCategoryStatistics">FilterCategoryStatistics</a>) - min. 0<ul><li><small>Provides filtered category statistics.</small></li></ul></li></ul></li></ul></li></ul><p><a name="FilterCategoryStatisticsType" id="FilterCategoryStatisticsType"></a><b>FilterCategoryStatisticsType: </b>Provides a filtered category statistic.</p><ul><li>Content:
+					<ul><li><I>Sequence of: </I><ul><li>FilterCategoryValue  (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>)		<ul><li><small>Value of the FilterVariable category</small></li></ul></li><li>[Reference]  (<a href="physicalinstance.html#FilterCategoryStatistic">FilterCategoryStatistic</a>) - max. unbounded<ul><li><small>Repeatable to provide both weighted and unweighted values.</small></li></ul></li></ul></li></ul></li></ul><p><a name="FilterCategoryStatisticType" id="FilterCategoryStatisticType"></a><b>FilterCategoryStatisticType: </b>Provides filtered category statistics.</p><ul><li>Content:
+					<ul><li><I>Sequence of: </I><ul><li>Weighted  (<a href="http://www.w3.org/TR/xmlschema-2/#boolean">xs:boolean</a>)		<ul><li><small>Value of true indicates that the weight reference at the variable statistics level is used.</small></li></ul></li><li>Value  (<a href="http://www.w3.org/TR/xmlschema-2/#decimal">xs:decimal</a>)		<ul><li><small>Container for the statistic.</small></li></ul></li></ul></li></ul></li></ul><p><a name="SummaryStatisticType" id="SummaryStatisticType"></a><b>SummaryStatisticType: </b>Includes a summary statistic for a variable.</p><ul><li>Content:
+					<ul><li><I>Sequence of: </I><ul><li>[Reference]  (<a href="physicalinstance.html#SummaryStatisticType">SummaryStatisticType</a>)<ul><li><small>Type of summary statistic.</small></li></ul></li><li>Weighted  (<a href="http://www.w3.org/TR/xmlschema-2/#boolean">xs:boolean</a>)		<ul><li><small>Value of true indicates that the weight reference at the variable statistics level is used. </small></li></ul></li><li>Value  (<a href="http://www.w3.org/TR/xmlschema-2/#decimal">xs:decimal</a>)		<ul><li><small>Container for the actual summary statistic.</small></li></ul></li></ul></li></ul></li></ul><p><a name="SummaryStatisticTypeCodedType" id="SummaryStatisticTypeCodedType"></a><b>SummaryStatisticTypeCodedType: </b></p><ul><li>Content:
+					<ul><li><I>Restricts: </I><a href="reusable.html#CodeValueType">r:CodeValueType</a></li><ul><li>Code: Mean - 
+               
+                  Mean (2nd Quartile)
+               
+            </li><li>Code: Mode - 
+               
+                  Mode
+               
+            </li><li>Code: Median - 
+               
+                  Median
+               
+            </li><li>Code: ValidCases - 
+               
+                  Valid Cases
+               
+            </li><li>Code: InvalidCases - 
+               
+                  Invalid Cases
+               
+            </li><li>Code: Minimum - 
+               
+                  Mimimum
+               
+            </li><li>Code: Maximum - 
+               
+                  Maximum
+               
+            </li><li>Code: StandardDeviation - 
+               
+                  Standard Deviation
+               
+            </li><li>Code: FirstQuartile - 
+               
+                  First quartile
+               
+            </li><li>Code: ThirdQuartile - 
+               
+                  Third quartile
+               
+            </li><li>Code: FourthQuartile - 
+               
+                  Fourth quartile
+               
+            </li><li>Code: FirstQuintile - 
+               
+                  First quintile
+               
+            </li><li>Code: SecondQuintile - 
+               
+                  Second quintile
+               
+            </li><li>Code: ThirdQuintile - 
+               
+                  Third quintile
+               
+            </li><li>Code: FourthQuintile - 
+               
+                  FourthQuintile
+               
+            </li><li>Code: FifthQuintile - 
+               
+                  FifthQuintile
+               
+            </li><li>Code: FirstDecile - 
+               
+                  First Decile
+               
+            </li><li>Code: SecondDecile - 
+               
+                  Second Decile
+               
+            </li><li>Code: ThirdDecile - 
+               
+                  Third Decile
+               
+            </li><li>Code: FourthDecile - 
+               
+                  FourthDecile
+               
+            </li><li>Code: FifthDecile - 
+               
+                  FifthDecile
+               
+            </li><li>Code: SixthDecile - 
+               
+                  Sixth Decile
+               
+            </li><li>Code: SeventhDecile - 
+               
+                  Seventh Decile
+               
+            </li><li>Code: EightDecile - 
+               
+                  Eigth Decile
+               
+            </li><li>Code: NinthDecile - 
+               
+                  NinthDecile
+               
+            </li><li>Code: TenthDecile - 
+               
+                  TenthDecile
+               
+            </li><li>Code: UseOther - 
+               
+                  See otherValue attribute Other
+               
+            </li><li>Attributes:
+					<ul><li>codeListID (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>) - required - fixed: Summary Statistic Type<ul><li><small>Identification of the code list that this value is taken from.</small></li></ul></li><li>codeListAgency (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>) - required - fixed: DDI<ul><li><small>Agency maintaining the code list.</small></li></ul></li><li>codeListVersion (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>) - fixed: 1.0<ul><li><small>Version of the code list.</small></li></ul></li><li>otherValue (<a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a>) - optional<ul><li><small>Other Value.</small></li></ul></li></ul></li></ul></ul></li></ul><BR></FONT><hr><p>Copyright &copy; 2008 <a href="http://www.ddialliance.org/">DDI Alliance</a>, DDI Version 3.0 (2008-04-28)</p><p>This documentation is extracted from the inline documentation of DDI 3.0 XML Schema and is licensed under the terms of the <a href="../../license.txt">GNU General Public License</a> as the schema itself.</p></BODY></HTML>

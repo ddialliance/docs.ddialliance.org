@@ -1,0 +1,38 @@
+MissingValueConstantExpression
+------------------------------
+
+A missing value constant.  Some languages allow multiple missing value constants.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Value","string","0..1","The missing value as it appears in the system (e.g., .a, .b, .c).  If Null, this is the system missing value."
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **MissingValueConstantExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/MissingValueConstantExpression.svg
+

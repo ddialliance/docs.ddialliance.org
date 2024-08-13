@@ -1,0 +1,29 @@
+AudioType
+---------
+
+Describes the type and length of the audio segment.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfAudioClip",":doc:`/composite-types/CodeValueType/index`","0..1","The type of audio clip provided. Supports the use of a controlled vocabulary."
+   "AudioClipBegin","string","0..1","The point to begin the audio clip. If no point is provided the assumption is that the start point is the beginning of the clip provided."
+   "AudioClipEnd","string","0..1","The point to end the audio clip. If no point is provided the assumption is that the end point is the end of the clip provided."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/SegmentType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AudioType.svg
+

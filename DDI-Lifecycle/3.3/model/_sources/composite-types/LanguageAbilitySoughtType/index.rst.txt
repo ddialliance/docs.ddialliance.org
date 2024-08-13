@@ -1,0 +1,28 @@
+LanguageAbilitySoughtType
+-------------------------
+
+Describes both minimum and preferred language abilities sought for the translation work as a set of source and target language requirements.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "MinimumLanguageAbility",":doc:`/composite-types/IndividualLanguageType/index`","0..1","Identifies the language and the individuals ability to read, write, and speak the designated language using a controlled vocabulary."
+   "PreferredLanguageAbility",":doc:`/composite-types/IndividualLanguageType/index`","0..1","Identifies the language and the individuals ability to read, write, and speak the designated language using a controlled vocabulary."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/TranslatorRequirementsType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LanguageAbilitySoughtType.svg
+

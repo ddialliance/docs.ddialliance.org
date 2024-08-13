@@ -1,0 +1,45 @@
+RangeValueType
+--------------
+
+Describes a bounding value of a string.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Included","boolean","1..1","Set to ""true"" if the value is included in the range."
+
+Properties Inherited from ValueType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * :doc:`/composite-types/ValueType/index`
+        * **RangeValueType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/RangeType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RangeValueType.svg
+

@@ -1,0 +1,40 @@
+AllTextVariablesExpression
+--------------------------
+
+An expression that represents all text variables in the dataset, similar to `_all` in SPSS or Stata.
+
+
+Properties
+~~~~~~~~~~
+
+This type contains no properties.
+
+Properties Inherited from VariableReferenceBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * :doc:`/composite-types/VariableReferenceBase/index`
+        * **AllTextVariablesExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AllTextVariablesExpression.svg
+

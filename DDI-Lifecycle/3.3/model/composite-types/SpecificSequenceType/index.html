@@ -1,0 +1,591 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SpecificSequenceType &mdash; DDI Data Documentation 3.3 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="StandardKeyValuePairType" href="../StandardKeyValuePairType/" />
+    <link rel="prev" title="SpatialCoordinateType" href="../SpatialCoordinateType/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> DDI Data Documentation 3.3
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Study/">Study</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Classification/">Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Data Capture/">Data Capture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Data Description/">Data Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Foundational/">Foundational</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Agent/">Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Non-Packaging Items/">Non-Packaging Items</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/All Content Items/">All Content Items</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../item-types/">All Item Types</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">All Composite Types</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../AccessRestrictionDateType/">AccessRestrictionDateType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AccessType/">AccessType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ActionToMinimizeLossesType/">ActionToMinimizeLossesType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ActionType/">ActionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AdditionalDataCollectionType/">AdditionalDataCollectionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AdditionalInformationType/">AdditionalInformationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AddressType/">AddressType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AggregationDefinitionType/">AggregationDefinitionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AggregationType/">AggregationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AggregationVariablesType/">AggregationVariablesType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AnchorType/">AnchorType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ApplicationDetailsType/">ApplicationDetailsType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ArchiveSpecificType/">ArchiveSpecificType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AreaCoverageType/">AreaCoverageType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AttachmentLocationType/">AttachmentLocationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AttributeType/">AttributeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AudioType/">AudioType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AuthorizationSourceType/">AuthorizationSourceType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AuthorizedPolicySourceType/">AuthorizedPolicySourceType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AuthorizedSourceType/">AuthorizedSourceType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BasedOnObjectType/">BasedOnObjectType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BasicIncrementType/">BasicIncrementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BibliographicNameType/">BibliographicNameType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BindingType/">BindingType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BoundingBoxType/">BoundingBoxType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BudgetDocumentType/">BudgetDocumentType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BudgetType/">BudgetType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CaseIdentificationType/">CaseIdentificationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CaseLawType/">CaseLawType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CaseSpecificationType/">CaseSpecificationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CategoryDomainType/">CategoryDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CategoryRepresentationBaseType/">CategoryRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CategoryStatisticType/">CategoryStatisticType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CategoryValueType/">CategoryValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CellCoordinatesAsDefinedType/">CellCoordinatesAsDefinedType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CellLabelType/">CellLabelType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CharacterParameterType/">CharacterParameterType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CitationType/">CitationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ClassificationIndexEntryType/">ClassificationIndexEntryType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ClassificationMapType/">ClassificationMapType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CodeDomainType/">CodeDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CodeRepresentationBaseType/">CodeRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CodeSubsetInformationType/">CodeSubsetInformationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CodeType/">CodeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CodeValueType/">CodeValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CohortType/">CohortType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CollectionEventType/">CollectionEventType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CollectionSituationType/">CollectionSituationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CollectionType/">CollectionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CommandCodeType/">CommandCodeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CommandFileType/">CommandFileType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CommandType/">CommandType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ComplianceDefinitionType/">ComplianceDefinitionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ComplianceType/">ComplianceType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ConcatenatedValueType/">ConcatenatedValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ConditionalIdentifierType/">ConditionalIdentifierType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ConditionalResultType/">ConditionalResultType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ConditionalTextType/">ConditionalTextType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ContactInformationType/">ContactInformationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ContentDateOffsetType/">ContentDateOffsetType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ContentLinkingMapType/">ContentLinkingMapType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ContentType/">ContentType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ContributorType/">ContributorType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CoordinatePairsType/">CoordinatePairsType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CoordinateRegionType/">CoordinateRegionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CorrespondenceType/">CorrespondenceType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CostStructureType/">CostStructureType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CountryCodeType/">CountryCodeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CoverageType/">CoverageType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CreateSummaryType/">CreateSummaryType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CreatorType/">CreatorType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataAppraisalInformationType/">DataAppraisalInformationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataCollectionFrequencyType/">DataCollectionFrequencyType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataCollectionMethodologyType/">DataCollectionMethodologyType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataExistenceType/">DataExistenceType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataFileIdentificationType/">DataFileIdentificationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataFileVersionType/">DataFileVersionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataFingerprintType/">DataFingerprintType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataItemType/">DataItemType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataSourceType/">DataSourceType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DateTimeDomainType/">DateTimeDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DateTimeRepresentationBaseType/">DateTimeRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DateType/">DateType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DDIMaintenanceAgencyIDType/">DDIMaintenanceAgencyIDType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DebriefingProcessType/">DebriefingProcessType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DefaultMissingValuesType/">DefaultMissingValuesType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DefiningCharacteristicType/">DefiningCharacteristicType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DelimiterType/">DelimiterType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DevelopmentObjectType/">DevelopmentObjectType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DeviationFromSampleDesignType/">DeviationFromSampleDesignType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DimensionIntersectType/">DimensionIntersectType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DimensionRankValueType/">DimensionRankValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DimensionType/">DimensionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DistributionDomainType/">DistributionDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DistributionRepresentationBaseType/">DistributionRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DomainSpecificValueType/">DomainSpecificValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoubleNumberRangeValueType/">DoubleNumberRangeValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DynamicTextType/">DynamicTextType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ElseIfTextType/">ElseIfTextType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ElseIfType/">ElseIfType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EmailType/">EmailType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EmbargoType/">EmbargoType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EmptyType/">EmptyType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EvaluatorType/">EvaluatorType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ExPostEvaluationType/">ExPostEvaluationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ExternalAidType/">ExternalAidType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ExternalCategoryRepresentationBaseType/">ExternalCategoryRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ExternalInformationType/">ExternalInformationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ExternalInterviewerInstructionType/">ExternalInterviewerInstructionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FilteredCategoryStatisticsType/">FilteredCategoryStatisticsType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FilterVariableCategoryType/">FilterVariableCategoryType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FixedCellValueType/">FixedCellValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FixedIdentifierType/">FixedIdentifierType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FormType/">FormType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FundingInformationType/">FundingInformationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GenerationType/">GenerationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GeographicBoundaryType/">GeographicBoundaryType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GeographicCoverageType/">GeographicCoverageType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GeographicDomainType/">GeographicDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GeographicLevelType/">GeographicLevelType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GeographicLocationCodeDomainType/">GeographicLocationCodeDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GeographicLocationCodeRepresentationBaseType/">GeographicLocationCodeRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GeographicLocationIdentifierType/">GeographicLocationIdentifierType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GeographicRepresentationBaseType/">GeographicRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GeographicStructureCodeDomainType/">GeographicStructureCodeDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GeographicStructureCodeRepresentationBaseType/">GeographicStructureCodeRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GridAttachmentType/">GridAttachmentType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GridDimensionType/">GridDimensionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GridResponseDomainInMixedType/">GridResponseDomainInMixedType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GrossFileStructureType/">GrossFileStructureType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GrossRecordStructureType/">GrossRecordStructureType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../HistoricalDateType/">HistoricalDateType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IdentifiableType/">IdentifiableType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IdentificationPortionType/">IdentificationPortionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IdentifierParsingInformationType/">IdentifierParsingInformationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IfThenElseTextType/">IfThenElseTextType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ImageAreaType/">ImageAreaType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ImageType/">ImageType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IncludedCodeType/">IncludedCodeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IncludedGeographicLocationCodesType/">IncludedGeographicLocationCodesType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IncludedGeographicStructureCodesType/">IncludedGeographicStructureCodesType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IndividualIdentificationType/">IndividualIdentificationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IndividualLanguageType/">IndividualLanguageType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IndividualNameType/">IndividualNameType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../InParameterType/">InParameterType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../InstantMessagingType/">InstantMessagingType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../InstructionAttachmentLocationType/">InstructionAttachmentLocationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../InternationalCodeValueType/">InternationalCodeValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../InternationalIdentifierType/">InternationalIdentifierType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../InternationalStringType/">InternationalStringType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ItemMapType/">ItemMapType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ItemSetType/">ItemSetType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ItemType/">ItemType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ItemValueType/">ItemValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KindOfDataType/">KindOfDataType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LabelType/">LabelType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LanguageAbilitySoughtType/">LanguageAbilitySoughtType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LevelContextType/">LevelContextType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LevelReferenceType/">LevelReferenceType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LevelType/">LevelType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LifecycleEventType/">LifecycleEventType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LifecycleInformationType/">LifecycleInformationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LimitedCodeSegmentCapturedType/">LimitedCodeSegmentCapturedType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LineParameterType/">LineParameterType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LinkingMapType/">LinkingMapType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LiteralTextType/">LiteralTextType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LocalAddedContentType/">LocalAddedContentType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LocationDomainType/">LocationDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LocationNameType/">LocationNameType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LocationRepresentationBaseType/">LocationRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LocationValueBundleType/">LocationValueBundleType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LocationValueType/">LocationValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LogicalRecordType/">LogicalRecordType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MaintainableObjectType/">MaintainableObjectType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MeasureDefinitionType/">MeasureDefinitionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MeasureDimensionType/">MeasureDimensionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MeasureDimensionValueType/">MeasureDimensionValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MetadataQualityType/">MetadataQualityType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MethodOfAdministrationType/">MethodOfAdministrationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ModeOfCollectionType/">ModeOfCollectionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ModeOfPretestCollectionType/">ModeOfPretestCollectionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NameType/">NameType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NCubesInRecordType/">NCubesInRecordType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NominalDomainType/">NominalDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NominalRepresentationBaseType/">NominalRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NoteType/">NoteType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NotUsedType/">NotUsedType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumberRangeType/">NumberRangeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumberRangeValueType/">NumberRangeValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumericDomainType/">NumericDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumericRepresentationBaseType/">NumericRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OperationType/">OperationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OrganizationIdentificationType/">OrganizationIdentificationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OrganizationNameType/">OrganizationNameType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OriginType/">OriginType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ParameterType/">ParameterType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PhysicalLocationType/">PhysicalLocationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PhysicalRecordSegmentType/">PhysicalRecordSegmentType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PointType/">PointType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PolygonType/">PolygonType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PopulationSizeType/">PopulationSizeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PopulationType/">PopulationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PretestAdministrationType/">PretestAdministrationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PrimaryComponentLevelType/">PrimaryComponentLevelType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PrivateImageType/">PrivateImageType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ProprietaryInfoType/">ProprietaryInfoType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PublicationType/">PublicationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PublisherType/">PublisherType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuestionSequenceType/">QuestionSequenceType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RangeType/">RangeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RangeValueType/">RangeValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RankingDomainType/">RankingDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RankingRangeType/">RankingRangeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RankingRepresentationBaseType/">RankingRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RecommendedStaffRequirementsType/">RecommendedStaffRequirementsType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RecordRelationshipType/">RecordRelationshipType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RecordSetType/">RecordSetType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RecordType/">RecordType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ReferenceDateType/">ReferenceDateType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RelatedValueType/">RelatedValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RelationshipType/">RelationshipType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RepresentationType/">RepresentationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RequiredResourcePackagesType/">RequiredResourcePackagesType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RequirementsAssessmentType/">RequirementsAssessmentType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ResearcherIDType/">ResearcherIDType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ResourcePackageArchiveType/">ResourcePackageArchiveType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ResourceUsedType/">ResourceUsedType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ResponseCardinalityType/">ResponseCardinalityType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ResponseDomainInMixedType/">ResponseDomainInMixedType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ResponseRateType/">ResponseRateType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ResponseTextSetType/">ResponseTextSetType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RestrictionProcessType/">RestrictionProcessType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ResultDetailType/">ResultDetailType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RoleType/">RoleType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RosterType/">RosterType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SamplingProcedureType/">SamplingProcedureType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ScaleDimensionType/">ScaleDimensionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ScaleDomainType/">ScaleDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ScaleRepresentationBaseType/">ScaleRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SegmentType/">SegmentType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SelectDimensionType/">SelectDimensionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SeriesStatementType/">SeriesStatementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SimilarConceptType/">SimilarConceptType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SizeType/">SizeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SoftwareType/">SoftwareType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SourceObjectType/">SourceObjectType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SourceRepresentationType/">SourceRepresentationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SourceTargetLinkType/">SourceTargetLinkType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SpatialCoordinateType/">SpatialCoordinateType</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SpecificSequenceType</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#item-type-hierarchy">Item Type Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relationships">Relationships</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../StandardKeyValuePairType/">StandardKeyValuePairType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StandardUsedType/">StandardUsedType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StandardWeightType/">StandardWeightType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StatisticalDataLocationType/">StatisticalDataLocationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StatisticalSummaryType/">StatisticalSummaryType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StatisticDoubleType/">StatisticDoubleType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StatisticType/">StatisticType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StimulusMaterialType/">StimulusMaterialType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StratificationRationaleType/">StratificationRationaleType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StratificationType/">StratificationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StringType/">StringType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StructuredCommandType/">StructuredCommandType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StructuredMixedGridResponseDomainType/">StructuredMixedGridResponseDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StructuredMixedResponseDomainType/">StructuredMixedResponseDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StructuredStringType/">StructuredStringType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StudyClassType/">StudyClassType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SummaryStatisticType/">SummaryStatisticType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TargetObjectType/">TargetObjectType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TargetRepresentationType/">TargetRepresentationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TargetSampleSizeType/">TargetSampleSizeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TelephoneType/">TelephoneType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TemporalCoverageType/">TemporalCoverageType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TextContentType/">TextContentType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TextDomainType/">TextDomainType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TextRepresentationBaseType/">TextRepresentationBaseType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TextType/">TextType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TextualType/">TextualType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TimeMethodType/">TimeMethodType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TopicalCoverageType/">TopicalCoverageType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TranslationAidResourceType/">TranslationAidResourceType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TranslationAidType/">TranslationAidType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TranslationMethodType/">TranslationMethodType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TranslationRequirementsType/">TranslationRequirementsType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TranslationType/">TranslationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TranslatorRequirementsType/">TranslatorRequirementsType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnfilteredCategoryStatisticsType/">UnfilteredCategoryStatisticsType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../URIType/">URIType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../URLType/">URLType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../URNType/">URNType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UsageGuideType/">UsageGuideType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UsedType/">UsedType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UserIDType/">UserIDType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ValueType/">ValueType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableAttributeType/">VariableAttributeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableCategoryType/">VariableCategoryType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableItemType/">VariableItemType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableOrderType/">VariableOrderType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableRepresentationType/">VariableRepresentationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableSetType/">VariableSetType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariablesInRecordType/">VariablesInRecordType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableValueReferenceType/">VariableValueReferenceType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VersionDistinctionType/">VersionDistinctionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VersionRationaleType/">VersionRationaleType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VideoType/">VideoType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VocabularyType/">VocabularyType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../XMLPrefixMapType/">XMLPrefixMapType</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">DDI Data Documentation 3.3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../">Docs</a> &raquo;</li>
+        
+          <li><a href="../">All Composite Types</a> &raquo;</li>
+        
+      <li>SpecificSequenceType</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/composite-types/SpecificSequenceType/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="specificsequencetype">
+<h1>SpecificSequenceType<a class="headerlink" href="#specificsequencetype" title="Permalink to this headline">¶</a></h1>
+<p>Describes the ordering of items when not otherwise indicated. There are a set number of values for ItemSequenceType, but also a provision for describing an alternate ordering using a command language.</p>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 4%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ItemSequenceType</p></td>
+<td><p>string</p></td>
+<td><p>0..1</p></td>
+<td><p>Identifies the type of sequence to use. Values include InOrderOfAppearance, Random, Rotate, and Other.</p></td>
+</tr>
+<tr class="row-odd"><td><p>AlternateSequenceType</p></td>
+<td><p><a class="reference internal" href="../CommandCodeType/"><span class="doc">CommandCodeType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Information on the command used to generate an alternative means of determining sequence changes. If used, the ItemSequenceType should be “Other”.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="item-type-hierarchy">
+<h2>Item Type Hierarchy<a class="headerlink" href="#item-type-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>SpecificSequenceType</strong></dt><dd><ul>
+<li><p><a class="reference internal" href="../QuestionSequenceType/"><span class="doc">QuestionSequenceType</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="relationships">
+<h2>Relationships<a class="headerlink" href="#relationships" title="Permalink to this headline">¶</a></h2>
+<p>The following types reference this type.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../item-types/QuestionConstruct/"><span class="doc">QuestionConstruct</span></a></p></li>
+<li><p><a class="reference internal" href="../../item-types/SamplingStage/"><span class="doc">SamplingStage</span></a></p></li>
+<li><p><a class="reference internal" href="../../item-types/Sequence/"><span class="doc">Sequence</span></a></p></li>
+</ul>
+<div class="image docutils container">
+<p><img alt="stub" src="../../_images/SpecificSequenceType.svg" /></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../StandardKeyValuePairType/" class="btn btn-neutral float-right" title="StandardKeyValuePairType" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../SpatialCoordinateType/" class="btn btn-neutral float-left" title="SpatialCoordinateType" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright TODO
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

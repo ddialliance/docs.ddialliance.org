@@ -1,0 +1,67 @@
+QuestionGroup
+-------------
+
+Contains a group of Questions, which may be ordered or hierarchical. In addition to the name, label, and description of the group, the structure allows for defining the type of group using an optional controlled vocabulary, a reference to a defining universe or concept for the group, a subject classification for the group, and a listing of Questions and QuestionGroups in any order.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfQuestionGroup",":doc:`/composite-types/CodeValueType/index`","0..1","A brief textual identification of the group type. Supports the use of an external controlled vocabulary."
+   "QuestionGroupName",":doc:`/composite-types/NameType/index`","0..n","A name for the group. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the question group. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the QuestionGroup. May be expressed in multiple languages and supports the use of structured content."
+   "UniverseReference",":doc:`/item-types/Universe/index`","0..n","Reference to the universe statement describing the persons or other objects to which the contents of this question group pertain."
+   "ConceptReference",":doc:`/item-types/Concept/index`","0..1","Reference to the concept expressed by the Questions in this group."
+   "Subject",":doc:`/composite-types/InternationalCodeValueType/index`","0..n","If subjects are listed for this group, it is strongly recommended that the subjects listed also be found in the TopicalCoverage element for the parent packaging element when this group is included directly or by reference in a module containing a coverage element. Use of subject at the group level allows for associating objects as a type of subject based group or to identify subject characteristics of a reusable group of objects."
+   "Keyword",":doc:`/composite-types/InternationalCodeValueType/index`","0..n","If keywords are listed for this group, it is strongly recommended that the keywords listed also be found in the TopicalCoverage element for the parent packaging element when this group is included directly or by reference in a module containing a coverage element. Use of keyword at the group level allows for associating objects as a type of keyword based group or to identify keyword characteristics of a reusable group of objects."
+   "QuestionItemReference",":doc:`/item-types/QuestionItem/index`","0..1","Reference to constituent QuestionItem."
+   "QuestionGridReference",":doc:`/item-types/QuestionGrid/index`","0..1","Reference to constituent QuestionGrid."
+   "QuestionBlockReference",":doc:`/item-types/QuestionBlock/index`","0..1","Reference to constituent QuestionBlock."
+   "QuestionGroupReference",":doc:`/item-types/QuestionGroup/index`","0..1","Reference to constituent QuestionGroup. This allows for nesting of QuestionGroups."
+   "IsOrdered","boolean","0..1","If set to ""true"" indicates that the content of the group is ordered as it appears within the XML structure."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference_Organization",":doc:`/item-types/Organization/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionResponsibilityReference_Individual",":doc:`/item-types/Individual/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * **QuestionGroup**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/QuestionScheme/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/QuestionGroup.svg
+

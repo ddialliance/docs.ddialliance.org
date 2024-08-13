@@ -1,0 +1,42 @@
+UserIDType
+----------
+
+A user provided identifier that is locally unique within its specific type. The required type attribute points to the local user identification system that defines the values. The optional userIDVersion allows specification of a version number for the identifier. If multiple UserIDs are used they must be differentiated by the type attribute.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfUserID","string","1..1","This is a required attribute containing the local user identification system that maintains and defines the UserID."
+   "UserIDVersion","string","0..1","The UserID may designate the version number of the UserID. This is important in cases where the DDI identification system and the UserID system use different structures to record version numbers or if there is a difference between the DDI version number and the UserID's version number."
+   "TypeOfUserVersion","string","0..1","This is the name of the versioning scheme as defined by the user's system, in cases where the user's system employs more than one versioning scheme. It is specific to the system identified by the typeOfUserID attribute"
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * **UserIDType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Versionable/index`
+* :doc:`/composite-types/IdentifiableType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/UserIDType.svg
+

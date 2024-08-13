@@ -1,0 +1,62 @@
+AccessType
+----------
+
+Describes access to the holdings of the archive or to a specific data product. In addition to the name, label, and description for access. This item includes a confidentiality statement, descriptions of the access permissions required, restrictions to access, citation requirements, depositor requirements, conditions for access, a disclaimer, any time limits for access restrictions, and contact information regarding access.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "AccessTypeName",":doc:`/composite-types/NameType/index`","0..n","A name by which the description of access is known. May be expressed in multiple languages. Repeat the element to express names with different content, for example, different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the description of access. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the access description. May be expressed in multiple languages and supports the use of structured content."
+   "ConfidentialityStatement",":doc:`/composite-types/StructuredStringType/index`","0..1","A statement regarding the confidentiality of the related data or metadata."
+   "AccessPermission",":doc:`/composite-types/FormType/index`","0..n","A link to a form used to provide access to the data or metadata including a statement of the purpose of the form."
+   "Restrictions",":doc:`/composite-types/StructuredStringType/index`","0..1","A statement regarding restrictions to access. May be expressed in multiple languages and supports the use of structured content."
+   "CitationRequirement",":doc:`/composite-types/StructuredStringType/index`","0..1","A statement regarding the citation requirement. May be expressed in multiple languages and supports the use of structured content."
+   "DepositRequirement",":doc:`/composite-types/StructuredStringType/index`","0..1","A statement regarding depositor requirements. May be expressed in multiple languages and supports the use of structured content."
+   "AccessConditions",":doc:`/composite-types/StructuredStringType/index`","0..1","A statement regarding conditions for access. May be expressed in multiple languages and supports the use of structured content."
+   "Disclaimer",":doc:`/composite-types/StructuredStringType/index`","0..1","A disclaimer regarding the liability of the data producers or providers. May be expressed in multiple languages and supports the use of structured content."
+   "AccessRestrictionDate",":doc:`/composite-types/AccessRestrictionDateType/index`","0..1","The date or date range of the access restriction for all or portions of the data. Includes a reason for the access restriction as well as the user group to which the restriction applies."
+   "ContactOrganizationReference_Organization",":doc:`/item-types/Organization/index`","0..n","A reference to an organization or individual to contact for further information regarding the metadata or data."
+   "ContactOrganizationReference_Individual",":doc:`/item-types/Individual/index`","0..n","A reference to an organization or individual to contact for further information regarding the metadata or data."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **AccessType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ArchiveSpecificType/index`
+* :doc:`/composite-types/CollectionType/index`
+* :doc:`/composite-types/ItemType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AccessType.svg
+

@@ -1,0 +1,47 @@
+CountryType
+-----------
+
+An unspecified identification of a Country. When using ISO 3166 code (2-letter, 3-letter, or numeric) use the specific CountryCode substitution element. Allows for an optional specification of language and effective date.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Lang","language","0..1","Indicates the language of content. Note that xml:lang allows for a simple 2 or 3 character language code or a language code extended by a country code , for example en-au for English as used in Australia."
+
+Properties Inherited from CountryCodeType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "EffectiveDate","dateTime","0..1","If it is important to specify the date that this code is effective in order to accurately capture a name or similar change, specify that here."
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * :doc:`/composite-types/CountryCodeType/index`
+        * **CountryType**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CountryType.svg
+

@@ -1,0 +1,52 @@
+InternationalStringType
+-----------------------
+
+Packaging structure for multiple language versions of the same string content. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages. The language designation goes on the individual String.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "String",":doc:`/composite-types/StringType/index`","0..n","A non-formatted string of text with an attribute that designates the language of the text. Repeat this object to express the same content in another language."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **InternationalStringType**
+    * :doc:`/composite-types/BibliographicNameType/index`
+    * :doc:`/composite-types/NameType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/StudyUnit/index`
+* :doc:`/item-types/SubGroup/index`
+* :doc:`/composite-types/BasedOnObjectType/index`
+* :doc:`/composite-types/CitationType/index`
+* :doc:`/composite-types/CollectionType/index`
+* :doc:`/composite-types/CommandFileType/index`
+* :doc:`/composite-types/DataFileIdentificationType/index`
+* :doc:`/composite-types/FormType/index`
+* :doc:`/composite-types/GeographicLevelType/index`
+* :doc:`/composite-types/IndividualNameType/index`
+* :doc:`/composite-types/ItemType/index`
+* :doc:`/composite-types/NoteType/index`
+* :doc:`/composite-types/OrganizationNameType/index`
+* :doc:`/composite-types/PrimaryComponentLevelType/index`
+* :doc:`/composite-types/UsedType/index`
+* :doc:`/composite-types/VersionRationaleType/index`
+* :doc:`/composite-types/VocabularyType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/InternationalStringType.svg
+

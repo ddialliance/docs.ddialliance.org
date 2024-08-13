@@ -1,0 +1,32 @@
+ModeOfPretestCollectionType
+---------------------------
+
+Describes available aids for translation typed by a controlled vocabulary and a description.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfPretestCollectionMode",":doc:`/composite-types/CodeValueType/index`","0..1","Specifies the type of data collection mode used (i.e. interview, self-completed form, observation). Supports the use of a controlled vocabulary."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","Description of mode of data collection for the pretest. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "MethodOfDelivery",":doc:`/composite-types/CodeValueType/index`","0..1","Method of delivery for the pretest mode (i.e., mail, hand-delivery, etc.). Supports the use of a controlled vocabulary."
+   "IsPrimary","boolean","0..1","A value of true indicates that this is the primary mode of data collection."
+   "IsAudioFormatAvailable","boolean","0..1","A value of true indicates that an audio format of the question text is available."
+   "IsRecordedInterview","boolean","0..1","A value of true indicates that the interview is recorded."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/PretestAdministrationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ModeOfPretestCollectionType.svg
+

@@ -1,0 +1,50 @@
+Invalid
+-------
+
+Describes an invalid command. A command is invalid if it uses incorrect syntax, or is otherwise not allowed by the executing system.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProblemDescription","string","1..1","A message describing the issue with the invalid command."
+
+Properties Inherited from InformBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+Properties Inherited from CommandBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","0..n","Information about the source of the command."
+   "MessageText","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/CommandBase/index`
+    * :doc:`/composite-types/InformBase/index`
+        * **Invalid**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Invalid.svg
+

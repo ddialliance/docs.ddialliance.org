@@ -1,0 +1,35 @@
+SoftwareType
+------------
+
+Describes a specific software package, which may be commercially available or custom-made.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SoftwareName",":doc:`/composite-types/NameType/index`","0..n","The name of the software package, including its producer."
+   "SoftwarePackage",":doc:`/composite-types/CodeValueType/index`","0..1","A coded value from a controlled vocabulary, describing the software package. The DDI Alliance has provided a controlled vocabulary (SoftwarePackage) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "SoftwareVersion","string","0..1","The version of the software package. Defaults to '1.0'."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the software. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "Date",":doc:`/composite-types/DateType/index`","0..1","Supported date of the software package with, at minimum, a release date if known."
+   "Function",":doc:`/composite-types/CodeValueType/index`","0..n","Identifies the functions handled by this software. Repeat for multiple functions. It may be advisable to note only those functions used in the specific usage of the software."
+   "Lang","language","0..1","Language (human language) of the software package."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Maintainable/index`
+* :doc:`/item-types/Methodology/index`
+* :doc:`/composite-types/GrossFileStructureType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SoftwareType.svg
+

@@ -1,0 +1,28 @@
+FilterVariableCategoryType
+--------------------------
+
+Category statistics for the variable when the filter variable contains the specified value.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "FilterCategoryValue","string","0..1","Provides the specific value of the variable being used as a filter. References a specific Code within the variable if using a CodeRepresentation. May alternately provide the Value of the Category."
+   "VariableCategory",":doc:`/composite-types/VariableCategoryType/index`","0..n","Category statistics for the specified value of the variable (when the filter variable contains the specified value). Repeat for each value of the variable."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/FilteredCategoryStatisticsType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/FilterVariableCategoryType.svg
+

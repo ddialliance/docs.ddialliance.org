@@ -1,0 +1,54 @@
+Message
+-------
+
+Inserts message text in the SDTL file.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Severity","string","0..1","Information, Warning, Error"
+   "LineNumber","int","0..1","The line number of the source that the messages is related to, if relevant."
+   "CharacterPosition","int","0..1","The character position of the source that the message is related to, if relevant."
+
+Properties Inherited from InformBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+Properties Inherited from CommandBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","0..n","Information about the source of the command."
+   "MessageText","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/CommandBase/index`
+    * :doc:`/composite-types/InformBase/index`
+        * **Message**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Program/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Message.svg
+

@@ -1,0 +1,30 @@
+CohortType
+----------
+
+Defines the included values of a dimension by means of individual value references or by defining a range of values to include. Allows the included values to be identified by reference to the Code, the Category used by the Code, or the Value of the Code (which by definition should be unique). The dimension is identified by its rank value.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CategoryReference",":doc:`/item-types/Category/index`","0..n","Reference to the Category represented by the Value of the Code assigned in a CodeList. Repeat for including multiple values."
+   "CodeReference",":doc:`/composite-types/CodeType/index`","0..n","Reference to the Code within the CodeList used by the variable describing the dimension. Repeat for including multiple values."
+   "Range",":doc:`/composite-types/RangeType/index`","0..n","Use when multiple values are included. This uses the unique Value provided for the Code as a means of identification. Provides the range of Values for this dimension that are within the area being defined. Repeat for non-contiguous values."
+   "Rank","nonNegativeInteger","1..1","Identify the dimension being described by its rank value within the NCube description."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CoordinateRegionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CohortType.svg
+

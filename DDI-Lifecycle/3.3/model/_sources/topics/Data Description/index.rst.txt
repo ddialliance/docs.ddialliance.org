@@ -1,0 +1,27 @@
+Data Description
+----------------
+
+
+
+Item Types
+**********
+
+DDI has 13 item types related to Data Description.
+
+.. toctree::
+   :maxdepth: 1
+
+   ../../item-types/ConceptualVariable/index
+   ../../item-types/RepresentedVariable/index
+   ../../item-types/Variable/index
+   ../../item-types/PhysicalInstance/index
+   ../../item-types/DataRelationship/index
+   ../../item-types/ManagedDateTimeRepresentation/index
+   ../../item-types/ManagedMissingValuesRepresentation/index
+   ../../item-types/ManagedNumericRepresentation/index
+   ../../item-types/ManagedScaleRepresentation/index
+   ../../item-types/ManagedTextRepresentation/index
+   ../../item-types/NCube/index
+   ../../item-types/VariableStatistics/index
+   ../../item-types/Weighting/index
+

@@ -1,0 +1,28 @@
+OriginType
+----------
+
+A citation or URI for the source of the data. Note that this is an external reference, and should not be used to point to DDI descriptions of the data, or to DDI-encoded data.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Citation",":doc:`/composite-types/CitationType/index`","0..1","Citation for the data source."
+   "OriginLocation","anyURI","0..1","A URN or URL for the data source."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/DataSourceType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/OriginType.svg
+

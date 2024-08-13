@@ -1,0 +1,28 @@
+RecordSetType
+-------------
+
+Storage format arranged record by record. A RecordSet requires a list of variables to appear in a specified order. Provides a consistent order for the variables and a set of values for each record displayed in variable order.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableOrder",":doc:`/composite-types/VariableOrderType/index`","0..1","Provides the sequence of variables representing the order of storage within each record."
+   "Record",":doc:`/composite-types/RecordType/index`","0..n","For each record, contains the values for the items in order by the specified variable sequence."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DataSet/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RecordSetType.svg
+

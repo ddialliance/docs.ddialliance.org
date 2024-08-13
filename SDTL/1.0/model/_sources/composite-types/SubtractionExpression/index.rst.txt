@@ -1,0 +1,38 @@
+SubtractionExpression
+---------------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **SubtractionExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SubtractionExpression.svg
+
+Properties
+~~~~~~~~~~
+
+Operands
+********
+
+Type
+    :doc:`/composite-types/ExpressionBase/index`
+Cardinality
+    0..2
+
+TODO
+
+
+

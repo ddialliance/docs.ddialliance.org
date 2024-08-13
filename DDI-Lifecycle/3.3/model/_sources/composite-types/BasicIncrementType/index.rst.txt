@@ -1,0 +1,24 @@
+BasicIncrementType
+------------------
+
+Describes the start, end, and increment value for an incremental string (numeric, character, or length).
+
+Properties
+~~~~~~~~~~
+
+This type contains no properties.
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LevelType/index`
+* :doc:`/composite-types/ScaleDimensionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/BasicIncrementType.svg
+

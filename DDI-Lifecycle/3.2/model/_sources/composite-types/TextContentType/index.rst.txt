@@ -1,0 +1,35 @@
+TextContentType
+---------------
+
+Abstract type existing as the head of a substitution group. May be replaced by any valid member of the substitution group TextContent. Provides the common element Description to all members using TextContent as an extension base.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the text segment. May be expressed in multiple languages and supports the use of structured content."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **TextContentType**
+    * :doc:`/composite-types/ConditionalTextType/index`
+    * :doc:`/composite-types/LiteralTextType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/DynamicTextType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TextContentType.svg
+

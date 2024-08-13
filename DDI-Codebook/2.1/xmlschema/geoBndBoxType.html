@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="section1.html">1.0 Document Description</a></li><li><a href="section2.html">2.0 Study Description</a></li><li><a href="section3.html">3.0 File Description</a></li><li><a href="section4.html">4.0 Variable Description</a></li><li><a href="section5.html">5.0 Other Material</a></li><li><a href="sectionall.html">Single file for printing</a> (slow)</li></ul><h2>&lt;geoBndBox&gt;&#160;Geographic Bounding Box</h2><ul><li>Optional</li><li>Not Repeatable</li><li>Attributes: <a href="codeBook.html">ID, xml:lang, source</a></li></ul><div style="padding-left:25px;"><p><em>Description:</em>&#160;The fundamental geometric description for any
+                        dataset that models geography. GeoBndBox is the minimum box, defined by west
+                        and east longitudes and north and south latitudes, that includes the largest
+                        geographic extent of the dataset's geographic coverage. This element is used
+                        in the first pass of a coordinate-based search. If the boundPoly element is
+                        included, then the geoBndBox element MUST be included.</p></div><div style="padding-left:25px;"><p><em>Example(s):</em></p><pre>&lt;geogCover&gt;Nevada State&lt;/geogCover&gt;
+&lt;geoBndBox&gt;
+  &lt;westBL&gt;-120.005729004&lt;/westBL&gt;
+  &lt;eastBL&gt;-114.039663&lt;/eastBL&gt;
+  &lt;southBL&gt;35.00208499998&lt;/southBL&gt;
+  &lt;northBL&gt;42.002207&lt;/northBL&gt;
+&lt;/geoBndBox&gt;
+
+ &lt;geogCover&gt;Norway&lt;/geogCover&gt;
+&lt;geoBndBox&gt;
+  &lt;westBL&gt;4.789583&lt;/westBL&gt;
+  &lt;eastBL&gt;33.637497&lt;/eastBL&gt;
+  &lt;southBL&gt;57.987915&lt;/southBL&gt;
+  &lt;northBL&gt;80.76416&lt;/northBL&gt;
+&lt;/geoBndBox&gt;
+                    </pre></div></body></html>

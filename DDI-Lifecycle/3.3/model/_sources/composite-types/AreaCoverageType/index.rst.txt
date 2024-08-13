@@ -1,0 +1,29 @@
+AreaCoverageType
+----------------
+
+Use to specify the area of land, water, total or other area coverage in terms of square miles/kilometers or other measure.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfArea",":doc:`/composite-types/CodeValueType/index`","0..1","Specify the type of area covered i.e. Total, Land, Water, etc. Supports the use of an external controlled vocabulary."
+   "MeasurementUnit",":doc:`/composite-types/CodeValueType/index`","0..1","Records the measurement unit, for example, Square Kilometer, Square Mile. Supports the use of an external controlled vocabulary."
+   "AreaMeasure","decimal","0..1","The area measure expressed as a decimal for the measurement unit designated."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/GeographicBoundaryType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AreaCoverageType.svg
+

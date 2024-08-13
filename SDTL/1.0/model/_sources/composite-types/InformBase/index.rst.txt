@@ -1,0 +1,46 @@
+InformBase
+----------
+
+InformBase includes information elements that do not transform data.
+
+
+Properties
+~~~~~~~~~~
+
+This type contains no properties.
+
+Properties Inherited from CommandBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","0..n","Information about the source of the command."
+   "MessageText","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/CommandBase/index`
+    * **InformBase**
+        * :doc:`/composite-types/Analysis/index`
+        * :doc:`/composite-types/Comment/index`
+        * :doc:`/composite-types/Invalid/index`
+        * :doc:`/composite-types/Message/index`
+        * :doc:`/composite-types/NoTransformOp/index`
+        * :doc:`/composite-types/Unsupported/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/InformBase.svg
+

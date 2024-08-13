@@ -1,0 +1,38 @@
+Delete
+------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/TransformBase/index`
+    * **Delete**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Delete.svg
+
+Properties
+~~~~~~~~~~
+
+Variables
+*********
+
+Type
+    :doc:`/composite-types/VariableReferenceBase/index`
+Cardinality
+    0..n
+
+The variables to be deleted.
+
+
+

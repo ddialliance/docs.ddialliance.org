@@ -1,0 +1,48 @@
+ExponentExpression
+------------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **ExponentExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ExponentExpression.svg
+
+Properties
+~~~~~~~~~~
+
+Base
+****
+
+Type
+    :doc:`/composite-types/ExpressionBase/index`
+Cardinality
+    0..1
+
+TODO
+
+Exponent
+********
+
+Type
+    :doc:`/composite-types/ExpressionBase/index`
+Cardinality
+    0..1
+
+TODO
+
+
+

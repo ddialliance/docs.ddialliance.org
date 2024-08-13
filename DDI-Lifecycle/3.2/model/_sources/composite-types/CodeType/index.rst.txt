@@ -1,0 +1,57 @@
+CodeType
+--------
+
+A structure that links a unique value of a code to a specified category and provides information as to the location of the code within a hierarchy, whether it is discrete, represents a total for the CodeList contents, and if its sub-elements represent a comprehensive coverage of the code. The Code is identifiable, but the value within the code must also be unique within the CodeList.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CategoryReference",":doc:`/item-types/Category/index`","0..1","Reference to the category that the code value represents."
+   "Value",":doc:`/composite-types/ValueType/index`","0..1","The value of the code. In a microdata file this would be the value found in the data file. If used as the description of an NCube dimension the value provides the coordinate value for that dimension. Note that r:Value has an attribute xml:space with the default value of ""default"". If white space is critical to the understanding of this code value (such as critical leading or tailing spaces, or multiple spaces within the code) change the value of xml:space to ""preserve""."
+   "Code",":doc:`/composite-types/CodeType/index`","0..n","Allows for nesting of codes."
+   "IsDiscrete","boolean","0..1","Indicates whether the code is discrete (that is, placed at the lowest level in a hierarchy and has no children)."
+   "LevelNumber","int","0..1","Level number of the code."
+   "IsComprehensive","string","0..1","Used in hierarchical structures at upper level values to indicate whether or not the subelements of the code are comprehensive in coverage. Not applicable if attribute isDiscrete is set to ""true""."
+   "IsTotal","boolean","0..1","This expresses a total whether or not isComprehensive is true. If isComprehensive = ""true"" then if addition is supported by the measure type, the contained categories can be aggregated to calculate the total. If isComprehensive = ""false"" or ""unknown"" the content of this field cannot be calculated if the value is not provided in the data."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **CodeType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/CodeList/index`
+* :doc:`/composite-types/AttachmentLocationType/index`
+* :doc:`/composite-types/CategoryValueType/index`
+* :doc:`/composite-types/CohortType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CodeType.svg
+

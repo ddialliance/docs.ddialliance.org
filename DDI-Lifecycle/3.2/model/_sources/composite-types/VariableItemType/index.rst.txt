@@ -1,0 +1,28 @@
+VariableItemType
+----------------
+
+The set of values associated with a single variable (one for each record in storage order of records).
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableReference",":doc:`/item-types/Variable/index`","0..1","Reference to the variable associated with the values given."
+   "Value",":doc:`/composite-types/ValueType/index`","0..n","Value associated with the referenced variable in record storage order."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/VariableSetType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VariableItemType.svg
+

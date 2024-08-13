@@ -1,0 +1,39 @@
+StringRangeExpression
+---------------------
+
+Defines a range of string values, such as "A to N".
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RangeStart","string","1..1","Starting value for range"
+   "RangeEnd","string","1..1","Ending value for range"
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **StringRangeExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/StringRangeExpression.svg
+

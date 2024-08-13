@@ -1,0 +1,29 @@
+PointType
+---------
+
+A geographic point consisting of an X and Y coordinate. Each coordinate value is expressed separately providing its value and format.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "XCoordinate",":doc:`/composite-types/SpatialCoordinateType/index`","0..1","An X coordinate (latitudinal equivalent) value and format expressed using the Spatial Coordinate structure."
+   "YCoordinate",":doc:`/composite-types/SpatialCoordinateType/index`","0..1","A Y coordinate (longitudinal equivalent) value and format expressed using the Spatial Coordinate structure."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/AddressType/index`
+* :doc:`/composite-types/PolygonType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/PointType.svg
+

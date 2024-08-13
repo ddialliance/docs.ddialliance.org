@@ -1,0 +1,57 @@
+RepresentationType
+------------------
+
+Abstract type for the head of a substitution group for a variable representation or a question response domain. If specific values are used to denote missing values, these can be indicated as a space-delimited list in the missingValue attribute. If the missing value is indicated by a blank, this should be indicated by setting the value of blankIsMissingValue to true.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RecommendedDataType",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides the recommended treatment of the data within an application. The value should come from a controlled vocabulary - recommended values include the set found in W3C XML Schema Part 2, but excluding string sub-types, QNAME, and NOTATION."
+   "GenericOutputFormat",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides a recommended generic treatment of the data for display by an application. The value should come from a controlled vocabulary."
+   "MissingValue","string","0..1","List the values used to represent missing data in a space delimited array. Use of MissingValuesReference is preferred. If this content does not match the values provided in the MissingValuesReference, the content of the MissingValuesReference overrides the content of this attribute."
+   "BlankIsMissingValue","boolean","0..1","When value is true a blank or empty variable content should be treated as a missing value.  Use of MissingValuesReference is preferred."
+   "ClassificationLevel","string","0..1","Indicates the type of relationship, nominal, ordinal, interval, ratio, or continuous. Use where appropriate for the representation type."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **RepresentationType**
+    * :doc:`/composite-types/CategoryRepresentationBaseType/index`
+    * :doc:`/composite-types/CodeRepresentationBaseType/index`
+    * :doc:`/composite-types/DateTimeRepresentationBaseType/index`
+    * :doc:`/composite-types/DistributionRepresentationBaseType/index`
+    * :doc:`/composite-types/ExternalCategoryRepresentationBaseType/index`
+    * :doc:`/composite-types/GeographicLocationCodeRepresentationBaseType/index`
+    * :doc:`/composite-types/GeographicRepresentationBaseType/index`
+    * :doc:`/composite-types/GeographicStructureCodeRepresentationBaseType/index`
+    * :doc:`/composite-types/LocationRepresentationBaseType/index`
+    * :doc:`/composite-types/NominalRepresentationBaseType/index`
+    * :doc:`/composite-types/NumericRepresentationBaseType/index`
+    * :doc:`/composite-types/RankingRepresentationBaseType/index`
+    * :doc:`/composite-types/ScaleRepresentationBaseType/index`
+    * :doc:`/composite-types/TextRepresentationBaseType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/QuestionGrid/index`
+* :doc:`/item-types/QuestionItem/index`
+* :doc:`/item-types/RepresentedVariable/index`
+* :doc:`/composite-types/GridResponseDomainType/index`
+* :doc:`/composite-types/ParameterType/index`
+* :doc:`/composite-types/ResponseDomainInMixedType/index`
+* :doc:`/composite-types/VariableRepresentationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RepresentationType.svg
+

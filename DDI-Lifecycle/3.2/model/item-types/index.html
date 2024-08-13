@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>All Item Types &mdash; DDI Data Documentation 3.2 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="BaseLogicalProduct" href="BaseLogicalProduct/" />
+    <link rel="prev" title="QualityStandard" href="QualityStandard/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> DDI Data Documentation 3.2
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../topics/Study/">Study</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/Data Capture/">Data Capture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/Data Description/">Data Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/Foundational/">Foundational</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/Non-Packaging Items/">Non-Packaging Items</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/All Content Items/">All Content Items</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">All Item Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Archive/">Archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BaseLogicalProduct/">BaseLogicalProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BaseRecordLayout/">BaseRecordLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Category/">Category</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CategoryGroup/">CategoryGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CategoryScheme/">CategoryScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CodeList/">CodeList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CodeListGroup/">CodeListGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CodeListScheme/">CodeListScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Comparison/">Comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ComputationItem/">ComputationItem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Concept/">Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ConceptGroup/">ConceptGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ConceptScheme/">ConceptScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ConceptualComponent/">ConceptualComponent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ConceptualVariable/">ConceptualVariable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ConceptualVariableGroup/">ConceptualVariableGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ConceptualVariableScheme/">ConceptualVariableScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ControlConstruct/">ControlConstruct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ControlConstructGroup/">ControlConstructGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ControlConstructScheme/">ControlConstructScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DataCollection/">DataCollection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DataRelationship/">DataRelationship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DataSet/">DataSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DDIInstance/">DDIInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DDIProfile/">DDIProfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralInstruction/">GeneralInstruction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GenerationInstruction/">GenerationInstruction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GenericMap/">GenericMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeographicLocation/">GeographicLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeographicLocationGroup/">GeographicLocationGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeographicLocationScheme/">GeographicLocationScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeographicStructure/">GeographicStructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeographicStructureGroup/">GeographicStructureGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeographicStructureScheme/">GeographicStructureScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Group/">Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IfThenElse/">IfThenElse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Individual/">Individual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Instruction/">Instruction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InstructionGroup/">InstructionGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Instrument/">Instrument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InstrumentGroup/">InstrumentGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InstrumentScheme/">InstrumentScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InterviewerInstructionScheme/">InterviewerInstructionScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LocalHoldingPackage/">LocalHoldingPackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LogicalProduct/">LogicalProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Loop/">Loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Maintainable/">Maintainable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ManagedDateTimeRepresentation/">ManagedDateTimeRepresentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ManagedMissingValuesRepresentation/">ManagedMissingValuesRepresentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ManagedNumericRepresentation/">ManagedNumericRepresentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ManagedRepresentationGroup/">ManagedRepresentationGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ManagedRepresentationScheme/">ManagedRepresentationScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ManagedScaleRepresentation/">ManagedScaleRepresentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ManagedTextRepresentation/">ManagedTextRepresentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Methodology/">Methodology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NCube/">NCube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NCubeGroup/">NCubeGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NCubeScheme/">NCubeScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Organization/">Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OrganizationGroup/">OrganizationGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OrganizationScheme/">OrganizationScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PhysicalDataProduct/">PhysicalDataProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PhysicalInstance/">PhysicalInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PhysicalStructure/">PhysicalStructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PhysicalStructureGroup/">PhysicalStructureGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PhysicalStructureScheme/">PhysicalStructureScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProcessingEvent/">ProcessingEvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProcessingEventGroup/">ProcessingEventGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProcessingEventScheme/">ProcessingEventScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProcessingInstructionGroup/">ProcessingInstructionGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProcessingInstructionScheme/">ProcessingInstructionScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QualityStandard/">QualityStandard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QualityStatement/">QualityStatement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QualityStatementGroup/">QualityStatementGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QualityStatementScheme/">QualityStatementScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionBlock/">QuestionBlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionConstruct/">QuestionConstruct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionGrid/">QuestionGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionGroup/">QuestionGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionItem/">QuestionItem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionScheme/">QuestionScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RecordLayout/">RecordLayout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RecordLayoutGroup/">RecordLayoutGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RecordLayoutScheme/">RecordLayoutScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Relation/">Relation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RepeatUntil/">RepeatUntil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RepeatWhile/">RepeatWhile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RepresentationMap/">RepresentationMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RepresentedVariable/">RepresentedVariable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RepresentedVariableGroup/">RepresentedVariableGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RepresentedVariableScheme/">RepresentedVariableScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ResourcePackage/">ResourcePackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sequence/">Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StatementItem/">StatementItem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StudyUnit/">StudyUnit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SubGroup/">SubGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SubUniverseClass/">SubUniverseClass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Universe/">Universe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UniverseGroup/">UniverseGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UniverseScheme/">UniverseScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Variable/">Variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VariableGroup/">VariableGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VariableScheme/">VariableScheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VariableStatistics/">VariableStatistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Versionable/">Versionable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Weighting/">Weighting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite-types/">All Composite Types</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">DDI Data Documentation 3.2</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../">Docs</a> &raquo;</li>
+        
+      <li>All Item Types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/item-types/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="all-item-types">
+<h1>All Item Types<a class="headerlink" href="#all-item-types" title="Permalink to this headline">¶</a></h1>
+<p>DDI32 has 107 item types.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Archive/">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BaseLogicalProduct/">BaseLogicalProduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BaseRecordLayout/">BaseRecordLayout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Category/">Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CategoryGroup/">CategoryGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CategoryScheme/">CategoryScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CodeList/">CodeList</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CodeListGroup/">CodeListGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CodeListScheme/">CodeListScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Comparison/">Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ComputationItem/">ComputationItem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Concept/">Concept</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ConceptGroup/">ConceptGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ConceptScheme/">ConceptScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ConceptualComponent/">ConceptualComponent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ConceptualVariable/">ConceptualVariable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ConceptualVariableGroup/">ConceptualVariableGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ConceptualVariableScheme/">ConceptualVariableScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ControlConstruct/">ControlConstruct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ControlConstructGroup/">ControlConstructGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ControlConstructScheme/">ControlConstructScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DataCollection/">DataCollection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DataRelationship/">DataRelationship</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DataSet/">DataSet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DDIInstance/">DDIInstance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DDIProfile/">DDIProfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GeneralInstruction/">GeneralInstruction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GenerationInstruction/">GenerationInstruction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GenericMap/">GenericMap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GeographicLocation/">GeographicLocation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GeographicLocationGroup/">GeographicLocationGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GeographicLocationScheme/">GeographicLocationScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GeographicStructure/">GeographicStructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GeographicStructureGroup/">GeographicStructureGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GeographicStructureScheme/">GeographicStructureScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Group/">Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IfThenElse/">IfThenElse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Individual/">Individual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Instruction/">Instruction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstructionGroup/">InstructionGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Instrument/">Instrument</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstrumentGroup/">InstrumentGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstrumentScheme/">InstrumentScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InterviewerInstructionScheme/">InterviewerInstructionScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LocalHoldingPackage/">LocalHoldingPackage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LogicalProduct/">LogicalProduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Loop/">Loop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Maintainable/">Maintainable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ManagedDateTimeRepresentation/">ManagedDateTimeRepresentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ManagedMissingValuesRepresentation/">ManagedMissingValuesRepresentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ManagedNumericRepresentation/">ManagedNumericRepresentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ManagedRepresentationGroup/">ManagedRepresentationGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ManagedRepresentationScheme/">ManagedRepresentationScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ManagedScaleRepresentation/">ManagedScaleRepresentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ManagedTextRepresentation/">ManagedTextRepresentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Methodology/">Methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NCube/">NCube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NCubeGroup/">NCubeGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NCubeScheme/">NCubeScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Organization/">Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OrganizationGroup/">OrganizationGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OrganizationScheme/">OrganizationScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PhysicalDataProduct/">PhysicalDataProduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PhysicalInstance/">PhysicalInstance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PhysicalStructure/">PhysicalStructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PhysicalStructureGroup/">PhysicalStructureGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PhysicalStructureScheme/">PhysicalStructureScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProcessingEvent/">ProcessingEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProcessingEventGroup/">ProcessingEventGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProcessingEventScheme/">ProcessingEventScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProcessingInstructionGroup/">ProcessingInstructionGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProcessingInstructionScheme/">ProcessingInstructionScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QualityStandard/">QualityStandard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QualityStatement/">QualityStatement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QualityStatementGroup/">QualityStatementGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QualityStatementScheme/">QualityStatementScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QuestionBlock/">QuestionBlock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QuestionConstruct/">QuestionConstruct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QuestionGrid/">QuestionGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QuestionGroup/">QuestionGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QuestionItem/">QuestionItem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QuestionScheme/">QuestionScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecordLayout/">RecordLayout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecordLayoutGroup/">RecordLayoutGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecordLayoutScheme/">RecordLayoutScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Relation/">Relation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RepeatUntil/">RepeatUntil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RepeatWhile/">RepeatWhile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RepresentationMap/">RepresentationMap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RepresentedVariable/">RepresentedVariable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RepresentedVariableGroup/">RepresentedVariableGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RepresentedVariableScheme/">RepresentedVariableScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ResourcePackage/">ResourcePackage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sequence/">Sequence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StatementItem/">StatementItem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StudyUnit/">StudyUnit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SubGroup/">SubGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SubUniverseClass/">SubUniverseClass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Universe/">Universe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UniverseGroup/">UniverseGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UniverseScheme/">UniverseScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Variable/">Variable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VariableGroup/">VariableGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VariableScheme/">VariableScheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VariableStatistics/">VariableStatistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Versionable/">Versionable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Weighting/">Weighting</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BaseLogicalProduct/" class="btn btn-neutral float-right" title="BaseLogicalProduct" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="QualityStandard/" class="btn btn-neutral float-left" title="QualityStandard" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright TODO
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

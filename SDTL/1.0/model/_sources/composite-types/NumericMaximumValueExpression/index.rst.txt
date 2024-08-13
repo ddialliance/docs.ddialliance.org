@@ -1,0 +1,34 @@
+NumericMaximumValueExpression
+-----------------------------
+
+Represents the largest numeric value supported by a system.
+
+
+Properties
+~~~~~~~~~~
+
+This type contains no properties.
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **NumericMaximumValueExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/NumericMaximumValueExpression.svg
+

@@ -1,0 +1,31 @@
+ExternalAidType
+---------------
+
+Description and link to the External Aid using the DDI Other Material structure.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..1","Description and link to the ExternalAid using the DDI Other Material structure."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ControlConstruct/index`
+* :doc:`/item-types/MeasurementItem/index`
+* :doc:`/item-types/QuestionBlock/index`
+* :doc:`/item-types/QuestionGrid/index`
+* :doc:`/item-types/QuestionItem/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ExternalAidType.svg
+

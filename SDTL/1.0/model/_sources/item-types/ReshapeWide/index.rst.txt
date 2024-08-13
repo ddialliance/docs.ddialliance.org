@@ -1,0 +1,58 @@
+ReshapeWide
+-----------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/TransformBase/index`
+    * **ReshapeWide**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ReshapeWide.svg
+
+Properties
+~~~~~~~~~~
+
+KeepItems
+*********
+
+Type
+    string
+Cardinality
+    0..n
+
+TODO
+
+IdVar
+*****
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+IndexVar
+********
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="section1.html">1.0 Document Description</a></li><li><a href="section2.html">2.0 Study Description</a></li><li><a href="section3.html">3.0 File Description</a></li><li><a href="section4.html">4.0 Variable Description</a></li><li><a href="section5.html">5.0 Other Material</a></li><li><a href="sectionall.html">Single file for printing</a> (slow)</li></ul><h2>&lt;nCubeGrp&gt;&#160;nCube Group</h2><ul><li>Optional</li><li>Repeatable</li><li>Attributes: <a href="codeBook.html">ID, xml:lang, source</a>, type, nCube, nCubeGrp, name, sdatrefs, methrefs, pubrefs, access</li></ul><div style="padding-left:25px;"><p><em>Description:</em></p>
+                        <p>A group of nCubes that may share a common subject, arise from the
+                            interpretation of a single question, or are linked by some other factor.
+                            This element makes it possible to identify all nCubes derived from a
+                            simple presentation table, and to provide the original table title and
+                            universe, as well as reference the source. Specific nesting patterns can
+                            be described using the attribute nCubeGrp. </p>
+                        <p>nCube groups are also created this way in order to permit nCubes to
+                            belong to multiple groups, including multiple subject groups, without
+                            causing overlapping groups. nCubes that are linked by the same use of
+                            the same variable need not be identified by an nCubeGrp element because
+                            they are already linked by a common variable element. Note that as a
+                            result of the strict sequencing required by XML, all nCube Groups must
+                            be marked up before the Variable element is opened. That is, the mark-up
+                            author cannot mark up a nCube Group, then mark up its constituent
+                            nCubes, then mark up another nCube Group. </p>
+                        <p>The "type" attribute refers to the general type of grouping of the
+                            nCubes. Specific nCube Groups, included within the 'type' attribute,
+                            are: </p>
+                        <p>Display: nCubes that are part of the same presentation table. </p>
+                        <p>Subject: nCubes that address a common topic or subject, e.g., income,
+                            poverty, children. </p>
+                        <p>Iteration: nCubes that appear in different sections of the data file
+                            measuring a common subject in different ways, e.g., using different
+                            universes, units of measurement, etc. </p>
+                        <p>Pragmatic: An nCube group without shared properties. </p>
+                        <p>Record: nCubes from a single record in a hierarchical file. </p>
+                        <p>File: nCube from a single file in a multifile study.</p>
+                        <p>Other: nCubes that do not fit easily into any of the categories
+                            listed above, e.g., a group of nCubes whose documentation is in another
+                            language. </p>
+                        <p>The "nCube" attribute is used to reference all the IDs of the nCubes
+                            belonging to the group. </p>
+                        <p>The "nCubeGrp" attribute is used to reference all the subsidiary
+                            nCube groups which nest underneath the current nCubeGrp. This allows for
+                            encoding of a hierarchical structure of nCube groups. </p>
+                        <p>The attribute "name" provides a name, or short label, for the group. </p>
+                        <p>The "sdatrefs" are summary data description references that record
+                            the ID values of all elements within the summary data description
+                            section of the Study Description that might apply to the group. These
+                            elements include: time period covered, date of collection, nation or
+                            country, geographic coverage, geographic unit, unit of analysis,
+                            universe, and kind of data. </p>
+                        <p>The "methrefs" are methodology and processing references which record
+                            the ID values of all elements within the study methodology and
+                            processing section of the Study Description which might apply to the
+                            group. These elements include information on data collection and data
+                            appraisal (e.g., sampling, sources, weighting, data cleaning, response
+                            rates, and sampling error estimates). </p>
+                        <p>The "pubrefs" attribute provides a link to publication/citation
+                            references and records the ID values of all citations elements within
+                            Section 2.5 or Section 5.0 that pertain to this nCube group. </p>
+                        <p>The "access" attribute records the ID values of all elements in
+                            Section 2.4 of the document that describe access conditions for this
+                            nCube group. </p>
+                    </div></body></html>

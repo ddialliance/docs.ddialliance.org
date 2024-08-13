@@ -1,0 +1,38 @@
+TimeDurationConstant
+--------------------
+
+A time duration constant expressed in ISO 8601 format.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TimeDurationValue","duration","1..1","A duration of time in ISO 8601 format"
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **TimeDurationConstant**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TimeDurationConstant.svg
+

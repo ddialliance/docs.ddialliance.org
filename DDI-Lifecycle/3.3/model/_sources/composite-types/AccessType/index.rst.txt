@@ -1,0 +1,63 @@
+AccessType
+----------
+
+Describes access to the holdings of the archive or to a specific data product. In addition to the name, label, and description for access. This item includes a confidentiality statement, descriptions of the access permissions required, restrictions to access, citation requirements, depositor requirements, conditions for access, a disclaimer, any time limits for access restrictions, and contact information regarding access.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfAccess",":doc:`/composite-types/CodeValueType/index`","0..1","The type of data access condition. The use of a controlled vocabulary is strongly recommended. "
+   "AccessTypeName",":doc:`/composite-types/NameType/index`","0..n","A name by which the description of access is known. May be expressed in multiple languages. Repeat the element to express names with different content, for example, different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the description of access. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the access description. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "ConfidentialityStatement",":doc:`/composite-types/StructuredStringType/index`","0..1","A statement regarding the confidentiality of the related data or metadata. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "AccessPermission",":doc:`/composite-types/FormType/index`","0..n","A link to a form used to provide access to the data or metadata including a statement of the purpose of the form."
+   "Restrictions",":doc:`/composite-types/StructuredStringType/index`","0..1","A statement regarding restrictions to access. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "CitationRequirement",":doc:`/composite-types/StructuredStringType/index`","0..1","A statement regarding the citation requirement. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "DepositRequirement",":doc:`/composite-types/StructuredStringType/index`","0..1","A statement of deposit requirements for the data.  Supports multiple language versions of the same content as well as optional formatting of the content."
+   "AccessConditions",":doc:`/composite-types/StructuredStringType/index`","0..1","Conditions for access to the metadata and/or data.  Supports multiple language versions of the same content as well as optional formatting of the content."
+   "Disclaimer",":doc:`/composite-types/StructuredStringType/index`","0..1","A disclaimer regarding the liability of the data producers or providers. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "AccessRestrictionDate",":doc:`/composite-types/AccessRestrictionDateType/index`","0..1","The date or date range of the access restriction for all or portions of the data. Includes a reason for the access restriction as well as the user group to which the restriction applies."
+   "ContactOrganizationReference",":doc:`/item-types/Agent/index`","0..n","A reference to an organization or individual to contact for further information regarding the metadata or data."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **AccessType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/SampleFrame/index`
+* :doc:`/composite-types/ArchiveSpecificType/index`
+* :doc:`/composite-types/CollectionType/index`
+* :doc:`/composite-types/ItemType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AccessType.svg
+

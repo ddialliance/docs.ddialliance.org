@@ -1,0 +1,21 @@
+Classification
+--------------
+
+
+
+Item Types
+**********
+
+DDI has 7 item types related to Classification.
+
+.. toctree::
+   :maxdepth: 1
+
+   ../../item-types/ClassificationFamily/index
+   ../../item-types/ClassificationSeries/index
+   ../../item-types/StatisticalClassification/index
+   ../../item-types/ClassificationLevel/index
+   ../../item-types/ClassificationItem/index
+   ../../item-types/ClassificationCorrespondenceTable/index
+   ../../item-types/ClassificationIndex/index
+

@@ -1,0 +1,62 @@
+Recode
+------
+
+Describes recoding values in one or more variables according to a specified mapping.
+
+The Recode command can either describe a recoding of one or more individual variables,
+or a range of variables. When one or more individual variables are described, a new
+variable name can be specified. In this case, the original variable is left alone, and
+a new variable is created with the recoded values.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RecodedVariables",":doc:`/composite-types/RecodeVariable/index`","0..n","The variables that will have their values recoded. The resulting values may be either stored in the same variable, or a newly created destination variable"
+   "RecodedVariableRange",":doc:`/composite-types/VariableRangeExpression/index`","0..1","A range of variables to which the recode rules are applied. The resulting values are stored in the same variable."
+   "Rules",":doc:`/composite-types/RecodeRule/index`","0..n","A mapping describing which values will be recoded to which new values"
+
+Properties Inherited from TransformBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProducesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform produces."
+   "ConsumesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform acts upon."
+
+Properties Inherited from CommandBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","0..n","Information about the source of the command."
+   "MessageText","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/CommandBase/index`
+    * :doc:`/composite-types/TransformBase/index`
+        * **Recode**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Recode.svg
+

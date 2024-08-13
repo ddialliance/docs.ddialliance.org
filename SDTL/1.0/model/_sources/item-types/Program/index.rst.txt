@@ -1,0 +1,40 @@
+Program
+-------
+
+The program represents a list of commands from a statistical package.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ID","string","1..1","ID of the object being referenced."
+   "SourceFileName","string","0..1","The name of the file containing the source code."
+   "SourceLanguage","string","0..1","The language of the source code."
+   "ScriptMD5","string","0..1","The MD5 hash of the contents of the file."
+   "ScriptSHA1","string","0..1","The SHA-1 hash of the contents of the file."
+   "SourceFileLastUpdate","dateTime","0..1","The date and time the file was last updated."
+   "SourceFileSize","long","0..1","The size of the file in bytes."
+   "LineCount","int","0..1","The number of lines in the source file."
+   "CommandCount","int","0..1","The number of commands detected in the source file."
+   "Messages",":doc:`/composite-types/Message/index`","0..n","Messages related to the parsing of the source file."
+   "Parser","string","0..1","The name of the parser used to generate the SDTL."
+   "ParserVersion","string","0..1","The version of the parser used to generate the SDTL."
+   "ModelVersion","string","0..1","The version of the SDTL model."
+   "ModelCreatedTime","dateTime","0..1","The date and time the SDTL was generated."
+   "Commands",":doc:`/composite-types/CommandBase/index`","0..n (Ordered)","The list of commands that make up the program."
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Program.svg
+

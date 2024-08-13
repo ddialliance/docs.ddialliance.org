@@ -1,0 +1,16 @@
+Study
+-----
+
+
+
+Item Types
+**********
+
+DDI has 2 item types related to Study.
+
+.. toctree::
+   :maxdepth: 1
+
+   ../../item-types/Group/index
+   ../../item-types/StudyUnit/index
+

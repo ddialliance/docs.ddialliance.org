@@ -1,0 +1,33 @@
+GridResponseDomainType
+----------------------
+
+Designates the response domain and the cells using the specified response domain within a QuestionGrid.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ResponseDomain",":doc:`/composite-types/RepresentationType/index`","0..1","This is a substitution head and can be replaced by any valid member of the substitution group for ResponseDomain."
+   "ResponseDomainReference_ManagedMissingValuesRepresentation",":doc:`/item-types/ManagedMissingValuesRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "ResponseDomainReference_ManagedScaleRepresentation",":doc:`/item-types/ManagedScaleRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "ResponseDomainReference_ManagedNumericRepresentation",":doc:`/item-types/ManagedNumericRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "ResponseDomainReference_ManagedDateTimeRepresentation",":doc:`/item-types/ManagedDateTimeRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "ResponseDomainReference_ManagedTextRepresentation",":doc:`/item-types/ManagedTextRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "GridAttachment",":doc:`/composite-types/GridAttachmentType/index`","0..n","Identifies the cell or cells in a grid to which the item is attached by a reference to a specific cell coordinate in a grid or by identifying a range of values along a dimension."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/StructuredMixedGridResponseDomainType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/GridResponseDomainType.svg
+

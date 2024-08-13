@@ -1,0 +1,64 @@
+ProcessingEvent
+---------------
+
+ProcessingEvent can contain a number of operations of different types to express a range of events that occur together. For example a ProcessingEvent of a CleaningOperation may also include a reference to a ProcessingInstruction used in the cleaning process. Event activities include ControlOperation, CleaningOperation, Weighting, and DataAppraisalInformation. References to related processing instructions and quality statement may be included.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProcessingEventName",":doc:`/composite-types/NameType/index`","0..n","A name for the ProcessingEvent. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the ProcessingEvent. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the ProcessingEvent. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "ControlOperation",":doc:`/composite-types/OperationType/index`","0..n","Description of a Control Operation used to facilitate data control."
+   "CleaningOperation",":doc:`/composite-types/OperationType/index`","0..n","Description of a Cleaning Operation such as consistency checking, invalid or out of range values, etc."
+   "WeightingReference",":doc:`/item-types/Weighting/index`","0..n","Description of the weighting processes and any resultant standard weights."
+   "DataAppraisalInformation",":doc:`/composite-types/DataAppraisalInformationType/index`","0..n","Description of the data appraisal processing including the resultant sampling error and response rate."
+   "ProcessingInstructionReference",":doc:`/item-types/ProcessingInstruction/index`","0..n","Reference to a processing instruction (GeneralInstruction or GenerationInstruction) used during the processing event. The basic Reference structure is extended to allow for the use of ParameterLinkage to link specific source parameters to the InParameter of the instruction to reflect its use within this specific Processing Event. TypeOfObject should be set to GeneralInstruction or GenerationInstruction."
+   "QualityStatementReference",":doc:`/item-types/QualityStatement/index`","0..n","Reference to a quality statement relating to the processing event."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference",":doc:`/item-types/Agent/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "RelatedOtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..n","The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+   "IsPublished","boolean","0..1","Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * **ProcessingEvent**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ProcessingEventGroup/index`
+* :doc:`/item-types/ProcessingEventScheme/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ProcessingEvent.svg
+

@@ -1,0 +1,28 @@
+CostStructureType
+-----------------
+
+Budget and funding information related to the development work.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Budget",":doc:`/composite-types/BudgetType/index`","0..n","A description and/or reference to a related document providing budget information for the development activities"
+   "FundingInformation",":doc:`/composite-types/FundingInformationType/index`","0..n","Provides information about the agency and grant(s) which fund the development work."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DevelopmentPlan/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CostStructureType.svg
+

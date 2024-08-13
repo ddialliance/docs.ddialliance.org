@@ -1,0 +1,44 @@
+VariableListExpression
+----------------------
+
+A list of variables which may include variable names (VariableSymbolExpression, CompositeVariableNameExpression), variable ranges (VariableRangeExpression), and variable lists.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Variables",":doc:`/composite-types/VariableReferenceBase/index`","1..n","An array of variables and/or variable ranges"
+
+Properties Inherited from VariableReferenceBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * :doc:`/composite-types/VariableReferenceBase/index`
+        * **VariableListExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VariableListExpression.svg
+

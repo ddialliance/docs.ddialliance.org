@@ -1,0 +1,29 @@
+TargetSampleSizeType
+--------------------
+
+The desired sample size for this particular sample plan express in relation to its strata number if relevant. Provides means of expressing the formula used for determining the sample size.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "StrataNumber","nonNegativeInteger","0..1","Indicate specific strata if the sample frame has been stratified prior to sampling within the specified stage."
+   "DesiredSampleSize",":doc:`/composite-types/SizeType/index`","0..1","The number and type of sample units."
+   "SampleSizeFormulaReference",":doc:`/item-types/ProcessingInstruction/index`","0..1","Reference to the General or GenerationInstruction containing the formula or instruction used to determine sample size. The basic Reference structure is extended to allow for the use of Binding to link specific source parameters to the InParameter of the instruction at the point of use. If there is a conflict between a Binding in the instruction of a specific source to an InParameter and the Binding information provided in the ProcessingInstructionReference, the Binding information in the reference overrides that found in the instruction. TypeOfObject should be set to GeneralInstruction or GenerationInstruction."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ApplicationDetailsType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TargetSampleSizeType.svg
+

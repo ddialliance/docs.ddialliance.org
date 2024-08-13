@@ -1,0 +1,29 @@
+DataAppraisalInformationType
+----------------------------
+
+Describes the result of data appraisal activities as a response rate and sampling error. May also list additional appraisal processes taken as a result of the initial appraisal process.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ResponseRate",":doc:`/composite-types/ResponseRateType/index`","0..n","A specific rate of response and/or a description of the rate of response for this event. If data contains multiple response rates for different portions of the data due to delivery method, identification of sub-populations or other reasons, repeat this element providing the specific response rate and a description of the sub-population, delivery method or other feature that was used in developing the specific rate."
+   "SamplingError",":doc:`/composite-types/StructuredStringType/index`","0..n","Sampling Error provided using a StructuredString to support multiple language versions of the same content as well as optional formatting of the content."
+   "OtherAppraisalProcess",":doc:`/composite-types/StructuredStringType/index`","0..n","Other Appraisal Process provided using a StructuredString to support multiple language versions of the same content as well as optional formatting of the content."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ProcessingEvent/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DataAppraisalInformationType.svg
+

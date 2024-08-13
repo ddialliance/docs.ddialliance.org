@@ -1,0 +1,30 @@
+DataFingerprintType
+-------------------
+
+Allows for assigning a hash value (digital fingerprint) to the data or data file. Set the attribute flag to "data" when the hash value provides a digital fingerprint to the data contained in the file regardless of the storage format (ASCII, SAS, binary, etc.). One approach to compute a data fingerprint is the Universal Numerical Fingerprint (UNF). Set the attribute flag to "dataFile" if the digital fingerprint is only for the data file in its current storage format.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "DigitalFingerprintValue","string","0..1","Contains the value of the specified digital fingerprint."
+   "AlgorithmSpecification","string","0..1","Specifies the type of the fingerprint (what algorithm or scheme)."
+   "AlgorithmVersion","string","0..1","Contains the version of the algorithm."
+   "Type","string","1..1","Brief identification of the type of data fingerprint used. The data fingerprint may be for the data file (storage format specific) or data (format neutral)."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/PhysicalInstance/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DataFingerprintType.svg
+

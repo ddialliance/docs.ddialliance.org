@@ -1,0 +1,49 @@
+ReferenceDateType
+-----------------
+
+The date that the data reference such as at the point of collection, a previous year or date, etc. This is expressed as a date (singular or range) and may have specific subjects associated with it. For example if only income and labor force status relate to the previous year and all other data related to the point of collection.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Subject",":doc:`/composite-types/InternationalCodeValueType/index`","0..n","If the date is for a subset of data only such as a referent date for residence 5 years ago, use Subject to specify the coverage of the data this date applies to. May be repeated to reflect multiple subjects."
+
+Properties Inherited from DateType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SimpleDate","cogsDate","0..1","A single point in time. If a duration is expressed as a SimpleDate it is defining a period of time without a designated Start or End date."
+   "HistoricalDate",":doc:`/composite-types/HistoricalDateType/index`","0..1","A simple date expressed in a historical date format, including a specification of the date format and calendar used."
+   "StartDate","cogsDate","0..1","Start of a date range. If there is a start date with no end date provided, this implies that the end date is unknown but that the date being recorded is not just a simple date but a range of unknown duration."
+   "HistoricalStartDate",":doc:`/composite-types/HistoricalDateType/index`","0..1","A start date expressed in a historical date format, including a specification of the date format and calendar used."
+   "EndDate","cogsDate","0..1","End of a date range with a known start date."
+   "HistoricalEndDate",":doc:`/composite-types/HistoricalDateType/index`","0..1","An end date expressed in a historical date format, including a specification of the date format and calendar used."
+   "Cycle","int","0..1","Use to indicate occurrence of this range within a series of ranges as an integer identifying the cycle, i.e. the 4th wave of a data collection cycle would have 4."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/DateType/index`
+    * **ReferenceDateType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/TemporalCoverageType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ReferenceDateType.svg
+

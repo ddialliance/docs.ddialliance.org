@@ -1,0 +1,52 @@
+CoordinateRegionType
+--------------------
+
+Defines the area of attachment for an NCube attribute. It may be defined as the NCube as a whole or as certain dimensions or values of dimensions.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the CoordinateRegion. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations."
+   "UniverseReference",":doc:`/item-types/Universe/index`","0..n","Reference to the universe statement containing a description of the persons or other elements that this CoordinateRegion refers to, and to which any analytic results refer. If more than one universe is referenced the universe of the CoordinateRegion is the intersect of the referenced universes. Use when the CoordinateRegion describes a subset of the NCube universe."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content of the CoordinateRegion. May be expressed in multiple languages and supports the use of structured content."
+   "DimensionValue",":doc:`/composite-types/CohortType/index`","0..n","Defines the included set of values needed to describe the coordinate region of the NCube on a Dimension by Dimension basis."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **CoordinateRegionType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/NCube/index`
+* :doc:`/composite-types/AttributeType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CoordinateRegionType.svg
+

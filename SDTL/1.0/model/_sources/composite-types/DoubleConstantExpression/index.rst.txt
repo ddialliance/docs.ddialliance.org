@@ -1,0 +1,38 @@
+DoubleConstantExpression
+------------------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **DoubleConstantExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DoubleConstantExpression.svg
+
+Properties
+~~~~~~~~~~
+
+DoubleValue
+***********
+
+Type
+    double
+Cardinality
+    0..1
+
+TODO
+
+
+

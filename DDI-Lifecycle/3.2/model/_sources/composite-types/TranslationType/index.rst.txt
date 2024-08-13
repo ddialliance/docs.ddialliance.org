@@ -1,0 +1,31 @@
+TranslationType
+---------------
+
+Provides the language of translation as well as a description of translation for the contents of the DDI Instance.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Language",":doc:`/composite-types/CodeValueType/index`","0..n","Uses the more generic Language element found in a Citation. Allows for use of an external controlled vocabulary."
+   "I18nText","string","0..1","Value of the language identifier used."
+   "I18nCatalog","string","0..1","Identifies the l18n catalog used."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","Description of the translation process of the data and metadata"
+   "Lang","language","0..1","Language of the tag content."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DDIInstance/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TranslationType.svg
+

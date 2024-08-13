@@ -1,0 +1,47 @@
+ConditionBase
+-------------
+
+ConditionBase defines general properties available on all conditional expressions.
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **ConditionBase**
+    * :doc:`/composite-types/AndCondition/index`
+    * :doc:`/composite-types/EqualCondition/index`
+    * :doc:`/composite-types/GreaterThanCondition/index`
+    * :doc:`/composite-types/GreaterThanOrEqualCondition/index`
+    * :doc:`/composite-types/GroupedCondition/index`
+    * :doc:`/composite-types/LessThanCondition/index`
+    * :doc:`/composite-types/LessThanOrEqualCondition/index`
+    * :doc:`/composite-types/NotCondition/index`
+    * :doc:`/composite-types/NotEqualCondition/index`
+    * :doc:`/composite-types/OrCondition/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ConditionBase.svg
+
+Properties
+~~~~~~~~~~
+
+Operator
+********
+
+Type
+    string
+Cardinality
+    0..1
+
+The type of the conditional expression.
+
+
+

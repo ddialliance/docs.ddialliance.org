@@ -1,0 +1,40 @@
+AllVariablesExpression
+----------------------
+
+An expression that represents all variables in the dataset, similar to `_all` in SPSS or Stata.
+
+
+Properties
+~~~~~~~~~~
+
+This type contains no properties.
+
+Properties Inherited from VariableReferenceBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * :doc:`/composite-types/VariableReferenceBase/index`
+        * **AllVariablesExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AllVariablesExpression.svg
+

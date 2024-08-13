@@ -1,0 +1,77 @@
+ClassificationCorrespondenceTable
+---------------------------------
+
+A Correspondence Table expresses the relationship between two Statistical Classifications. These are typically: two versions from the same Classification Series; Statistical Classifications from different Classification Series; a variant and the version on which it is based; different versions of a variant. In the first and last examples, the Correspondence Table facilitates comparability over time. Correspondence relationships are shown in both directions
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OwnerReference",":doc:`/item-types/Agent/index`","0..n","The statistical office, other authority or section that created and maintains the Correspondence Table. A Correspondence Table may have several owners. TypeOfObject should be Organization or Individual."
+   "MaintenanceUnitReference",":doc:`/item-types/Agent/index`","0..n","The unit or group of persons who are responsible for the Correspondence Table, i.e. for maintaining and updating it. TypeOfObject should be Organization or Individual."
+   "ContactPersonReference",":doc:`/item-types/Agent/index`","0..n","The person(s) who may be contacted for additional information about the Correspondence Table. TypeOfObject should be Organization or Individual."
+   "Publication",":doc:`/composite-types/PublicationType/index`","0..n","A list of the publications in which the Correspondence Table has been published. "
+   "SourceClassificationReference",":doc:`/item-types/StatisticalClassification/index`","0..1","The Statistical Classification from which the correspondence is made. TypeOfObject should be StatisticalClassification."
+   "TargetClassificationReference",":doc:`/item-types/StatisticalClassification/index`","0..n","The Statistical Classification(s) to which the correspondence is directed. There may be multiple target Statistical Classifications associated with the Correspondence Table. TypeOfObject should be StatisticalClassification."
+   "SourceLevelReference",":doc:`/item-types/ClassificationLevel/index`","0..1","The correspondence is normally restricted to a certain Level in the source Statistical Classification. In this case, target Classification Items are assigned only to source Classification Items on the given level. If no level is indicated, target Classification Items can be assigned to any Level of the source Statistical Classification. TypeOfObject should be set to ClassificationLevel."
+   "TargetLevelReference",":doc:`/item-types/ClassificationLevel/index`","0..1","The correspondence is normally restricted to a certain Level in the target Statistical Classification. In this case, source Classification Items are assigned only to target Classification Items on the given Level. If no Level is indicated, source Classification Items can be assigned to any Level of the target Statistical Classification. TypeOfObject should be set to ClassificationLevel."
+   "RelationshipMappingType",":doc:`/composite-types/CodeValueType/index`","0..1","A Correspondence Table can define a 1:1, 1:N, N:1 or M:N relationship between source and target Classification Items. Supports the use of an external controlled vocabulary."
+   "Maps",":doc:`/composite-types/ClassificationMapType/index`","0..n","The relationship between two Statistical Classifications. A Map is an expression of the relation between a Classification Item in a source Statistical Classification and a corresponding Classification Item in the target Statistical Classification. The Map should specify whether the relationship between the two Classification Items is partial or complete. Depending on the relationship type of the Correspondence Table, there may be several Maps for a single source or target Classification Item."
+   "FloatingMapDate","cogsDate","0..1","If the source and/or target Statistical Classifications of a Correspondence Table are floating Statistical Classifications, the date of the Correspondence Table must be noted. The Correspondence Table expresses the relationships between the two Statistical Classifications as they existed on the date specified in the Correspondence Table."
+
+Properties Inherited from Describable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Name",":doc:`/composite-types/NameType/index`","0..n","A name for the item. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the item. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the item. May be expressed in multiple languages and supports the use of structured content."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference",":doc:`/item-types/Agent/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "RelatedOtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..n","The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+   "IsPublished","boolean","0..1","Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * :doc:`/item-types/Describable/index`
+        * **ClassificationCorrespondenceTable**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ResourcePackage/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ClassificationCorrespondenceTable.svg
+

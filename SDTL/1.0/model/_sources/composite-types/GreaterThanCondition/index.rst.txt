@@ -1,0 +1,38 @@
+GreaterThanCondition
+--------------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ConditionBase/index`
+    * **GreaterThanCondition**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/GreaterThanCondition.svg
+
+Properties
+~~~~~~~~~~
+
+Operands
+********
+
+Type
+    :doc:`/composite-types/ExpressionBase/index`
+Cardinality
+    0..2
+
+TODO
+
+
+

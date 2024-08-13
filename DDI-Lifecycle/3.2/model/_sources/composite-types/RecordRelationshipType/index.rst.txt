@@ -1,0 +1,54 @@
+RecordRelationshipType
+----------------------
+
+Describes the relationship between records of different types or of the same type within a longitudinal study. Identifies the key and linking value relationships. All relationships are pairwise. Multiple pairwise relationships maybe needed to clarify all record relationships within a logical product or data set. In addition to the standard name, label, and description, the structure identifies the pair of logical records for which the relationship is defined as SourceLogicalRecord and TargetLogicalRecord, describes the link between these two records and indicates the relationship of the of the source record to the target record.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RecordRelationshipName",":doc:`/composite-types/NameType/index`","0..n","A name for the RecordRelationship. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the RecordRelationship. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the RecordRelationship. May be expressed in multiple languages and supports the use of structured content."
+   "SourceLogicalRecordReference",":doc:`/composite-types/LogicalRecordType/index`","0..1","A reference to the Logical Record acting as the Source Record. All relationship information is from the source to the target. If the relationship is not unidirectional (i.e., sibling) simply assign one record as the source and the other as the target."
+   "TargetLogicalRecordReference",":doc:`/composite-types/LogicalRecordType/index`","0..1","A reference to the Logical Record acting as the Target Record."
+   "SourceTargetLink",":doc:`/composite-types/SourceTargetLinkType/index`","0..n","Each SourceTargetLink provides a pair of variables which act as all or part of a link between the source and the target records. Repeat if more than one set of variables is required to make the link."
+   "RelationToTarget","string","0..1","Indicates the relationship of the source to the target. The value describes the role of the source in the relationship. This is a restricted list of Parent, Child, Sibling, Unknown."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **RecordRelationshipType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DataRelationship/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RecordRelationshipType.svg
+

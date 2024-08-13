@@ -1,0 +1,73 @@
+RecordLayout
+------------
+
+A member of the BaseRecordLayout substitution group intended for use with archival formats of microdata held in an external file with fixed or delimited locations for data items. In addition to the link to the PhysicalStructure provided by BaseRecordLayout, the record layout is this namespace (p) identifies the character set and array base for the stored data, an optional reference to the default VariableScheme for the data items, a flag indicating that the variable names are provided on the first row of the data file, and a full description of each data item including a link to its description and its physical location in the record.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CharacterSet",":doc:`/composite-types/CodeValueType/index`","0..1","Character set used in the data file (e.g., US ASCII, EBCDIC, UTF-8). This is a required field. The DDI Alliance has provided a controlled vocabulary (CharacterSet) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "ArrayBase","int","0..1","Sets the array base for any arrays used in the definition (that is, whether the first value is in position 0 or 1, etc.). This may be the data array in a delimited data file or the measure array for measures that are bundled and stored in a single location. Array base is generally set to either 0 or 1. There is no override provided as systems processing a record would use a consistent array base."
+   "DefaultVariableSchemeReference",":doc:`/item-types/VariableScheme/index`","0..1","References a variable scheme for the RecordLayout. This can be overridden by individual data items if they are from a different variable scheme."
+   "DataItem",":doc:`/composite-types/DataItemType/index`","0..n","Includes a reference to a variable, and information about its data item location and its data type/format."
+   "NamesOnFirstRow","boolean","0..1","Set this item to ""true"" if the first row of the file contains the names of the variables (data items)."
+
+Properties Inherited from BaseRecordLayout
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "PhysicalStructureLinkReference",":doc:`/item-types/PhysicalStructure/index`","0..1","Reference to the PhysicalStructure and the PhysicalSegment used by this Record Layout."
+   "EndOfLineMarker",":doc:`/composite-types/CodeValueType/index`","0..1","Specifies the end-of-line (EOL) marker used in the file as produced. If no value is provided assume the use of a CRLF (carriage return and line feed). This is the common EOL for PC's. The common EOL in a Unix environment is LF. Some systems will automatically translate EOLs when a file is moved across systems. Common EOLs include: CR (carriage return), LF (line feed), CRLF, NEL (next line), VT (vertical tab), FF (form feed), LS (line separator) and PS (paragraph separator). See Part I documentation for more detailed information. This object supports the use of a controlled vocabulary. Use of a common controlled vocabulary is strongly recommended."
+   "TextQualifier","string","0..1","Use for delimited files to designate the which text qualifier, if any, was used. Valid values include: singleQuote, doubleQuote, and none."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference",":doc:`/item-types/Agent/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "RelatedOtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..n","The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+   "IsPublished","boolean","0..1","Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * :doc:`/item-types/BaseRecordLayout/index`
+        * **RecordLayout**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/PhysicalInstance/index`
+* :doc:`/item-types/RecordLayoutGroup/index`
+* :doc:`/item-types/RecordLayoutScheme/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RecordLayout.svg
+

@@ -1,0 +1,28 @@
+ProprietaryInfoType
+-------------------
+
+Contains information proprietary to the software package which produced the data file. This is expressed as a set of key(name)-value pairs.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProprietaryProperty",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A structure that supports the use of a standard key value pair. Note that this information is often not interoperable and is provided to support the use of the metadata within specific systems."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/PhysicalInstance/index`
+* :doc:`/composite-types/NoteType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ProprietaryInfoType.svg
+

@@ -1,0 +1,38 @@
+LoadSave
+--------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/TransformBase/index`
+    * **LoadSave**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LoadSave.svg
+
+Properties
+~~~~~~~~~~
+
+FileName
+********
+
+Type
+    string
+Cardinality
+    0..1
+
+The name of the file
+
+
+

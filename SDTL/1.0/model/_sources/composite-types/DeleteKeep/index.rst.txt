@@ -1,0 +1,38 @@
+DeleteKeep
+----------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/TransformBase/index`
+    * **DeleteKeep**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DeleteKeep.svg
+
+Properties
+~~~~~~~~~~
+
+VariableList
+************
+
+Type
+    :doc:`/composite-types/VariableListExpression/index`
+Cardinality
+    0..1
+
+The list of variables kept or dropped
+
+
+

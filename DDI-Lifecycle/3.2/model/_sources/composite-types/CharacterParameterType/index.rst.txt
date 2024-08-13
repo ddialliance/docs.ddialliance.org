@@ -1,0 +1,28 @@
+CharacterParameterType
+----------------------
+
+Specification of the character offset for the beginning and end of the segment.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "StartCharOffset","int","0..1","Number of characters from beginning of the document, indicating the inclusive start of the text range."
+   "EndCharOffset","int","0..1","Number of characters from the beginning of the document, indicating the inclusive end of the text segment."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/TextualType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CharacterParameterType.svg
+

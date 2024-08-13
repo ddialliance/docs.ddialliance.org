@@ -1,0 +1,29 @@
+ConditionalResultType
+---------------------
+
+The text resulting from the conditional command. Supports structured content and the insertion of content by a source parameter. For example if a language has gender specific verb structures the result of an IfCondition may result in a text using female verb structures and inserting the female's name at a specific point.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Text",":doc:`/composite-types/TextType/index`","1..n","The value of the static text string to use if condition is true. Supports the optional use of XHTML formatting tags within the string structure. If the content of a literal text contains more than one language, i.e. ""What is your understanding of the German word 'Gesundheit'?"", the foreign language element should be placed in a separate LiteralText component with the appropriate xml:lang value and, in this case, isTranslatable set to ""false"". If the existence of white space is critical to the understanding of the content (such as inclusion of a leading or trailing white space), set the attribute of Text xml:space to ""preserve""."
+   "SourceParameterReference",":doc:`/composite-types/ParameterType/index`","0..1","This allows for the simple insert of a piece of information from another specified parameter. For example, if the text of the item using conditional text included the respondent’s name use SourceParameterReference to reference the InParameter of the question that is bound to the OutParameter of the question: “What is your name?”"
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ElseIfTextType/index`
+* :doc:`/composite-types/IfThenElseTextType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ConditionalResultType.svg
+

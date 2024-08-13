@@ -1,0 +1,27 @@
+RecordType
+----------
+
+For each record, contains the values for the items in order by the specified variable sequence.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Value",":doc:`/composite-types/ValueType/index`","0..n","An individual item value."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/RecordSetType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RecordType.svg
+

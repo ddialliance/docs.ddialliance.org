@@ -1,0 +1,39 @@
+CollectionType
+--------------
+
+Describes a collection of items held or distributed by the archive in connection with a study, group of studies, or resource packages. What constitutes an collection is determined by the archive. These may be data file(s) in a variety of formats, statistical setups, codebooks, questionnaires, etc. A collection may also be a group of studies, groups, and/or resource packages.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Citation",":doc:`/composite-types/CitationType/index`","0..1","A citation for the collection. May additionally be rendered in native qualified Dublin Core (dc and dcterms)."
+   "LocationInArchive",":doc:`/composite-types/InternationalStringType/index`","0..n","Describes the location of the collection within the archive. Repeat for multiple locations such as separate stores for access and archival copies."
+   "CallNumber","string","0..1","The name, code, or number used by the archive to uniquely identify the collection within the archive."
+   "URI","anyURI","0..1","The URL or URN for the collection."
+   "ItemQuantity","int","0..1","The number of items in the collection. This is a check sum and should be updated as the contents of the collection changes. The use of this element is best restricted to completed collections where change in the number of objects is not dynamic."
+   "StudyClass",":doc:`/composite-types/StudyClassType/index`","0..1","An archive specific classification for the collection. This may be a topical classification, a classification of intended processing levels, or information on the processing status."
+   "DefaultAccess",":doc:`/composite-types/AccessType/index`","0..1","Default access restriction information applying to all of the items in the collection."
+   "OriginalArchiveOrganizationReference",":doc:`/item-types/Organization/index`","0..n","The original archive for the described collection, expressed as a reference to an organization listed in the organization scheme."
+   "AvailabilityStatus",":doc:`/composite-types/StructuredStringType/index`","0..1","A statement of availability for the collection. This is a positive statement (as opposed to access restrictions) which may be used for publication or other purposes. Allows for structured content."
+   "DataFileQuantity","int","0..1","The number of data files in the described collection, expressed as an integer. This is a check sum and should be updated as the contents of the collection changes. The use of this element is best restricted to completed collections where change in the number of objects is not dynamic."
+   "CollectionCompleteness",":doc:`/composite-types/StructuredStringType/index`","0..1","Describes the completeness of the collection. Note coverage gaps as well as collections strengths. This statement may be used for publication or other purposes. Allows for structured content."
+   "Item",":doc:`/composite-types/ItemType/index`","0..n","Allows for the nesting of Item descriptions with a collection."
+   "Collection",":doc:`/composite-types/CollectionType/index`","0..n","Allows for the nesting of collection descriptions with a collection hierarchical groupings within a collection description."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ArchiveSpecificType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CollectionType.svg
+

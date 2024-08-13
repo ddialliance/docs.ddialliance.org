@@ -1,0 +1,241 @@
+StructuredStringType
+--------------------
+
+Packaging structure for multiple language versions of the same string content for objects that allow for internal formatting using XHTML tags. Where an element of this type is repeatable, the expectation is that each repetition contains different content, each of which can be expressed in multiple languages.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Content",":doc:`/composite-types/ContentType/index`","0..n","Supports the optional use of XHTML formatting tags within the string structure. In addition to the language designation and information regarding translation, the attribute isPlain can be set to true to indicate that the content should be treated as plain unstructured text, including any XHTML formatting tags. Repeat the content element to provide multiple language versions of the same content."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **StructuredStringType**
+    * :doc:`/composite-types/AdditionalInformationType/index`
+    * :doc:`/composite-types/LabelType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ApprovalReview/index`
+* :doc:`/item-types/Archive/index`
+* :doc:`/item-types/BaseLogicalProduct/index`
+* :doc:`/item-types/Category/index`
+* :doc:`/item-types/CategoryGroup/index`
+* :doc:`/item-types/CategoryScheme/index`
+* :doc:`/item-types/ClassificationFamily/index`
+* :doc:`/item-types/ClassificationIndex/index`
+* :doc:`/item-types/ClassificationItem/index`
+* :doc:`/item-types/ClassificationLevel/index`
+* :doc:`/item-types/CodeList/index`
+* :doc:`/item-types/CodeListGroup/index`
+* :doc:`/item-types/CodeListScheme/index`
+* :doc:`/item-types/Comparison/index`
+* :doc:`/item-types/Concept/index`
+* :doc:`/item-types/ConceptGroup/index`
+* :doc:`/item-types/ConceptScheme/index`
+* :doc:`/item-types/ConceptualComponent/index`
+* :doc:`/item-types/ConceptualVariable/index`
+* :doc:`/item-types/ConceptualVariableGroup/index`
+* :doc:`/item-types/ConceptualVariableScheme/index`
+* :doc:`/item-types/ControlConstruct/index`
+* :doc:`/item-types/ControlConstructGroup/index`
+* :doc:`/item-types/ControlConstructScheme/index`
+* :doc:`/item-types/DataCaptureDevelopment/index`
+* :doc:`/item-types/DataCollection/index`
+* :doc:`/item-types/DataRelationship/index`
+* :doc:`/item-types/DDIProfile/index`
+* :doc:`/item-types/Describable/index`
+* :doc:`/item-types/DevelopmentActivity/index`
+* :doc:`/item-types/DevelopmentActivityGroup/index`
+* :doc:`/item-types/DevelopmentActivityScheme/index`
+* :doc:`/item-types/DevelopmentImplementation/index`
+* :doc:`/item-types/DevelopmentPlan/index`
+* :doc:`/item-types/DevelopmentResults/index`
+* :doc:`/item-types/DevelopmentStep/index`
+* :doc:`/item-types/GeneralInstruction/index`
+* :doc:`/item-types/GenerationInstruction/index`
+* :doc:`/item-types/GenericMap/index`
+* :doc:`/item-types/GeographicLocation/index`
+* :doc:`/item-types/GeographicLocationGroup/index`
+* :doc:`/item-types/GeographicLocationScheme/index`
+* :doc:`/item-types/GeographicStructure/index`
+* :doc:`/item-types/GeographicStructureGroup/index`
+* :doc:`/item-types/GeographicStructureScheme/index`
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/Individual/index`
+* :doc:`/item-types/InformationClassification/index`
+* :doc:`/item-types/Instruction/index`
+* :doc:`/item-types/InstructionGroup/index`
+* :doc:`/item-types/Instrument/index`
+* :doc:`/item-types/InstrumentGroup/index`
+* :doc:`/item-types/InstrumentScheme/index`
+* :doc:`/item-types/InterviewerInstructionScheme/index`
+* :doc:`/item-types/ManagedDateTimeRepresentation/index`
+* :doc:`/item-types/ManagedMissingValuesRepresentation/index`
+* :doc:`/item-types/ManagedNumericRepresentation/index`
+* :doc:`/item-types/ManagedRepresentationGroup/index`
+* :doc:`/item-types/ManagedRepresentationScheme/index`
+* :doc:`/item-types/ManagedScaleRepresentation/index`
+* :doc:`/item-types/ManagedTextRepresentation/index`
+* :doc:`/item-types/MeasurementGroup/index`
+* :doc:`/item-types/MeasurementItem/index`
+* :doc:`/item-types/MeasurementScheme/index`
+* :doc:`/item-types/Methodology/index`
+* :doc:`/item-types/NCube/index`
+* :doc:`/item-types/NCubeGroup/index`
+* :doc:`/item-types/NCubeScheme/index`
+* :doc:`/item-types/Organization/index`
+* :doc:`/item-types/OrganizationGroup/index`
+* :doc:`/item-types/OrganizationScheme/index`
+* :doc:`/item-types/OtherMaterial/index`
+* :doc:`/item-types/OtherMaterialGroup/index`
+* :doc:`/item-types/OtherMaterialScheme/index`
+* :doc:`/item-types/PhysicalDataProduct/index`
+* :doc:`/item-types/PhysicalInstanceGroup/index`
+* :doc:`/item-types/PhysicalStructure/index`
+* :doc:`/item-types/PhysicalStructureGroup/index`
+* :doc:`/item-types/PhysicalStructureScheme/index`
+* :doc:`/item-types/ProcessingEvent/index`
+* :doc:`/item-types/ProcessingEventGroup/index`
+* :doc:`/item-types/ProcessingEventScheme/index`
+* :doc:`/item-types/ProcessingInstructionGroup/index`
+* :doc:`/item-types/ProcessingInstructionScheme/index`
+* :doc:`/item-types/QualityScheme/index`
+* :doc:`/item-types/QualityStandard/index`
+* :doc:`/item-types/QualityStandardGroup/index`
+* :doc:`/item-types/QualityStatement/index`
+* :doc:`/item-types/QualityStatementGroup/index`
+* :doc:`/item-types/QuestionBlock/index`
+* :doc:`/item-types/QuestionGrid/index`
+* :doc:`/item-types/QuestionGroup/index`
+* :doc:`/item-types/QuestionItem/index`
+* :doc:`/item-types/QuestionScheme/index`
+* :doc:`/item-types/RecordLayoutGroup/index`
+* :doc:`/item-types/RecordLayoutScheme/index`
+* :doc:`/item-types/Relation/index`
+* :doc:`/item-types/RepresentationMap/index`
+* :doc:`/item-types/RepresentedVariable/index`
+* :doc:`/item-types/RepresentedVariableGroup/index`
+* :doc:`/item-types/RepresentedVariableScheme/index`
+* :doc:`/item-types/ResourcePackage/index`
+* :doc:`/item-types/Sample/index`
+* :doc:`/item-types/SampleFrame/index`
+* :doc:`/item-types/SampleStep/index`
+* :doc:`/item-types/SamplingInformationGroup/index`
+* :doc:`/item-types/SamplingInformationScheme/index`
+* :doc:`/item-types/SamplingPlan/index`
+* :doc:`/item-types/SamplingStage/index`
+* :doc:`/item-types/StatisticalClassification/index`
+* :doc:`/item-types/StudyUnit/index`
+* :doc:`/item-types/SubUniverseClass/index`
+* :doc:`/item-types/UnitTypeGroup/index`
+* :doc:`/item-types/UnitTypeScheme/index`
+* :doc:`/item-types/Universe/index`
+* :doc:`/item-types/UniverseGroup/index`
+* :doc:`/item-types/UniverseScheme/index`
+* :doc:`/item-types/Variable/index`
+* :doc:`/item-types/VariableGroup/index`
+* :doc:`/item-types/VariableScheme/index`
+* :doc:`/item-types/Weighting/index`
+* :doc:`/item-types/WeightingMethodology/index`
+* :doc:`/composite-types/AccessRestrictionDateType/index`
+* :doc:`/composite-types/AccessType/index`
+* :doc:`/composite-types/ActionToMinimizeLossesType/index`
+* :doc:`/composite-types/ActionType/index`
+* :doc:`/composite-types/AdditionalDataCollectionType/index`
+* :doc:`/composite-types/ApplicationDetailsType/index`
+* :doc:`/composite-types/AuthorizationSourceType/index`
+* :doc:`/composite-types/BudgetType/index`
+* :doc:`/composite-types/CaseLawType/index`
+* :doc:`/composite-types/CategoryDomainType/index`
+* :doc:`/composite-types/ClassificationIndexEntryType/index`
+* :doc:`/composite-types/CodeDomainType/index`
+* :doc:`/composite-types/CollectionEventType/index`
+* :doc:`/composite-types/CollectionSituationType/index`
+* :doc:`/composite-types/CollectionType/index`
+* :doc:`/composite-types/CommandCodeType/index`
+* :doc:`/composite-types/ComplianceDefinitionType/index`
+* :doc:`/composite-types/ComplianceType/index`
+* :doc:`/composite-types/CoordinateRegionType/index`
+* :doc:`/composite-types/CorrespondenceType/index`
+* :doc:`/composite-types/DataAppraisalInformationType/index`
+* :doc:`/composite-types/DataCollectionMethodologyType/index`
+* :doc:`/composite-types/DataSourceType/index`
+* :doc:`/composite-types/DateTimeDomainType/index`
+* :doc:`/composite-types/DebriefingProcessType/index`
+* :doc:`/composite-types/DevelopmentObjectType/index`
+* :doc:`/composite-types/DeviationFromSampleDesignType/index`
+* :doc:`/composite-types/DistributionDomainType/index`
+* :doc:`/composite-types/EmbargoType/index`
+* :doc:`/composite-types/ExPostEvaluationType/index`
+* :doc:`/composite-types/ExternalCategoryRepresentationBaseType/index`
+* :doc:`/composite-types/FundingInformationType/index`
+* :doc:`/composite-types/GenerationType/index`
+* :doc:`/composite-types/GeographicCoverageType/index`
+* :doc:`/composite-types/GeographicDomainType/index`
+* :doc:`/composite-types/GeographicLevelType/index`
+* :doc:`/composite-types/GeographicLocationCodeDomainType/index`
+* :doc:`/composite-types/GeographicStructureCodeDomainType/index`
+* :doc:`/composite-types/GrossFileStructureType/index`
+* :doc:`/composite-types/ItemType/index`
+* :doc:`/composite-types/LevelType/index`
+* :doc:`/composite-types/LifecycleEventType/index`
+* :doc:`/composite-types/LimitedCodeSegmentCapturedType/index`
+* :doc:`/composite-types/LinkingMapType/index`
+* :doc:`/composite-types/LocationDomainType/index`
+* :doc:`/composite-types/LogicalRecordType/index`
+* :doc:`/composite-types/MetadataQualityType/index`
+* :doc:`/composite-types/MethodOfAdministrationType/index`
+* :doc:`/composite-types/ModeOfCollectionType/index`
+* :doc:`/composite-types/ModeOfPretestCollectionType/index`
+* :doc:`/composite-types/NominalDomainType/index`
+* :doc:`/composite-types/NoteType/index`
+* :doc:`/composite-types/NumericDomainType/index`
+* :doc:`/composite-types/OperationType/index`
+* :doc:`/composite-types/ParameterType/index`
+* :doc:`/composite-types/PopulationType/index`
+* :doc:`/composite-types/RankingDomainType/index`
+* :doc:`/composite-types/RecommendedStaffRequirementsType/index`
+* :doc:`/composite-types/RecordRelationshipType/index`
+* :doc:`/composite-types/RelationshipType/index`
+* :doc:`/composite-types/RequirementsAssessmentType/index`
+* :doc:`/composite-types/ResearcherIDType/index`
+* :doc:`/composite-types/ResourceUsedType/index`
+* :doc:`/composite-types/ResponseRateType/index`
+* :doc:`/composite-types/ResultDetailType/index`
+* :doc:`/composite-types/RoleType/index`
+* :doc:`/composite-types/SamplingProcedureType/index`
+* :doc:`/composite-types/ScaleDomainType/index`
+* :doc:`/composite-types/SeriesStatementType/index`
+* :doc:`/composite-types/SimilarConceptType/index`
+* :doc:`/composite-types/SoftwareType/index`
+* :doc:`/composite-types/StratificationRationaleType/index`
+* :doc:`/composite-types/StratificationType/index`
+* :doc:`/composite-types/StudyClassType/index`
+* :doc:`/composite-types/TextContentType/index`
+* :doc:`/composite-types/TextDomainType/index`
+* :doc:`/composite-types/TimeMethodType/index`
+* :doc:`/composite-types/TranslationAidType/index`
+* :doc:`/composite-types/TranslationMethodType/index`
+* :doc:`/composite-types/TranslationRequirementsType/index`
+* :doc:`/composite-types/TranslationType/index`
+* :doc:`/composite-types/UsageGuideType/index`
+* :doc:`/composite-types/UsedType/index`
+* :doc:`/composite-types/VersionDistinctionType/index`
+* :doc:`/composite-types/VocabularyType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/StructuredStringType.svg
+

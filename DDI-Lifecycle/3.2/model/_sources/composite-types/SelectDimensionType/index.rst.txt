@@ -1,0 +1,23 @@
+SelectDimensionType
+-------------------
+
+For each dimension in the grid define the applicable values as "all values", a "specific value" or a range. If a rangeMinimum or rangeMaximum is provided without the other, the assumption is unbounded for the object not included.
+
+Properties
+~~~~~~~~~~
+
+This type contains no properties.
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CellCoordinatesAsDefinedType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SelectDimensionType.svg
+

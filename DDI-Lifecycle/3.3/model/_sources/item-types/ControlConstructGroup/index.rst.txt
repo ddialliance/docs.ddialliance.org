@@ -1,0 +1,65 @@
+ControlConstructGroup
+---------------------
+
+Contains a group of ControlConstructs, which may describe an ordered or hierarchical relationship structure. Specifies the purpose of the group, a name, label, and description of the group, its relationship to a specific universe or concept, and lists the members of the group.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfControlConstructGroup",":doc:`/composite-types/CodeValueType/index`","0..1","A generic element for specifying a reason for a ControlConstructGroup. Note that this element can contain either a term from a controlled vocabulary list or a textual description."
+   "ControlConstructGroupName",":doc:`/composite-types/NameType/index`","0..n","A name for the ControlConstructGroup. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the ControlConstructGroup. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the ControlConstructGroup. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "UniverseReference",":doc:`/item-types/Universe/index`","0..n","Reference to the universe statement describing the persons or other objects to which the contents of this group pertain."
+   "ConceptReference",":doc:`/item-types/Concept/index`","0..1","Reference to the concept expressed by the objects in this group."
+   "Subject",":doc:`/composite-types/InternationalCodeValueType/index`","0..n","If subjects are listed for this group, it is strongly recommended that the subjects listed also be found in the TopicalCoverage element for the parent packaging element when this group is included directly or by reference in a module containing a coverage element. Use of subject at the group level allows for associating objects as a type of subject based group or to identify subject characteristics of a reusable group of objects."
+   "Keyword",":doc:`/composite-types/InternationalCodeValueType/index`","0..n","If keywords are listed for this group, it is strongly recommended that the keywords listed also be found in the TopicalCoverage element for the parent packaging element when this group is included directly or by reference in a module containing a coverage element. Use of keyword at the group level allows for associating objects as a type of keyword based group or to identify keyword characteristics of a reusable group of objects."
+   "ControlConstructReference",":doc:`/item-types/ControlConstruct/index`","0..1","Reference to constituent ControlConstruct (from the substitution group). TypeOfObject should be set to IfThenElse, RepeatUntil, RepeatWhile, Loop, Sequence, ComputationItem, StatementItem, MeasurementConstruct or QuestionConstruct."
+   "ControlConstructGroupReference",":doc:`/item-types/ControlConstructGroup/index`","0..1","Reference to constituent ControlConstructGroup. This allows for nesting of ControlConstructGroups. TypeOfObject should be set to ControlConstructGroup."
+   "IsOrdered","boolean","0..1","If set to ""true"" indicates that the content of the group is ordered as it appears within the XML structure."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference",":doc:`/item-types/Agent/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "RelatedOtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..n","The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+   "IsPublished","boolean","0..1","Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * **ControlConstructGroup**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ControlConstructScheme/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ControlConstructGroup.svg
+

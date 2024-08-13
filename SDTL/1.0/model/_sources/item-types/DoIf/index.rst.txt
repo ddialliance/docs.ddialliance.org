@@ -1,0 +1,48 @@
+DoIf
+----
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/TransformBase/index`
+    * **DoIf**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DoIf.svg
+
+Properties
+~~~~~~~~~~
+
+Condition
+*********
+
+Type
+    :doc:`/reusable-types/Expression/index`
+Cardinality
+    0..1
+
+TODO
+
+Items
+*****
+
+Type
+    :doc:`/item-types/TransformBase/index`
+Cardinality
+    0..n
+
+TODO
+
+
+

@@ -1,0 +1,61 @@
+VariableReferenceBase
+---------------------
+
+Types used to describe variables in expressions.
+
+
+Properties
+~~~~~~~~~~
+
+This type contains no properties.
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **VariableReferenceBase**
+        * :doc:`/composite-types/AllNumericVariablesExpression/index`
+        * :doc:`/composite-types/AllTextVariablesExpression/index`
+        * :doc:`/composite-types/AllVariablesExpression/index`
+        * :doc:`/composite-types/CompositeVariableNameExpression/index`
+        * :doc:`/composite-types/VariableListExpression/index`
+        * :doc:`/composite-types/VariableRangeExpression/index`
+        * :doc:`/composite-types/VariableSymbolExpression/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/Aggregate/index`
+* :doc:`/composite-types/AppendFileDescription/index`
+* :doc:`/composite-types/Collapse/index`
+* :doc:`/composite-types/Compute/index`
+* :doc:`/composite-types/DataframeDescription/index`
+* :doc:`/composite-types/DropVariables/index`
+* :doc:`/composite-types/KeepVariables/index`
+* :doc:`/composite-types/MergeDatasets/index`
+* :doc:`/composite-types/MergeFileDescription/index`
+* :doc:`/composite-types/ReshapeItemDescription/index`
+* :doc:`/composite-types/ReshapeLong/index`
+* :doc:`/composite-types/ReshapeWide/index`
+* :doc:`/composite-types/SetDataType/index`
+* :doc:`/composite-types/SetDisplayFormat/index`
+* :doc:`/composite-types/SetMissingValues/index`
+* :doc:`/composite-types/SetValueLabels/index`
+* :doc:`/composite-types/SetVariableLabel/index`
+* :doc:`/composite-types/SortCriterion/index`
+* :doc:`/composite-types/VariableListExpression/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VariableReferenceBase.svg
+

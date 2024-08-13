@@ -1,0 +1,35 @@
+ReshapeItemDescription
+----------------------
+
+Descripbes a new variable created by reshaping a dataset from wide to long or vice versa.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TargetVariableName","string","0..1","Name of new variable created by this command."
+   "TargetVariableLabel","string","0..1","Label for new variable created by this command."
+   "SourceVariables",":doc:`/composite-types/VariableReferenceBase/index`","0..1","Source variables in the original dataset used to create this variable."
+   "Stub","string","0..1","The stub is a string used in the names of variables in the wide dataset."
+   "IndexValues",":doc:`/composite-types/ExpressionBase/index`","0..1","A list of values that produce new rows (long) or columns (wide) for this variable."
+   "IndexVariableName","string","0..1","Name of the variable that will contain the value of the index for this row."
+   "IndexVariableLabel","string","0..1","Label for the variable in IndexVariableName."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ReshapeLong/index`
+* :doc:`/composite-types/ReshapeWide/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ReshapeItemDescription.svg
+

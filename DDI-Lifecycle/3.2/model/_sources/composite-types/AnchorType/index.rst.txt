@@ -1,0 +1,28 @@
+AnchorType
+----------
+
+Allows for the attachment of a category label at any anchor point in a scale.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CategoryReference",":doc:`/item-types/Category/index`","0..1","A reference to the category containing the label for the anchor point."
+   "Value_string","string","0..1","The value of the anchor point."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ScaleDimensionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AnchorType.svg
+

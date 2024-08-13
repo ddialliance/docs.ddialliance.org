@@ -1,0 +1,33 @@
+DynamicTextType
+---------------
+
+Structure supporting the use of dynamic text, where portions of the textual contend change depending on external information (pre-loaded data, response to an earlier query, environmental situations, etc.).
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TextContent",":doc:`/composite-types/TextContentType/index`","0..n","This is the head of a substitution group and is never used directly as an element name. Instead it is replaced with either LiteralText or ConditionalText."
+   "IsStructureRequired","boolean","0..1","If textual structure (e.g. size, color, font, etc.) is required to understand the meaning of the content change value to ""true""."
+   "AudienceLanguage","language","0..1","Specifies the language of the intended audience. This is particularly important for clarifying the primary language of a mixed language textual string, for example when language testing and using a foreign word withing the question text."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Instruction/index`
+* :doc:`/item-types/QuestionGrid/index`
+* :doc:`/item-types/QuestionItem/index`
+* :doc:`/item-types/StatementItem/index`
+* :doc:`/composite-types/ResponseTextSetType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DynamicTextType.svg
+

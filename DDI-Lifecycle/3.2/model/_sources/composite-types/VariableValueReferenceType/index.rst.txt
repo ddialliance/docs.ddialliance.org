@@ -1,0 +1,28 @@
+VariableValueReferenceType
+--------------------------
+
+A reference to the variable containing the record type locator and the value being used. TypeOfObject should be set to Variable.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableReference",":doc:`/item-types/Variable/index`","0..1","Reference to the variable containing the record type locator."
+   "RelatedValue",":doc:`/composite-types/RelatedValueType/index`","0..n","Value of variable indicating this record type, multiple entries allow for multiple valid values or ranges. Indicates if the variable should be equal to, greater than, less than, greater than or equal to, less than or equal to, or not equal to the stated value.(default value is ""Equal""). Also allows the conditional value to be defined as blank (or no content)."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LogicalRecordType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VariableValueReferenceType.svg
+

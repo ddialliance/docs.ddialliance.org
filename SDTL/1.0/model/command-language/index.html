@@ -1,0 +1,1030 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>SDTL Command Language &mdash; Structured Data Transform Language 0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="SDTL Function Library" href="../function-library/" />
+    <link rel="prev" title="SDTL Use Cases" href="../use-cases/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> Structured Data Transform Language
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components/">Components of SDTL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../use-cases/">SDTL Use Cases</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SDTL Command Language </a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sdtl-type-hierarchy">SDTL Type Hierarchy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#commandbase">CommandBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transformbase">TransformBase</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#informbase">InformBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expressionbase">ExpressionBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#types-for-complex-properties">Types for Complex Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#files-and-dataframes">Files and Dataframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conditional-execution-by-row-or-by-file-dataframe">Conditional Execution by Row or by File/Dataframe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#links-to-related-documents">Links to related documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../function-library/">SDTL Function Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pseudocode-library/">SDTL Pseudocode Library Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../best-practices/">SDTL Best Practices and Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits/#copyright-and-license">Copyright and License</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../topics/All/">All</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../item-types/">All Item Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../composite-types/">All Composite Types</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Structured Data Transform Language</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>SDTL Command Language </li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/command-language/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sdtl-command-language-1">
+<h1>SDTL Command Language <a class="footnote-reference" href="#id3" id="id1">[1]</a><a class="headerlink" href="#sdtl-command-language-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>SDTL has been defined as a set of JSON (JavaScript Object Notation)
+schemas. Each schema is a “type” (“$type” in the schemas), which can
+include one or more “properties”. Properties are described by name/value
+pairs. The value of a property may be another SDTL type, and SDTL types
+are often nested in this way. A value may also be an array, which is an
+ordered list of values. However, all values are ultimately resolved into
+numbers, text strings, or boolean constants (True/False).</p>
+<p>Figure 2 gives an example illustrating how SDTL types are nested inside
+other types. The source command is “RENAME VARIABLES (var10 = Age).“,
+which changes the name of variable “var10” to “Age” in the SPSS
+language. The corresponding SDTL command is <strong>Rename</strong>, which is given
+in both the “$type” and “command” properties in Figure 1. The original
+SPSS version is given in the <strong>originalSourceText</strong> of the
+<strong>sourceInformation</strong> property. The SDTL <strong>Rename</strong> command has only one
+property, <strong>renames</strong>, which can include one or more values of type
+<strong>RenamePair</strong>. In this case, we have only one <strong>RenamePair</strong>, which has
+two properties <strong>oldVariable</strong> and <strong>newVariable</strong>, each of which must
+be a <strong>VariableSymbolExpression</strong> type. A <strong>VariableSymbolExpression</strong>
+has only one property, <strong>VariableName</strong>, which must be a string. These
+strings are the old and new names for the variable, “var10” and “Age”.</p>
+<p>SDTL is much more verbose than the SPSS version of the same command, but
+SDTL is much easier for a computer to manipulate. Every element in SDTL
+has a “$type” explaining where it fits in the SDTL schema. <a class="footnote-reference" href="#id4" id="id2">[2]</a> We know
+that “var10” is the old variable name, because it is tagged with
+<strong>oldVariable</strong>. In contrast, a computer program would need to include
+code reproducing the syntax rules of the SPSS language to identify
+“var10” as the variable to be renamed in the original SPSS command.</p>
+<p>Documentation and downloads for the SDTL Command Language are available
+at <a class="reference external" href="http://c2metadata.gitlab.io/sdtl-docs/">http://c2metadata.gitlab.io/sdtl-docs/</a>. The COGS documentation system
+provides detailed descriptions of all SDTL types, and some descriptions
+are supplemented with examples and other documents.</p>
+<p>Figure 2. Example SDTL: Rename command</p>
+<div class="code json highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;Rename&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;rename&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sourceInformation&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;originalSourceText&quot;</span><span class="p">:</span> <span class="s2">&quot;RENAME VARIABLES (var10 = Age).&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;renames&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;RenamePair&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;oldVariable&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;variableName&quot;</span><span class="p">:</span> <span class="s2">&quot;var10&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;VariableSymbolExpression&quot;</span>
+
+            <span class="p">},</span>
+            <span class="s2">&quot;newVariable&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;variableName&quot;</span><span class="p">:</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;VariableSymbolExpression&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sdtl-type-hierarchy">
+<h2>SDTL Type Hierarchy<a class="headerlink" href="#sdtl-type-hierarchy" title="Permalink to this headline">¶</a></h2>
+<p>Types in SDTL are organized into groups, called “bases”, according to
+the hierarchy shown in Figure 3.</p>
+<img alt="../_images/sdtl-type-hierarchy.png" src="../_images/sdtl-type-hierarchy.png" />
+<p>Figure 3. Type Hierarchy in SDTL</p>
+<div class="section" id="commandbase">
+<h3>CommandBase<a class="headerlink" href="#commandbase" title="Permalink to this headline">¶</a></h3>
+<p>The SDTL types in CommandBase describe actions, like merging files or
+modifying the contents of a variable. CommandBase has two
+sub-categories:</p>
+<ul class="simple">
+<li>TransformBase includes commands that change data or metadata, like
+<strong>Compute</strong>, <strong>Rename</strong>, <strong>MergeDatasets</strong>, and <strong>SetDataType</strong></li>
+<li>InformBase commands provide information, like <strong>Comment</strong> and
+<strong>Message</strong></li>
+</ul>
+<p>All commands inherit properties from CommandBase (<strong>command</strong>,
+<strong>sourceInformation</strong>, and <strong>messageText</strong>).</p>
+</div>
+<div class="section" id="transformbase">
+<h3>TransformBase<a class="headerlink" href="#transformbase" title="Permalink to this headline">¶</a></h3>
+<p>The types belonging to TransformBase are commands that change data or
+metadata. All commands in TransformBase also inherit properties from
+CommandBase to which it belongs:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>producesDataframe</strong></td>
+<td>Identifies the dataframes which this
+transform produces.</td>
+</tr>
+<tr class="row-even"><td><strong>consumesDataframe</strong></td>
+<td>Identifies the dataframes which this
+transform acts upon.</td>
+</tr>
+</tbody>
+</table>
+<p>In Table 1 the commands in TransformBase are arranged into five
+functional sub-groups.</p>
+<ol class="arabic simple">
+<li>Commands that create variables or change the values of a variable.
+Only four SDTL commands add or modify variables.</li>
+<li>Commands that change the metadata associated with a variable or
+dataframe.
+Statistical packages manage several types of metadata: variable
+names, labels, data type, display properties.</li>
+<li>Commands that read or write files.</li>
+<li>Commands that change the structure of a dataframe.
+The structure of a dataframes is changed by adding or dropping
+columns or rows.</li>
+<li>Commands that control the flow of operations in a script
+Command execution can be conditional (if.. then..else) or iterative.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="informbase">
+<h2>InformBase<a class="headerlink" href="#informbase" title="Permalink to this headline">¶</a></h2>
+<p>Table 2 shows informational commands that do not describe changes to the
+data. Although SDTL does not include commands that analyze data, these
+commands can be transcribed verbatim in an SDTL script with the
+<strong>Analysis</strong> command. <strong>Unsupported</strong> is used for commands that our
+Parser cannot translate into SDTL. <strong>Invalid</strong> is used when the parser
+recognizes the command in the source language but its syntax does not
+conform to expectations. <strong>NoTransformOp</strong> is used for source language
+commands that do not have a function in SDTL, like invoking a library of
+functions in the source language.</p>
+</div>
+<div class="section" id="expressionbase">
+<h2>ExpressionBase<a class="headerlink" href="#expressionbase" title="Permalink to this headline">¶</a></h2>
+<p>The SDTL types in Table 3 (ExpressionBase) are used in expressions,
+which may be numeric, text or logical. The most powerful of these types
+is <strong>FunctionCallExpression</strong>, which is discussed below.
+VariableReferenceBase (Table 4) is a subcategory of ExpressionBase used
+to describe the variables in an expression.</p>
+<p>ExpressionBase includes types to describe lists and ranges of variables,
+numbers, and strings. Commands like <strong>Recode</strong> and <strong>SetDataFormat</strong> are
+often applied to many variables at the same time. The
+<strong>VariableRangeExpression</strong> identifies variables in contiguous columns
+in the dataframe by specifying the first and last variables in the set.
+A <strong>VariableListExpression</strong> consists of a list of individual variables
+(<strong>VariableSymbolExpression</strong>) and ranges (<strong>VariableRangeExpression</strong>).</p>
+<p>Commands and functions may also require a list of values, like the
+<strong>cut_list()</strong> function which divides a numeric variable into categories
+at specified breakpoints. A <strong>ValueListExpression</strong> may consist of
+numbers or strings (<strong>NumericConstantExpression</strong>,
+<strong>StringConstantExpression</strong>) or ranges of numbers or strings
+(<strong>NumberRangeExpression</strong>, <strong>StringRangeExpression</strong>). In SDTL a list
+of values is a single expression, which simplifies the description of
+functions.</p>
+</div>
+<div class="section" id="types-for-complex-properties">
+<h2>Types for Complex Properties<a class="headerlink" href="#types-for-complex-properties" title="Permalink to this headline">¶</a></h2>
+<p>Table 5 includes types that were created to represent complex properties
+of other commands. For example, <strong>SourceInformation</strong> is a property of
+every command in CommandBase that shows the source of this command in
+its original language. In addition to the text of the original command,
+<strong>SourceInformation</strong> provides the location of the original command in
+the command script. <strong>SourceInformation</strong> has the following properties.</p>
+<ul class="simple">
+<li><strong>lineNumberStart</strong>: The line number of the beginning of the
+transform code</li>
+<li><strong>lineNumberEnd</strong>: The line number of the end of the transform code</li>
+<li><strong>sourceStartIndex</strong>: The character index of the beginning of the
+transform code</li>
+<li><strong>sourceStopIndex</strong>: The character index of the end of the transform
+code</li>
+<li><strong>originalSourceText</strong>: The original source code of the data
+transform code</li>
+<li><strong>processedSourceText</strong>: The source code of the data transform code
+after processing macros or loops</li>
+</ul>
+<p>Although <strong>sourceInformation</strong> is only one property of a command, the
+<strong>SourceInformation</strong> type allows it to include six types of
+information.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td colspan="2"><dl class="first last docutils">
+<dt><strong>Table 1</strong></dt>
+<dd><strong>TransformBase: SDTL Types that Change a Dataframe</strong></dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td colspan="2">A. Commands that create
+variables or change the
+values of a variable</td>
+</tr>
+<tr class="row-odd"><td><strong>Aggregate</strong></td>
+<td>An aggregation summarizes data
+using aggregation functions
+applied to data that may be
+grouped by one or more
+variables. The resulting summary
+data is added to each row of the
+existing dataset. The SDTL
+Collapse command is used when
+the summary data is used to
+create a new dataframe with one
+row per group..</td>
+</tr>
+<tr class="row-even"><td><strong>Compute</strong></td>
+<td>Assigns the value of an
+expression to a variable.</td>
+</tr>
+<tr class="row-odd"><td><strong>Recode</strong></td>
+<td>Describes recoding values in one
+or more variables according to a
+specified mapping. The Recode
+command can either describe a
+recoding of one or more
+individual variables, or a range
+of variables. When one or more
+individual variables are
+described, a new variable name
+can be specified. In this case,
+the original variable is left
+alone, and a new variable is
+created with the recoded values.</td>
+</tr>
+<tr class="row-even"><td><strong>SetMissingValues</strong></td>
+<td>Defines values that are treated
+as missing values for a list of
+variables.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td colspan="2">B. Commands that change the
+metadata associated with a
+variable or dataframe</td>
+</tr>
+<tr class="row-odd"><td><strong>Rename</strong></td>
+<td>Rename changes the name of a
+variable or list of variables.</td>
+</tr>
+<tr class="row-even"><td><strong>SetDatasetProperty</strong></td>
+<td>Changes a property of a
+dataframe.</td>
+</tr>
+<tr class="row-odd"><td><strong>SetDataType</strong></td>
+<td>Sets the data type of a variable
+or list of variables.</td>
+</tr>
+<tr class="row-even"><td><strong>SetDisplayFormat</strong></td>
+<td>Sets the display or output
+format for a variable or list of
+variables.</td>
+</tr>
+<tr class="row-odd"><td><strong>SetValueLabels</strong></td>
+<td>Describes the assignment of
+labels to categorical values.</td>
+</tr>
+<tr class="row-even"><td><strong>SetVariableLabel</strong></td>
+<td>Describes the assignment of a
+label to a variable.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td colspan="2">C. Commands that read or write
+files</td>
+</tr>
+<tr class="row-odd"><td><strong>Load</strong></td>
+<td>Load data from a file.</td>
+</tr>
+<tr class="row-even"><td><strong>Save</strong></td>
+<td>Writes a dataset to a file.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td colspan="2">D. Commands that change the
+structure of a dataframe</td>
+</tr>
+<tr class="row-odd"><td><strong>AppendDatasets</strong></td>
+<td>Combines datasets by
+concatenation for datasets with
+the same or overlapping
+variables.</td>
+</tr>
+<tr class="row-even"><td><strong>Collapse</strong></td>
+<td>A collapse command summarizes
+data using aggregation functions
+applied to data that may be
+grouped by one or more
+variables. The resulting summary
+data is represented in a new
+dataset. See Aggregate for
+adding summary variables without
+changing the number of rows.</td>
+</tr>
+<tr class="row-odd"><td><strong>DropCases</strong></td>
+<td>Rows that match the selection
+condition are deleted in the
+dataset. Other rows are
+retained.</td>
+</tr>
+<tr class="row-even"><td><strong>DropVariables</strong></td>
+<td>Deletes variables from the
+dataset.</td>
+</tr>
+<tr class="row-odd"><td><strong>KeepCases</strong></td>
+<td>Rows that match the selection
+condition are retained in the
+dataset. Other rows are deleted.</td>
+</tr>
+<tr class="row-even"><td><strong>KeepVariables</strong></td>
+<td>Variables to be retained in the
+dataset. Variables not on the
+list are deleted.</td>
+</tr>
+<tr class="row-odd"><td><strong>MergeDatasets</strong></td>
+<td>Merges datasets holding
+overlapping cases but different
+variables. The merge may be
+controlled by keys or grouping
+variables.</td>
+</tr>
+<tr class="row-even"><td><strong>NewDataframe</strong></td>
+<td>Creates a new empty dataframe.
+Numbers of rows or columns may
+be specified. All values are
+assumed to be missing.</td>
+</tr>
+<tr class="row-odd"><td><strong>ReshapeLong</strong></td>
+<td>Creates a new dataset with
+multiple rows per case by
+assigning a set of variables in
+the original dataset to a single
+variable in the new dataset.</td>
+</tr>
+<tr class="row-even"><td><strong>ReshapeWide</strong></td>
+<td>ReshapeWide is not supported in
+the current version of SDTL,
+because it depends on values in
+the data. However, it may be
+useful when values of the index
+variable are available in the
+metadata file or the data can be
+processed.</td>
+</tr>
+<tr class="row-odd"><td><strong>SortCases</strong></td>
+<td>Sorts rows in the dataframe in a
+specified order.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td colspan="2">E. Commands that control the
+flow of operations in a script</td>
+</tr>
+<tr class="row-even"><td><strong>DoIf</strong></td>
+<td>A set of commands that are
+performed when a logical
+expression is true. May also
+include ElseCommands to be
+performed if the logical
+expression is false. The
+commands in DoIf are performed
+once, and it expects a logical
+condition that applies to the
+entire dataframe. Use IfRows for
+commands that are performed on
+each row depending upon values
+on those rows.</td>
+</tr>
+<tr class="row-odd"><td><strong>Execute</strong></td>
+<td>This command causes the system
+to execute preceding commands
+before continuing to process the
+command script.</td>
+</tr>
+<tr class="row-even"><td><strong>IfRows</strong></td>
+<td>A set of commands that are
+performed on each row in the
+dataframe when a logical
+expression is true for that row.
+May also include ElseCommands to
+be performed if the logical
+expression is false. Use DoIf
+for a logical condition that
+applies to the entire dataframe
+and commands that are performed
+once.</td>
+</tr>
+<tr class="row-odd"><td><strong>LoopOverList</strong></td>
+<td>A loop creates multiple versions
+of a set of commands by
+iterating over a list of
+variables, numbers, or strings.</td>
+</tr>
+<tr class="row-even"><td><strong>LoopWhile</strong></td>
+<td>LoopWhile iterates over a set of
+commands under the control of
+one or more logical expressions.
+Since the logical conditions
+typically depend upon values in
+the data, commands executed in a
+LoopWhile cannot be anticipated
+and expanded in SDTL.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td colspan="2"><dl class="first last docutils">
+<dt><strong>Table 2.</strong></dt>
+<dd><strong>InformBase: Commands that provide information</strong></dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><strong>Analysis</strong></td>
+<td>Describes an analysis command.
+An analysis command does not
+result in any data
+transformation.</td>
+</tr>
+<tr class="row-odd"><td><strong>Comment</strong></td>
+<td>Describes a source code comment.</td>
+</tr>
+<tr class="row-even"><td><strong>Invalid</strong></td>
+<td>Describes an invalid command. A
+command is invalid if it uses
+incorrect syntax, or is
+otherwise not allowed by the
+executing system.</td>
+</tr>
+<tr class="row-odd"><td><strong>Message</strong></td>
+<td>Inserts message text in the SDTL
+file.</td>
+</tr>
+<tr class="row-even"><td><strong>NoTransformOp</strong></td>
+<td>NoTransformOp is used for a
+command in the original script
+that provides important
+information but does not have a
+function in SDTL. For example,
+“library()” in R loads a package
+of R functions. Since the Parser
+detects the library, the SDTL
+will reflect the library that is
+used, and commands derived from
+the library will be translated
+in the SDTL script. However, it
+is useful to know which library
+is active for auditing the R
+script, even if it does not
+perform any data
+transformations.</td>
+</tr>
+<tr class="row-odd"><td><strong>Unsupported</strong></td>
+<td>Describes an unsupported
+command. An unsupported command
+is valid syntax, but not
+supported by the parsing
+application.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td colspan="2"><dl class="first last docutils">
+<dt><strong>Table 3.</strong></dt>
+<dd><strong>ExpressionBase: SDTL Types Used in Expressions</strong></dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><strong>BooleanConstantExpression</strong></td>
+<td>BooleanConstantExpression takes
+values of TRUE and FALSE.</td>
+</tr>
+<tr class="row-odd"><td><strong>FunctionCallExpression</strong></td>
+<td>An expression evaluated by
+reference to the Function
+Library.</td>
+</tr>
+<tr class="row-even"><td><strong>GroupedExpression</strong></td>
+<td>A group of expressions to be
+evaluated before expressions
+outside of the group. Used to
+control the order of operations
+in a formula.</td>
+</tr>
+<tr class="row-odd"><td><strong>IteratorSymbolExpression</strong></td>
+<td>The name of an iterator symbol
+used as an index in describing
+the actions of a loop.</td>
+</tr>
+<tr class="row-even"><td><strong>MissingValueConstantExpression</strong></td>
+<td>A missing value constant. Some
+languages allow multiple missing
+value constants.</td>
+</tr>
+<tr class="row-odd"><td><strong>NumberRangeExpression</strong></td>
+<td>Defines a range of numeric
+values.</td>
+</tr>
+<tr class="row-even"><td><strong>NumericConstantExpression</strong></td>
+<td>A numeric constant.</td>
+</tr>
+<tr class="row-odd"><td><strong>NumericMaximumValueExpression</strong></td>
+<td>Represents the largest numeric
+value supported by a system.</td>
+</tr>
+<tr class="row-even"><td><strong>NumericMinimumValueExpression</strong></td>
+<td>Represents the smallest numeric
+value supported by a system.</td>
+</tr>
+<tr class="row-odd"><td><strong>StringConstantExpression</strong></td>
+<td>A text string.</td>
+</tr>
+<tr class="row-even"><td><strong>StringRangeExpression</strong></td>
+<td>Defines a range of string
+values.</td>
+</tr>
+<tr class="row-odd"><td><strong>UnhandledValuesExpression</strong></td>
+<td>Represents any values not
+previously handled (for example,
+in a set of recode rules).</td>
+</tr>
+<tr class="row-even"><td><strong>ValueListExpression</strong></td>
+<td>Wraps a list of other
+expressions.</td>
+</tr>
+<tr class="row-odd"><td><strong>VariableReferenceBase</strong></td>
+<td>SDTL types used to describe
+variables. See Table 3.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="48%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td colspan="2"><dl class="first last docutils">
+<dt><strong>Table 4.</strong></dt>
+<dd><strong>VariableReferenceBase: SDTL Types Used to Describe Variables</strong>
+<strong>in Expressions</strong></dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><strong>AllNumericVariablesExpression</strong></td>
+<td>An expression that represents
+all numeric variables in the
+dataset, similar to `_all` in
+SPSS or Stata.</td>
+</tr>
+<tr class="row-odd"><td><strong>AllTextVariablesExpression</strong></td>
+<td>An expression that represents
+all text variables in the
+dataset, similar to `_all` in
+SPSS or Stata.</td>
+</tr>
+<tr class="row-even"><td><strong>AllVariablesExpression</strong></td>
+<td>An expression that represents
+all variables in the dataset,
+similar to _all in SPSS or
+Stata.</td>
+</tr>
+<tr class="row-odd"><td><strong>CompositeVariableNameExpression</strong></td>
+<td>A composite variable name is
+used to describe a variable name
+that is computed.</td>
+</tr>
+<tr class="row-even"><td><strong>VariableListExpression</strong></td>
+<td>A list of variables which may
+include variable names
+(VariableSymbolExpression) and
+variable ranges
+(VariableRangeExpression).</td>
+</tr>
+<tr class="row-odd"><td><strong>VariableRangeExpression</strong></td>
+<td>A list of variables in adjacent
+columns defined by the variable
+names of first and last columns.</td>
+</tr>
+<tr class="row-even"><td><strong>VariableSymbolExpression</strong></td>
+<td>A reference to a variable.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td colspan="2"><dl class="first last docutils">
+<dt><strong>Table 5.</strong></dt>
+<dd><strong>Types for Complex Properties in SDTL Commands</strong></dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><strong>AppendFileDescription</strong></td>
+<td>Describes files used in an
+AppendDatasets command.</td>
+</tr>
+<tr class="row-odd"><td><strong>DataframeDescription</strong></td>
+<td>Describes a dataframe in the
+consumesDataframe or
+producesDataframe types.
+Provides the name of the data
+frame and a list of variables
+(columns). DataframeDescription
+can also define dimensions in
+dataframes that have
+hierarchical indexes, data
+cubes, or multi-indexes.</td>
+</tr>
+<tr class="row-even"><td><strong>FunctionArgument</strong></td>
+<td>Describes the arguments in a
+function as specified in the
+SDTL Function Library.</td>
+</tr>
+<tr class="row-odd"><td><strong>IteratorDescription</strong></td>
+<td>Describes an iteration process
+consisting of an
+IteratorSymbolExpression and a
+list of values it takes.</td>
+</tr>
+<tr class="row-even"><td><strong>MergeFileDescription</strong></td>
+<td>Describes files used in a
+MergeDatasets command.</td>
+</tr>
+<tr class="row-odd"><td><strong>RecodeRule</strong></td>
+<td>Describes how values will be
+recoded.</td>
+</tr>
+<tr class="row-even"><td><strong>RecodeVariable</strong></td>
+<td>Describes a variable that will
+have its values recoded.</td>
+</tr>
+<tr class="row-odd"><td><strong>RenamePair</strong></td>
+<td>Variable names before and after
+a variable is renamed.</td>
+</tr>
+<tr class="row-even"><td><strong>ReshapeItemDescription</strong></td>
+<td>Describes a new variable created
+by reshaping a dataset from wide
+to long.</td>
+</tr>
+<tr class="row-odd"><td><strong>SortCriterion</strong></td>
+<td>Describes a criterion by which
+cases are sorted, including the
+variable name and whether to
+sort ascending or descending.</td>
+</tr>
+<tr class="row-even"><td><strong>SourceInformation</strong></td>
+<td>SourceInformation defines
+information about the original
+source of a data transform.</td>
+</tr>
+<tr class="row-odd"><td><strong>ValueLabel</strong></td>
+<td>Associates a label with a value
+in a categorical variable.</td>
+</tr>
+</tbody>
+</table>
+<p>A command in a source language may result in several SDTL commands. For
+example, in some languages the cut() function, which divides a numeric
+variable into categories, can also apply labels to the resulting
+categories. The equivalent SDTL function does not include a way to
+define value labels, and it would be followed by a separate
+<strong>SetValueLabels</strong> command.</p>
+</div>
+<div class="section" id="files-and-dataframes">
+<h2>Files and Dataframes<a class="headerlink" href="#files-and-dataframes" title="Permalink to this headline">¶</a></h2>
+<p>SDTL was designed to describe statistical data arranged in a
+two-dimensional matrix of rows (cases) and columns (variables). We refer
+to data stored on persistent media as ‘files’, and we use ‘dataframe’ to
+refer to temporary storage that is available for the duration of a
+command script. Files are loaded into temporary storage where they
+become dataframes, and dataframes are saved to external storage as
+files. A command script may use many files and dataframes.</p>
+<p>We use the term “active dataframe” to refer to the dataframe currently
+in use by the script. Some statistical packages only use one dataframe
+at a time. Other packages set up a working environment in which many
+dataframes are accessible. The active dataframe is not always named in
+the source script, but a name may be assigned in the SDTL script for
+clarification.</p>
+<p><strong>AppendDatasets</strong> and <strong>MergeDatasets</strong> combine rows or columns from
+two or more files or dataframes into a new dataframe. <strong>AppendDatasets</strong>
+(Figure 4) combines rows from dataframes that share common variables.
+<strong>MergeDatasets</strong> (Figure 5) combines columns from dataframes that share
+rows referring to the same subjects or entities.</p>
+<img alt="../_images/append-datasets.png" src="../_images/append-datasets.png" />
+<p>Figure 4. <strong>AppendDatasets</strong></p>
+<img alt="../_images/merge-datasets.png" src="../_images/merge-datasets.png" />
+<p>Figure 5. <strong>MergeDatasets</strong></p>
+<p><strong>MergeDatasets</strong> is a particularly complex operation with different
+options in every source language.  Older languages, like SPSS and SAS,
+approach file merging as a process of drawing rows from two files that
+have been pre-sorted.  R and Python use concepts like “right” and “left”
+joins, which are familiar to SQL programmers but opaque to most others.
+SDTL covers old and new source languages by identifying three properties
+defining a wide range of merge procedures.  First, SDTL has a controlled
+vocabulary for the <strong>mergeType</strong>.  A “Sequential” merge matches rows in the
+order that they appear in each file.  A “OneToOne” merge expects each file
+to have one or more identifying variables that uniquely link each row in
+one file to the corresponding row in the other file.</p>
+<p>Second, the <strong>update</strong> property determines the outcome when a variable
+appears in more than one input file.   Some languages use file merging as
+a way of updating data in an existing file.  For example, the merge may be
+designed to supply values for rows with missing values.  In this case, the
+SDTL <strong>update</strong> property of the primary file is set to “Master”, and the
+<strong>update</strong> property of the secondary file is set to “UpdateMissing.”</p>
+<p>Third, the <strong>newRow</strong> property describes the outcome when a row in one file
+cannot be matched to any of the rows in the other file.  When <strong>newRow</strong> is
+TRUE, a row is added to the output file even if it is not matched.  When
+<strong>newRow</strong> is FALSE, unmatched rows are not included in the output file.
+For “inner” and “outer” joins we set the <strong>newRow</strong> of every file to TRUE or
+FALSE respectively.  “Left” and “right” joins involve one file set to TRUE
+and another file set to FALSE.</p>
+<p>The “SDTL Merge Gallery” includes more than thirty examples of merge
+commands in source languages with corresponding SDTL.</p>
+<p><strong>Aggregate</strong> and <strong>Collapse</strong> involve computations across multiple
+rows. For example, consider a dataframe consisting of a row for each
+child that includes the ID of the mother of each child. If we count rows
+by mother’s ID, we get the number of children for each mother. The
+<strong>Aggregate</strong> command (Figure 6) retains the existing number of rows and
+adds the number of children variable to every child’s row. The
+<strong>Collapse</strong> command (Figure 7) results in a new dataframe with one row
+per mother.</p>
+<img alt="../_images/aggregate.png" src="../_images/aggregate.png" />
+<p>Figure 6. <strong>Aggregate</strong></p>
+<img alt="../_images/collapse.png" src="../_images/collapse.png" />
+<p>Figure 7. <strong>Collapse</strong></p>
+</div>
+<div class="section" id="conditional-execution-by-row-or-by-file-dataframe">
+<h2>Conditional Execution by Row or by File/Dataframe<a class="headerlink" href="#conditional-execution-by-row-or-by-file-dataframe" title="Permalink to this headline">¶</a></h2>
+<p>The execution of a command may depend on a logical condition that is
+evaluated sequentially for each row in a dataframe or on a logical
+condition that applies to the entire dataframe. For example, a
+<strong>Compute</strong> command may be applied only to rows where “varX” is less
+than 1000 or it may be applied to all rows when the average of “varX” is
+less than 1000. In SDTL <strong>IfRows</strong> is used when the condition is
+evaluated and executed separately on each row, and <strong>DoIf</strong> is used when
+the condition is evaluated once for the entire dataframe. Both
+<strong>IfRows</strong> and <strong>DoIf</strong> can be applied to a group of commands, and both
+include an <strong>elseCommands</strong> property for commands to be performed if the
+condition is false.</p>
+</div>
+<div class="section" id="links-to-related-documents">
+<h2>Links to related documents<a class="headerlink" href="#links-to-related-documents" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>For data cubes and multi-indexes in SDTL see:</dt>
+<dd><span class="xref std std-doc">/command-language/Hierarchical_Indexing_in_SDTL.rst</span></dd>
+</dl>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>In this section SDTL the names of types and properties are given in
+<strong>boldface</strong>. SDTL types begin with uppercase, and properties begin
+with lowercase. Values are surrounded by double quotes (“”).</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>As explained in SDTL Best Practices and Conventions #1, the “$type”
+property may be omitted when only one type is allowed.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../function-library/" class="btn btn-neutral float-right" title="SDTL Function Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../use-cases/" class="btn btn-neutral float-left" title="SDTL Use Cases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Copyright (c) 2020 C2Metadata Contributors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

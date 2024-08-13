@@ -1,0 +1,27 @@
+LifecycleInformationType
+------------------------
+
+Allows a listing of events in the life cycle of a data set or collection. Identification, date, agency, and descriptive information are provided for each event. Note that the agency that documents a lifecycle event is not necessarily the same agency as the one that performed the operation being documented as a lifecycle event.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "LifecycleEvent",":doc:`/composite-types/LifecycleEventType/index`","0..n","Documents an event in the life cycle of a study or group of studies. A life cycle event can be any event which is judged to be significant enough to document by the agency maintaining the documentation for a particular set of data."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Archive/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LifecycleInformationType.svg
+

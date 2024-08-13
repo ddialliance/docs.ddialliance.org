@@ -1,0 +1,38 @@
+NumberRangeType
+---------------
+
+Structures a numeric range. Low and High values are designated. The structure identifies Low values that should be treated as bottom coded (Stated value and bellow, High values that should be treated as top coded (stated value and higher), and provides a regular expression to further define the valid content of the range.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the number range. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Low",":doc:`/composite-types/NumberRangeValueType/index`","0..1","The lower bound of the range expressed in the data type xs:decimal. If not present, then there is no lower bound."
+   "LowDouble",":doc:`/composite-types/DoubleNumberRangeValueType/index`","0..1","The lower bound of the range expressed in the data type xs:double. If not present, then there is no lower bound."
+   "High",":doc:`/composite-types/NumberRangeValueType/index`","0..1","The upper bound of the range in the data type xs:decimal. If not present, then there is no upper bound."
+   "HighDouble",":doc:`/composite-types/DoubleNumberRangeValueType/index`","0..1","The upper bound of the range in the data type xs:double. If not present, then there is no upper bound."
+   "TopCode","decimal","0..1","Indicates that any response equal to or greater than this value has been coded as the top-code value. Expressed in the data type xs:decimal."
+   "TopCodeDouble","double","0..1","Indicates that any response equal to or greater than this value has been coded as the top-code value. Expressed in the data type xs:decimal."
+   "BottomCode","decimal","0..1","Indicates that any response equal to or less than this value has been coded as the bottom-code value. Expressed in the data type xs:double."
+   "BottomCodeDouble","double","0..1","Indicates that any response equal to or less than this value has been coded as the bottom-code value. Expressed in the data type xs:double."
+   "RegExp","string","0..1","Regular expression defining the allowed syntax of the number."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ManagedNumericRepresentation/index`
+* :doc:`/composite-types/NumericRepresentationBaseType/index`
+* :doc:`/composite-types/ScaleDimensionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/NumberRangeType.svg
+

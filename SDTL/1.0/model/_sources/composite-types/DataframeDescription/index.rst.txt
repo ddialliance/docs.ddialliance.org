@@ -1,0 +1,31 @@
+DataframeDescription
+--------------------
+
+Provides a name for the dataframe and an ordered list of variables (optional).   
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "DataframeName","string","1..1","Name of the dataframe."
+   "VariableInventory","string","0..n","Variables in the dataframe in order"
+   "RowDimensions",":doc:`/composite-types/VariableReferenceBase/index`","0..n","An ordered list of variables used as hierarchical dimensions in a data cube or multi-index"
+   "ColumnDimensions",":doc:`/composite-types/VariableReferenceBase/index`","0..n","An ordered list of variables used as colum indexes in a multi-index"
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/TransformBase/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DataframeDescription.svg
+

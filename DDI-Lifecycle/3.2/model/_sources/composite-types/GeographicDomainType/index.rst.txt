@@ -1,0 +1,69 @@
+GeographicDomainType
+--------------------
+
+Structures the response domain for a geographic point to ensure collection of relevant information. The point may be associated with a polygon (such as the centroid of the polygon) or a line (end or shape points of a line). Note that the common response domain objects (OutParameter, ResponseCardinality, and ContentDateOffset) are available at each of the response objects in the representation.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the domain. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the domain. May be expressed in multiple languages and supports the use of structured content."
+
+Properties Inherited from GeographicRepresentationBaseType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Datum",":doc:`/composite-types/CodeValueType/index`","0..1","The standard datum format used. Supports the use of a controlled vocabulary."
+   "CoordinateSystem",":doc:`/composite-types/CodeValueType/index`","0..1","The standard coordinate system used. Supports the use of a controlled vocabulary."
+   "CoordinateZone",":doc:`/composite-types/CodeValueType/index`","0..1","The standard coordinate zone being used. Supports the use of a controlled vocabulary."
+   "CoordinateSource",":doc:`/composite-types/CodeValueType/index`","0..1","The standard coordinate source being used. Supports the use of a controlled vocabulary."
+   "ErrorCorrection",":doc:`/composite-types/CodeValueType/index`","0..1","The standard method of error correction being used. Supports the use of a controlled vocabulary."
+   "Offset","string","0..1","A definition of the standard offset used when taking a coordinate reading on the geo-referenced object."
+   "GeoreferencedObject",":doc:`/composite-types/CodeValueType/index`","0..1","The standard object for which the geographic coordinates are being captured. This could be a household, village centroid, etc. Supports the use of a controlled vocabulary."
+   "AddressMatchType",":doc:`/composite-types/CodeValueType/index`","0..1","Use for coordinates obtained through address matching only. Identify the address matching method. Example: street segment match, ZIP code centroid, etc. Supports the use of a controlled vocabulary."
+   "CoordinatePairs",":doc:`/composite-types/CoordinatePairsType/index`","0..n","Field to capture coordinate pairs as individual pairs or as an array of pairs."
+   "AlternateOffset",":doc:`/composite-types/TextDomainType/index`","0..1","If unable to use the standard offset, allows entry of a non-standard offset figure."
+   "AlternateObject",":doc:`/composite-types/TextDomainType/index`","0..1","If the default geo-referenced object is unavailable or cannot be measured, allows identification of an alternate object."
+   "AlternateCoordinateSystem",":doc:`/composite-types/TextDomainType/index`","0..1","Specifies the coordinate system used for a response if different from that stated in the response structure."
+   "PointFormat","string","1..1","The type attribute is used by the documenter to describe the numeric response domain."
+   "SpatialPrimitive","string","1..1","Indicates the spatial primitive object which the point references."
+
+Properties Inherited from RepresentationType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RecommendedDataType",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides the recommended treatment of the data within an application. The value should come from a controlled vocabulary - recommended values include the set found in W3C XML Schema Part 2, but excluding string sub-types, QNAME, and NOTATION."
+   "GenericOutputFormat",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides a recommended generic treatment of the data for display by an application. The value should come from a controlled vocabulary."
+   "MissingValue","string","0..1","List the values used to represent missing data in a space delimited array. Use of MissingValuesReference is preferred. If this content does not match the values provided in the MissingValuesReference, the content of the MissingValuesReference overrides the content of this attribute."
+   "BlankIsMissingValue","boolean","0..1","When value is true a blank or empty variable content should be treated as a missing value.  Use of MissingValuesReference is preferred."
+   "ClassificationLevel","string","0..1","Indicates the type of relationship, nominal, ordinal, interval, ratio, or continuous. Use where appropriate for the representation type."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/RepresentationType/index`
+    * :doc:`/composite-types/GeographicRepresentationBaseType/index`
+        * **GeographicDomainType**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/GeographicDomainType.svg
+

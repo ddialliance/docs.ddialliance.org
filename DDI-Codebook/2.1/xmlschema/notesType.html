@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="section1.html">1.0 Document Description</a></li><li><a href="section2.html">2.0 Study Description</a></li><li><a href="section3.html">3.0 File Description</a></li><li><a href="section4.html">4.0 Variable Description</a></li><li><a href="section5.html">5.0 Other Material</a></li><li><a href="sectionall.html">Single file for printing</a> (slow)</li></ul><h2>&lt;notes&gt;&#160;Notes and comments</h2><ul><li>Optional</li><li>Repeatable</li><li>Attributes: <a href="codeBook.html">ID, xml:lang, source</a>, type, subject, level, resp, sdatrefs</li></ul><div style="padding-left:25px;"><p><em>Description:</em></p>
+                        <p>For clarifying information/annotation regarding the parent element.</p>
+                        <p>The attributes for notes permit a controlled vocabulary to be
+                            developed ("type" and "subject"), indicate the "level" of the DDI to
+                            which the note applies (study, file, variable, etc.), and identify the
+                            author of the note ("resp"). </p>
+                    </div><div style="padding-left:25px;"><p><em>Example(s):</em></p><pre>&lt;docDscr&gt;&lt;verStmt&gt;&lt;notes resp="Jane Smith"&gt;Additional information on derived variables  
+has been added to this marked-up version of the documentation.&lt;/notes&gt;&lt;/verStmt&gt;&lt;/docDscr&gt;
+
+&lt;docDscr&gt;&lt;citation&gt;&lt;notes resp="Jane Smith"&gt;This citation was prepared by the archive 
+based on information received from the markup authors.&lt;/notes&gt;&lt;/citation&gt;&lt;/docDscr&gt; 
+
+&lt;docSrc&gt;&lt;verStmt&gt;&lt;notes resp="Jane Smith"&gt;The source codebook was produced from  
+original hardcopy materials using  Optical Character Recognition (OCR).&lt;/notes&gt;&lt;verStmt&gt;
+&lt;/docSrc&gt; 
+
+&lt;docSrc&gt;&lt;notes&gt;A machine-readable version of the source codebook was supplied by the 
+Zentralarchiv&lt;/notes&gt;&lt;/docSrc&gt;
+
+&lt;docDscr&gt;&lt;notes&gt;This Document Description, or header information, can be used  within an 
+electronic resource discovery environment.&lt;/notes&gt;&lt;/docDscr&gt; 
+
+&lt;stdyDscr&gt;&lt;verStmt&gt;&lt;notes resp="Jane Smith"&gt;Data for 1998 have been added to this 
+version of the data collection.&lt;/notes&gt;&lt;/verStmt&gt;&lt;/stdyDscr&gt;
+
+&lt;stdyDscr&gt;&lt;citation&gt;&lt;notes resp="Jane Smith"&gt;This citation was sent to ICPSR by the 
+agency depositing the data.&lt;/notes&gt;&lt;/citation&gt;&lt;/stdyDscr&gt; 
+
+&lt;stdyInfo&gt;&lt;notes&gt;Data on employment and income refer to the preceding year, although 
+demographic data refer to the time of the survey.&lt;/notes&gt;&lt;/stdyInfo&gt; 
+
+&lt;method&gt;&lt;notes&gt;Undocumented codes were found in this data collection. Missing data are 
+represented by blanks.&lt;/notes&gt;&lt;/method&gt;
+
+&lt;method&gt;&lt;notes&gt;For this collection, which focuses on employment, unemployment, and 
+gender equality, data from EUROBAROMETER 44.3: HEALTH CARE ISSUES AND PUBLIC SECURITY, 
+FEBRUARY-APRIL 1996 (ICPSR 6752) were merged with an oversample.&lt;/notes&gt;&lt;/method&gt; 
+
+&lt;setAvail&gt;&lt;notes&gt; Data from the Bureau of Labor Statistics used in the analyses for the 
+final report are not provided as part of this collection.&lt;/notes&gt;&lt;/setAvail&gt; 
+
+&lt;dataAccs&gt;&lt;notes&gt;Users should note that this is a beta version of the data. The 
+investigators therefore request that users who encounter any problems with the dataset 
+contact them at the above address.&lt;/notes&gt;&lt;/dataAccs&gt; 
+
+&lt;fileStrc&gt;&lt;notes&gt;The number of arrest records for an individual is dependent on the 
+number of arrests an offender had.&lt;/notes&gt;&lt;/fileStrc&gt; 
+
+&lt;fileTxt&gt;&lt;verStmt&gt;&lt;notes&gt;Data for all previously-embargoed variables are now available 
+in  this version of the file.&lt;/notes&gt;&lt;/verStmt&gt;&lt;/fileTxt&gt; 
+
+&lt;fileDscr&gt;&lt;notes&gt;There is a restricted version of this file containing confidential 
+information,  access to which is controlled by the principal investigator.&lt;/notes&gt;
+&lt;/fileDscr&gt; 
+
+&lt;varGrp&gt;&lt;notes&gt;This variable group was created for the purpose of combining all derived 
+variables.&lt;/notes&gt;&lt;/varGrp&gt; 
+
+&lt;varGrp&gt;&lt;notes source="archive" resp="John Data"&gt;This variable group and all other 
+variable groups in this data file were organized according to a schema developed by 
+the adhoc advisory committee. &lt;/notes&gt;&lt;/varGrp&gt; 
+
+&lt;nCubeGrp&gt;&lt;notes&gt;This nCube Group was created for the purpose of presenting a cross-
+tabulation between variables "Tenure" and "Age of householder."&lt;/notes&gt;&lt;/nCubeGrp&gt; 
+
+&lt;valrng&gt;&lt;notes subject="political party"&gt;Starting with Euro-Barometer 2 the coding of 
+this variable has been standardized following an approximate ordering of each country's 
+political parties along a "left" to "right" continuum in the first digit of the codes. 
+Parties coded 01-39 are generally considered on the "left", those coded 40-49 in the 
+"center", and those coded 60-89 on the "right" of the political spectrum. Parties coded 
+50-59 cannot be readily located in the traditional meaning of "left" and "right". The 
+second digit of the codes is not significant to the "left-right" ordering. Codes 90-99 
+contain the response "other party" and various missing data responses. Users may modify 
+these codings or part of these codings in order to suit their specific needs. &lt;/notes&gt;
+&lt;/valrng&gt; 
+
+&lt;invalrng&gt;&lt;notes&gt;Codes 90-99 contain the response "other party" and various missing 
+data responses. &lt;/notes&gt;&lt;/invalrng&gt; 
+
+&lt;var&gt;&lt;verStmt&gt;&lt;notes&gt;The labels for categories 01 and 02 for this variable, were 
+inadvertently switched in the first version of this variable and have now been 
+corrected.&lt;/notes&gt;&lt;/verStmt&gt;&lt;/var&gt; 
+
+&lt;var&gt;&lt;notes&gt;This variable was created by recoding location of residence to Census 
+regions.&lt;/notes&gt;&lt;/var&gt; 
+
+&lt;nCube&gt;&lt;verStmt&gt;&lt;notes&gt;The labels for categories 01 and 02 in dimension 1 were 
+inadvertently switched in the first version of the cube, and have now been corrected.
+&lt;/notes&gt;&lt;/verStmt&gt;&lt;/nCube&gt; 
+
+&lt;nCube&gt;&lt;notes&gt;This nCube was created to meet the needs of local low income programs 
+in determining eligibility for federal funds.&lt;/notes&gt;&lt;/nCube&gt; 
+
+&lt;dataDscr&gt;&lt;notes&gt;The variables in this study are identical to earlier waves. &lt;/notes&gt;
+&lt;/dataDscr&gt; 
+
+&lt;otherMat&gt;&lt;notes&gt;Users should be aware that this questionnaire was modified  during 
+the CAI process.&lt;/notes&gt;&lt;/otherMat&gt; </pre></div></body></html>

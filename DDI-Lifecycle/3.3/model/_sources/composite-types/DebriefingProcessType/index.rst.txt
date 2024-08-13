@@ -1,0 +1,28 @@
+DebriefingProcessType
+---------------------
+
+Describe the debriefing process. Specifies if debriefing is required.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the Debriefing Process. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "IsRequired","boolean","0..1","If debriefing is required for this activity set isRequired to ""true""."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DevelopmentActivity/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DebriefingProcessType.svg
+

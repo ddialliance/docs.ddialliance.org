@@ -1,0 +1,33 @@
+CorrespondenceType
+------------------
+
+Describes the commonalities and differences between two items using a textual description of both commonalities and differences plus an optional coding of the type of commonality, a commonality expresses as a 0 to 1 weighting factor (expressing degree of comparability) and a user defined correspondence property which is specific to an organization or community of use.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Commonality",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the common features of the two items using a StructuredString to support multiple language versions of the same content as well as optional formatting of the content."
+   "Difference",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the differences between the two items using a StructuredString to support multiple language versions of the same content as well as optional formatting of the content."
+   "CommonalityTypeCoded",":doc:`/composite-types/CodeValueType/index`","0..1","A brief description describing the commonality of the two schemes/items, i.e., ""Identical"", ""High"", ""Medium"", ""Low"", ""None"". Supports the use of an external controlled vocabulary."
+   "CommonalityWeight","float","0..1","A value between 0 and 1 expressing the degree of commonality (0 indicates none, 1 indicates that they are identical)."
+   "UserDefinedCorrespondenceProperty",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","An alternate means of expressing commonality within a specific system. A system specific user defined correspondence expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/GenericMap/index`
+* :doc:`/item-types/RepresentationMap/index`
+* :doc:`/composite-types/ItemMapType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CorrespondenceType.svg
+

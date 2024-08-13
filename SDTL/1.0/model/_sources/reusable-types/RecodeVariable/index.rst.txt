@@ -1,0 +1,41 @@
+RecodeVariable
+--------------
+
+Describes a variable that will have its values recoded.
+
+
+.. contents::
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RecodeVariable.svg
+
+Properties
+~~~~~~~~~~
+
+Source
+******
+
+Type
+    string
+Cardinality
+    0..1
+
+The name of the variable which will have its values recoded
+
+Target
+******
+
+Type
+    string
+Cardinality
+    0..1
+
+The name of the new variable into which the recoded values are inserted. This may be the same as the source variable if values are recoded in place.
+
+
+

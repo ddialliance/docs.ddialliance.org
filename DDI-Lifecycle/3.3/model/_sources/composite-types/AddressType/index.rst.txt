@@ -1,0 +1,37 @@
+AddressType
+-----------
+
+Location address identifying each part of the address as separate elements, identifying the type of address, the level of privacy associated with the release of the address, and a flag to identify the preferred address for contact.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfAddress",":doc:`/composite-types/CodeValueType/index`","0..1","Indicates address type (i.e. home, office, mailing, etc.). The DDI Alliance has provided a controlled vocabulary (TypeOfAddress) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "Line","string","0..n","Number and street including office or suite number. May use multiple lines."
+   "CityPlaceLocal","string","0..1","City, Place, or local area used as part of an address."
+   "StateProvince","string","0..1","A major subnational division such as a state or province used to identify a major region within an address."
+   "PostalCode","string","0..1","Postal or ZIP Code"
+   "CountryCode",":doc:`/composite-types/CountryCodeType/index`","0..1","Country of the location"
+   "GeographicPoint",":doc:`/composite-types/PointType/index`","0..1","Geographic coordinate point for the location"
+   "TimeZone",":doc:`/composite-types/CodeValueType/index`","0..1","Time zone of the location expressed as code. The DDI Alliance has provided a controlled vocabulary (TimeZone) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "EffectivePeriod",":doc:`/composite-types/DateType/index`","0..1","Clarifies when the identification information is accurate."
+   "Privacy","string","0..1","A basic set of privacy codes for the parent element. These may be stricter than the general access restrictions for the overall metadata. If available codes are insufficient this may also contain any string."
+   "IsPreferred","boolean","0..1","Set to ""true"" if this is the preferred location for contacting the organization or individual."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ContactInformationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AddressType.svg
+

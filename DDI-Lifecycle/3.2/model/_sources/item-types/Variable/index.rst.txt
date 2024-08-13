@@ -1,0 +1,95 @@
+Variable
+--------
+
+Describes the structure of a Variable. This is the applied expression of a data item within a data set and maps to the GSIM ImplementedVariable. In addition to the standard name, label, and description, includes a reference to a source parameter, represented variable, conceptual variable, universe, concept, question, source variable, and embargo information. It identifies the normal source of the data in the variable, the unit of analysis, whether the variable provides temporal or geographic information, or serves as a weight for other variables in the data, and provides a full description of its representation.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableName",":doc:`/composite-types/NameType/index`","0..n","A name for the Variable. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the Variable. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the Variable. May be expressed in multiple languages and supports the use of structured content."
+   "OutParameter",":doc:`/composite-types/ParameterType/index`","0..1","Assigns a parameter that contains output from the Variable so that it can be bound to an InParameter of an instruction or act as the SourceParameter of another Variable."
+   "SourceParameterReference",":doc:`/composite-types/ParameterType/index`","0..1","Reference to an OutParameter that serves as the source for the content of this variable."
+   "SourceVariableReference",":doc:`/item-types/Variable/index`","0..n","Reference to variable(s) used as a basis for recoding, derivation, or other means of calculating the data for this variable. This reference is intended to provide basic information on the source variable structure including value representation, measurement unit, etc. Note that if a variable is used by reference within multiple VariableSchemes you can identify its role within a specific VariableScheme by including that VariableScheme in the sourceContext attribute of the reference. Use ProcessingInstructionReference to provide additional information on the transformation of the source variable(s) into the data for this variable. If additional processing detail is required use the InParameter, OutParameter, and ParameterLinkage options in the GenerationInstruction and ProcessingInstructionReference."
+   "RepresentedVariableReference",":doc:`/item-types/RepresentedVariable/index`","0..1","Reference to the RepresentedVariable that describes the core of this variable (the RepresentedVariable that the variable is the implementation of). The RepresentedVariable contains the broad reusable specification of the Variable, i.e., concept, universe, and value representation. These may be constrained by specifications within the Variable description. TypeOfObject should be set to RepresentedVariable."
+   "ConceptualVariableReference",":doc:`/item-types/ConceptualVariable/index`","0..1","Reference to the ConceptualVariable that describes the core of this variable. The ConceptualVariable provides linked Concept and Universe specifications. These may be constrained by specifications within the Variable description. TypeOfObject should be set to ConceptualVariable."
+   "UniverseReference",":doc:`/item-types/Universe/index`","0..n","Reference to the universe statement containing a description of the persons or other elements that this variable refers to, and to which any analytic results refer. If more than one universe is referenced the universe of the variable is the intersect of the referenced universes."
+   "ConceptReference",":doc:`/item-types/Concept/index`","0..1","Reference to the concept measured by this variable."
+   "QuestionReference",":doc:`/item-types/QuestionItem/index`","0..n","Reference to question(s) used to collect data for this variable. This references the wording and response domain of the question, not the question flow (if the same question was asked in reference to multiple objects (i.e., Age of each child). Use SourceParameterReference and/or VariableRepresentation/ProcessingInstructionReference to differentiate sources associated with flow patterns or data processing instructions."
+   "EmbargoReference",":doc:`/composite-types/EmbargoType/index`","0..1","Reference to any embargoes placed on the contents of this variable. Embargoes may limit access to the data and/or metadata to specific groups and/or for specified periods of time."
+   "SourceUnit",":doc:`/composite-types/CodeValueType/index`","0..1","The normal source of the information contained in the variable. In the case of a survey this may be a respondent, proxy, interviewer, or other source. In the case of administrative data the position of a field on a form e.g., ""top of page"", ""item 3"", ""generated by data processor"", etc. Supports the use of an external controlled vocabulary."
+   "AnalysisUnit",":doc:`/composite-types/CodeValueType/index`","0..1","The entity to which the data refer, for example, individuals, families or households, groups, institutions/organizations, administrative units, etc. Supports the use of an external controlled vocabulary."
+   "VariableRepresentation",":doc:`/composite-types/VariableRepresentationType/index`","0..1","Describes the representation of the variable in the data set, including allowed content, data typing, and computation information."
+   "IsTemporal","boolean","0..1","Set to ""true"" if the variable relays time-related information (date, time, season, relative time, etc.)."
+   "IsGeographic","boolean","0..1","Set to ""true"" if the variable relays geographic information, i.e., geographic code, area name, relative location, etc."
+   "IsWeight","boolean","0..1","Set to ""true"" if the variable is used a weight when analyzing data within the data set."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference_Organization",":doc:`/item-types/Organization/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionResponsibilityReference_Individual",":doc:`/item-types/Individual/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * **Variable**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DataSet/index`
+* :doc:`/item-types/GenerationInstruction/index`
+* :doc:`/item-types/VariableGroup/index`
+* :doc:`/item-types/VariableScheme/index`
+* :doc:`/item-types/VariableStatistics/index`
+* :doc:`/composite-types/AggregationVariablesType/index`
+* :doc:`/composite-types/AttributeType/index`
+* :doc:`/composite-types/CaseSpecificationType/index`
+* :doc:`/composite-types/ConcatenatedValueType/index`
+* :doc:`/composite-types/DataItemType/index`
+* :doc:`/composite-types/DimensionRankValueType/index`
+* :doc:`/composite-types/DimensionType/index`
+* :doc:`/composite-types/FilteredCategoryStatisticsType/index`
+* :doc:`/composite-types/FixedIdentifierType/index`
+* :doc:`/composite-types/GeographicCoverageType/index`
+* :doc:`/composite-types/ItemValueType/index`
+* :doc:`/composite-types/MeasureDefinitionType/index`
+* :doc:`/composite-types/PhysicalRecordSegmentType/index`
+* :doc:`/composite-types/SourceTargetLinkType/index`
+* :doc:`/composite-types/VariableItemType/index`
+* :doc:`/composite-types/VariableOrderType/index`
+* :doc:`/composite-types/VariableRepresentationType/index`
+* :doc:`/composite-types/VariablesInRecordType/index`
+* :doc:`/composite-types/VariableValueReferenceType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Variable.svg
+

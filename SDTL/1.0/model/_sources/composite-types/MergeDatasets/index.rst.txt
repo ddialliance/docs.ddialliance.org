@@ -1,0 +1,385 @@
+MergeDatasets
+-------------
+
+Merges datasets holding overlapping cases but different variables.  The merge may be controlled by keys or grouping variables.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "MergeFiles",":doc:`/composite-types/MergeFileDescription/index`","2..n","Description of files to be merged."
+   "MergeByVariables",":doc:`/composite-types/VariableReferenceBase/index`","0..1","A variable or list of variables that acts as the unique case identifier across datasets.  If MergeByVariables is absent, MergeType must be ""sequential"" on all files."
+   "FirstVariable","string","0..1","The name of a variable set to 1 for the first row of each group of cases with the same value for the MergeByVariables variables and set to  0 for all other rows."
+   "LastVariable","string","0..1","The name of a variable set to 1 for the last row of each group of cases with the same value for the MergeByVariables variables and set to  0 for all other rows."
+
+Properties Inherited from TransformBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProducesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform produces."
+   "ConsumesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform acts upon."
+
+Properties Inherited from CommandBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","0..n","Information about the source of the command."
+   "MessageText","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/CommandBase/index`
+    * :doc:`/composite-types/TransformBase/index`
+        * **MergeDatasets**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/MergeDatasets.svg
+
+Merge_options
+~~~~~~~~~~~~~
+
+Properties and Options of MergeFileDescription
+==============================================
+    
++----------------------+----------------------------------------------+
+|Property name         | Description                                  |
++======================+==============================================+
+| FileName             | The names of the files to be merged.         |
+|                      | \"Active file\" means the file current       |
+|                      | active dataset.                              |
++----------------------+----------------------------------------------+
+|  _                   |                                              | 
++----------------------+----------------------------------------------+
+| MergeType            | Describes the type of merge performed.       |
++----------------------+----------------------------------------------+
+|                      | > Sequential: Match rows from each input     |
+|                      | > dataframe in sequential order.             |
+|                      | >                                            |
+|                      | > OneToOne: Create one row for each value of |
+|                      | > the **mergeByVariables**. If a combination |
+|                      | > of the **mergeByVariables** is repeated,   |
+|                      | > only one row is matched. Rows with         |
+|                      | > repeated combinations of the               |
+|                      | > MergeByVariables may or may not be         |
+|                      | > included in the output file depending on   |
+|                      | > the **newRow** property.                   |
+|                      | >                                            |
+|                      | > OneToMany: Create a row in the output      |
+|                      | > dataframe by matching rows in this         |
+|                      | > dataframe to every row in other dataframes |
+|                      | > with the same value of MergeByVariables.   |
+|                      | > Note that OneToMany implies that one of    |
+|                      | > the other input datarames is set to        |
+|                      | > ManyToOne.                                 |
+|                      | >                                            |
+|                      | > ManyToOne: Create a row in the output      |
+|                      | > dataframe by matching all rows in this     |
+|                      | > dataframe to the one row in the other      |
+|                      | > dataframe with the same value of           |
+|                      | > MergeByVariables.                          |
+|                      | >                                            |
+|                      | > Cartesian: Create a new row in the output  |
+|                      | > dataframe for every possible combination   |
+|                      | > of rows having the same value of           |
+|                      | > MergeByVariables. This is equivalent to a  |
+|                      | > many to many merge. R and Python use a     |
+|                      | > model derived from SQL, which is based on  |
+|                      | > Cartesian joins.                           |
+|                      | >                                            |
+|                      | > Unmatched: Create a new row for every row  |
+|                      | > that cannot be matched on the              |
+|                      | > MergeByVariables                           |
+|                      | >                                            |
+|                      | > SASmatchMerge: SAS uses a merging approach |
+|                      | > that combines matching keys and sequential |
+|                      | > merges within groups.                      |
++----------------------+----------------------------------------------+
+| MergeFlagVariable    | Creates a new variable indicating whether    |
+|                      | the row came from this file or a different   |
+|                      | input file.                                  |
++----------------------+----------------------------------------------+
+| RenameVariables      | Variables to be renamed                      |
++----------------------+----------------------------------------------+
+| _                    |                                              | 
++----------------------+----------------------------------------------+
+| Update               | Describes outcome when a variable exists in  |
+|                      | both this file and another file.             |
++----------------------+----------------------------------------------+
+|                      | > Master: This dataframe is the Master       |
+|                      | > dataframe.                                 |
+|                      | >                                            |
+|                      | > Ignore: If a column with the same name     |
+|                      | > exists in the Master dataframe, ignore the |
+|                      | > values in this dataframe.                  |
+|                      | >                                            |
+|                      | > FillNew: If a column with the same name    |
+|                      | > exists in the Master dataframe, use the    |
+|                      | > values from this dataframe only in new     |
+|                      | > rows created from this dataframe.          |
+|                      | >                                            |
+|                      | > UpdateMissing: If a column with the same   |
+|                      | > name exists in the Master dataframe, use   |
+|                      | > values from this dataframe when the value  |
+|                      | > in the Master dataframe is missing. Rows   |
+|                      | > not in the Master dataframe are filled     |
+|                      | > from this dataframe.                       |
+|                      | >                                            |
+|                      | > Replace: If a column with the same name    |
+|                      | > exists in the Master dataframe, use values |
+|                      | > from this dataframe.                       |
++----------------------+----------------------------------------------+
+| NewRow               | When TRUE, generates a new row when not      |
+|                      | matched to other files                       |
++----------------------+----------------------------------------------+
+| KeepVariables        | List of variables to keep                    |
++----------------------+----------------------------------------------+
+| DropVariables        | List of variables to drop                    |
++----------------------+----------------------------------------------+
+| KeepCasesCondition   | Logical condition for keeping rows.          |
++----------------------+----------------------------------------------+
+| DropCasesCondition   | Logical condition for dropping rows.         |
++----------------------+----------------------------------------------+
+| MergeByNames         | > An ordered list of variables used as keys  |
+|                      | > in this file to be matched to the          |
+|                      | > variables in the mergeByVariables property |
+|                      | > of the MergeDatasets command. This         |
+|                      | > property is only used when the key         |
+|                      | > variables in this file have different      |
+|                      | > names than the variable names listed in    |
+|                      | > the MergeDatasets command.                 |
++----------------------+----------------------------------------------+
+
+SPSS_merge_examples
+~~~~~~~~~~~~~~~~~~~
+
+
+====================  EXAMPLE 1   ====================================
+```
+MATCH FILES  
+    /FILE='merge_1.sav'
+   /file='merge_2.sav'
+    .
+
+
+{"command": "MergeDatasets",
+	"$type": "MergeDatasets",
+    "MergeFiles": [
+    "mergeFileDescription":
+        {"fileName": "merge_1.sav",
+        "mergeType": "Sequential",
+		"newRow": TRUE
+        },
+    "MergeFileDescription":
+        {"fileName": "merge_2.sav",
+        "mergeType": "Sequential"
+		"newRow": TRUE
+        }
+        ]
+    }
+```
+    
+====================  EXAMPLE 2   ====================================
+```
+MATCH FILES  
+    /FILE='merge_1.sav'
+   /in=from_f1
+   /file='merge_3.sav'
+   /in=from_f3
+   /RENAME= (VAR3=VARx)
+   /KEEP= id VAR2 VARx
+   /by id
+   /first=firstvar
+   /last=lastvar
+  .
+```
+
+```
+  
+{"command": "MergeDatasets",
+	"$type": "MergeDatasets",
+    "mergeByVariables": [ {"$type": "VariableSymbolExpression",
+                            "VariableName":"id"}      ],
+    "firstVariable": "firstvar",
+    "lastVariable": "lastvar",
+	"mergeFiles": [
+	   "mergeFileDescription":
+			{"fileName": "merge_1.sav",
+			"mergeType": "OneToOne",
+			"mergeFlagVariable":"from_f1",
+			"renameVariable":["RenamePair":
+				{"OldVariable":"VAR3","NewVariable":"VARx"}  ],
+			"newRow": TRUE		
+			},
+		"mergeFileDescription":
+			{"fileName": "merge_3.sav",
+			"mergeType": "OneToOne",
+			"mergeFlagVariable":"from_f3",
+			"newRow": FALSE
+			}
+        },
+{"command": "KeepVariables",
+		"$type": "KeepVariables",
+		"variables": {"$type": "VariableListExpression",
+				"variables":
+					[ {"$type": "VariableSymbolExpression",
+						"VariableName":"id"},
+						{"$type": "VariableSymbolExpression",
+						"VariableName":"VAR2"},
+						{"$type": "VariableSymbolExpression",
+						"VariableName":"VARx"}
+						]
+					},
+		"messageText": "NOTE: This KeepVariables command is after the MergeDatasets command, because it applies to the output dataframe."
+		}
+  ```
+
+Stata_merge_examples
+~~~~~~~~~~~~~~~~~~~~
+
+```
+NOTE:  These Stata Merge options are not represented in SDTL:  
+	noreport   
+	nolabel   
+	nonotes   
+	sorted   
+```
+
+====================  EXAMPLE 1   ====================================
+
+```
+use "mergedat1.dta", clear
+merge 1:1 _n using "mergedat4.dta"
+list _all
+
+{"command": "MergeDatasets",
+    "mergeFiles": [
+    "mergeFileDescription":
+        {"fileName": "Active file",
+        "mergeType": "Sequential",
+        "newRow": TRUE,
+        "mergeFlagVariable":"_merge"},
+    "mergeFileDescription":
+        {"fileName": "mergedat4.dta",
+        "mergeType": "Sequential",
+        "newRow": TRUE}
+        ]
+    },
+{"$type": "SetValueLabels",
+	"command": "SetValueLabels",
+	"variables": [
+			{"$type": "VariableSymbolExpression",
+				"variableName", "_merge"}
+			],		
+	"labels": [
+			{"value": 1,	"label": "master"}
+			{"value": 2,	"label": "using"}
+			{"value": 3,	"label": "match"}
+			{"value": 4,	"label": "match_update"}
+			{"value": 5,	"label": "match_conflict"}
+			]
+	}	
+``` 
+====================  EXAMPLE 2   ====================================
+```
+use "mergedat1.dta", clear
+merge 1:1 id using "mergedat3b.dta" ,  update  gener(matchVar)
+list _all
+
+{"command": "MergeDatasets",
+    "MergeFiles": [
+    "MergeFileDescription":
+        {"fileName": "Active Dataframe",
+        "mergeType": "1:1",
+        "update": "Master",
+        "mergeFlagVariable":"matchVar",
+        "newRow": TRUE},
+    "MergeFileDescription":
+        {"fileName": "mergedat3c.dta",
+        "mergeType": "1:1",
+        "update": "UpdateMissing",
+        "newRow":TRUE}
+        ],      
+    "MergeByVariables": {"$type": "VariableSymbolExpression",
+                            "VariableName":"id"}
+    },
+{"$type": "SetValueLabels",
+	"command": "SetValueLabels",
+	"variables": [
+			{"$type": "VariableSymbolExpression",
+				"variableName", "matchVar"}
+			],		
+	"labels": [
+			{"value": 1,	"label": "master"}
+			{"value": 2,	"label": "using"}
+			{"value": 3,	"label": "match"}
+			{"value": 4,	"label": "match_update"}
+			{"value": 5,	"label": "match_conflict"}
+			]
+	}
+```
+====================  EXAMPLE 3   ====================================
+``` 
+use "mergedat1.dta", clear
+merge 1:1 id using "mergedat3b.dta" , update replace  keepusing(lastname) 
+
+
+{"command": "MergeDatasets",
+	"$type": "MergeDatasets",
+    "mergeByVariables":{"$type": "VariableSymbolExpression",
+                            "variableName":"id"},
+    "mergeFiles": [
+    "mergeFileDescription":
+        {"mileName": "Active file",
+        "mergeType": "1:1",
+        "update": "UpdateMissing",
+        "mergeFlagVariable":"matchVar",
+        "newRow":"False"},
+    "mergeFileDescription":
+        {"fileName": "mergedat3b.dta",
+        "mergeType": "1:1",
+        "update": "Master",
+        "newRow":"True",
+        "keepVariables":{"$type": "VariableSymbolExpression",
+                            "variableName":"lastname"}
+        }
+        ]
+    },
+{"$type": "SetValueLabels",
+	"command": "SetValueLabels",
+	"variables": [
+			{"$type": "VariableSymbolExpression",
+				"variableName", "_merge"}
+			],		
+	"labels": [
+			{"value": 1,	"label": "master"}
+			{"value": 2,	"label": "using"}
+			{"value": 3,	"label": "match"}
+			{"value": 4,	"label": "match_update"}
+			{"value": 5,	"label": "match_conflict"}
+			]
+	}
+```
+
+
+

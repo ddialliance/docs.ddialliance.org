@@ -1,0 +1,29 @@
+ComplianceDefinitionType
+------------------------
+
+Provides a list of quality concepts in the quality standard.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ComplianceConceptReference",":doc:`/item-types/Concept/index`","0..1","A reference to a concept which relates to an area of coverage of the standard."
+   "ExternalComplianceCode",":doc:`/composite-types/CodeValueType/index`","0..1","Specification of a code which relates to an area of coverage of the standard. Supports the use of an external controlled vocabulary."
+   "ComplianceRequirements",":doc:`/composite-types/StructuredStringType/index`","0..1","Specifies what is required to be seen as in compliance with the Standard. Note minimum requirements for various levels of compliance. "
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/QualityStandard/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ComplianceDefinitionType.svg
+

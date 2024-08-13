@@ -1,0 +1,33 @@
+SeriesStatementType
+-------------------
+
+Series statement contains information about the series to which a study unit or group of study units belongs. You may point to the URL of a series repository and then use the SeriesName field to indicate the series itself as identified in that repository. Fields also exist for describing the series and providing abbreviations.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SeriesRepositoryLocation","anyURI","0..n","Location of the repository containing the series. This may be repeated for multiple repository locations."
+   "SeriesName",":doc:`/composite-types/NameType/index`","0..n","The full name of the series. The structure supports the use of multiple language versions of the content. If the name varies depending upon the context or is known by multiple names, this element may be repeated."
+   "SeriesAbbreviation",":doc:`/composite-types/CodeValueType/index`","0..n","Abbreviation of the series name. Repeat for multiple abbreviations for the SAME series Name."
+   "SeriesDescription",":doc:`/composite-types/StructuredStringType/index`","0..1","Describe the purpose of coverage of the series. The structure supports the use of multiple language versions of the content."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/ResourcePackage/index`
+* :doc:`/item-types/StudyUnit/index`
+* :doc:`/item-types/SubGroup/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SeriesStatementType.svg
+

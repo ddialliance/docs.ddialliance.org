@@ -1,0 +1,32 @@
+GenerationType
+--------------
+
+Description of the process used to generate the category content. Includes a reference to component parts, a description of the generation process, a structured command, and other materials that are needed in the generation process. The item may be designated as a derivation process (default value) and be qualified in some way by a qualification attribute.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ComponentReference",":doc:`/item-types/Category/index`","0..n","Reference to a category used in the generation process."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the generation process. May be expressed in multiple languages and supports the use of structured content."
+   "CommandCode",":doc:`/composite-types/CommandCodeType/index`","0..n","Structured information used by a system to generate the category."
+   "OtherMaterial",":doc:`/composite-types/OtherMaterialType/index`","0..n","External documentation required for creating the generation - for example, a chart or table for defining poverty."
+   "IsDerived","boolean","0..1","If not a derivation process set this attribute to ""false""."
+   "Qualification","string","0..1","A qualification for the generation process expressed as a simple string."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Category/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/GenerationType.svg
+

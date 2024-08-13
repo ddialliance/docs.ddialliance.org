@@ -1,0 +1,62 @@
+CodeDomainType
+--------------
+
+A response domain capturing a coded response (where both codes and their related category value are displayed) for a question. Includes standard response domain elements; OutParameter, designation of response cardinality, and a declaration of an offset date for the data content. Contains the equivalent content of a CodeRepresentation including a reference to the CodeList used and the ability to limit the use of the CodeList to specific CodeList levels, ranges, or values. Adds a set of elements available to all Response Domains; Label, Description, OutParameter, designation of response cardinality, and a declaration of an offset date for the data content. CodeDomains cannot be included by reference. CodeDomain does not have an equivalent managed representation as the CodeList itself is a managed object. CodeDomains must be entered in-line.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the domain. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the domain. May be expressed in multiple languages and supports the use of structured content."
+   "OutParameter",":doc:`/composite-types/ParameterType/index`","0..1","Allows for the response to be bound to one of the QuestionItem's OutParameters, so the collected information can be used elsewhere, for example as inputs to subsequent questions in an Instrument or to a GenerationInstruction. If multiple responses are possible, this would represent and ordered array of the responses."
+   "ResponseCardinality",":doc:`/composite-types/ResponseCardinalityType/index`","0..1","Allows the designation of the minimum and maximum number of responses allowed for this response domain."
+   "ContentDateOffset",":doc:`/composite-types/ContentDateOffsetType/index`","0..1","Identifies the difference between the date applied to the data as a whole and this specific item such as previous year's income or residence 5 years ago."
+
+Properties Inherited from CodeRepresentationBaseType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CodeListReference",":doc:`/item-types/CodeList/index`","0..1","A reference to the CodeList included in this representation using the Reference structure."
+   "CodeSubsetInformation",":doc:`/composite-types/CodeSubsetInformationType/index`","0..1","Allows further specification of the codes to use from the CodeList by defining the level or only the most discrete codes of a hierarchical CodeList, the range of codes to use, or an itemized sub-set."
+
+Properties Inherited from RepresentationType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RecommendedDataType",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides the recommended treatment of the data within an application. The value should come from a controlled vocabulary - recommended values include the set found in W3C XML Schema Part 2, but excluding string sub-types, QNAME, and NOTATION."
+   "GenericOutputFormat",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides a recommended generic treatment of the data for display by an application. The value should come from a controlled vocabulary."
+   "MissingValue","string","0..1","List the values used to represent missing data in a space delimited array. Use of MissingValuesReference is preferred. If this content does not match the values provided in the MissingValuesReference, the content of the MissingValuesReference overrides the content of this attribute."
+   "BlankIsMissingValue","boolean","0..1","When value is true a blank or empty variable content should be treated as a missing value.  Use of MissingValuesReference is preferred."
+   "ClassificationLevel","string","0..1","Indicates the type of relationship, nominal, ordinal, interval, ratio, or continuous. Use where appropriate for the representation type."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/RepresentationType/index`
+    * :doc:`/composite-types/CodeRepresentationBaseType/index`
+        * **CodeDomainType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/GridDimensionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CodeDomainType.svg
+

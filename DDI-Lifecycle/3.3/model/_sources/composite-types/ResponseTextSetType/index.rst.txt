@@ -1,0 +1,27 @@
+ResponseTextSetType
+-------------------
+
+Provides a means of bundling multiple language versions of the same intended dynamic text together. This wrapper serves to differentiate between a case where multiple language content for a single ResponseText are provided and when two differing sets of ResponseText are in immediate sequence (with no intervening question). Each of the repetitions of ResponseText within this wrapper are assumed to be multi-language equivalents.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ResponseText",":doc:`/composite-types/DynamicTextType/index`","0..n","Text closely related to the content of the ResponseDomain(s), in general, text required to make sense of the related response domain. Note that when using ResponseText, the full ResponseText must be repeated for multi-language versions of the content. Different languages may handle the dynamic portions in different locations and/or with different content. Therefore languages cannot be mixed within a dynamic text except when the full text itself has multiple language sections, for example, a foreign language term in a text. The DisplayText may also be repeated to provide a dynamic and plain text version of the display. This allows for accurate rendering of the ResponseText in a non-dynamic environment like print."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/StructuredMixedResponseDomainType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ResponseTextSetType.svg
+

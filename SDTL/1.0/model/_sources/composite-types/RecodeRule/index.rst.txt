@@ -1,0 +1,30 @@
+RecodeRule
+----------
+
+Describes how values will be recoded.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "FromValue",":doc:`/composite-types/ExpressionBase/index`","0..n","The values to be recoded."
+   "To","string","0..1","The new value"
+   "Label","string","0..1","A value label for the new recoded value, if appropriate"
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/Recode/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RecodeRule.svg
+

@@ -1,0 +1,45 @@
+CitationType
+------------
+
+Provides bibliographic citation information for a DDI instance, a group of studies, a study unit, or a physical instance. Note that a native DDI citation is required - the citation information may be repeated using DCElements if desired, but a citation must not consist only of DCElements.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Title",":doc:`/composite-types/InternationalStringType/index`","0..1","Full authoritative title. List any additional titles for this item as AlternativeTitle."
+   "SubTitle",":doc:`/composite-types/InternationalStringType/index`","0..n","Secondary or explanatory title."
+   "AlternateTitle",":doc:`/composite-types/InternationalStringType/index`","0..n","An alternative title by which a data collection is commonly referred, or an abbreviation  for the title."
+   "Creator",":doc:`/composite-types/CreatorType/index`","0..n","Person, corporate body, or agency responsible for the substantive and intellectual content of the described object."
+   "Publisher",":doc:`/composite-types/PublisherType/index`","0..n","Person or organization responsible for making the resource available in its present form."
+   "Contributor",":doc:`/composite-types/ContributorType/index`","0..n","The name of a contributing author or creator, who worked in support of the primary creator given above."
+   "PublicationDate",":doc:`/composite-types/DateType/index`","0..1","The date of publication."
+   "Language",":doc:`/composite-types/CodeValueType/index`","0..n","Language of the intellectual content of the described object. Strongly recommend the use of language codes supported by xs:language which include the 2 and 3 character and extended structures defined by RFC4646 or its successors."
+   "InternationalIdentifier",":doc:`/composite-types/InternationalIdentifierType/index`","0..n","An identifier whose scope of uniqueness is broader than the local archive. Common forms of an international identifier are ISBN, ISSN, DOI or similar designator."
+   "Copyright",":doc:`/composite-types/InternationalStringType/index`","0..n","The copyright statement."
+   "DcTerms","DcTerms","0..n","Element including a sequence of Dublin Core fields that may be used to supplement - but not replace - the DDI citation."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DDIInstance/index`
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/OtherMaterial/index`
+* :doc:`/item-types/PhysicalInstance/index`
+* :doc:`/item-types/ResourcePackage/index`
+* :doc:`/item-types/StudyUnit/index`
+* :doc:`/composite-types/CollectionType/index`
+* :doc:`/composite-types/ItemType/index`
+* :doc:`/composite-types/OriginType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CitationType.svg
+

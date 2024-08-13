@@ -1,0 +1,29 @@
+IdentificationPortionType
+-------------------------
+
+Provides structural information for parsing the identification code structure of the Authorized Source into its separate parts.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "GeographicLevelReference",":doc:`/composite-types/GeographicLevelType/index`","0..n","Reference to the Geographic Level to which this identification segment refers."
+   "StartPosition","nonNegativeInteger","0..1","The start position of the first character expressed as an integer."
+   "Length","nonNegativeInteger","0..1","The length of the segment expressed as an integer."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/IdentifierParsingInformationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IdentificationPortionType.svg
+

@@ -1,0 +1,27 @@
+ResourcePackageArchiveType
+--------------------------
+
+This is archive information specific to the creation, maintenance, and archiving of the ResourcePackage provided either in-line or by reference. This packaging element differentiates this "Archive" from one being published as a product within a ResourcePackage.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ArchiveReference",":doc:`/item-types/Archive/index`","0..n","Allows for in-line entry of an Archive related to the creation and maintenance of the ResourcePackage."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ResourcePackage/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ResourcePackageArchiveType.svg
+

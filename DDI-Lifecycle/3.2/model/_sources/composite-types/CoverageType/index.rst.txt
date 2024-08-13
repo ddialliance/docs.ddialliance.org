@@ -1,0 +1,43 @@
+CoverageType
+------------
+
+Describes the temporal, spatial and topical coverage. At the instance level these descriptions should be inclusive of the coverage of all modules in the instance. The element is available within individual modules and can be used to refine the coverage to that of the individual module.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TopicalCoverageReference",":doc:`/composite-types/TopicalCoverageType/index`","0..1","Reference to a previously defined topical coverage."
+   "TopicalCoverage",":doc:`/composite-types/TopicalCoverageType/index`","0..1","Description of the topical coverage of the data described in a particular DDI module."
+   "SpatialCoverageReference",":doc:`/composite-types/GeographicCoverageType/index`","0..1","Reference to a previously defined spatial coverage."
+   "SpatialCoverage",":doc:`/composite-types/GeographicCoverageType/index`","0..1","Description of the geographic coverage of the data described in a particular DDI module."
+   "TemporalCoverageReference",":doc:`/composite-types/TemporalCoverageType/index`","0..1","Reference to a previously defined temporal coverage."
+   "TemporalCoverage",":doc:`/composite-types/TemporalCoverageType/index`","0..1","Description of the temporal coverage of the data described in a particular DDI module."
+   "RestrictionProcess",":doc:`/composite-types/RestrictionProcessType/index`","0..1","Allows for a specific machine actionable description of the restriction process using a GenerationInstructionReference, if one currently exists, or through a CommandCode. In the case of a physical instance, the RestrictionProcess would be the same as a case, record or variable selection process."
+   "IsRestrictionOfParentCoverage","boolean","0..1","If the coverage described within this object is a restriction of the coverage of its parent study or group set this attribute to ""true"". If the coverage of a specific type (spatial, topical, or temporal) is not a restriction, include this coverage type by reference to that described in parent. Create a new coverage for the type being restricted."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/BaseLogicalProduct/index`
+* :doc:`/item-types/ConceptualComponent/index`
+* :doc:`/item-types/DataCollection/index`
+* :doc:`/item-types/DDIInstance/index`
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/PhysicalInstance/index`
+* :doc:`/item-types/ResourcePackage/index`
+* :doc:`/item-types/StudyUnit/index`
+* :doc:`/item-types/SubGroup/index`
+* :doc:`/composite-types/ArchiveSpecificType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CoverageType.svg
+

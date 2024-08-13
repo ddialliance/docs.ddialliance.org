@@ -1,0 +1,60 @@
+CollectionEventType
+-------------------
+
+Information on a specific data collection event including details on who was involved in data collection, the source of the data, the date and frequency of collection, mode of collection, identification of the instrument used for collection, information on the actual situation under which data was collected, actions taken to minimize loss of data, and reference to a quality standard or statement regarding the handling of the data collection process during this event.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CollectionEventName",":doc:`/composite-types/NameType/index`","0..n","A name for the Collection Event. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the Collection Event. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the Collection Event. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "DataCollectorOrganizationReference",":doc:`/item-types/Agent/index`","0..n","Reference to an organization or individual, defined in the organization scheme, responsible for the data collection."
+   "DataSource",":doc:`/composite-types/DataSourceType/index`","0..n","Describes a source of the data."
+   "DataCollectionDate",":doc:`/composite-types/DateType/index`","0..1","Provides a date or range of dates for the described data collection event as well as  a cycle number when the collection is part of a series of data collection events."
+   "DataCollectionFrequency",":doc:`/composite-types/DataCollectionFrequencyType/index`","0..n","Documents the intended frequency of data collection, for example monthly, yearly, weekly, etc., preferably using an optional controlled vocabulary in the IntendedFrequency element. Date of first collection should be provided in StartDate as a basis for defining periodicity. EndDate should be entered for data collection cycles with a known or anticipated end date. EndDate is omitted in data collection series that are intended to be on-going."
+   "ModeOfCollection",":doc:`/composite-types/ModeOfCollectionType/index`","0..n","Describes the mode of data collection."
+   "InstrumentReference",":doc:`/item-types/Instrument/index`","0..n","References the instrument or instruments used during the process of collecting data for this collection event period."
+   "CollectionSituation",":doc:`/composite-types/CollectionSituationType/index`","0..n","Describes the situation in which the data collection event takes place. If a number of collection situation types occurred repeat this element."
+   "ActionToMinimizeLosses",":doc:`/composite-types/ActionToMinimizeLossesType/index`","0..n","Describes action taken to minimize loss of data from the collection event."
+   "QualityStatementReference",":doc:`/item-types/QualityStatement/index`","0..n","A reference to a Quality Statement pertaining to the quality of the study methodology, metadata, or data to which it is associated. Quality statements may be related to external quality standards."
+   "SampleReference",":doc:`/item-types/Sample/index`","0..n","References the Sample used by this CollectionEvent. TypeOfObject should be Sample."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **CollectionEventType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DataCollection/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CollectionEventType.svg
+

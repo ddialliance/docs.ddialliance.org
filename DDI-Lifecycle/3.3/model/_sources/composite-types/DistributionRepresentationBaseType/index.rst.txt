@@ -1,0 +1,48 @@
+DistributionRepresentationBaseType
+----------------------------------
+
+Means of describing Distributions as a representation so that they can be used as a response domain questions. Primarily used as a response domain in a QuestionGrid. In addition to the base of objects of a representation the structure provides the total value to be distributed between the objects and the number of decimal positions allowed within a response.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "DistributionValue","decimal","0..1","Identifies the total value to be distributed among the designated objects."
+   "DecimalPositions","int","0..1","Identifies the number of decimal points allowed for the expression of a response."
+
+Properties Inherited from RepresentationType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RecommendedDataType",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides the recommended treatment of the data within an application. The value should come from a controlled vocabulary - recommended values include the set found in W3C XML Schema Part 2, but excluding string sub-types, QNAME, and NOTATION. The DDI Alliance has provided a controlled vocabulary (DataType) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "GenericOutputFormat",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides a recommended generic treatment of the data for display by an application. The value should come from a controlled vocabulary."
+   "MeasurementUnit",":doc:`/composite-types/CodeValueType/index`","0..1","Records the measurement unit, for example, 'km', 'miles', etc. Supports the use of a controlled vocabulary."
+   "MissingValue","string","0..1","List the values used to represent missing data in a space delimited array. Use of MissingValuesReference is preferred. If this content does not match the values provided in the MissingValuesReference, the content of the MissingValuesReference overrides the content of this attribute."
+   "BlankIsMissingValue","boolean","0..1","When value is true a blank or empty variable content should be treated as a missing value.  Use of MissingValuesReference is preferred."
+   "ClassificationLevel","string","0..1","Indicates the type of relationship, nominal, ordinal, interval, ratio, or continuous. Use where appropriate for the representation type."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/RepresentationType/index`
+    * **DistributionRepresentationBaseType**
+        * :doc:`/composite-types/DistributionDomainType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DistributionRepresentationBaseType.svg
+

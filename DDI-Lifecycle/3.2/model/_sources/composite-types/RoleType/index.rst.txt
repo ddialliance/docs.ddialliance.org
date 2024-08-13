@@ -1,0 +1,31 @@
+RoleType
+--------
+
+Describes the role of Target Individual or Organization in relation to the Source Object. Provides a description and classification of the role, the period for which the role was valid, and any additional information relevent to the role.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","Description of the role played by the Target Object in relationship to the Source Object."
+   "Keyword",":doc:`/composite-types/InternationalCodeValueType/index`","0..n","Keyword used to classify the role of the organization or individual in relationship to the Source Object"
+   "EffectivePeriod",":doc:`/composite-types/DateType/index`","0..n","Time period when this role is/was valid."
+   "AdditionalInformation",":doc:`/composite-types/AdditionalInformationType/index`","0..n","Any additional information you which to note about this role of the Target object in this relationship. This is a structured string so it can be formatted and a privacy tag can be applied."
+   "Privacy","string","0..1","A basic set of privacy codes for the parent element. These may be stricter than the general access restrictions for the overall metadata. If available codes are insufficient this may also contain any string."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/TargetObjectType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RoleType.svg
+

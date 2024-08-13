@@ -1,0 +1,51 @@
+RecodeRule
+----------
+
+Describes how values will be recoded.
+
+
+.. contents::
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RecodeRule.svg
+
+Properties
+~~~~~~~~~~
+
+From
+****
+
+Type
+    string
+Cardinality
+    0..n
+
+The value or range of values that will be recoded
+
+To
+**
+
+Type
+    string
+Cardinality
+    0..1
+
+The new value
+
+Label
+*****
+
+Type
+    string
+Cardinality
+    0..1
+
+A value label for the new recoded value, if appropriate
+
+
+

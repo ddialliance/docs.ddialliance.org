@@ -1,0 +1,27 @@
+AuthorizedPolicySourceType
+--------------------------
+
+Description and link to the policy source using the DDI Other Material structure.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..n","Inline description and link to the policy using the DDI Other Material structure."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/InformationClassification/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AuthorizedPolicySourceType.svg
+

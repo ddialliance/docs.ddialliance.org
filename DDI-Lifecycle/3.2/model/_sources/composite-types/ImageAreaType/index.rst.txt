@@ -1,0 +1,28 @@
+ImageAreaType
+-------------
+
+Defines the shape and area of an image used as part of a location representation. The shape is defined as a Rectangle, Circle, or Polygon and Coordinates provides the information required to define it.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Shape","string","0..1","A fixed set of valid responses includes Rectangle, Circle, and Polygon."
+   "Coordinates","string","0..1","A comma-delimited list of x,y coordinates, listed as a set of adjacent points for rectangles and polygons, and as a center-point and a radius for circles (x,y,r)."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/SegmentType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ImageAreaType.svg
+

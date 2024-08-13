@@ -1,0 +1,28 @@
+ElseIfType
+----------
+
+Use for multiple branching from a single point in the flow logic represented by the flow logic If, Then, ElseIf, Then, etc. This is a packaging element for an IfCondition and ThenConstructReference and not a control construct.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "IfCondition",":doc:`/composite-types/CommandCodeType/index`","0..1","The condition which must be met to trigger the Then clause, expressed as a Coding. The condition is an expression in the programming language used in the instrument."
+   "ThenConstructReference",":doc:`/item-types/Sequence/index`","0..1","Reference to the control construct which should be triggered if the associated condition is met."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/IfThenElse/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ElseIfType.svg
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="Version2-1.xsd">1.0 Document Description</a></li><li><a href="Version2-1.xsd">2.0 Study Description</a></li><li><a href="Version2-1.xsd">3.0 File Description</a></li><li><a href="Version2-1.xsd">4.0 Variable Description</a></li><li><a href="Version2-1.xsd">5.0 Other Material</a></li><li><a href="Version2-1.xsd">Single file for printing</a> (slow)</li></ul><h2>&lt;measure&gt;&#160;Measure</h2><ul><li>Optional</li><li>Repeatable</li><li>Attributes: <a href="Version2-1.xsd">ID, xml:lang, source</a>, varRef, aggrMeth, measUnit, scale, origin, additivity</li></ul><div style="padding-left:25px;"><p><em>Description:</em>&#160;The element measure indicates the measurement
+                        features of the cell content: type of aggregation used, measurement unit,
+                        and measurement scale. An origin point is recorded for anchored scales, to
+                        be used in determining relative movement along the scale. Additivity
+                        indicates whether an aggregate is a stock (like the population at a given
+                        point in time) or a flow (like the number of births or deaths over a certain
+                        period of time). The non-additive flag is to be used for measures that for
+                        logical reasons cannot be aggregated to a higher level - for instance, data
+                        that only make sense at a certain level of aggregation, like a
+                        classification. Two nCubes may be identical except for their measure - for
+                        example, a count of persons by age and percent of persons by age. Measure is
+                        an empty element that includes the following attributes: "varRef" is an
+                        IDREF; "aggrMeth" indicates the type of aggregation method used, for example
+                        'sum', 'average', 'count'; "measUnit" records the measurement unit, for
+                        example 'km', 'miles', etc.; "scale" records unit of scale, for example
+                        'x1', 'x1000'; "origin" records the point of origin for anchored
+                        scales;"additivity" records type of additivity such as 'stock', 'flow',
+                        'non-additive'. </p></div></body></html>

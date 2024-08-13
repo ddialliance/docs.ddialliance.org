@@ -1,0 +1,31 @@
+ResearcherIDType
+----------------
+
+Captures an individuals assigned researcher ID within a specified system. Includes the type or researcher ID provided, the ID, a URI of the location or link, and a description of the researcher ID provided. E.g., Rajiv Agrwal, type=researcherID, ID=A-8725-2008), URI=www.researcherid.com/rid/A-8725-2008 which brings you to the researchers page.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfID",":doc:`/composite-types/CodeValueType/index`","0..1","Brief description of the ID type. Supports the use of an external controlled vocabulary."
+   "ResearcherIdentification","string","0..1","The value of the researcher ID."
+   "URI","anyURI","0..1","The URI (URN or URL) of the of the researcher ID."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the purpose and use of the researcher ID. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "EffectivePeriod",":doc:`/composite-types/DateType/index`","0..1","Clarifies when the identification information is accurate."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/IndividualIdentificationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ResearcherIDType.svg
+

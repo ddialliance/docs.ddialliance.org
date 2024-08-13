@@ -1,0 +1,54 @@
+ItemMapType
+-----------
+
+Maps a Source and one or more Target items of the same type within the Source and Target Schemes identified.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SourceItemReference_Versionable",":doc:`/item-types/Versionable/index`","0..1","A reference to the source object in the source scheme already identified. TypeOfObject dependent on object of comparison."
+   "SourceItemReference_Maintainable",":doc:`/item-types/Maintainable/index`","0..1","A reference to the source object in the source scheme already identified. TypeOfObject dependent on object of comparison."
+   "TargetItemReference_Versionable",":doc:`/item-types/Versionable/index`","0..n","A reference the target object or objects in the target scheme already identified. TypeOfObject dependent on object of comparison. Note that if multiple target items are identified the correspondence between the source and ALL target items must be identical."
+   "TargetItemReference_Maintainable",":doc:`/item-types/Maintainable/index`","0..n","A reference the target object or objects in the target scheme already identified. TypeOfObject dependent on object of comparison. Note that if multiple target items are identified the correspondence between the source and ALL target items must be identical."
+   "Correspondence",":doc:`/composite-types/CorrespondenceType/index`","0..1","Describe the level of similarity and difference between the Source and the Target objects."
+   "RelatedMapReference",":doc:`/composite-types/ItemMapType/index`","0..n","Identifies related maps for example an ItemMap of two questions may point to the CodeMap defining the comparison of the two response domains."
+   "Alias","string","0..1","Allows for an alias to be assigned to the correspondence between two items, so that it can be referred to with a single name, that would include both related items."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **ItemMapType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/GenericMap/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ItemMapType.svg
+

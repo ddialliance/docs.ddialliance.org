@@ -1,0 +1,45 @@
+RankingRangeType
+----------------
+
+Describes the range of values used in the ranking system using Range and sets the number of times a single value can be repeated.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "MaximumRepetitionOfSingleValue","int","0..1","Allows values to be expressed more than once, for example if respondent can specify a ""tie"" by repeating a single value."
+
+Properties Inherited from RangeType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RangeUnit","string","0..1","Specifies the units in the range."
+   "MinimumValue",":doc:`/composite-types/RangeValueType/index`","0..1","Minimum value in the range."
+   "MaximumValue",":doc:`/composite-types/RangeValueType/index`","0..1","Maximum value in the range."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/RangeType/index`
+    * **RankingRangeType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/RankingRepresentationBaseType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RankingRangeType.svg
+

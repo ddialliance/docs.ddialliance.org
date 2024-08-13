@@ -1,0 +1,29 @@
+CategoryStatisticType
+---------------------
+
+The value of a statistic associated with the category value.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfCategoryStatistic",":doc:`/composite-types/CodeValueType/index`","0..1","Type of category statistic. Supports the use of an external controlled vocabulary. DDI strongly recommends the use of a controlled vocabulary."
+   "Statistic",":doc:`/composite-types/StatisticType/index`","0..1","The value (expressed as a decimal) of the statistics and whether it is weighted and/or includes missing values."
+   "StatisticDouble",":doc:`/composite-types/StatisticDoubleType/index`","0..1","The value (expressed as a double) of the statistics and whether it is weighted and/or includes missing values."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/VariableCategoryType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CategoryStatisticType.svg
+

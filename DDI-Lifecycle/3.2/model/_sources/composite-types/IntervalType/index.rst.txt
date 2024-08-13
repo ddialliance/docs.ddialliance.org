@@ -1,0 +1,28 @@
+IntervalType
+------------
+
+Describes the structure, starting point and increment step of an interval.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Anchor_string","string","0..1","Identifies the start value for this interval."
+   "Increment","string","0..1","Value specifying the increment between categories."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LevelType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IntervalType.svg
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="section1.html">1.0 Document Description</a></li><li><a href="section2.html">2.0 Study Description</a></li><li><a href="section3.html">3.0 File Description</a></li><li><a href="section4.html">4.0 Variable Description</a></li><li><a href="section5.html">5.0 Other Material</a></li><li><a href="sectionall.html">Single file for printing</a> (slow)</li></ul><h2>&lt;catgry&gt;&#160;Category</h2><ul><li>Optional</li><li>Repeatable</li><li>Attributes: <a href="codeBook.html">ID, xml:lang, source</a>, missing, missType, country, sdatrefs, excls, catgry, level</li></ul><div style="padding-left:25px;"><p><em>Description:</em></p>
+						<p>A description of a particular response.</p>
+						
+						<p>The attribute "missing" indicates whether this category group contains missing
+                        data or not. </p>
+                        <p>The attribute "missType" is used to specify the type of missing
+                        data, e.g., inap., don't know, no answer, etc. </p>
+						<p>The attribute "country" allows for the denotation of country-specific category values.</p>
+						<p>The "sdatrefs" attribute records the ID values of all elements within the
+                        summary data decription that apply to this category. </p>
+						<p>The exclusiveness attribute ("excls") should be set to "false" if the category can appear in
+                        more than one place in the classification hierarchy.</p>
+                        <p>The attribute "catgry" is an IDREF referencing any child categories of this category element.
+						Used to capture nested hierarchies of categories.</p>
+						<p>The attribute "level" is an IDREF referencing the catLevel ID in which this category exists.</p>
+					</div><div style="padding-left:25px;"><p><em>Example(s):</em></p><pre>
+						
+                        &lt;catlevel ID="Level1" levelnm="Broader sectors" /&gt;
+						&lt;catlevel ID="Level2" levelnm="Narrower sectors" /&gt;
+						&lt;catlevel ID="Level3" levelnm="Occupations" /&gt;
+                        &lt;!-- ... --&gt;
+						&lt;catgry ID="C1" catgry="C2" Level="Level1"&gt;
+							&lt;catValu&gt;0&lt;/catValu&gt;
+							&lt;labl&gt; Management, professional and related occupations &lt;/labl&gt;
+						&lt;/catgry&gt;
+						&lt;catgry ID="C2" catgry="C3, C4" Level="Level2"&gt;
+							&lt;catValu&gt;01&lt;/catValu&gt;
+							&lt;labl&gt; Management occupations&lt;/labl&gt;
+						&lt;/catgry&gt;
+						&lt;catgry ID="C3" Level="Level3"&gt;
+							&lt;catValu&gt;011&lt;/catValu&gt;
+							&lt;labl&gt; Top executives &lt;/labl&gt;
+						&lt;/catgry&gt;
+						&lt;catgry ID="C4" Level="Level3"&gt;
+							&lt;catValu&gt;012&lt;/catValu&gt;
+							&lt;labl&gt; Financial managers&lt;/labl&gt;
+						&lt;/catgry&gt;
+						
+					</pre></div></body></html>

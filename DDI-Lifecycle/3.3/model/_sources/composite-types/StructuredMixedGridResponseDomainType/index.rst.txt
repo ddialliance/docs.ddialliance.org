@@ -1,0 +1,28 @@
+StructuredMixedGridResponseDomainType
+-------------------------------------
+
+Contains a mixture of response domains for the grid cells. Each response domain can be attached to a specific region of the grid, for example a single column or row. It is assumed that each cell will contain either a resonse domain or be declared as containing No Data By Definition. Any cell may also contain an internal label.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "GridResponseDomainInMixed",":doc:`/composite-types/GridResponseDomainInMixedType/index`","0..1","Identifies a response type found in the grid and defines the cell or cells that contain it."
+   "NoDataByDefinition",":doc:`/composite-types/GridAttachmentType/index`","0..1","Identifies the cell or cells in the grid that by definition contain no response domains. These cells MAY contain a label."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/QuestionGrid/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/StructuredMixedGridResponseDomainType.svg
+

@@ -1,0 +1,87 @@
+PhysicalInstance
+----------------
+
+Includes information about the physical instance of a data product (an actual data file). It completes the documentation contained in the Physical Data Product module that is specific to the individual file and serves as a descriptive record of the external data file. Physical Instance provides a citation for the data file, a link to the RecordLayout(s) used by the files records, a description of it coverage (as a constraint if different from the study), check figures for quality control (e.g. digital fingerprint, record count, etc.), and a statistical summary of the data in the file at both the variable and category level.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Citation",":doc:`/composite-types/CitationType/index`","0..1","A citation for the physical instance of a data set. Note that a DOI or similar unique identifier for the data file should be placed in InternationalIdentifier. It is strongly recommended that use of a Citation in this location includes the use of the optional sub-element Title."
+   "DataFingerprint",":doc:`/composite-types/DataFingerprintType/index`","0..n","Allows for assigning a hash value (digital fingerprint) to the data or data file. Set the attribute flag to ""data"" when the hash value provides a digital fingerprint to the data contained in the file regardless of the storage format (ASCII, SAS, binary, etc.). One approach to compute a data fingerprint is the Universal Numerical Fingerprint (UNF). Set the attribute flag to ""dataFile"" if the digital fingerprint is only for the data file in its current storage format."
+   "Coverage",":doc:`/composite-types/CoverageType/index`","0..1","Includes information about the topical, spatial, and temporal coverage of the physical instance. May be expressed as a restriction of the parent study coverage."
+   "DataRelationshipReference",":doc:`/item-types/DataRelationship/index`","0..n","Reference to the DataRelationship containing the LogicalRecord to which the RecordLayout refers. Repeat for cases where LogicalRecords are described in multiple DataRelationship structures. Note that this does not imply that all of the LogicalRecords described in the DataRelationship are contained, wholly or in part in the PhysicalInstance. This reference allows for a direct path between the PhysicalInstance and the related content found in a LogicalProduct."
+   "VariableGroupReference",":doc:`/item-types/VariableGroup/index`","0..n","Reference to a grouping of variables that are included in the PhysicalInstance. Variable Groups may represent hierarchical relationships of variables, topical groupings, or administrative groupings."
+   "RecordLayoutReference",":doc:`/item-types/RecordLayout/index`","0..n","References the record layout of the data documented in the physical instance."
+   "DefaultMissingValuesReference",":doc:`/item-types/ManagedMissingValuesRepresentation/index`","0..1","References the content of the default missing values used in the file. The content of this file overrides default missing value information provided in the LogicalRecord. Allows for the specification that is a Systems Missing Value."
+   "DataFileIdentification",":doc:`/composite-types/DataFileIdentificationType/index`","0..n","Identifies the data file documented in the physical instance and provides information about its location."
+   "DataFileVersion",":doc:`/composite-types/DataFileVersionType/index`","0..1","Provides the version information for the data file related to this physical instance. Note that while Physical Instance allows for multiple copies of the same data file (such as backup copies) the assumption is that they are identical in terms of content, layout, format and version."
+   "InformationClassificationReference",":doc:`/item-types/InformationClassification/index`","0..n","Used to describe the rules and guidelines on how the data is allowed to be handled, transferred, stored and disposed. These confidentiality policies are often dictated by national laws and/or data owners on handling of personal, proprietary, and other sensitive information."
+   "QualityStatementReference",":doc:`/item-types/QualityStatement/index`","0..n","A reference to a Quality Statement pertaining to the quality of the study methodology, metadata, or data to which it is associated. Quality statements may be related to external quality standards."
+   "GrossFileStructure",":doc:`/composite-types/GrossFileStructureType/index`","0..1","Includes information about the file structure, as well as other characteristics that are specific to the physical instance."
+   "ProprietaryInfo",":doc:`/composite-types/ProprietaryInfoType/index`","0..1","Contains information proprietary to the software package which produced the data file. This is expressed as a set of name-value pairs. The value may be taken from a controlled vocabulary."
+   "StatisticalSummary",":doc:`/composite-types/StatisticalSummaryType/index`","0..1","Includes variable and category statistics data documented in the physical instance, or a reference to a physical instance where the statistics are described or located in line."
+   "ByteOrder",":doc:`/composite-types/CodeValueType/index`","0..1","Contains a term from a controlled vocabulary indicating the byte ordering."
+
+Properties Inherited from Maintainable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Note",":doc:`/composite-types/NoteType/index`","0..n","Note allows for the attachment of a piece of additional information to any object with an ID. Note facilitates capturing temporary processing notes such as ""Review and approval required"". A single note can be attached to multiple objects by reference to the objects. Note may also contain content for a needed object that has been reported for addition in a later version of the schema. Ideally this should be handled by a local extension, but Note can accommodate run-time extensions when required. The Note should be housed within the Maintainable object that contains the referenced objects. In this way the user is ensured of receiving all known Note attachments when the maintainable content is delivered. This means that if a Note references objects within multiple Maintainable objects, the Note should be repeated in each Maintainable and reference only those objects with that Maintainable."
+   "Software",":doc:`/composite-types/SoftwareType/index`","0..n","Indicate the software used to create and/or manage the metadata. This is repeatable to allow for multiple softwares or multiple functions. If this information is important it is advisable to provide it in each maintainable so that it does not become separated from the internal content if the metadata is re-factored."
+   "MetadataQuality",":doc:`/composite-types/MetadataQualityType/index`","0..n","An assessment of the quality of the metadata within the Maintainable object, e.g. the quality of the transcription, completeness, editing status, etc."
+   "ExternalReferenceDefaultURI","anyURI","0..1","Use to provide a default value for the URI of external references. Use of a URI in a reference within this maintainable overrides the value entered here. Nested maintainables should redeclare the contents of this attribute for clarity."
+   "Lang","language","0..1","This is used to designate the language of the metadata content of the maintainable. If a lower level xml:lang attribute conflicts with the content at the maintainable level, the object level value takes precedence."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference",":doc:`/item-types/Agent/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "RelatedOtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..n","The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+   "IsPublished","boolean","0..1","Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * :doc:`/item-types/Maintainable/index`
+        * **PhysicalInstance**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/PhysicalInstanceGroup/index`
+* :doc:`/item-types/ResourcePackage/index`
+* :doc:`/item-types/StudyUnit/index`
+* :doc:`/composite-types/StatisticalDataLocationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/PhysicalInstance.svg
+

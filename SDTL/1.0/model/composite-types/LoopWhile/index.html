@@ -1,0 +1,645 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>LoopWhile &mdash; Structured Data Transform Language 0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="MergeDatasets" href="../MergeDatasets/" />
+    <link rel="prev" title="LoopOverList" href="../LoopOverList/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> Structured Data Transform Language
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../summary/">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components/">Components of SDTL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../use-cases/">SDTL Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../command-language/">SDTL Command Language </a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../function-library/">SDTL Function Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pseudocode-library/">SDTL Pseudocode Library Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../best-practices/">SDTL Best Practices and Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../credits/#copyright-and-license">Copyright and License</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/All/">All</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../item-types/">All Item Types</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">All Composite Types</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Aggregate/">Aggregate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AllNumericVariablesExpression/">AllNumericVariablesExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AllTextVariablesExpression/">AllTextVariablesExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AllVariablesExpression/">AllVariablesExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Analysis/">Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AppendDatasets/">AppendDatasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AppendFileDescription/">AppendFileDescription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BooleanConstantExpression/">BooleanConstantExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Collapse/">Collapse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CommandBase/">CommandBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Comment/">Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CompositeVariableNameExpression/">CompositeVariableNameExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Compute/">Compute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataframeDescription/">DataframeDescription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DateTimeConstant/">DateTimeConstant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoIf/">DoIf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DropCases/">DropCases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DropVariables/">DropVariables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Execute/">Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ExpressionBase/">ExpressionBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FunctionArgument/">FunctionArgument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FunctionCallExpression/">FunctionCallExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GroupedExpression/">GroupedExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IfRows/">IfRows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../InformBase/">InformBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Invalid/">Invalid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IteratorDescription/">IteratorDescription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IteratorSymbolExpression/">IteratorSymbolExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeepCases/">KeepCases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeepVariables/">KeepVariables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Load/">Load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LoopOverList/">LoopOverList</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">LoopWhile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#properties-inherited-from-transformbase">Properties Inherited from TransformBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#properties-inherited-from-commandbase">Properties Inherited from CommandBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#item-type-hierarchy">Item Type Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relationships">Relationships</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spss-example-loopwhile">SPSS_example_LoopWhile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stata-example-loopwhile">Stata_example_LoopWhile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../MergeDatasets/">MergeDatasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MergeFileDescription/">MergeFileDescription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Message/">Message</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MissingValueConstantExpression/">MissingValueConstantExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NewDataframe/">NewDataframe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NoTransformOp/">NoTransformOp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumberRangeExpression/">NumberRangeExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumericConstantExpression/">NumericConstantExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumericMaximumValueExpression/">NumericMaximumValueExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumericMinimumValueExpression/">NumericMinimumValueExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recode/">Recode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RecodeRule/">RecodeRule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RecodeVariable/">RecodeVariable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rename/">Rename</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RenamePair/">RenamePair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ReshapeItemDescription/">ReshapeItemDescription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ReshapeLong/">ReshapeLong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ReshapeWide/">ReshapeWide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Save/">Save</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetDatasetProperty/">SetDatasetProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetDataType/">SetDataType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetDisplayFormat/">SetDisplayFormat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetMissingValues/">SetMissingValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetValueLabels/">SetValueLabels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetVariableLabel/">SetVariableLabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SortCases/">SortCases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SortCriterion/">SortCriterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SourceInformation/">SourceInformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StringConstantExpression/">StringConstantExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StringRangeExpression/">StringRangeExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TimeDurationConstant/">TimeDurationConstant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TransformBase/">TransformBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnhandledValuesExpression/">UnhandledValuesExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unsupported/">Unsupported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ValueLabel/">ValueLabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ValueListExpression/">ValueListExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableListExpression/">VariableListExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableRangeExpression/">VariableRangeExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableReferenceBase/">VariableReferenceBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableSymbolExpression/">VariableSymbolExpression</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Structured Data Transform Language</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../">All Composite Types</a> &raquo;</li>
+        
+      <li>LoopWhile</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/composite-types/LoopWhile/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="loopwhile">
+<h1>LoopWhile<a class="headerlink" href="#loopwhile" title="Permalink to this headline">¶</a></h1>
+<p>LoopWhile iterates over a set of commands under the control of one or more logical expressions.  Since the logical conditions typically depend upon values in the data, commands executed in a LoopWhile cannot be anticipated and expanded in SDTL.</p>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="12%" />
+<col width="8%" />
+<col width="4%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">&#160;</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Condition</td>
+<td><a class="reference internal" href="../ExpressionBase/"><span class="doc">ExpressionBase</span></a></td>
+<td>0..1</td>
+<td>Describes a condition required for the next iteration to begin.</td>
+</tr>
+<tr class="row-odd"><td>EndCondition</td>
+<td><a class="reference internal" href="../ExpressionBase/"><span class="doc">ExpressionBase</span></a></td>
+<td>0..1</td>
+<td>Describes a condition that ends interation.</td>
+</tr>
+<tr class="row-even"><td>Commands</td>
+<td><a class="reference internal" href="../CommandBase/"><span class="doc">CommandBase</span></a></td>
+<td>1..n</td>
+<td>Commands within the loop.</td>
+</tr>
+<tr class="row-odd"><td>Updated</td>
+<td>boolean</td>
+<td>0..1</td>
+<td>When TRUE, the loop has been expanded into separate commands.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties-inherited-from-transformbase">
+<h2>Properties Inherited from TransformBase<a class="headerlink" href="#properties-inherited-from-transformbase" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="12%" />
+<col width="8%" />
+<col width="4%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">&#160;</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ProducesDataframe</td>
+<td><a class="reference internal" href="../DataframeDescription/"><span class="doc">DataframeDescription</span></a></td>
+<td>0..n</td>
+<td>Signify the dataframe which this transform produces.</td>
+</tr>
+<tr class="row-odd"><td>ConsumesDataframe</td>
+<td><a class="reference internal" href="../DataframeDescription/"><span class="doc">DataframeDescription</span></a></td>
+<td>0..n</td>
+<td>Signify the dataframe which this transform acts upon.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties-inherited-from-commandbase">
+<h2>Properties Inherited from CommandBase<a class="headerlink" href="#properties-inherited-from-commandbase" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="12%" />
+<col width="8%" />
+<col width="4%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">&#160;</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Command</td>
+<td>string</td>
+<td>1..1</td>
+<td>The type of command</td>
+</tr>
+<tr class="row-odd"><td>SourceInformation</td>
+<td><a class="reference internal" href="../SourceInformation/"><span class="doc">SourceInformation</span></a></td>
+<td>0..n</td>
+<td>Information about the source of the command.</td>
+</tr>
+<tr class="row-even"><td>MessageText</td>
+<td>string</td>
+<td>0..n</td>
+<td>Adds a message that can be displayed with the command.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="item-type-hierarchy">
+<h2>Item Type Hierarchy<a class="headerlink" href="#item-type-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="../CommandBase/"><span class="doc">CommandBase</span></a></dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="../TransformBase/"><span class="doc">TransformBase</span></a></dt>
+<dd><ul class="first last">
+<li><strong>LoopWhile</strong></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="relationships">
+<h2>Relationships<a class="headerlink" href="#relationships" title="Permalink to this headline">¶</a></h2>
+<div class="image docutils container">
+<img alt="stub" src="composite-types\LoopWhile\../../images/LoopWhile.svg" /></div>
+</div>
+<div class="section" id="spss-example-loopwhile">
+<h2>SPSS_example_LoopWhile<a class="headerlink" href="#spss-example-loopwhile" title="Permalink to this headline">¶</a></h2>
+<p>========= SPSS EXAMPLE ================</p>
+<p>LOOP IF (Y GT 10).
+COMPUTE X=X+1.
+END LOOP IF (X EQ 5).</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
+{“Command”: “LoopWhile”,</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>“sourceInformation”: {</dt>
+<dd><dl class="first last docutils">
+<dt>“originalSourceText”: “LOOP IF (Y GT 10).</dt>
+<dd><blockquote class="first">
+<div>COMPUTE X=X+1.
+END LOOP IF (X EQ 5). “</div></blockquote>
+<p class="last">},</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>“Condition”:</dt>
+<dd><p class="first">{“$type”:”FunctionCallExpression”,
+“Function”: “gt”,
+“IsSDTLName”:”True”,
+“Arguments”: [</p>
+<blockquote>
+<div><p>{“ArgumentName”: “EXP1”,
+“ArgumentValue”:</p>
+<blockquote>
+<div>{“$type”: “VariableSymbolExpression”,  “VariableName”: “Y”}</div></blockquote>
+<p>},
+{“ArgumentName”: “EXP2”,
+“ArgumentValue”:</p>
+<blockquote>
+<div>{“$type”: “NumericConstantExpression”,  “Value”: “10”}</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p class="last">]
+},</p>
+</dd>
+<dt>“EndCondition”:</dt>
+<dd><p class="first">{“$type”:”FunctionCallExpression”,
+“Function”: “eq”,
+“IsSDTLName”:”True”,
+“Arguments”: [</p>
+<blockquote>
+<div><p>{“ArgumentName”: “EXP1”,
+“ArgumentValue”:</p>
+<blockquote>
+<div>{“$type”: “VariableSymbolExpression”,  “VariableName”: “X”}</div></blockquote>
+<p>},
+{“ArgumentName”: “EXP2”,
+“ArgumentValue”:</p>
+<blockquote>
+<div>{“$type”: “NumericConstantExpression”,  “IteratorSymbolName”: “5”}</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p class="last">]
+},</p>
+</dd>
+<dt>“IteratorCommands:” [</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>{“Command”: “compute”,</div></blockquote>
+<dl class="docutils">
+<dt>“VariableName”:</dt>
+<dd>{“$type”: “VariableSymbolExpression”,  “VariableName”: “X”},</dd>
+<dt>“Expression”:</dt>
+<dd><dl class="first last docutils">
+<dt>{“$type”:”FunctionCallExpression”,</dt>
+<dd><p class="first">“Function”: “Addition”,
+“IsSDTLName”:”True”,
+“Arguments”: [
+{“ArgumentName”: “EXP1”,
+“ArgumentValue”:</p>
+<blockquote>
+<div>{“$type”: “VariableSymbolExpression”,  “VariableName”: “X”},
+},</div></blockquote>
+<p>{“ArgumentName”: “EXP2”,
+“ArgumentValue”:</p>
+<blockquote class="last">
+<div><blockquote>
+<div>{“$type”: “NumericConstantExpression”,  “IteratorSymbolName”: “1”}</div></blockquote>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p class="last">]</p>
+</dd>
+</dl>
+<p>}</p>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a></p>
+</div>
+<div class="section" id="stata-example-loopwhile">
+<h2>Stata_example_LoopWhile<a class="headerlink" href="#stata-example-loopwhile" title="Permalink to this headline">¶</a></h2>
+<p>======== Stata EXAMPLE ===============
+<a href="#id7"><span class="problematic" id="id8">``</span></a>`
+while <a href="#id9"><span class="problematic" id="id10">`</span></a>i’&lt;40 {</p>
+<blockquote>
+<div>gen newvar`i’ = runiform()
+local i=`i’+1
+}</div></blockquote>
+<p><a href="#id11"><span class="problematic" id="id12">``</span></a><a href="#id13"><span class="problematic" id="id14">`</span></a></p>
+<p><a href="#id15"><span class="problematic" id="id16">``</span></a>`
+{“Command”: “LoopWhile”,</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>“sourceInformation”: {</dt>
+<dd><dl class="first last docutils">
+<dt>“originalSourceText”: “while <a href="#id17"><span class="problematic" id="id18">`</span></a>i’&lt;40 {</dt>
+<dd><blockquote class="first">
+<div>gen newvar`i’ = runiform()
+local i=`i’+1
+}”</div></blockquote>
+<p class="last">},</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>“Condition”:</dt>
+<dd><p class="first">{“$type”:”FunctionCallExpression”,
+“Function”: “lt”,
+“IsSDTLName”:”True”,
+“Arguments”: [</p>
+<blockquote>
+<div><p>{“ArgumentName”: “EXP1”,
+“ArgumentValue”:</p>
+<blockquote>
+<div>{“$type”: “IteratorSymbolExpression”,  “IteratorSymbolName”: “i”}</div></blockquote>
+<p>},
+{“ArgumentName”: “EXP2”,
+“ArgumentValue”:</p>
+<blockquote>
+<div>{“$type”: “NumericConstantExpression”,  “Value”: “40”}</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p class="last">]
+},</p>
+</dd>
+<dt>“IteratorCommands:” [</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>{“Command”: “compute”,</div></blockquote>
+<dl class="docutils">
+<dt>“VariableName”:</dt>
+<dd><blockquote class="first">
+<div><dl class="docutils">
+<dt>{“CompositeVariableName”:</dt>
+<dd><dl class="first docutils">
+<dt>{“Stub”: “newvar”,</dt>
+<dd><dl class="first last docutils">
+<dt>“Postfix”:</dt>
+<dd>{“$type”: “IteratorSymbolExpression”,  “IteratorSymbolName”: “i”}
+}</dd>
+</dl>
+</dd>
+</dl>
+<p class="last">},</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>“Expression”:
+{“$type”:”FunctionCallExpression”,</p>
+<blockquote class="last">
+<div><p>“Function”: “random_variable_uniform”,
+“IsSDTLName”:”True”,
+“Arguments”: [
+{“ArgumentName”: “EXP1”,
+“ArgumentValue”:</p>
+<blockquote>
+<div>{“$type”: “NumericConstantExpression”,  “Value”: “0”},
+},</div></blockquote>
+<p>{“ArgumentName”: “EXP2”,
+“ArgumentValue”:</p>
+<blockquote>
+<div><blockquote>
+<div>{“$type”: “NumericConstantExpression”,  “Value”: “1”}</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<p class="last">]</p>
+</dd>
+</dl>
+<p>}</p>
+<p><a href="#id19"><span class="problematic" id="id20">``</span></a><a href="#id21"><span class="problematic" id="id22">`</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../MergeDatasets/" class="btn btn-neutral float-right" title="MergeDatasets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../LoopOverList/" class="btn btn-neutral float-left" title="LoopOverList" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Copyright (c) 2020 C2Metadata Contributors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+AllNumericVariablesExpression
+-----------------------------
+
+An expression that represents all numeric variables in the dataset, similar to `_all` in SPSS or Stata.
+
+
+Properties
+~~~~~~~~~~
+
+This type contains no properties.
+
+Properties Inherited from VariableReferenceBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * :doc:`/composite-types/VariableReferenceBase/index`
+        * **AllNumericVariablesExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AllNumericVariablesExpression.svg
+

@@ -1,0 +1,27 @@
+FixedIdentifierType
+-------------------
+
+Reference to the variable containing the unique identifier. This may be a concatenated variable which indicates the combination of variable required to create a unique identification. If more than one variable reference is included the combination of the variable field contents must be unique and all variables are required for case identification.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableReference",":doc:`/item-types/Variable/index`","0..n","Reference to a variable used as a fixed identifier either singly or in combination with additional reference variables."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CaseIdentificationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/FixedIdentifierType.svg
+

@@ -1,0 +1,46 @@
+CreateSummaryType
+-----------------
+
+Note that this is generally usable only with single valid response domain in grid. More complex uses should be carefully documented using details in CommandCode and Input/output Parameters.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Label",":doc:`/composite-types/LabelType/index`","0..1","Label for the summary type used."
+
+Properties Inherited from CommandCodeType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the purpose and use of the command code provided. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "Command",":doc:`/composite-types/CommandType/index`","0..n","This is an in-line provision of the command itself."
+   "CommandFile",":doc:`/composite-types/CommandFileType/index`","0..n","Identifies and provides a link to an external copy of the command, for example, a SAS Command Code script."
+   "StructuredCommand",":doc:`/composite-types/StructuredCommandType/index`","0..1","The is an extension stub to allow for the insertion of command code using an external namespace."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/CommandCodeType/index`
+    * **CreateSummaryType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/GridDimensionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CreateSummaryType.svg
+

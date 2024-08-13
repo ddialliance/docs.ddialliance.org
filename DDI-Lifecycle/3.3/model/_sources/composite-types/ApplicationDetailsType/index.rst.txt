@@ -1,0 +1,32 @@
+ApplicationDetailsType
+----------------------
+
+Provides sample stage level details where needed. Repeat for individual stages or sub-stages.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SamplingStageReference",":doc:`/item-types/SamplingStage/index`","0..1","References the sample plan stage in an overall sample plan. TypeOfObject should be set to SamplingStage"
+   "SampleFrameReference",":doc:`/item-types/SampleFrame/index`","0..1","Reference to sample frame used. Note that this is the actual sample frame used and may differ from the recommended sample frame found in the sample plan stage referenced for this procedure. Deviation from the recommended sample frame should be described in FrameLimitations."
+   "FrameLimitations",":doc:`/composite-types/StructuredStringType/index`","0..1","Description of limitations of the usage of the frame for the data collection.  Clarify (over/under) coverage issues, lack of needed fields, and needs to support over-sampling or deviation from recommended sample frame found in sample plan stage."
+   "TargetSampleSize",":doc:`/composite-types/TargetSampleSizeType/index`","0..n","The desired sample size for this particular sample plan express in relation to its strata number if relevant. Provides means of expressing the formula used for determining the sample size."
+   "DateOfSample",":doc:`/composite-types/DateType/index`","0..1","Date or date range when sample was drawn."
+   "ResponsibleForSamplingReference",":doc:`/item-types/Agent/index`","0..n","A reference to an organization or individual responsible for sampling."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Sample/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ApplicationDetailsType.svg
+

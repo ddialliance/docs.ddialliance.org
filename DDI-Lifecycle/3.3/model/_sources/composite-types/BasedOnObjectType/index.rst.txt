@@ -1,0 +1,30 @@
+BasedOnObjectType
+-----------------
+
+Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "BasedOnReference_Versionable",":doc:`/item-types/Versionable/index`","0..n","A reference to an object upon which the current object is based using a standard Reference structure. Repeat for multiple base objects. The TypeOfObject may be any Versionable or Maintainable object."
+   "BasedOnReference_Maintainable",":doc:`/item-types/Maintainable/index`","0..n","A reference to an object upon which the current object is based using a standard Reference structure. Repeat for multiple base objects. The TypeOfObject may be any Versionable or Maintainable object."
+   "BasedOnRationaleDescription",":doc:`/composite-types/InternationalStringType/index`","0..1","Textual description of the rationale/purpose for the based on reference to inform users as to the extent and implication of the version change. May be expressed in multiple languages."
+   "BasedOnRationaleCode",":doc:`/composite-types/CodeValueType/index`","0..1","RationaleCode is primarily for internal processing flags within an organization or system. Supports the use of an external controlled vocabulary."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Versionable/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/BasedOnObjectType.svg
+

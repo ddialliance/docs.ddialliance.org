@@ -1,0 +1,35 @@
+VocabularyType
+--------------
+
+Provides information about the vocabulary used to create a concept scheme.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VocabularyTitle",":doc:`/composite-types/InternationalStringType/index`","0..1","Full title of vocabulary."
+   "Abbreviation",":doc:`/composite-types/InternationalStringType/index`","0..n","Abbreviation of vocabulary title."
+   "Keyword",":doc:`/composite-types/InternationalCodeValueType/index`","0..n","Keywords that describe the vocabulary."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the Vocabulary. May be expressed in multiple languages and supports the use of structured content."
+   "URI","anyURI","0..1","URI to external resource providing information about the vocabulary (general description, main web page)."
+   "XMLURI","anyURI","0..1","URI to the vocabulary represented as an XML document."
+   "Scheme","string","0..1","Textual description of the XML scheme in which the classification is written."
+   "SchemeURI","anyURI","0..1","URI to the XML scheme used in the vocabulary (DTD or XML Schema for the XML document above; schemes like DDI, Claset, Neuchatel, and DocBook). Typically, this will be an XML namespace."
+   "Comments",":doc:`/composite-types/StructuredStringType/index`","0..n","Information for the user regarding the reasons for use of the vocabulary and appropriate usage constraints."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ConceptScheme/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VocabularyType.svg
+

@@ -1,0 +1,29 @@
+IdentifierParsingInformationType
+--------------------------------
+
+Provides structural information for parsing the identification code structure of the Authorized Source into its separate parts.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ParentIdentificationPortion",":doc:`/composite-types/IdentificationPortionType/index`","0..n","Identifies the parent portions of the code string as individual segments. Repeat for each parental segment."
+   "UniqueIdentificationPortion",":doc:`/composite-types/IdentificationPortionType/index`","0..1","Identifies the unique portion of the code string as a segment."
+   "ArrayBase_string","string","0..1","The array base is the value of the designation for the first item in an array and is set to either 0 or 1. Unix based systems and most current programming systems use an array base of 0. Traditional codebooks normally set the array base at 1, for example the first data item in a fixed format ASCII file record begins at character 1."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/AuthorizedSourceType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IdentifierParsingInformationType.svg
+

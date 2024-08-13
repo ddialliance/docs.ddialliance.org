@@ -1,0 +1,48 @@
+PrivateImageType
+----------------
+
+References an image using the standard Image description. In addition to the standard attributes provides an effective date (period), the type of image, and a privacy ranking.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "EffectivePeriod",":doc:`/composite-types/DateType/index`","0..1","The period for which this image is effective/valid."
+   "Privacy","string","0..1","A basic set of privacy codes for the parent element. These may be stricter than the general access restrictions for the overall metadata. If available codes are insufficient this may also contain any string."
+
+Properties Inherited from ImageType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ImageLocation","anyURI","0..1","A reference to the location of the image using a URI."
+   "TypeOfImage",":doc:`/composite-types/CodeValueType/index`","0..1","Brief description of the image type. Supports the use of an external controlled vocabulary."
+   "Dpi","nonNegativeInteger","0..1","Provides the resolution of the image in dots per inch to assist in selecting the appropriate image for various uses."
+   "LanguageOfImage","language","0..1","Language of image."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ImageType/index`
+    * **PrivateImageType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/IndividualIdentificationType/index`
+* :doc:`/composite-types/OrganizationIdentificationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/PrivateImageType.svg
+

@@ -1,0 +1,47 @@
+AdditionalInformationType
+-------------------------
+
+Additional Information provided using a StructuredString plus a privacy code to support multiple language versions of the same content as well as optional formatting of the content.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "EffectivePeriod",":doc:`/composite-types/DateType/index`","0..1","Clarifies when the identification information is accurate."
+   "Privacy","string","0..1","A basic set of privacy codes for the parent element. These may be stricter than the general access restrictions for the overall metadata. If available codes are insufficient this may also contain any string."
+
+Properties Inherited from StructuredStringType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Content",":doc:`/composite-types/ContentType/index`","0..n","Supports the optional use of XHTML formatting tags within the string structure. In addition to the language designation and information regarding translation, the attribute isPlain can be set to true to indicate that the content should be treated as plain unstructured text, including any XHTML formatting tags. Repeat the content element to provide multiple language versions of the same content."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/StructuredStringType/index`
+    * **AdditionalInformationType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Individual/index`
+* :doc:`/item-types/Organization/index`
+* :doc:`/item-types/Relation/index`
+* :doc:`/composite-types/RoleType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AdditionalInformationType.svg
+

@@ -1,0 +1,48 @@
+DivisionExpression
+------------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **DivisionExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DivisionExpression.svg
+
+Properties
+~~~~~~~~~~
+
+Dividend
+********
+
+Type
+    :doc:`/composite-types/ExpressionBase/index`
+Cardinality
+    0..1
+
+TODO
+
+Divisor
+*******
+
+Type
+    :doc:`/composite-types/ExpressionBase/index`
+Cardinality
+    0..1
+
+TODO
+
+
+

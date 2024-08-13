@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="section1.html">1.0 Document Description</a></li><li><a href="section2.html">2.0 Study Description</a></li><li><a href="section3.html">3.0 File Description</a></li><li><a href="section4.html">4.0 Variable Description</a></li><li><a href="section5.html">5.0 Other Material</a></li><li><a href="sectionall.html">Single file for printing</a> (slow)</li></ul><h2>&lt;universe&gt;&#160;Universe</h2><ul><li>Optional</li><li>Repeatable</li><li>Attributes: <a href="codeBook.html">ID, xml:lang, source</a>, level, clusion</li></ul><div style="padding-left:25px;"><p><em>Description:</em>&#160;The group of persons or other elements that are
+                        the object of research and to which any analytic results refer. Age,
+                        nationality, and residence commonly help to delineate a given universe, but
+                        any of a number of factors may be involved, such as sex, race, income,
+                        veteran status, criminal convictions, etc. The universe may consist of
+                        elements other than persons, such as housing units, court cases, deaths,
+                        countries, etc. In general, it should be possible to tell from the
+                        description of the universe whether a given individual or element
+                        (hypothetical or real) is a member of the population under study. A "level"
+                        attribute is included to permit coding of the level to which universe
+                        applies, i.e., the study level, the file level (if different from study),
+                        the record group, the variable group, the nCube group, the variable, or the
+                        nCube level. The "clusion" attribute provides for specification of groups
+                        included (I) in or excluded (E) from the universe. If all the
+                        variables/nCubes described in the data documentation relate to the same
+                        population, e.g., the same set of survey respondents, this element would be
+                        unnecessary at data description level. In this case, universe can be fully
+                        described at the study level. </p></div><div style="padding-left:25px;"><p><em>Example(s):</em></p><pre>&lt;universe clusion="I"&gt;Individuals 15-19 years of age. &lt;/universe&gt; 
+
+&lt;universe clusion="E"&gt;Individuals younger than 15 and older than 19 years of age.&lt;/universe&gt; </pre></div></body></html>

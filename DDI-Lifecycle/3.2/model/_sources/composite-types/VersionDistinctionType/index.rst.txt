@@ -1,0 +1,31 @@
+VersionDistinctionType
+----------------------
+
+Describes the data versioning scheme(s) used by an organization. If more than one, Name should differentiate between a standard versioning structure used by the organization and special structures used by specific projects or studies. Information on what drives and major and minor change and how they are structured.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VersionDistinctionName",":doc:`/composite-types/NameType/index`","0..n","A name for the Version Distinction. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the Version Distinction. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the Version Distinction. May be expressed in multiple languages and supports the use of structured content."
+   "EffectivePeriod",":doc:`/composite-types/DateType/index`","0..1","Clarifies when the identification information is accurate."
+   "RegExp","string","0..1","Allows the version structure to be defined by a regular expression."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Organization/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VersionDistinctionType.svg
+

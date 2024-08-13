@@ -1,0 +1,29 @@
+TargetObjectType
+----------------
+
+Identifies the Target organization or individual in the relationship. References either an Organiztion or an Individual and specifies the role of the Target in relationship to the Source. Multiple roles for specified periods may be identified.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OrganizationReference",":doc:`/item-types/Organization/index`","0..1","A reference to an Organization described in DDI."
+   "IndividualReference",":doc:`/item-types/Individual/index`","0..1","A reference to an Individual described in DDI."
+   "Role",":doc:`/composite-types/RoleType/index`","0..n","Describes the role of Target Individual or Organization in relation to the Source Object."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Relation/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TargetObjectType.svg
+

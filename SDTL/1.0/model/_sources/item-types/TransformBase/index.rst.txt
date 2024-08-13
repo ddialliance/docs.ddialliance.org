@@ -1,0 +1,106 @@
+TransformBase
+-------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **TransformBase**
+    * :doc:`/item-types/Compute/index`
+    * :doc:`/item-types/DeleteKeep/index`
+    * :doc:`/item-types/DoIf/index`
+    * :doc:`/item-types/LoadSave/index`
+    * :doc:`/item-types/Recode/index`
+    * :doc:`/item-types/Rename/index`
+    * :doc:`/item-types/ReshapeLong/index`
+    * :doc:`/item-types/ReshapeWide/index`
+    * :doc:`/item-types/Select/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TransformBase.svg
+
+Properties
+~~~~~~~~~~
+
+ID
+**
+
+Type
+    string
+Cardinality
+    1..1
+
+ID of the object being referenced.
+
+Command
+*******
+
+Type
+    string
+Cardinality
+    0..1
+
+The type of transform command
+
+SourceLanguage
+**************
+
+Type
+    string
+Cardinality
+    0..1
+
+The language of the original transform (e.g., SPSS, SAS, Stata, R)
+
+SourceFileName
+**************
+
+Type
+    string
+Cardinality
+    0..1
+
+The name of the file that contained the original transform code
+
+SourceStartIndex
+****************
+
+Type
+    int
+Cardinality
+    0..1
+
+The character index of the beginning of the transform code
+
+SourceStopIndex
+***************
+
+Type
+    int
+Cardinality
+    0..1
+
+The character index of the end of the transform code
+
+SourceText
+**********
+
+Type
+    string
+Cardinality
+    0..1
+
+The original source code of the data transform code
+
+
+

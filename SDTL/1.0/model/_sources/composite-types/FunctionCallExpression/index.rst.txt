@@ -1,0 +1,39 @@
+FunctionCallExpression
+----------------------
+
+An expression evaluated by reference to the Function Library.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Function","string","1..1","The name of the function being called."
+   "IsSdtlName","boolean","1..1","When true, the Function property contains the name of a function from the SDTL function library. When false, the Function property contains the name of a system-specific or user-defined function."
+   "Arguments",":doc:`/composite-types/FunctionArgument/index`","0..n (Ordered)","A list of parameters to the function."
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **FunctionCallExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/FunctionCallExpression.svg
+

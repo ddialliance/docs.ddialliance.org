@@ -1,0 +1,36 @@
+FundingInformationType
+----------------------
+
+Provides information about the individual, agency and/or grant(s) which funded the described entity. Lists a reference to the agency or individual as described in a DDI Organization Scheme, the role of the funder, the grant number(s) and a description of the funding activity.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "AgencyOrganizationReference",":doc:`/item-types/Agent/index`","0..n","Reference to an organization or individual, defined in the organization scheme, that served as a funding source."
+   "FunderRole",":doc:`/composite-types/CodeValueType/index`","0..1","Role of the funding organization or individual. Supports the use of a controlled vocabulary."
+   "GrantNumber","string","0..n","The identification code of the grant or other monetary award which provided funding for the described object."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","Additional information regarding the role and actions of the this funding source. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "FundingDocumentReference",":doc:`/item-types/OtherMaterial/index`","0..1","Link to a document related to the funding such as application or funding announcement using the OtherMaterial structure."
+   "FundingPeriod",":doc:`/composite-types/DateType/index`","0..1","Dates for which the funding is provided."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/ResourcePackage/index`
+* :doc:`/item-types/StudyUnit/index`
+* :doc:`/composite-types/ArchiveSpecificType/index`
+* :doc:`/composite-types/CostStructureType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/FundingInformationType.svg
+

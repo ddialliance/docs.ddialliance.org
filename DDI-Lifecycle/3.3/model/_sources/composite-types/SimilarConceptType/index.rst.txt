@@ -1,0 +1,28 @@
+SimilarConceptType
+------------------
+
+A reference to a concept with similar meaning and a description of their differences. Formal comparison is done using a ConceptMap. The similar concept structure allows specification of similar concepts to address cases where confusion may affect the appropriate use of the concept.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SimilarConceptReference",":doc:`/item-types/Concept/index`","0..1","Reference to a concept with a similar definition."
+   "Difference",":doc:`/composite-types/StructuredStringType/index`","0..1","Description of the difference between the two concepts.  Supports multiple language versions of the same content as well as optional formatting of the content."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Concept/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SimilarConceptType.svg
+

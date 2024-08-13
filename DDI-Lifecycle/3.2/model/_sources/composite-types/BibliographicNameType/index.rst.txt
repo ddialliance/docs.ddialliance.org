@@ -1,0 +1,45 @@
+BibliographicNameType
+---------------------
+
+Personal names should be listed surname or family name first, followed by forename or given name. When in doubt, give the name as it appears, and do not invert. In the case of organizations where there is clearly a hierarchy present, list the parts of the hierarchy from largest to smallest, separated by full stops and a space. If it is not clear whether there is a hierarchy present, or unclear which is the larger or smaller portion of the body, give the name as it appears in the item. The name may be provided in one or more languages.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Affiliation","string","0..1","The affiliation of this person to an organization. This is generally an organization or sub-organization name and should be related to the specific role within which the individual is being listed."
+
+Properties Inherited from InternationalStringType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "String",":doc:`/composite-types/StringType/index`","0..n","A non-formatted string of text with an attribute that designates the language of the text. Repeat this object to express the same content in another language."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/InternationalStringType/index`
+    * **BibliographicNameType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ContributorType/index`
+* :doc:`/composite-types/CreatorType/index`
+* :doc:`/composite-types/PublisherType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/BibliographicNameType.svg
+

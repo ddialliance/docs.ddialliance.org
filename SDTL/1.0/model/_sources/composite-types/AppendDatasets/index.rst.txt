@@ -1,0 +1,56 @@
+AppendDatasets
+--------------
+
+Combines datasets by concatenation for datasets with the same or overlapping variables.  
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "AppendFiles",":doc:`/composite-types/AppendFileDescription/index`","1..n","Description of files to be appended"
+   "AppendFlagVariable","string","0..1","Creates a new variable identifying the source dataframe for a row with the variable name given in the value of the property"
+
+Properties Inherited from TransformBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProducesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform produces."
+   "ConsumesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform acts upon."
+
+Properties Inherited from CommandBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","0..n","Information about the source of the command."
+   "MessageText","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/CommandBase/index`
+    * :doc:`/composite-types/TransformBase/index`
+        * **AppendDatasets**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AppendDatasets.svg
+

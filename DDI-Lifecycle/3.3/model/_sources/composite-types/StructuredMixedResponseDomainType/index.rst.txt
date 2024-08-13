@@ -1,0 +1,29 @@
+StructuredMixedResponseDomainType
+---------------------------------
+
+A structure to allow for mixing multiple response domains in a single question. These may also include intervening text statements that are tightly bound to a response domain. A common example is the use of a CodeDomain and a TextDomain where the TextDomain is associated with the value with the label "Other" in the CodeDomain. ResponseDomains should be chosen that do NOT duplicate responses such as CodeLists with overlapping codes. Be aware that certain instruments may collect responses in such a way that confusion between a code response and text response may be possible. The process of resolving such conflicts should be addressed in the data processing instructions. There is an assumption that if a text or numeric response duplicates a coded response to a question, that the value is that of the coded category. At least one ResponseDomain must be provided.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ResponseTextSet",":doc:`/composite-types/ResponseTextSetType/index`","0..1","Text closely related to the content of the ResponseDomain(s), in general, text required to make sense of the related response domain. ResponseTextSet provides a means of bundling multiple language versions of ResponseText together. This wrapper serves to differentiate between a case where multiple language content for a single ResponseText are provided and when two differing sets of ResponseText are in immediate sequence (with no intervening question).  Note that when using ResponseText, the full ResponseText must be repeated for multi-language versions of the content within the same ResponseTextSet."
+   "ResponseDomainInMixed",":doc:`/composite-types/ResponseDomainInMixedType/index`","0..1","A structure that provides both the response domain and information on how it should be attached, or related, to other specified response domains in the question."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/MeasurementItem/index`
+* :doc:`/item-types/QuestionItem/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/StructuredMixedResponseDomainType.svg
+

@@ -1,0 +1,30 @@
+ResponseDomainInMixedType
+-------------------------
+
+A structure that provides both the response domain and information on how it should be attached, or related, to other specified response domains in the question. If no AttachmentLocation information is provided it is assumed that multiple response domains or response text occurs in sequence.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ResponseDomain",":doc:`/composite-types/RepresentationType/index`","0..1","The response domain being used. An abstract element. May be substituted by any valid object of substitution type ResponseDomain."
+   "ResponseDomainReference",":doc:`/item-types/ManagedRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "AttachmentLocation",":doc:`/composite-types/AttachmentLocationType/index`","0..1","Allows attachment of a secondary response domain to a specific item within another response domain used in the question. For example, attach a TextDomain to the value ""Other"" using the TextDomain label (Please specify) as a label for the TextDomain."
+   "AttachmentBase","int","0..1","If another response domain will be attached to the response domain listed withinResponseDomainInMixed provide a value in attachmentBase to allow for unique identification within this question. AttachmentLocation contains an attribute attachmentDomain which will provide a link from the domain that is being attached to the domain it is being attached to."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/StructuredMixedResponseDomainType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ResponseDomainInMixedType.svg
+

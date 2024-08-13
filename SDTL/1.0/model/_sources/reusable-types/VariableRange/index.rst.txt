@@ -1,0 +1,41 @@
+VariableRange
+-------------
+
+TODO
+
+
+.. contents::
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VariableRange.svg
+
+Properties
+~~~~~~~~~~
+
+First
+*****
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+Last
+****
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+
+

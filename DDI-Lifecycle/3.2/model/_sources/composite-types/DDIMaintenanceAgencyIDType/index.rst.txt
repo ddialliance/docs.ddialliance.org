@@ -1,0 +1,41 @@
+DDIMaintenanceAgencyIDType
+--------------------------
+
+Provides the official DDI ID of a maintenance agency as a value taken from the registry cited in @registryID.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RegistryID","string","1..1","Currently there is only a single DDI Agency Registry. Use ""DDIAgencyRegistry""."
+   "StartDate_dateTime","dateTime","0..1","The date when this agency ID was registered or become active."
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * **DDIMaintenanceAgencyIDType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/IndividualIdentificationType/index`
+* :doc:`/composite-types/OrganizationIdentificationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DDIMaintenanceAgencyIDType.svg
+

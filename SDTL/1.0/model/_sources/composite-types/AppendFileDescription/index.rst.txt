@@ -1,0 +1,36 @@
+AppendFileDescription
+---------------------
+
+Describes files used in an AppendDatasets command.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "FileName","string","1..1","Name of the file being appended.  May be the name of an active dataframe."
+   "RenameVariables",":doc:`/composite-types/RenamePair/index`","0..n","Variables to be renamed"
+   "KeepVariables",":doc:`/composite-types/VariableReferenceBase/index`","0..n","List of variables to keep"
+   "DropVariables",":doc:`/composite-types/VariableReferenceBase/index`","0..n","List of variables to drop"
+   "KeepCasesCondition",":doc:`/composite-types/ExpressionBase/index`","0..1","Logical condition for keeping rows."
+   "DropCasesCondition",":doc:`/composite-types/ExpressionBase/index`","0..1","Logical condition for dropping rows."
+   "Software","string","0..1","The software package that works with the file."
+   "FileFormat","string","0..1","The name of a file format Valid values include: csv, txt, dat, xls, xlsx, sav, dta, sas7bdat, rds, rdata"
+   "IsCompressed","boolean","0..1","Indicates whether the file format is compressed."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/AppendDatasets/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AppendFileDescription.svg
+

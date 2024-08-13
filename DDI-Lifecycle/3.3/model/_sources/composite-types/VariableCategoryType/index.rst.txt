@@ -1,0 +1,29 @@
+VariableCategoryType
+--------------------
+
+A category value for which one or more statistics are recorded. Each VariableCategory has one category value and any number of associated statistics.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CategoryValue",":doc:`/composite-types/CategoryValueType/index`","0..1","The value of the category."
+   "CategoryStatistic",":doc:`/composite-types/CategoryStatisticType/index`","0..n","The value of a statistic associated with the category value indicated in the sibling CategoryValue element."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/FilterVariableCategoryType/index`
+* :doc:`/composite-types/UnfilteredCategoryStatisticsType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VariableCategoryType.svg
+

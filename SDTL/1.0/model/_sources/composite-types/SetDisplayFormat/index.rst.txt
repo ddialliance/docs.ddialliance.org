@@ -1,0 +1,67 @@
+SetDisplayFormat
+----------------
+
+Sets the display or output format for a variable.    
+Examples:   
+```
+"displayFormatSchema": "SAS"
+"displayFormatName": "DOLLAR6.2"
+```
+
+```
+"displayFormatSchema": "Stata 15.1"
+"displayFormatName": "%tcDDmonCCYY_HH:MM:SS"
+```
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Variables",":doc:`/composite-types/VariableReferenceBase/index`","1..n","The variables that will have their format set"
+   "DisplayFormatSchema","string","0..1","A vendor or standards body with a controlled vocabulary.  The value can be a URL."
+   "DisplayFormatName","string","0..1","The name used in the associated schema."
+
+Properties Inherited from TransformBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProducesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform produces."
+   "ConsumesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform acts upon."
+
+Properties Inherited from CommandBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","0..n","Information about the source of the command."
+   "MessageText","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/CommandBase/index`
+    * :doc:`/composite-types/TransformBase/index`
+        * **SetDisplayFormat**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SetDisplayFormat.svg
+

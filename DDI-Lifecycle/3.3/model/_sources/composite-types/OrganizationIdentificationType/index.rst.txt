@@ -1,0 +1,29 @@
+OrganizationIdentificationType
+------------------------------
+
+Means of identifying an organization. The structure contains a repeatable OrganizationName. At minimum enter the current legal or formal name setting the attribute isFormal to "true". Additional OrganizationNames may be provided that have a) a specific contextual usage, or b) are of specific types (e.g. PreviousFormalName). The DDI Maintenance Agency ID and and organization images, such as a building picture or logo are found in OrganizationIdentification. Images and names can be individually date stamped.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OrganizationName",":doc:`/composite-types/OrganizationNameType/index`","0..n","Names by which the organization is known. Use the attribute isFormal=""true"" to designate the legal or formal name of the Organization. The preferred name should be noted with the isPreferred attribute. Names may be typed with TypeOfOrganizationName to indicate their appropriate usage."
+   "DDIMaintenanceAgencyID",":doc:`/composite-types/DDIMaintenanceAgencyIDType/index`","0..n","Contains the official DDI ID of the maintenance agency as registered with the DDI registry by the parent organization or individual. A single organization or individual may have one or more DDI Maintenance Agency IDs registered within the DDI registry (i.e., an organization may have a DDI Maintenance Agency ID for each project managed by the organization) The structure of this string is described by Part I of the Technical Documentation and the content is registered within the DDI registry as a unique identifier."
+   "OrganizationImage",":doc:`/composite-types/PrivateImageType/index`","0..n","Provides an external link to images associated with the individual."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Organization/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/OrganizationIdentificationType.svg
+

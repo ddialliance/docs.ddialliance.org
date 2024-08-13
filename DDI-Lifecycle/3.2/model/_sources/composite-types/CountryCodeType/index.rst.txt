@@ -1,0 +1,44 @@
+CountryCodeType
+---------------
+
+Serves as head of a substitution group for specifying ISO 3166 Country Codes or use of unspecified text.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "EffectiveDate","dateTime","0..1","If it is important to specify the date that this code is effective in order to accurately capture a name or similar change, specify that here."
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * **CountryCodeType**
+        * :doc:`/composite-types/CountryType/index`
+        * :doc:`/composite-types/Country_2Type/index`
+        * :doc:`/composite-types/Country_3Type/index`
+        * :doc:`/composite-types/Country_NType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/AddressType/index`
+* :doc:`/composite-types/GeographicCoverageType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CountryCodeType.svg
+

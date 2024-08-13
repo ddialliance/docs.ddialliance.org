@@ -1,0 +1,27 @@
+ConcatenatedValueType
+---------------------
+
+Lists the variables whose values when concatenated result in the value for this variable.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableReference",":doc:`/item-types/Variable/index`","2..n","Identifies the variables whose values are concatenated to form the concatenated variable. Note that the order of these variables determines the order of concatenation."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/VariableRepresentationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ConcatenatedValueType.svg
+

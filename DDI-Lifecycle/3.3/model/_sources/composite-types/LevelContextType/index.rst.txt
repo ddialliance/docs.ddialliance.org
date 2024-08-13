@@ -1,0 +1,29 @@
+LevelContextType
+----------------
+
+Level Context provides the depth of a Level within a Statistical Classification together with its membership. Both depth and membership can be specified per Statistical Classification.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "LevelNumber","nonNegativeInteger","0..1","The number associated with the Level Context. Levels are numbered consecutively starting with Level 1 at the highest (most aggregated) Level."
+   "ClassificationLevelReference",":doc:`/item-types/ClassificationLevel/index`","0..1","The structure of a Statistical Classification is defined by its Levels (classification level). Include here links to the relevant Level. Allows for in-line entry of a Classification Level."
+   "ClassificationItemReference",":doc:`/item-types/ClassificationItem/index`","0..n","A Statistical Classification is composed of categories structured in one or more Levels. Each category is represented by a Classification Item, which defines the content and the borders of the category. Allows for in-line entry of a Classification Item."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/StatisticalClassification/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LevelContextType.svg
+

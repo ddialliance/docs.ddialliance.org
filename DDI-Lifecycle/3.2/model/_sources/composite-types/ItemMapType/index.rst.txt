@@ -1,0 +1,52 @@
+ItemMapType
+-----------
+
+Maps two items of the same type within the Source and Target Schemes identified.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SourceItem","IDType","0..1","The ID of the source object in the source scheme already identified. Note that the version of the object is whichever version of it that exists in the version of the parent scheme as identified."
+   "TargetItem","IDType","0..1","The ID of the target object in the target scheme already identified. Note that the version of the object is whichever version of it that exists in the version of the parent scheme as identified."
+   "Correspondence",":doc:`/composite-types/CorrespondenceType/index`","0..1","Describe the level of similarity and difference between the Source and the Target objects."
+   "RelatedMapReference","ReferenceType","0..n","Identifies related maps for example an ItemMap of two questions may point to the CodeMap defining the comparison of the two response domains."
+   "Alias","string","0..1","Allows for an alias to be assigned to the correspondence between two items, so that it can be referred to with a single name, that would include both related items."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **ItemMapType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/GenericMap/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ItemMapType.svg
+

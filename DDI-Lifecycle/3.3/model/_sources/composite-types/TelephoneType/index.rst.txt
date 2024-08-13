@@ -1,0 +1,31 @@
+TelephoneType
+-------------
+
+Details of a telephone number including the number, type of number, a privacy setting and an indication of whether this is the preferred contact number.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TelephoneNumber","string","0..1","The telephone number including country code if appropriate."
+   "TypeOfTelephone",":doc:`/composite-types/CodeValueType/index`","0..1","Indicates type of telephone number provided (home, fax, office, cell, etc.). Supports the use of a controlled vocabulary. The DDI Alliance has provided a controlled vocabulary (TypeOfTelephone) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "EffectivePeriod",":doc:`/composite-types/DateType/index`","0..1","Clarifies when the identification information is accurate."
+   "Privacy","string","0..1","A basic set of privacy codes for the parent element. These may be stricter than the general access restrictions for the overall metadata. If available codes are insufficient this may also contain any string."
+   "IsPreferred","boolean","0..1","Set to ""true"" if this is the preferred telephone number for contact."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ContactInformationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TelephoneType.svg
+

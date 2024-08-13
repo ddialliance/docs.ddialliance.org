@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SubUniverseClass &mdash; DDI Data Documentation 3.2 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="GeographicStructureScheme" href="../GeographicStructureScheme/" />
+    <link rel="prev" title="ConceptualVariableGroup" href="../ConceptualVariableGroup/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> DDI Data Documentation 3.2
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Topics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Study/">Study</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Data Capture/">Data Capture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Data Description/">Data Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Foundational/">Foundational</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Non-Packaging Items/">Non-Packaging Items</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../topics/All Content Items/">All Content Items</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../topics/All Content Items/#item-types">Item Types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../GeographicStructure/">GeographicStructure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GeographicLocation/">GeographicLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QualityStatementScheme/">QualityStatementScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QualityStatementGroup/">QualityStatementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QualityStatement/">QualityStatement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedRepresentationScheme/">ManagedRepresentationScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedRepresentationGroup/">ManagedRepresentationGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedTextRepresentation/">ManagedTextRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedDateTimeRepresentation/">ManagedDateTimeRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedNumericRepresentation/">ManagedNumericRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedScaleRepresentation/">ManagedScaleRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedMissingValuesRepresentation/">ManagedMissingValuesRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DDIInstance/">DDIInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Archive/">Archive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../OrganizationScheme/">OrganizationScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../OrganizationGroup/">OrganizationGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Organization/">Organization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Individual/">Individual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Relation/">Relation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Comparison/">Comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GenericMap/">GenericMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RepresentationMap/">RepresentationMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DataCollection/">DataCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Methodology/">Methodology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ProcessingEventScheme/">ProcessingEventScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ProcessingEventGroup/">ProcessingEventGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ProcessingEvent/">ProcessingEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ProcessingInstructionScheme/">ProcessingInstructionScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ProcessingInstructionGroup/">ProcessingInstructionGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GeneralInstruction/">GeneralInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GenerationInstruction/">GenerationInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../InterviewerInstructionScheme/">InterviewerInstructionScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../InstructionGroup/">InstructionGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Instruction/">Instruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../InstrumentScheme/">InstrumentScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../InstrumentGroup/">InstrumentGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Instrument/">Instrument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ControlConstructScheme/">ControlConstructScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ControlConstructGroup/">ControlConstructGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IfThenElse/">IfThenElse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RepeatUntil/">RepeatUntil</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RepeatWhile/">RepeatWhile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Loop/">Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Sequence/">Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ComputationItem/">ComputationItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../StatementItem/">StatementItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QuestionScheme/">QuestionScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QuestionItem/">QuestionItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QuestionBlock/">QuestionBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QuestionGroup/">QuestionGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QuestionGrid/">QuestionGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QuestionConstruct/">QuestionConstruct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Weighting/">Weighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../LogicalProduct/">LogicalProduct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../CategoryScheme/">CategoryScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../CategoryGroup/">CategoryGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Category/">Category</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../CodeListScheme/">CodeListScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../CodeList/">CodeList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../CodeListGroup/">CodeListGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../VariableScheme/">VariableScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Variable/">Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../VariableGroup/">VariableGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../NCubeScheme/">NCubeScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../NCube/">NCube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DataRelationship/">DataRelationship</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../NCubeGroup/">NCubeGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RepresentedVariableScheme/">RepresentedVariableScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RepresentedVariableGroup/">RepresentedVariableGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RepresentedVariable/">RepresentedVariable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ConceptualComponent/">ConceptualComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ConceptScheme/">ConceptScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UniverseScheme/">UniverseScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UniverseGroup/">UniverseGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ConceptGroup/">ConceptGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Concept/">Concept</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ConceptualVariable/">ConceptualVariable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ConceptualVariableScheme/">ConceptualVariableScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ConceptualVariableGroup/">ConceptualVariableGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Universe/">Universe</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">SubUniverseClass</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties-inherited-from-versionable">Properties Inherited from Versionable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#item-type-hierarchy">Item Type Hierarchy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#relationships">Relationships</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../GeographicStructureScheme/">GeographicStructureScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GeographicStructureGroup/">GeographicStructureGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GeographicLocationScheme/">GeographicLocationScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GeographicLocationGroup/">GeographicLocationGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DataSet/">DataSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PhysicalDataProduct/">PhysicalDataProduct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PhysicalStructureScheme/">PhysicalStructureScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PhysicalStructure/">PhysicalStructure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PhysicalStructureGroup/">PhysicalStructureGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RecordLayoutScheme/">RecordLayoutScheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RecordLayoutGroup/">RecordLayoutGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RecordLayout/">RecordLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DDIProfile/">DDIProfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ResourcePackage/">ResourcePackage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Group/">Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../SubGroup/">SubGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../LocalHoldingPackage/">LocalHoldingPackage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PhysicalInstance/">PhysicalInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../VariableStatistics/">VariableStatistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../StudyUnit/">StudyUnit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QualityStandard/">QualityStandard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../">All Item Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite-types/">All Composite Types</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">DDI Data Documentation 3.2</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../">Docs</a> &raquo;</li>
+        
+          <li><a href="../../topics/All Content Items/">All Content Items</a> &raquo;</li>
+        
+      <li>SubUniverseClass</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/item-types/SubUniverseClass/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="subuniverseclass">
+<h1>SubUniverseClass<a class="headerlink" href="#subuniverseclass" title="Permalink to this headline">¶</a></h1>
+<p>A sub-universe group provides a definition to the universes contained within it. For example the Sub-Universe Group of Gender for the Universe Resident Population may contain the Universe Males and the Universe Females. In addition to the standard name, label, and description, the SubUniverseClass references a concept which defines it, and references to the universes and or other sub-universe groups it contains. The contents of the SubUniverseClass may be designated as ordered.</p>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 4%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SubUniverseClassName</p></td>
+<td><p><a class="reference internal" href="../../composite-types/NameType/"><span class="doc">NameType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>A name for the SubUniverseClass. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Label</p></td>
+<td><p><a class="reference internal" href="../../composite-types/LabelType/"><span class="doc">LabelType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>A display label for the SubUniverseClass. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations.</p></td>
+</tr>
+<tr class="row-even"><td><p>Description</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StructuredStringType/"><span class="doc">StructuredStringType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>A description of the content and purpose of the SubUniverseClass. May be expressed in multiple languages and supports the use of structured content.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DefiningConceptReference</p></td>
+<td><p><a class="reference internal" href="../Concept/"><span class="doc">Concept</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>A concept that provides a grouping factor for the universes contained by the SubUniverseClass. For example if the parent Universe is Population of the World and the two universes in the group are Male and Female the defining concept may be Sex.</p></td>
+</tr>
+<tr class="row-even"><td><p>UniverseReference</p></td>
+<td><p><a class="reference internal" href="../Universe/"><span class="doc">Universe</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>A reference to a universe contained in this SubUniverseClass. Note that two different parent universes may contain references to the same universe within a sub-universe group. For example, the Universe “Population of Europe” and the Universe “Population of the United States” may both have a reference to the SubUniverseClass with the defining concept of Gender and member Universes “Males” and “Females”. The SubUniverseClass is ALWAYS a restriction of its parent universe so that in one case it would be “Males within the Population of Europe” and in the other usage “Males within the Population of the United States”. A question or variable should reference each relevant universe to define the appropriate intersect group.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SubUniverseClassReference</p></td>
+<td><p><a class="reference internal" href="#"><span class="doc">SubUniverseClass</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>A reference to a SubUniverseClass contained in this SubUniverseClass (a means of nesting hierarchies).</p></td>
+</tr>
+<tr class="row-even"><td><p>IsOrdered</p></td>
+<td><p>boolean</p></td>
+<td><p>0..1</p></td>
+<td><p>If set to “true” indicates that the content of the group is ordered as it appears within the XML structure.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties-inherited-from-versionable">
+<h2>Properties Inherited from Versionable<a class="headerlink" href="#properties-inherited-from-versionable" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 4%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>URN</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Agency</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Version</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>UserID</p></td>
+<td><p><a class="reference internal" href="../../composite-types/UserIDType/"><span class="doc">UserIDType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure.</p></td>
+</tr>
+<tr class="row-odd"><td><p>InheritanceAction</p></td>
+<td><p>string</p></td>
+<td><p>0..1</p></td>
+<td><p>The attribute “action” is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for “action”: Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed.</p></td>
+</tr>
+<tr class="row-even"><td><p>UserAttributePair</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StandardKeyValuePairType/"><span class="doc">StandardKeyValuePairType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended.</p></td>
+</tr>
+<tr class="row-odd"><td><p>VersionResponsibility</p></td>
+<td><p>string</p></td>
+<td><p>0..1</p></td>
+<td><p>Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use.</p></td>
+</tr>
+<tr class="row-even"><td><p>VersionResponsibilityReference_Organization</p></td>
+<td><p><a class="reference internal" href="../Organization/"><span class="doc">Organization</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use.</p></td>
+</tr>
+<tr class="row-odd"><td><p>VersionResponsibilityReference_Individual</p></td>
+<td><p><a class="reference internal" href="../Individual/"><span class="doc">Individual</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use.</p></td>
+</tr>
+<tr class="row-even"><td><p>VersionRationale</p></td>
+<td><p><a class="reference internal" href="../../composite-types/VersionRationaleType/"><span class="doc">VersionRationaleType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object.</p></td>
+</tr>
+<tr class="row-odd"><td><p>BasedOnObject</p></td>
+<td><p><a class="reference internal" href="../../composite-types/BasedOnObjectType/"><span class="doc">BasedOnObjectType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary.</p></td>
+</tr>
+<tr class="row-even"><td><p>VersionDate</p></td>
+<td><p>cogsDate</p></td>
+<td><p>0..1</p></td>
+<td><p>Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="item-type-hierarchy">
+<h2>Item Type Hierarchy<a class="headerlink" href="#item-type-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="../Versionable/"><span class="doc">Versionable</span></a></dt><dd><ul>
+<li><p><strong>SubUniverseClass</strong></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="relationships">
+<h2>Relationships<a class="headerlink" href="#relationships" title="Permalink to this headline">¶</a></h2>
+<p>The following types reference this type.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../Universe/"><span class="doc">Universe</span></a></p></li>
+</ul>
+<div class="image docutils container">
+<p><img alt="stub" src="../../_images/SubUniverseClass.svg" /></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../GeographicStructureScheme/" class="btn btn-neutral float-right" title="GeographicStructureScheme" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../ConceptualVariableGroup/" class="btn btn-neutral float-left" title="ConceptualVariableGroup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright TODO
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

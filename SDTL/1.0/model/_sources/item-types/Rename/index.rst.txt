@@ -1,0 +1,48 @@
+Rename
+------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/TransformBase/index`
+    * **Rename**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Rename.svg
+
+Properties
+~~~~~~~~~~
+
+OldName
+*******
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+NewName
+*******
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+
+

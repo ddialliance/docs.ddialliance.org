@@ -1,0 +1,28 @@
+AdditionalDataCollectionType
+----------------------------
+
+Description of the method and mode of data collection in administering the pretest. Notes any additional data collected in the administration of the pretest.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfAdditionalData",":doc:`/composite-types/CodeValueType/index`","0..1","Specifies type of additional data collected. Supports the use of a controlled vocabulary."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","Description of the additional data collected. Supports multiple language versions of the same content as well as optional formatting of the content."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/PretestAdministrationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AdditionalDataCollectionType.svg
+

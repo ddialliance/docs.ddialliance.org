@@ -1,0 +1,27 @@
+MaintainableObjectType
+----------------------
+
+Provides information on the Maintainable Parent of the object. If the scope of the Identifiable or Versionable Object is the Maintinable, this information must be provided in order to provide all the information contained in the Canonical DDI URN. This is done to support interoperability.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfObject","string","0..1","The object type of the parent maintainable taken from a restricted list."
+   "MaintainableID","string","0..1","The value of the ID of the maintainable parent object."
+   "MaintainableVersion","string","0..1","The version number of the maintainable parent object at the time the identifiable or versionable object was created or altered. Note that creating or altering the non-administrative content of an object within a maintainable will increment the version number of the maintainable and the content of this element should contain the new version number. In short, this represents the version number of the maintainable when the content of the current object first appeared in its present form."
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/MaintainableObjectType.svg
+

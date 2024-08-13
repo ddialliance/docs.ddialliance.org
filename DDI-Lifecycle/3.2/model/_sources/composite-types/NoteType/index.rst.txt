@@ -1,0 +1,34 @@
+NoteType
+--------
+
+A note related to one or more identifiable objects. Note is designed to be an inherent part of the DDI. (Unlike XML comments or other types of system-level annotations, which may be removed during processing.) DDI recommends placing the note within the maintainable object containing the objects this note relates to in order to assist tracking of note items within a study. Each note may indicate who is responsible for the note, its type using a controlled vocabulary, the subject of the note, a head and note content, a set of key/value pairs and language specification for the overall note. In addition each note must be related to one or more identifiable objects.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfNote",":doc:`/composite-types/CodeValueType/index`","0..1","Specifies the type of note. Supports the use of a controlled vocabulary."
+   "NoteSubject",":doc:`/composite-types/CodeValueType/index`","0..1","The subject of the note."
+   "Relationship",":doc:`/composite-types/RelationshipType/index`","0..n","Reference to one or more identifiable objects which the note is related to."
+   "Responsibility","string","0..1","The person or agency responsible for adding the note."
+   "Header",":doc:`/composite-types/InternationalStringType/index`","0..1","A brief label or heading for the note contents."
+   "NoteContent",":doc:`/composite-types/StructuredStringType/index`","0..1","The content of the note. Note should contain content except when it is a production flag that is fully explained by its ""type"". If the note provides system specific information in a structured way using XHTML formating, DDI strongly recommends the use of local extensions or the Key/Value pair structure in ProprietaryInfo whenever possible."
+   "ProprietaryInfo",":doc:`/composite-types/ProprietaryInfoType/index`","0..1","A set of actions related to the object as described by a set of name-value pairs. This would commonly be used in a case where additional information needs to be recorded regarding the content of a new element or attribute that has not yet been added to the schema, for example when a bug for a missing object has been filed and the user wishes to record the content prior to correction in the schema. Ideally this should be handled by local extensions of the schema as described in Part 2 of the formal documentation. However, the structure in Note allows for an unanticipated need for an extension at run time by providing a means of capturing system specific information in a structured way."
+   "Lang","language","0..1","Indicates the language of content. Note that xml:lang allows for a simple 2 or 3 character language code or a language code extended by a country code , for example en-au for English as used in Australia."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Maintainable/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/NoteType.svg
+

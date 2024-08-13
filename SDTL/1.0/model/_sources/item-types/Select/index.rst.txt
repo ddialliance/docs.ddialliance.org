@@ -1,0 +1,38 @@
+Select
+------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/TransformBase/index`
+    * **Select**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Select.svg
+
+Properties
+~~~~~~~~~~
+
+Condition
+*********
+
+Type
+    :doc:`/reusable-types/Expression/index`
+Cardinality
+    0..1
+
+TODO
+
+
+

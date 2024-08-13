@@ -1,0 +1,30 @@
+FormType
+--------
+
+A link to a form used by the metadata containing the form number, a statement regarding the contents of the form, a statement as to the mandatory nature of the form and a privacy level designation.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "FormNumber","string","0..1","The number or other means of identifying the form."
+   "URI","anyURI","0..1","The URN or URL of the form."
+   "Statement",":doc:`/composite-types/InternationalStringType/index`","0..1","A statement regarding the use, coverage, and purpose of the form."
+   "IsRequired","boolean","0..1","Set to ""true"" if the form is required. Set to ""false"" if the form is optional."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/AccessType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/FormType.svg
+

@@ -1,0 +1,36 @@
+SpecificSequenceType
+--------------------
+
+Describes the ordering of items when not otherwise indicated. There are a set number of values for ItemSequenceType, but also a provision for describing an alternate ordering using a command language.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ItemSequenceType","string","0..1","Identifies the type of sequence to use. Values include InOrderOfAppearance, Random, Rotate, and Other."
+   "AlternateSequenceType",":doc:`/composite-types/CommandCodeType/index`","0..1","Information on the command used to generate an alternative means of determining sequence changes. If used, the ItemSequenceType should be ""Other""."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **SpecificSequenceType**
+    * :doc:`/composite-types/QuestionSequenceType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/QuestionConstruct/index`
+* :doc:`/item-types/Sequence/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SpecificSequenceType.svg
+

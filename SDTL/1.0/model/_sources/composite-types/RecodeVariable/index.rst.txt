@@ -1,0 +1,29 @@
+RecodeVariable
+--------------
+
+Describes a variable that will have its values recoded.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Source","string","0..1","The name of the variable which will have its values recoded"
+   "Target","string","0..1","The name of the new variable into which the recoded values are inserted. This may be the same as the source variable if values are recoded in place."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/Recode/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RecodeVariable.svg
+

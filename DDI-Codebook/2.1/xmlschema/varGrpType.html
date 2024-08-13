@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="section1.html">1.0 Document Description</a></li><li><a href="section2.html">2.0 Study Description</a></li><li><a href="section3.html">3.0 File Description</a></li><li><a href="section4.html">4.0 Variable Description</a></li><li><a href="section5.html">5.0 Other Material</a></li><li><a href="sectionall.html">Single file for printing</a> (slow)</li></ul><h2>&lt;varGrp&gt;&#160;Variable Group</h2><ul><li>Optional</li><li>Repeatable</li><li>Attributes: <a href="codeBook.html">ID, xml:lang, source</a>, type, var, varGrp, name, sdatrefs, methrefs, pubrefs, access, nCube</li></ul><div style="padding-left:25px;"><p><em>Description:</em></p>
+                        <p>A group of variables that may share a common subject, arise from the
+                            interpretation of a single question, or are linked by some other factor. </p>
+                        <p>Variable groups are created this way in order to permit variables to
+                            belong to multiple groups, including multiple subject groups such as a
+                            group of variables on sex and income, or to a subject and a multiple
+                            response group, without causing overlapping groups. Variables that are
+                            linked by use of the same question need not be identified by a Variable
+                            Group element because they are linked by a common unique question
+                            identifier in the Variable element. Note that as a result of the strict
+                            sequencing required by XML, all Variable Groups must be marked up before
+                            the Variable element is opened. That is, the mark-up author cannot mark
+                            up a Variable Group, then mark up its constituent variables, then mark
+                            up another Variable Group.</p>
+                        <p>The "type" attribute refers to the general type of grouping of the
+                            variables, e.g., subject, multiple response. </p>
+                        <p>Specific variable groups, included within the "type" attribute, are: </p>
+                        <p>Section: Questions which derive from the same section of the
+                            questionnaire, e.g., all variables located in Section C.</p>
+                        <p>Multiple response: Questions where the respondent has the opportunity
+                            to select more than one answer from a variety of choices, e.g., what
+                            newspapers have you read in the past month (with the respondent able to
+                            select up to five choices). </p>
+                        <p>Grid: Sub-questions of an introductory or main question but which do
+                            not constitute a multiple response group, e.g., I am going to read you
+                            some events in the news lately and you tell me for each one whether you
+                            are very interested in the event, fairly interested in the fact, or not
+                            interested in the event. </p>
+                        <p>Display: Questions which appear on the same interview screen (CAI)
+                            together or are presented to the interviewer or respondent as a group. </p>
+                        <p>Repetition: The same variable (or group of variables) which are
+                            repeated for different groups of respondents or for the same respondent
+                            at a different time.</p>
+                        <p>Subject: Questions which address a common topic or subject, e.g.,
+                            income, poverty, children. </p>
+                        <p>Version: Variables, often appearing in pairs, which represent
+                            different aspects of the same question, e.g., pairs of variables (or
+                            groups) which are adjusted/unadjusted for inflation or season or
+                            whatever, pairs of variables with/without missing data imputed, and
+                            versions of the same basic question. </p>
+                        <p>Iteration: Questions that appear in different sections of the data
+                            file measuring a common subject in different ways, e.g., a set of
+                            variables which report the progression of respondent income over the
+                            life course. </p>
+                        <p>Analysis: Variables combined into the same index, e.g., the
+                            components of a calculation, such as the numerator and the denominator
+                            of an economic statistic. </p>
+                        <p>Pragmatic: A variable group without shared properties. </p>
+                        <p>Record: Variable from a single record in a hierarchical file. </p>
+                        <p>File: Variable from a single file in a multifile study. </p>
+                        <p>Randomized: Variables generated by CAI surveys produced by one or
+                            more random number variables together with a response variable, e.g,
+                            random variable X which could equal 1 or 2 (at random) which in turn
+                            would control whether Q.23 is worded "men" or "women", e.g., would you
+                            favor helping [men/women] laid off from a factory obtain training for a
+                            new job? </p>
+                        <p>Other: Variables which do not fit easily into any of the categories
+                            listed above, e.g., a group of variables whose documentation is in
+                            another language. </p>
+                        <p>The "var" attribute is used to reference all the constituent variable
+                            IDs in the group. </p>
+                        <p>The "varGrp" attribute is used to reference all the subsidiary
+                            variable groups which nest underneath the current varGrp. This allows
+                            for encoding of a hierarchical structure of variable groups. </p>
+                        <p>The attribute "name" provides a name, or short label, for the group. </p>
+                        <p>The "sdatrefs" are summary data description references that record
+                            the ID values of all elements within the summary data description
+                            section of the Study Description that might apply to the group. These
+                            elements include: time period covered, date of collection, nation or
+                            country, geographic coverage, geographic unit, unit of analysis,
+                            universe, and kind of data. </p>
+                        <p>The "methrefs" are methodology and processing references which record
+                            the ID values of all elements within the study methodology and
+                            processing section of the Study Description which might apply to the
+                            group. These elements include information on data collection and data
+                            appraisal (e.g., sampling, sources, weighting, data cleaning, response
+                            rates, and sampling error estimates). </p>
+                        <p>The "pubrefs" attribute provides a link to publication/citation
+                            references and records the ID values of all citations elements within
+                            Section 2.5 or Section 5.0 that pertain to this variable group. </p>
+                        <p>The "access" attribute records the ID values of all elements in
+                            Section 2.4 of the document that describe access conditions for this
+                            variable group. </p>
+                    </div></body></html>

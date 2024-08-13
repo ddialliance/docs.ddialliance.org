@@ -1,0 +1,30 @@
+IncludedGeographicStructureCodesType
+------------------------------------
+
+Specifies the Geographic Structure Codes included in the representation by providing a reference to the authorized source of the code, the GeographicStructure used, and any excluded levels.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "AuthorizedSourceReference",":doc:`/composite-types/AuthorizedSourceType/index`","0..1","A reference to the Authorized Source of the value used by this representation. A GeographicStructure may have more than one Authorized Source included in the listing."
+   "GeographicStructureReference",":doc:`/item-types/GeographicStructure/index`","0..1","A reference to the GeographicStructure used by this representation."
+   "ExcludedGeographicLevelReference",":doc:`/composite-types/GeographicLevelType/index`","0..n","A reference to a Structure Level that is excluded, not used by, this representation. May be repeated to exclude multiple Structure values."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/GeographicStructureCodeRepresentationBaseType/index`
+* :doc:`/composite-types/TargetRepresentationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IncludedGeographicStructureCodesType.svg
+

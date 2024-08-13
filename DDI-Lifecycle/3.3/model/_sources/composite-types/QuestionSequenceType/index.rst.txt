@@ -1,0 +1,44 @@
+QuestionSequenceType
+--------------------
+
+Describes the ordering of questions when not otherwise indicated. Extends the standard sequencing information to indicate how and if StimulusMaterial should be treated in the resequencing.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "HandlingOfStimulusMaterial","string","0..1","Clarifies how stimulus material is to be handled within the resequencing using a controlled vocabulary. Options: ""include""=Include StimulusMaterial in resequencing without restriction; ""preceding""=Attach each StimulusMaterial to the preceding question; ""following""=Attach each StimulusMaterial to the question following it; and the default value of ""within""=Resequencing occurs within each set of questions as delimited by StimulusMaterial"
+
+Properties Inherited from SpecificSequenceType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ItemSequenceType","string","0..1","Identifies the type of sequence to use. Values include InOrderOfAppearance, Random, Rotate, and Other."
+   "AlternateSequenceType",":doc:`/composite-types/CommandCodeType/index`","0..1","Information on the command used to generate an alternative means of determining sequence changes. If used, the ItemSequenceType should be ""Other""."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/SpecificSequenceType/index`
+    * **QuestionSequenceType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/QuestionBlock/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/QuestionSequenceType.svg
+

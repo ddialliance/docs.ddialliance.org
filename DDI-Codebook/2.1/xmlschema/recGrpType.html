@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="section1.html">1.0 Document Description</a></li><li><a href="section2.html">2.0 Study Description</a></li><li><a href="section3.html">3.0 File Description</a></li><li><a href="section4.html">4.0 Variable Description</a></li><li><a href="section5.html">5.0 Other Material</a></li><li><a href="sectionall.html">Single file for printing</a> (slow)</li></ul><h2>&lt;recGrp&gt;&#160;Record or Record Group</h2><ul><li>Optional</li><li>Repeatable</li><li>Attributes: <a href="codeBook.html">ID, xml:lang, source</a>, recGrp, rectype, keyvar, rtypeloc, rtypewidth, rtypevtype, recidvar</li></ul><div style="padding-left:25px;"><p><em>Description:</em>&#160;Used to describe record groupings if the file is
+                        hierarchical or relational. The attribute "recGrp" allows a record group to
+                        indicate subsidiary record groups which nest underneath; this allows for the
+                        encoding of a hierarchical structure of record groups. The attribute
+                        "rectype" indicates the type of record, e.g., "A records" or "Household
+                        records." The attribute "keyvar" is an IDREF that provides the link to other
+                        record types. In a hierarchical study consisting of individual and household
+                        records, the "keyvar" on the person record will indicate the household to
+                        which it belongs. The attribute "rtypeloc" indicates the starting column
+                        location of the record type indicator variable on each record of the data
+                        file. The attribute "rtypewidth" specifies the width, for files with many
+                        different record types. The attribute "rtypevtype" specifies the type of the
+                        indicator variable. The "recidvar" indicates the variable that identifies
+                        the record group.</p></div><div style="padding-left:25px;"><p><em>Example(s):</em></p><pre>&lt;fileStrc type="hierarchical"&gt; 
+  &lt;recGrp rectype="Person" keyvar="HHDID"&gt;
+    &lt;labl&gt;CPS 1999 Person-Level Record&lt;/labl&gt;
+    &lt;recDimnsn&gt;
+      &lt;varQnty&gt;133&lt;/varQnty&gt;
+      &lt;caseQnty&gt;1500&lt;/caseQnty&gt;
+      &lt;logRecL&gt;852&lt;/logRecL&gt;
+    &lt;/recDimnsn&gt;
+  &lt;/recGrp&gt; 
+&lt;/fileStrc&gt;</pre></div></body></html>

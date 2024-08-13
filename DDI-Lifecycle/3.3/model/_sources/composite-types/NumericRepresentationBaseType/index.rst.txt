@@ -1,0 +1,55 @@
+NumericRepresentationBaseType
+-----------------------------
+
+Defines the representation for a numeric response. May be a range or specific value, or a list of ranges.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "NumberRange",":doc:`/composite-types/NumberRangeType/index`","0..n","Defines the valid number range or number values for the representation."
+   "NumericTypeCode",":doc:`/composite-types/CodeValueType/index`","0..1","Identification of the numeric type such as integer, decimal, etc. supports the use of an external controlled vocabulary. The DDI Alliance has provided a controlled vocabulary (NumericType) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "Format","string","0..1","A format for number expressed as a string."
+   "Scale","int","0..1","The scale of the number expressed as an integer (for example a number expressed in 100's, 5 = 500 would have a scale of 100)."
+   "DecimalPositions","int","0..1","The number of decimal positions expressed as an integer (precision of the number)."
+   "Interval_IntervalType","nonNegativeInteger","0..1","The interval between valid responses expressed as an integer."
+   "Accuracy","decimal","0..1","The level to which a number is considered to be accurate. Expressed as a decimal. "
+
+Properties Inherited from RepresentationType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RecommendedDataType",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides the recommended treatment of the data within an application. The value should come from a controlled vocabulary - recommended values include the set found in W3C XML Schema Part 2, but excluding string sub-types, QNAME, and NOTATION. The DDI Alliance has provided a controlled vocabulary (DataType) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "GenericOutputFormat",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides a recommended generic treatment of the data for display by an application. The value should come from a controlled vocabulary."
+   "MeasurementUnit",":doc:`/composite-types/CodeValueType/index`","0..1","Records the measurement unit, for example, 'km', 'miles', etc. Supports the use of a controlled vocabulary."
+   "MissingValue","string","0..1","List the values used to represent missing data in a space delimited array. Use of MissingValuesReference is preferred. If this content does not match the values provided in the MissingValuesReference, the content of the MissingValuesReference overrides the content of this attribute."
+   "BlankIsMissingValue","boolean","0..1","When value is true a blank or empty variable content should be treated as a missing value.  Use of MissingValuesReference is preferred."
+   "ClassificationLevel","string","0..1","Indicates the type of relationship, nominal, ordinal, interval, ratio, or continuous. Use where appropriate for the representation type."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/RepresentationType/index`
+    * **NumericRepresentationBaseType**
+        * :doc:`/composite-types/NumericDomainType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ManagedMissingValuesRepresentation/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/NumericRepresentationBaseType.svg
+

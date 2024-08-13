@@ -1,0 +1,8 @@
+
+/* Style for a "Working Group Note" */
+
+@import "https://www.w3.org/StyleSheets/TR/2016/base.css";
+
+body {
+  background-image: url(ddi-rdf.png);
+}

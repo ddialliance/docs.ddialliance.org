@@ -1,0 +1,447 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Recode &mdash; Structured Data Transform Language 0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="RecodeRule" href="../RecodeRule/" />
+    <link rel="prev" title="NumericMinimumValueExpression" href="../NumericMinimumValueExpression/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> Structured Data Transform Language
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../summary/">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components/">Components of SDTL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../use-cases/">SDTL Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../command-language/">SDTL Command Language </a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../function-library/">SDTL Function Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pseudocode-library/">SDTL Pseudocode Library Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../best-practices/">SDTL Best Practices and Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../credits/#copyright-and-license">Copyright and License</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/All/">All</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../item-types/">All Item Types</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">All Composite Types</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Aggregate/">Aggregate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AllNumericVariablesExpression/">AllNumericVariablesExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AllTextVariablesExpression/">AllTextVariablesExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AllVariablesExpression/">AllVariablesExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Analysis/">Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AppendDatasets/">AppendDatasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AppendFileDescription/">AppendFileDescription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BooleanConstantExpression/">BooleanConstantExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Collapse/">Collapse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CommandBase/">CommandBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Comment/">Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CompositeVariableNameExpression/">CompositeVariableNameExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Compute/">Compute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DataframeDescription/">DataframeDescription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DateTimeConstant/">DateTimeConstant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoIf/">DoIf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DropCases/">DropCases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DropVariables/">DropVariables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Execute/">Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ExpressionBase/">ExpressionBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FunctionArgument/">FunctionArgument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FunctionCallExpression/">FunctionCallExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GroupedExpression/">GroupedExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IfRows/">IfRows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../InformBase/">InformBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Invalid/">Invalid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IteratorDescription/">IteratorDescription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IteratorSymbolExpression/">IteratorSymbolExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeepCases/">KeepCases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeepVariables/">KeepVariables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Load/">Load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LoopOverList/">LoopOverList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LoopWhile/">LoopWhile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MergeDatasets/">MergeDatasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MergeFileDescription/">MergeFileDescription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Message/">Message</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MissingValueConstantExpression/">MissingValueConstantExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NewDataframe/">NewDataframe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NoTransformOp/">NoTransformOp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumberRangeExpression/">NumberRangeExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumericConstantExpression/">NumericConstantExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumericMaximumValueExpression/">NumericMaximumValueExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../NumericMinimumValueExpression/">NumericMinimumValueExpression</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Recode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#properties-inherited-from-transformbase">Properties Inherited from TransformBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#properties-inherited-from-commandbase">Properties Inherited from CommandBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#item-type-hierarchy">Item Type Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relationships">Relationships</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../RecodeRule/">RecodeRule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RecodeVariable/">RecodeVariable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rename/">Rename</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RenamePair/">RenamePair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ReshapeItemDescription/">ReshapeItemDescription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ReshapeLong/">ReshapeLong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ReshapeWide/">ReshapeWide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Save/">Save</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetDatasetProperty/">SetDatasetProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetDataType/">SetDataType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetDisplayFormat/">SetDisplayFormat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetMissingValues/">SetMissingValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetValueLabels/">SetValueLabels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetVariableLabel/">SetVariableLabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SortCases/">SortCases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SortCriterion/">SortCriterion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SourceInformation/">SourceInformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StringConstantExpression/">StringConstantExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StringRangeExpression/">StringRangeExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TimeDurationConstant/">TimeDurationConstant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TransformBase/">TransformBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnhandledValuesExpression/">UnhandledValuesExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unsupported/">Unsupported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ValueLabel/">ValueLabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ValueListExpression/">ValueListExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableListExpression/">VariableListExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableRangeExpression/">VariableRangeExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableReferenceBase/">VariableReferenceBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableSymbolExpression/">VariableSymbolExpression</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Structured Data Transform Language</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../">All Composite Types</a> &raquo;</li>
+        
+      <li>Recode</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/composite-types/Recode/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="recode">
+<h1>Recode<a class="headerlink" href="#recode" title="Permalink to this headline">¶</a></h1>
+<p>Describes recoding values in one or more variables according to a specified mapping.</p>
+<p>The Recode command can either describe a recoding of one or more individual variables,
+or a range of variables. When one or more individual variables are described, a new
+variable name can be specified. In this case, the original variable is left alone, and
+a new variable is created with the recoded values.</p>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="12%" />
+<col width="8%" />
+<col width="4%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">&#160;</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>RecodedVariables</td>
+<td><a class="reference internal" href="../RecodeVariable/"><span class="doc">RecodeVariable</span></a></td>
+<td>0..n</td>
+<td>The variables that will have their values recoded. The resulting values may be either stored in the same variable, or a newly created destination variable</td>
+</tr>
+<tr class="row-odd"><td>RecodedVariableRange</td>
+<td><a class="reference internal" href="../VariableRangeExpression/"><span class="doc">VariableRangeExpression</span></a></td>
+<td>0..1</td>
+<td>A range of variables to which the recode rules are applied. The resulting values are stored in the same variable.</td>
+</tr>
+<tr class="row-even"><td>Rules</td>
+<td><a class="reference internal" href="../RecodeRule/"><span class="doc">RecodeRule</span></a></td>
+<td>0..n</td>
+<td>A mapping describing which values will be recoded to which new values</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties-inherited-from-transformbase">
+<h2>Properties Inherited from TransformBase<a class="headerlink" href="#properties-inherited-from-transformbase" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="12%" />
+<col width="8%" />
+<col width="4%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">&#160;</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ProducesDataframe</td>
+<td><a class="reference internal" href="../DataframeDescription/"><span class="doc">DataframeDescription</span></a></td>
+<td>0..n</td>
+<td>Signify the dataframe which this transform produces.</td>
+</tr>
+<tr class="row-odd"><td>ConsumesDataframe</td>
+<td><a class="reference internal" href="../DataframeDescription/"><span class="doc">DataframeDescription</span></a></td>
+<td>0..n</td>
+<td>Signify the dataframe which this transform acts upon.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties-inherited-from-commandbase">
+<h2>Properties Inherited from CommandBase<a class="headerlink" href="#properties-inherited-from-commandbase" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="12%" />
+<col width="8%" />
+<col width="4%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">&#160;</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Command</td>
+<td>string</td>
+<td>1..1</td>
+<td>The type of command</td>
+</tr>
+<tr class="row-odd"><td>SourceInformation</td>
+<td><a class="reference internal" href="../SourceInformation/"><span class="doc">SourceInformation</span></a></td>
+<td>0..n</td>
+<td>Information about the source of the command.</td>
+</tr>
+<tr class="row-even"><td>MessageText</td>
+<td>string</td>
+<td>0..n</td>
+<td>Adds a message that can be displayed with the command.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="item-type-hierarchy">
+<h2>Item Type Hierarchy<a class="headerlink" href="#item-type-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="../CommandBase/"><span class="doc">CommandBase</span></a></dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="../TransformBase/"><span class="doc">TransformBase</span></a></dt>
+<dd><ul class="first last">
+<li><strong>Recode</strong></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="relationships">
+<h2>Relationships<a class="headerlink" href="#relationships" title="Permalink to this headline">¶</a></h2>
+<div class="image docutils container">
+<img alt="stub" src="composite-types\Recode\../../images/Recode.svg" /></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../RecodeRule/" class="btn btn-neutral float-right" title="RecodeRule" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../NumericMinimumValueExpression/" class="btn btn-neutral float-left" title="NumericMinimumValueExpression" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Copyright (c) 2020 C2Metadata Contributors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

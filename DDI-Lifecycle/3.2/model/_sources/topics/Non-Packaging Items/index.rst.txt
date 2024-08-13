@@ -1,0 +1,56 @@
+Non-Packaging Items
+-------------------
+
+
+
+Item Types
+**********
+
+DDI32 has 42 item types related to Non-Packaging Items.
+
+.. toctree::
+   :maxdepth: 1
+
+   ../../item-types/Category/index
+   ../../item-types/CodeList/index
+   ../../item-types/ComputationItem/index
+   ../../item-types/Concept/index
+   ../../item-types/ConceptualVariable/index
+   ../../item-types/DataCollection/index
+   ../../item-types/DataRelationship/index
+   ../../item-types/GeneralInstruction/index
+   ../../item-types/GenerationInstruction/index
+   ../../item-types/Group/index
+   ../../item-types/IfThenElse/index
+   ../../item-types/Individual/index
+   ../../item-types/Instruction/index
+   ../../item-types/Instrument/index
+   ../../item-types/Loop/index
+   ../../item-types/ManagedDateTimeRepresentation/index
+   ../../item-types/ManagedMissingValuesRepresentation/index
+   ../../item-types/ManagedNumericRepresentation/index
+   ../../item-types/ManagedScaleRepresentation/index
+   ../../item-types/ManagedTextRepresentation/index
+   ../../item-types/Methodology/index
+   ../../item-types/NCube/index
+   ../../item-types/Organization/index
+   ../../item-types/PhysicalInstance/index
+   ../../item-types/ProcessingEvent/index
+   ../../item-types/QualityStatement/index
+   ../../item-types/QuestionBlock/index
+   ../../item-types/QuestionConstruct/index
+   ../../item-types/QuestionGrid/index
+   ../../item-types/QuestionItem/index
+   ../../item-types/Relation/index
+   ../../item-types/RepeatUntil/index
+   ../../item-types/RepeatWhile/index
+   ../../item-types/RepresentedVariable/index
+   ../../item-types/Sequence/index
+   ../../item-types/StatementItem/index
+   ../../item-types/StudyUnit/index
+   ../../item-types/SubGroup/index
+   ../../item-types/Universe/index
+   ../../item-types/Variable/index
+   ../../item-types/VariableStatistics/index
+   ../../item-types/Weighting/index
+

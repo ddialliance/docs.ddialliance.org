@@ -1,0 +1,29 @@
+Structured Data Transform Language
+==================================
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Getting Started
+
+   summary/index
+   components/index
+   use-cases/index
+   command-language/index
+   function-library/index
+   pseudocode-library/index
+   best-practices/index
+   credits/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Topics
+
+   topics/All/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Items and Fields
+
+   item-types/index
+   composite-types/index
+

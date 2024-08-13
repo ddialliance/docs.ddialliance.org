@@ -1,0 +1,40 @@
+NumberRangeExpression
+---------------------
+
+Defines a range of numeric values.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "NumberRangeStart",":doc:`/composite-types/ExpressionBase/index`","1..1","Starting value for range"
+   "NumberRangeEnd",":doc:`/composite-types/ExpressionBase/index`","1..1","Ending value for range"
+   "NumberRangeIncrement",":doc:`/composite-types/ExpressionBase/index`","0..1","Increment for stepping through range"
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **NumberRangeExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/NumberRangeExpression.svg
+

@@ -1,0 +1,81 @@
+Expression
+----------
+
+TODO
+
+
+.. contents::
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Expression.svg
+
+Properties
+~~~~~~~~~~
+
+Operator
+********
+
+Type
+    :doc:`/reusable-types/Operator/index`
+Cardinality
+    0..1
+
+TODO
+
+TextConstant
+************
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+NumericConstant
+***************
+
+Type
+    int
+Cardinality
+    0..1
+
+TODO
+
+NullConstant
+************
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+Varname
+*******
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+Missing
+*******
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+
+

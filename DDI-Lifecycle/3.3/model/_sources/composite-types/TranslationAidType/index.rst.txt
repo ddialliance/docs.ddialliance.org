@@ -1,0 +1,29 @@
+TranslationAidType
+------------------
+
+Describes available aids for translation typed by a controlled vocabulary and supporting a description and resource identification where appropriate. This may include items such as the availability of an interpreter, key word material, etc.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfTranslationAid",":doc:`/composite-types/CodeValueType/index`","0..1","Specifies the type of translation aid available. Supports the use of a controlled vocabulary."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","Description of the translation aid. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "TranslationAidResource",":doc:`/composite-types/TranslationAidResourceType/index`","0..1","Provides a reference to the translation aid resource using the structure of OtherMaterial."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/TranslationActivity/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TranslationAidType.svg
+

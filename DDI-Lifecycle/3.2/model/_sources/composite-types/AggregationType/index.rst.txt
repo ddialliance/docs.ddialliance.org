@@ -1,0 +1,29 @@
+AggregationType
+---------------
+
+Describes the aggregation method and the variables used in the aggregation process. Identifies the method using an external controlled vocabulary and identifies the variables used either in-line or by reference to an existing description.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "AggregationMethod",":doc:`/composite-types/CodeValueType/index`","0..1","Identification of the type of aggregation method used. Supports the use of a controlled vocabulary. DDI strongly recommends the use of a controlled vocabulary."
+   "AggregationVariables",":doc:`/composite-types/AggregationVariablesType/index`","0..1","Identifies the independent and dependent variables used in the aggregation process in-line."
+   "AggregationVariablesReference",":doc:`/composite-types/AggregationVariablesType/index`","0..1","A reference to an existing AggregationVariables description."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/GenerationInstruction/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AggregationType.svg
+

@@ -1,0 +1,49 @@
+TopicalCoverageType
+-------------------
+
+Describes the topical coverage of the module using Subject and Keyword. Note that upper level modules should include all the members of lower level modules. Subjects are members of structured classification systems such as formal subject headings in libraries or topical thesauri. Keywords are generally unstructured and reflect the terminology found in the document and other related (broader or similar) terms.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Subject",":doc:`/composite-types/InternationalCodeValueType/index`","0..n","A subject or list of subjects that indicate the topical coverage of the data described in a particular module/section. Uses and InternationalCodeValue and may indicate the language of the code used."
+   "Keyword",":doc:`/composite-types/InternationalCodeValueType/index`","0..n","A keyword that indicates the topical coverage of the data described in a particular module/section. Uses and InternationalCodeValue and may indicate the language of the code used."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **TopicalCoverageType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CoverageType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TopicalCoverageType.svg
+

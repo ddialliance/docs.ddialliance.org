@@ -1,0 +1,47 @@
+LocationRepresentationBaseType
+------------------------------
+
+Means of describing the Location of an action and the action itself within a repesentation so that they can be used by questions as a response domain. In addition to the basic objects of the representation, the structure briefly describes the object type upon which the action is to take place and the action to take (where an how to mark the object).
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Object",":doc:`/composite-types/CodeValueType/index`","0..1","The type of object on which the action takes place such as an image, audio tape, etc. Allows for the use of a controlled vocabulary."
+   "Action",":doc:`/composite-types/ActionType/index`","0..n","Describes the region of an image, recording, or text where an action where a specified action is performed and the type of action taken (i.e., Mark an ""X"" where the actor should be standing on the picture of the stage.)."
+
+Properties Inherited from RepresentationType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RecommendedDataType",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides the recommended treatment of the data within an application. The value should come from a controlled vocabulary - recommended values include the set found in W3C XML Schema Part 2, but excluding string sub-types, QNAME, and NOTATION."
+   "GenericOutputFormat",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides a recommended generic treatment of the data for display by an application. The value should come from a controlled vocabulary."
+   "MissingValue","string","0..1","List the values used to represent missing data in a space delimited array. Use of MissingValuesReference is preferred. If this content does not match the values provided in the MissingValuesReference, the content of the MissingValuesReference overrides the content of this attribute."
+   "BlankIsMissingValue","boolean","0..1","When value is true a blank or empty variable content should be treated as a missing value.  Use of MissingValuesReference is preferred."
+   "ClassificationLevel","string","0..1","Indicates the type of relationship, nominal, ordinal, interval, ratio, or continuous. Use where appropriate for the representation type."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/RepresentationType/index`
+    * **LocationRepresentationBaseType**
+        * :doc:`/composite-types/LocationDomainType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LocationRepresentationBaseType.svg
+

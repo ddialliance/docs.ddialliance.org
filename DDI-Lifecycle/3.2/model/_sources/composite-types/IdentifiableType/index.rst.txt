@@ -1,0 +1,69 @@
+IdentifiableType
+----------------
+
+Adds the attribute identifying this as an identifiable object as well as the MaintainableObject. All identifiable objects should provide their contextual information, the identity of their maintainable parent. The deprecated form of the URN contains all the information to identify and object and its context. A Canonical URN scoped to the Maintainable contains the ID of the Maintainable as part of its structure. To provide full contextual information use the MaintainableObject structure. The use of the Canonical URN scoped to the agency or the identification sequence alone requires the content of the MaintainableObject to provide full contextual information. All content of Identifiable is considered to be administrative metadata. Note that changes to the administrative metadata does not drive a change in the version of the parent objects. See DDI 3.2 Technical Documentation: Part I for further details.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **IdentifiableType**
+    * :doc:`/composite-types/AccessType/index`
+    * :doc:`/composite-types/ActionToMinimizeLossesType/index`
+    * :doc:`/composite-types/AggregationVariablesType/index`
+    * :doc:`/composite-types/AttributeType/index`
+    * :doc:`/composite-types/CodeType/index`
+    * :doc:`/composite-types/CollectionEventType/index`
+    * :doc:`/composite-types/CollectionSituationType/index`
+    * :doc:`/composite-types/CoordinateRegionType/index`
+    * :doc:`/composite-types/DataCollectionMethodologyType/index`
+    * :doc:`/composite-types/DeviationFromSampleDesignType/index`
+    * :doc:`/composite-types/EmbargoType/index`
+    * :doc:`/composite-types/GeographicCoverageType/index`
+    * :doc:`/composite-types/GeographicLevelType/index`
+    * :doc:`/composite-types/GrossFileStructureType/index`
+    * :doc:`/composite-types/GrossRecordStructureType/index`
+    * :doc:`/composite-types/ItemMapType/index`
+    * :doc:`/composite-types/LifecycleEventType/index`
+    * :doc:`/composite-types/LocationValueType/index`
+    * :doc:`/composite-types/LogicalRecordType/index`
+    * :doc:`/composite-types/MeasureDefinitionType/index`
+    * :doc:`/composite-types/ModeOfCollectionType/index`
+    * :doc:`/composite-types/OtherMaterialType/index`
+    * :doc:`/composite-types/ParameterType/index`
+    * :doc:`/composite-types/PhysicalRecordSegmentType/index`
+    * :doc:`/composite-types/RecordRelationshipType/index`
+    * :doc:`/composite-types/SamplingProcedureType/index`
+    * :doc:`/composite-types/StandardWeightType/index`
+    * :doc:`/composite-types/TemporalCoverageType/index`
+    * :doc:`/composite-types/TimeMethodType/index`
+    * :doc:`/composite-types/TopicalCoverageType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LinkingMapType/index`
+* :doc:`/composite-types/RelationshipType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IdentifiableType.svg
+

@@ -1,0 +1,29 @@
+TranslationRequirementsType
+---------------------------
+
+Provides a detailed description of the requirements for an acceptable translation and indicate if the translation should be oral and/or written. Supports multiple language versions of the same content as well as optional formatting of the content.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the Translation Requirements. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "IsOral","boolean","0..1","Indicates if the translation is an oral translation."
+   "IsWritten","boolean","0..1","Indicates if the translation is a written translation."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/TranslationActivity/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TranslationRequirementsType.svg
+

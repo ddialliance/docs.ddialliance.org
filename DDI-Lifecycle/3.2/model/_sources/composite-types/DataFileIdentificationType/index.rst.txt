@@ -1,0 +1,29 @@
+DataFileIdentificationType
+--------------------------
+
+Identifies the data file documented in the physical instance and provides information about its location.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Location",":doc:`/composite-types/InternationalStringType/index`","0..1","Documents the location of the data file as a description. Supports the multi-language content."
+   "DataFileURI",":doc:`/composite-types/URIType/index`","0..1","A URN or URL for the data file with a flag to indicate if it is a public copy."
+   "IsMaster","boolean","0..1","Set to ""true"" when this file is the master file (in the case that there are multiple, i.e. backup, copies)."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/PhysicalInstance/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DataFileIdentificationType.svg
+

@@ -1,0 +1,30 @@
+VariablesInRecordType
+---------------------
+
+Identifies the variables contained in the logical record by indicating that all variable contained in the logical product are included, inclusion of a scheme of variable to include, or listing individual variables to include. When the attribute allVariablesInLogicalProduct is set to "false" use the VariableSchemeReference (which allows for exclusions) and VariableUsedReference to specify the included variables.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableSchemeReference",":doc:`/item-types/VariableScheme/index`","0..n","Reference to a VariableScheme whose members are included in the logical record. Note that individual items may be excluded from the scheme if not used by the logical record."
+   "VariableUsedReference",":doc:`/item-types/Variable/index`","0..n","Reference to a variable to include in the logical record. This may be used to supplement the contents of an included VariableScheme or to list all the variables individually."
+   "AllVariablesInLogicalProduct","boolean","0..1","Set to ""true"" when the logical record contains all the variables identified within the logical product module."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LogicalRecordType/index`
+* :doc:`/composite-types/NCubesInRecordType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VariablesInRecordType.svg
+

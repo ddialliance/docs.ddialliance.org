@@ -1,0 +1,28 @@
+CreatorType
+-----------
+
+Holds the name of the creator and/or a reference to the creator as described within a DDI Organization scheme. Repeat this element for multiple creators.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CreatorName",":doc:`/composite-types/BibliographicNameType/index`","0..1","Full name of the creator and affiliation. Language equivalents should be expressed within the International String structure."
+   "CreatorReference",":doc:`/item-types/Individual/index`","0..1","Reference to a creator as described within a DDI Organization Scheme."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CitationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CreatorType.svg
+

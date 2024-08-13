@@ -1,0 +1,29 @@
+HistoricalDateType
+------------------
+
+Used to preserve an historical date, formatted in a non-ISO fashion.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "NonISODate","string","0..1","This is the date expressed in a non-ISO compliant structure. Primarily used to retain legacy content or to express non-Gregorian calender dates."
+   "HistoricalDateFormat",":doc:`/composite-types/CodeValueType/index`","0..1","Indicate the structure of the date provided in NonISODate. For example if the NonISODate contained 4/1/2000 the Historical Date Format would be mm/dd/yyyy. The use of a controlled vocabulary is strongly recommended to support interoperability."
+   "Calendar",":doc:`/composite-types/CodeValueType/index`","0..1","Specifies the type of calendar used (e.g., Gregorian, Julian, Jewish)."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/DateType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/HistoricalDateType.svg
+

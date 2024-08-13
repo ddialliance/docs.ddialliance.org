@@ -1,0 +1,152 @@
+CodeValueType
+-------------
+
+Allows for string content which may be taken from an externally maintained controlled vocabulary (code value). If the content is from a controlled vocabulary provide the code value, as well as a reference to the code list from which the value is taken. Provide as many of the identifying attributes as needed to adequately identify the controlled vocabulary. Note that DDI has published a number of controlled vocabularies applicable to several locations using the CodeValue structure. Use of shared controlled vocabularies helps support interoperability and machine actionability.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CodeListID","string","0..1","The ID of the code list (controlled vocabulary) that the content was taken from."
+   "CodeListName_string","string","0..1","The name of the code list."
+   "CodeListAgencyName","string","0..1","The name of the agency maintaining the code list."
+   "CodeListVersionID","string","0..1","The version number of the code list (default is 1.0)."
+   "OtherValue","string","0..1","If the value of the string is ""Other"" or the equivalent from the codelist, this attribute can provide a more specific value not found in the codelist."
+   "CodeListURN","string","0..1","The URN of the codelist."
+   "CodeListSchemeURN","string","0..1","If maintained within a scheme, the URN of the scheme containing the codelist."
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * **CodeValueType**
+        * :doc:`/composite-types/ContentDateOffsetType/index`
+        * :doc:`/composite-types/KindOfDataType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/BaseRecordLayout/index`
+* :doc:`/item-types/CategoryGroup/index`
+* :doc:`/item-types/CodeList/index`
+* :doc:`/item-types/CodeListGroup/index`
+* :doc:`/item-types/ConceptGroup/index`
+* :doc:`/item-types/ConceptualVariableGroup/index`
+* :doc:`/item-types/ControlConstructGroup/index`
+* :doc:`/item-types/DDIProfile/index`
+* :doc:`/item-types/GeographicLocationGroup/index`
+* :doc:`/item-types/GeographicStructureGroup/index`
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/Individual/index`
+* :doc:`/item-types/InstructionGroup/index`
+* :doc:`/item-types/Instrument/index`
+* :doc:`/item-types/InstrumentGroup/index`
+* :doc:`/item-types/ManagedDateTimeRepresentation/index`
+* :doc:`/item-types/ManagedNumericRepresentation/index`
+* :doc:`/item-types/ManagedRepresentationGroup/index`
+* :doc:`/item-types/ManagedScaleRepresentation/index`
+* :doc:`/item-types/ManagedTextRepresentation/index`
+* :doc:`/item-types/NCube/index`
+* :doc:`/item-types/NCubeGroup/index`
+* :doc:`/item-types/Organization/index`
+* :doc:`/item-types/OrganizationGroup/index`
+* :doc:`/item-types/PhysicalInstance/index`
+* :doc:`/item-types/PhysicalStructure/index`
+* :doc:`/item-types/PhysicalStructureGroup/index`
+* :doc:`/item-types/ProcessingEventGroup/index`
+* :doc:`/item-types/ProcessingInstructionGroup/index`
+* :doc:`/item-types/QualityStatementGroup/index`
+* :doc:`/item-types/QuestionConstruct/index`
+* :doc:`/item-types/QuestionGroup/index`
+* :doc:`/item-types/RecordLayout/index`
+* :doc:`/item-types/RecordLayoutGroup/index`
+* :doc:`/item-types/RepresentedVariableGroup/index`
+* :doc:`/item-types/ResourcePackage/index`
+* :doc:`/item-types/Sequence/index`
+* :doc:`/item-types/StudyUnit/index`
+* :doc:`/item-types/SubGroup/index`
+* :doc:`/item-types/UniverseGroup/index`
+* :doc:`/item-types/Variable/index`
+* :doc:`/item-types/VariableGroup/index`
+* :doc:`/item-types/Weighting/index`
+* :doc:`/composite-types/ActionToMinimizeLossesType/index`
+* :doc:`/composite-types/AddressType/index`
+* :doc:`/composite-types/AggregationType/index`
+* :doc:`/composite-types/AreaCoverageType/index`
+* :doc:`/composite-types/AudioType/index`
+* :doc:`/composite-types/BasedOnObjectType/index`
+* :doc:`/composite-types/CategoryStatisticType/index`
+* :doc:`/composite-types/CitationType/index`
+* :doc:`/composite-types/CollectionSituationType/index`
+* :doc:`/composite-types/CommandFileType/index`
+* :doc:`/composite-types/CommandType/index`
+* :doc:`/composite-types/ComplianceType/index`
+* :doc:`/composite-types/ContactInformationType/index`
+* :doc:`/composite-types/ContributorType/index`
+* :doc:`/composite-types/CorrespondenceType/index`
+* :doc:`/composite-types/DataCollectionFrequencyType/index`
+* :doc:`/composite-types/DataCollectionMethodologyType/index`
+* :doc:`/composite-types/DataSourceType/index`
+* :doc:`/composite-types/DateTimeRepresentationBaseType/index`
+* :doc:`/composite-types/DefiningCharacteristicType/index`
+* :doc:`/composite-types/DeviationFromSampleDesignType/index`
+* :doc:`/composite-types/EmailType/index`
+* :doc:`/composite-types/EvaluatorType/index`
+* :doc:`/composite-types/ExPostEvaluationType/index`
+* :doc:`/composite-types/FundingInformationType/index`
+* :doc:`/composite-types/GeographicLevelType/index`
+* :doc:`/composite-types/GeographicRepresentationBaseType/index`
+* :doc:`/composite-types/GrossFileStructureType/index`
+* :doc:`/composite-types/HistoricalDateType/index`
+* :doc:`/composite-types/ImageType/index`
+* :doc:`/composite-types/IndividualLanguageType/index`
+* :doc:`/composite-types/IndividualNameType/index`
+* :doc:`/composite-types/InstantMessagingType/index`
+* :doc:`/composite-types/InternationalIdentifierType/index`
+* :doc:`/composite-types/ItemType/index`
+* :doc:`/composite-types/LabelType/index`
+* :doc:`/composite-types/LifecycleEventType/index`
+* :doc:`/composite-types/LinkingMapType/index`
+* :doc:`/composite-types/LocationRepresentationBaseType/index`
+* :doc:`/composite-types/MetadataQualityType/index`
+* :doc:`/composite-types/ModeOfCollectionType/index`
+* :doc:`/composite-types/NoteType/index`
+* :doc:`/composite-types/NumericRepresentationBaseType/index`
+* :doc:`/composite-types/OrganizationNameType/index`
+* :doc:`/composite-types/OtherMaterialType/index`
+* :doc:`/composite-types/PhysicalLocationType/index`
+* :doc:`/composite-types/PolygonType/index`
+* :doc:`/composite-types/PublisherType/index`
+* :doc:`/composite-types/RepresentationType/index`
+* :doc:`/composite-types/ResearcherIDType/index`
+* :doc:`/composite-types/SamplingProcedureType/index`
+* :doc:`/composite-types/ScaleRepresentationBaseType/index`
+* :doc:`/composite-types/SeriesStatementType/index`
+* :doc:`/composite-types/SoftwareType/index`
+* :doc:`/composite-types/StandardKeyValuePairType/index`
+* :doc:`/composite-types/StudyClassType/index`
+* :doc:`/composite-types/SummaryStatisticType/index`
+* :doc:`/composite-types/TelephoneType/index`
+* :doc:`/composite-types/TimeMethodType/index`
+* :doc:`/composite-types/TranslationType/index`
+* :doc:`/composite-types/VariableRepresentationType/index`
+* :doc:`/composite-types/VersionRationaleType/index`
+* :doc:`/composite-types/VideoType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CodeValueType.svg
+

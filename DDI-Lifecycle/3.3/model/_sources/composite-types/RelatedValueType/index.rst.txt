@@ -1,0 +1,46 @@
+RelatedValueType
+----------------
+
+The characteristic value expressed as a string with an indicator of the specific relationship of the variable value to the characteristic value. The default is "Equal". The value may be defined as containing no content (blank) by setting the attribute valueIsBlank to "true".
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Type","string","0..1","Indicates value type as ""GreaterThan"", LessThan"", ""Equal"", ""GreaterThanOrEqual"", ""LessThanOrEqual"", or ""NotEqual""."
+   "ValueIsBlank","boolean","0..1","Set to ""true"" if the value of the conditional variable is blank."
+
+Properties Inherited from ValueType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * :doc:`/composite-types/ValueType/index`
+        * **RelatedValueType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/VariableValueReferenceType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RelatedValueType.svg
+

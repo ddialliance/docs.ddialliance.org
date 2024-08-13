@@ -1,0 +1,42 @@
+CommandBase
+-----------
+
+CommandBase defines general properties available to all commands.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","0..n","Information about the source of the command."
+   "MessageText","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **CommandBase**
+    * :doc:`/composite-types/InformBase/index`
+    * :doc:`/composite-types/TransformBase/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Program/index`
+* :doc:`/composite-types/DoIf/index`
+* :doc:`/composite-types/IfRows/index`
+* :doc:`/composite-types/LoopOverList/index`
+* :doc:`/composite-types/LoopWhile/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CommandBase.svg
+

@@ -1,0 +1,62 @@
+VariableStatistics
+------------------
+
+Contains summary and category level statistics for the referenced variable. Includes information on the total number of responses, the weights in calculating the statistics, variable level summary statistics, and category statistics. The category statistics may be provided as unfiltered values or filtered through a single variable. For example the category statistics for Sex filtered by the variable Country for a multi-national data file. Note that if no weighting factor is identified, all of the statistics provided are unweighted. 
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableReference",":doc:`/item-types/Variable/index`","0..1","Reference to the variable to which the statistics apply."
+   "TotalResponses","int","0..1","The total number of responses to this variable. This element is especially useful if the number of responses does not match added case counts. It may also be used to sum the frequencies for variable categories."
+   "StandardWeightReference",":doc:`/composite-types/StandardWeightType/index`","0..1","Reference to the StandardWeight value provided in Weighting."
+   "WeightVariableReference",":doc:`/item-types/Variable/index`","0..1","Reference to a variable to use for weight in calculating the statistic."
+   "MissingValuesReference",":doc:`/item-types/ManagedMissingValuesRepresentation/index`","0..1","Indicates the missing values that were excluded from the statistic by referencing the ManagedMissingValuesRepresentation used by the Variable."
+   "SummaryStatistic",":doc:`/composite-types/SummaryStatisticType/index`","0..n","A summary statistic for the referenced variable."
+   "UnfilteredCategoryStatistics",":doc:`/composite-types/UnfilteredCategoryStatisticsType/index`","0..n","The unfiltered values of any number of statistics by category value representing the full response distribution of the variable."
+   "FilteredCategoryStatistics",":doc:`/composite-types/FilteredCategoryStatisticsType/index`","0..n","Includes category-level statistic for the referenced variable using another variable to filter the categories through. For example, the Eurobarometer may filter its category statistics by country as represented in a variable ""CountryCode""."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference_Organization",":doc:`/item-types/Organization/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionResponsibilityReference_Individual",":doc:`/item-types/Individual/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * **VariableStatistics**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/StatisticalSummaryType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VariableStatistics.svg
+

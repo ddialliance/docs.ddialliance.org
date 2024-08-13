@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>IntConstantExpression &mdash; Structured Data Transform Language 0.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/image.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Invalid" href="../Invalid/" />
+    <link rel="prev" title="GroupedExpression" href="../GroupedExpression/" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../" class="icon icon-home"> Structured Data Transform Language
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/All/">All</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../item-types/">All Item Types</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">All Composite Types</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Analysis/">Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Comment/">Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Compute/">Compute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Delete/">Delete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoIf/">DoIf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoubleConstantExpression/">DoubleConstantExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Execute/">Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ExpressionBase/">ExpressionBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FunctionCallExpression/">FunctionCallExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GroupedExpression/">GroupedExpression</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">IntConstantExpression</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#item-type-hierarchy">Item Type Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relationships">Relationships</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#properties">Properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#intvalue">IntValue</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Invalid/">Invalid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeepVariables/">KeepVariables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Load/">Load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MergeDatasets/">MergeDatasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Message/">Message</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recode/">Recode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RecodeRule/">RecodeRule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RecodeVariable/">RecodeVariable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rename/">Rename</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RenamePair/">RenamePair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ReshapeLong/">ReshapeLong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ReshapeWide/">ReshapeWide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Save/">Save</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Select/">Select</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetDatasetProperty/">SetDatasetProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetDisplayFormat/">SetDisplayFormat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetMissingValues/">SetMissingValues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetValueLabels/">SetValueLabels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SetVariableLabel/">SetVariableLabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SourceInformation/">SourceInformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StringConstantExpression/">StringConstantExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TransformBase/">TransformBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unsupported/">Unsupported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ValueLabel/">ValueLabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ValueRange/">ValueRange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableRangeExpression/">VariableRangeExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableReferenceBase/">VariableReferenceBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../VariableSymbolExpression/">VariableSymbolExpression</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Structured Data Transform Language</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../">Docs</a> &raquo;</li>
+        
+          <li><a href="../">All Composite Types</a> &raquo;</li>
+        
+      <li>IntConstantExpression</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/composite-types/IntConstantExpression/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="intconstantexpression">
+<h1><a class="toc-backref" href="#id1">IntConstantExpression</a><a class="headerlink" href="#intconstantexpression" title="Permalink to this headline">¶</a></h1>
+<p>TODO</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#intconstantexpression" id="id1">IntConstantExpression</a><ul>
+<li><a class="reference internal" href="#item-type-hierarchy" id="id2">Item Type Hierarchy</a></li>
+<li><a class="reference internal" href="#relationships" id="id3">Relationships</a></li>
+<li><a class="reference internal" href="#properties" id="id4">Properties</a><ul>
+<li><a class="reference internal" href="#intvalue" id="id5">IntValue</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="item-type-hierarchy">
+<h2><a class="toc-backref" href="#id2">Item Type Hierarchy</a><a class="headerlink" href="#item-type-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="../ExpressionBase/"><span class="doc">ExpressionBase</span></a></dt>
+<dd><ul class="first last">
+<li><strong>IntConstantExpression</strong></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="relationships">
+<h2><a class="toc-backref" href="#id3">Relationships</a><a class="headerlink" href="#relationships" title="Permalink to this headline">¶</a></h2>
+<div class="image docutils container">
+<img alt="stub" src="composite-types\IntConstantExpression\../../images/IntConstantExpression.svg" /></div>
+</div>
+<div class="section" id="properties">
+<h2><a class="toc-backref" href="#id4">Properties</a><a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="intvalue">
+<h3><a class="toc-backref" href="#id5">IntValue</a><a class="headerlink" href="#intvalue" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>int</dd>
+<dt>Cardinality</dt>
+<dd>0..1</dd>
+</dl>
+<p>TODO</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Invalid/" class="btn btn-neutral float-right" title="Invalid" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../GroupedExpression/" class="btn btn-neutral" title="GroupedExpression" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (c) 2017 C2Metadata Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

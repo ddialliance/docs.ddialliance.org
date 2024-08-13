@@ -1,0 +1,73 @@
+SetDataType
+-----------
+
+Sets the data type of a variable.   
+Examples:   
+
+```
+"dataType": "Text",
+"subTypeSchema": "Stata 15.1",
+"subType": "str1"
+```
+
+```
+"dataType": "Numeric",
+"subTypeSchema": "https://www.ddialliance.org/Specification/DDI-CV/DataType_1.0.html" ,
+"subType": "Int"
+```
+
+
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Variables",":doc:`/composite-types/VariableReferenceBase/index`","0..n","The variables that will have their type set"
+   "DataType","string","1..1","General type of a variable,  e.g.  ""Text"" or ""Numeric"". Valid values include: Text, Numeric, Boolean, Date-Time, Factor"
+   "SubTypeSchema","string","0..1","A vendor or standards body with a controlled vocabulary.  The value can be a URL."
+   "SubType","string","0..1","The name used in the associated schema."
+
+Properties Inherited from TransformBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProducesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform produces."
+   "ConsumesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform acts upon."
+
+Properties Inherited from CommandBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","0..n","Information about the source of the command."
+   "MessageText","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/CommandBase/index`
+    * :doc:`/composite-types/TransformBase/index`
+        * **SetDataType**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SetDataType.svg
+

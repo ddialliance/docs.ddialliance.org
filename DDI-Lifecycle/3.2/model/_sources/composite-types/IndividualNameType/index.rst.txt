@@ -1,0 +1,39 @@
+IndividualNameType
+------------------
+
+The name of an individual broken out into its component parts of prefix, first/given name, middle name, last/family/surname, and suffix. The preferred compilation of the name parts may also be provided. The legal or formal name of the individual should have the isFormal attribute set to true. The preferred name should be noted with the isPreferred attribute. The attribute sex provides information to assist in the appropriate use of pronouns.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Prefix","string","0..1","Title that precedes the name of the individual, such as Ms., or Dr."
+   "FirstGiven","string","0..1","First (given) name of the individual"
+   "Middle","string","0..n","Middle name or initial of the individual"
+   "LastFamily","string","0..1","Last (family) name /surname of the individual"
+   "Suffix","string","0..1","Title that follows the name of the individual, such as Esq."
+   "FullName",":doc:`/composite-types/InternationalStringType/index`","0..1","This provides a means of providing a full name as a single object for display or print such as identification badges etc. For example a person with the name of William Grace for official use may prefer a display name of Bill Grace on a name tag or other informal publication."
+   "EffectivePeriod",":doc:`/composite-types/DateType/index`","0..1","Clarifies when the name information is accurate."
+   "Abbreviation",":doc:`/composite-types/InternationalStringType/index`","0..1","An abbreviation or acronym for the name. This may be expressed in multiple languages. It is assumed that if only a single language is provided that it may be used in any of the other languages within which the name itself is expressed."
+   "TypeOfIndividualName",":doc:`/composite-types/CodeValueType/index`","0..1","The type of individual name provided. the use of a controlled vocabulary is strongly recommended. At minimum his should include, e.g. PreviousFormalName, Nickname (or CommonName), Other."
+   "Sex","string","0..1","Sex allows for the specification of male, female or neutral. The purpose of providing this information is to assist others in the appropriate use of pronouns when addressing the individual. Note that many countries/languages may offer a neutral pronoun form."
+   "IsPreferred","boolean","0..1","If more than one name for the object is provided, use the isPreferred attribute to indicate which is the preferred name content. All other names should be set to isPreferred=""false""."
+   "Context","string","0..1","A name may be specific to a particular context, i.e. common usage, business, social, etc.. Identify the context related to the specified name."
+   "IsFormal","boolean","0..1","The legal or formal name of the individual should have the isFormal attribute set to true. To avoid confusion only one individual name should have the isFormal attribute set to true. Use the TypeOfIndividualName to further differentiate the type and applied usage when multiple names are provided."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/IndividualIdentificationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IndividualNameType.svg
+

@@ -1,0 +1,53 @@
+AttributeType
+-------------
+
+An attribute may be any object which should be attached to all or part of the NCube. It may be defined as a Variable or contain textual content (such as a footnote).
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableReference",":doc:`/item-types/Variable/index`","0..1","A reference to a variable that describes the attribute."
+   "AttachmentValue","string","0..1","The value of the attachment expressed as a string, if not a variable."
+   "AttachmentRegionReference",":doc:`/composite-types/CoordinateRegionType/index`","0..1","Reference to the CoordinateRegion that defines the attachment point for the attribute."
+   "MeasureDefinitionReference",":doc:`/composite-types/MeasureDefinitionType/index`","0..n","Reference to the MeasureDefinition that the attribute is attached to."
+   "Value",":doc:`/composite-types/ValueType/index`","0..n","Reference to the specified Value of the MeasureDefinition that the attribute is attached to."
+   "AttachmentLevel","string","0..1","Describes the attachment level of the attribute as Cube, CoordinateRegion, Dimension, Measurement, or MeasurementValue."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **AttributeType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/NCube/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AttributeType.svg
+

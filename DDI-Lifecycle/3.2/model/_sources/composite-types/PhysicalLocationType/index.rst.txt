@@ -1,0 +1,37 @@
+PhysicalLocationType
+--------------------
+
+Description of the physical location of the value of the object in the data file. Includes information about the data item location and its data type/format if other than the default.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "StorageFormat",":doc:`/composite-types/CodeValueType/index`","0..1","An explicit definition of the data storage format. This field is necessary in the case of some numeric data formats where the format definition would allow real values, but the values are integer values. Supports the use of an external controlled vocabulary. Use of a controlled vocabulary is strongly recommended."
+   "Delimiter",":doc:`/composite-types/DelimiterType/index`","0..1","Defines the delimiter used to separate variables in a delimited record. The attribute treatConsecutiveDelimiterAsOne indicates how consecutive delimiters should be handed by the software."
+   "StartPosition","int","0..1","Position of the first character of the data item in fixed format file."
+   "ArrayPosition","int","0..1","Array number of the data item for delimited files."
+   "EndPosition","int","0..1","Position of the last character of the data item in fixed format. Must be specified if a value for Width is not provided."
+   "Width","int","0..1","Data item width for fixed format file, maximum width for delimited file. Must be specified if a value for EndPosition is not provided."
+   "DecimalPositions","int","0..1","Number of decimal places for data with an implied decimal separator. Another expression is the decimal scaling factor (SAS). Default: 0."
+   "DecimalSeparator","string","0..1","The character used to separate the integer and the fraction part of a number (if an explicit separator is used in the data). Allowed values are: None (default), Dot, Comma, Other. On the basis of the data definition in DDI documents, data processing tools could compute the necessary precision width on the basis of the format width and the existence of separators. Appropriate data types could be used, i.e. float or double, short or long. The decimal separator definition only makes sense with some XML Schema primitives."
+   "DigitGroupSeparator","string","0..1","The character used to separate groups of digits (if an explicit separator is used in the data). Allowed values are: None (default), Dot, Comma, Other. The decimal separator definition makes only sense with some XML Schema primitives."
+   "LanguageOfData","language","0..n","Language of the data file expressed as a delimited list of language codes."
+   "LocaleOfData","string","0..1","A two-character ISO country code, to supplement the LanguageOfData value."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/DataItemType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/PhysicalLocationType.svg
+

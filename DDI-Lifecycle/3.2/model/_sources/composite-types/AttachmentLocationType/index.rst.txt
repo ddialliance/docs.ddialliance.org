@@ -1,0 +1,30 @@
+AttachmentLocationType
+----------------------
+
+Allows attachment of a response domain to a specific item in a code or category scheme. For example, attach a TextDomain to the value "Other".
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CodeReference",":doc:`/composite-types/CodeType/index`","0..1","Identifies the value to which the new response domain is attached by a references a specific Code within the CodeDomain."
+   "CategoryReference",":doc:`/item-types/Category/index`","0..1","Identifies the value to which the new response domain is attached by a references a specific Category within the CategoryDomain."
+   "DomainSpecificValue",":doc:`/composite-types/DomainSpecificValueType/index`","0..1","Identifies the value to which the new response domain is attached by a reference to a specific value used by the response domain and the specific value."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/InstructionAttachmentLocationType/index`
+* :doc:`/composite-types/ResponseDomainInMixedType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AttachmentLocationType.svg
+

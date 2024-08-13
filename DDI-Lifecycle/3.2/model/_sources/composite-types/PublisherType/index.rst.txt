@@ -1,0 +1,29 @@
+PublisherType
+-------------
+
+Holds the name of the publisher with their role and/or a reference to the publisher as described within a DDI Organization scheme. Repeat this element for multiple publishers.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "PublisherName",":doc:`/composite-types/BibliographicNameType/index`","0..1","Full name of the publisher. Language equivalents should be expressed within the International String structure."
+   "PublisherRole",":doc:`/composite-types/CodeValueType/index`","0..n","The role of the publisher as publisher, distributor, etc."
+   "PublisherReference",":doc:`/item-types/Organization/index`","0..1","Reference to a publisher as described within a DDI Organization Scheme."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CitationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/PublisherType.svg
+

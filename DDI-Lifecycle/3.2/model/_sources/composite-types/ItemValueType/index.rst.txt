@@ -1,0 +1,29 @@
+ItemValueType
+-------------
+
+Each value in the data set linked to it's variable and record identification.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableReference",":doc:`/item-types/Variable/index`","0..1","Reference to the variable describing the item."
+   "RecordReference","string","0..1","The value of the record identifier or key. This is the value found in the item linked to the variable identified by the DataSet in the IdentifyingVariableReference."
+   "Value",":doc:`/composite-types/ValueType/index`","0..n","The value of the item for the specified variable and record."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ItemSetType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ItemValueType.svg
+

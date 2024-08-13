@@ -1,0 +1,161 @@
+ReshapeLong
+-----------
+
+Creates a new dataset with multiple rows per case by assigning a set of variables in the original dataset to a single variable in the new dataset.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "MakeItems",":doc:`/composite-types/ReshapeItemDescription/index`","0..n","New variables created by this command."
+   "CaseNumberVariable","string","0..1","New variable identifying the case number in the wide data that created this row."
+   "IDVariables",":doc:`/composite-types/VariableReferenceBase/index`","0..1","One or more variables identifying unique rows in the wide data."
+   "DropVariables",":doc:`/composite-types/VariableReferenceBase/index`","0..1","Variables to be dropped from the new dataset."
+   "KeepVariables",":doc:`/composite-types/VariableReferenceBase/index`","0..1","Variables to be kept in the new dataset."
+   "KeepNullCases","boolean","0..1","When set to TRUE, rows in which all constructed variables are missing are not deleted."
+   "CountByID","string","0..1","New variable with the number of cases in the long dataset that were created from the source row in the wide dataset."
+   "CountByIDLabel","string","0..1","Label for the CountByID variable."
+
+Properties Inherited from TransformBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProducesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform produces."
+   "ConsumesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform acts upon."
+
+Properties Inherited from CommandBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","0..n","Information about the source of the command."
+   "MessageText","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/CommandBase/index`
+    * :doc:`/composite-types/TransformBase/index`
+        * **ReshapeLong**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ReshapeLong.svg
+
+ReshapeLong_examples
+~~~~~~~~~~~~~~~~~~~~
+
+=========  SPSS Example =================
+```
+varstocases 
+ /make name "Full Name" from named namem
+ /make income from incd incm
+ /index dadmom "Parent" 
+ /id=id1
+ /drop= var88 to var99
+ /null= KEEP
+ /count= casecount "Number of rows from original case" .
+ 
+{"command": "ReshapeLong",
+    "MakeItems": [
+            "ReshapeItemDescription":
+                {"TargetVariableName": "name",
+                "TargetVariableLabel": "Full Name",
+                "SourceVariables": 
+                    {"$type": "VariableListExpression",
+                    "Variables": [
+                        {"$type": "VariableSymbolExpression", "VariableName": "named"},
+                        {"$type": "VariableSymbolExpression", "VariableName": "namem"}
+                        ]   },
+                "IndexVariable": "dadmom",
+                "IndexVariableLabel": "Parent"},
+            "ReshapeItemDescription":
+                {"TargetVariable": "income",
+                "SourceVariables": 
+                    {"$type": "VariableListExpression",
+                    "Variables": [
+                        {"$type": "VariableSymbolExpression", "VariableName": "incd"},
+                        {"$type": "VariableSymbolExpression", "VariableName": "incm"}
+                        ]   },
+            "IndexVariable": "dadmom"}
+            ],
+    "CaseNumberVariable":"id1",
+     "DropVariables": [
+                    {"$type": "VariableRangeExpression",
+                    "First":"var88",
+                    "Last":"var99"}
+                    ],
+    "KeepNullCases":"True",
+    "CountByID": "casecount",
+    "CountByIDLabel": "Number of rows from original case"
+    }
+```        
+============  Stata Example 1 ==================
+```                            
+ 
+reshape long inc ue, i(region id) j(year)
+ 
+{"command": "ReshapeLong",
+    "MakeItems": [
+            "ReshapeItemDescription":
+                {"TargetVariableName": "inc",
+                "Stub": "inc",
+                "IndexVariableName": "year"},
+            "ReshapeItemDescription":
+                {"TargetVariableName": "ue",
+                "Stub": "ue",
+                "IndexVariableName": "year"}
+            ],
+    "IDVariables": [ 
+                {"$type": "VariableSymbolExpression","VariableName": "region"},
+                {"$type": "VariableSymbolExpression","VariableName": "id"}
+                ]
+        }
+```        
+
+
+============  Stata Example 2 ==================
+```                            
+reshape long inc, i(id) j(sex "male" "female") string
+ 
+ {"command": "ReshapeLong",
+    "MakeItems": [
+            "ReshapeItemDescription":
+                {"TargetVariableName": "inc",
+                "Stub": "inc",
+                "IndexVariableName": "sex",
+                "IndexValues": [
+                    {"$type":"StringListExpression",
+                        "Values": [
+                            {"$type": "StringConstantExpression", "Value": "male"},
+                            {"$type": "StringConstantExpression", "Value": "female"}
+                            ]
+                        }
+                    ],
+                }
+            ],
+    "IDVariables": [ 
+                {"$type": "VariableSymbolExpression","VariableName": "region"},
+                {"$type": "VariableSymbolExpression","VariableName": "id"}
+                ]
+        }
+
+

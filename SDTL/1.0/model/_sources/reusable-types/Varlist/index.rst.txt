@@ -1,0 +1,41 @@
+Varlist
+-------
+
+TODO
+
+
+.. contents::
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Varlist.svg
+
+Properties
+~~~~~~~~~~
+
+VariableName
+************
+
+Type
+    string
+Cardinality
+    0..n
+
+TODO
+
+VariableRange
+*************
+
+Type
+    :doc:`/reusable-types/VariableRange/index`
+Cardinality
+    0..n
+
+TODO
+
+
+

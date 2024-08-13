@@ -1,0 +1,31 @@
+GridDimensionType
+-----------------
+
+Describes each dimension of the grid including dimension rank (for the purpose of identifying a cell address), a text for the dimension, and optional labels and codes used as column and row stubs. May also describe a roster (a set of unlabeled rows or columns depending upon display situation).
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CodeDomain",":doc:`/composite-types/CodeDomainType/index`","0..1","This includes a reference to a CodeList that is used for the labels contained in the dimension. CodeLists are used even when the code is not being displayed in order to use this information for creating the cell coordinate address."
+   "Roster",":doc:`/composite-types/RosterType/index`","0..1","A roster is an unlabeled list of numbered rows or columns depending upon orientation. The numbers may or may not be displayed but will be used as information for creating the cell coordinate address."
+   "Rank","int","1..1","The rank order of this dimension (the order in which the value for this dimension will appear in the cell address)denoted with a 1-based indexing. Provides coordinate order (1,2,n) for the intersect point of this dimension within the cell address. For example, if the rank of this dimension is 2, the intersect point on this dimension will be the second value listed in the cell address."
+   "DisplayCode","boolean","0..1","If set to ""true"" (default value) the code value associated with the category label will be displayed. Set to ""false"" if only the category label should be displayed."
+   "DisplayLabel","boolean","0..1","If set to ""true"" (default value) the label of the CodeList will be displayed. Set to ""false"" to suppress this display."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/QuestionGrid/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/GridDimensionType.svg
+

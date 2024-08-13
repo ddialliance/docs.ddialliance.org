@@ -1,0 +1,34 @@
+ArchiveSpecificType
+-------------------
+
+Contains metadata specific to a particular archive's holding. This includes information on the items or collection of items held by the archive, the default terms of access, funding information and budget specific to the archive and its maintenance of this collection, reference to a quality statement related to archive activities, and coverage of the archive or sub-set of the archive.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ArchiveOrganizationReference",":doc:`/item-types/Agent/index`","0..1","A reference to the organization or an individual acting as the archive."
+   "Item",":doc:`/composite-types/ItemType/index`","0..n","Describes individual items held or distributed by the archive in connection with a study, group of studies, or resource packages. What constitutes an item is determined by the archive."
+   "Collection",":doc:`/composite-types/CollectionType/index`","0..n","Describes a collection of items held or distributed by the archive in connection with a study, group of studies, or resource packages. What constitutes an collection is determined by the archive."
+   "DefaultAccess",":doc:`/composite-types/AccessType/index`","0..n","Describes access to the archive in general. The restrictions noted at this level apply to all holdings of the archive unless overridden for specified collections or items."
+   "FundingInformation",":doc:`/composite-types/FundingInformationType/index`","0..n","Describes funding information in relationship to the archive and its activities. This may be archive wide or related to specific collections or projects within the archive."
+   "Budget",":doc:`/composite-types/BudgetType/index`","0..n","This describes the archive budget. It can be repeated for distinct budget activities such as budget periods, specific projects or types of activity."
+   "QualityStatementReference",":doc:`/item-types/QualityStatement/index`","0..n","A reference to a Quality Statement regarding the activities and operation of the archive. These may include access or preservation appraisal assessments or certification."
+   "Coverage",":doc:`/composite-types/CoverageType/index`","0..1","Documents the spatial, temporal, and/or topical coverage of the archive or division of an archive."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Archive/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ArchiveSpecificType.svg
+

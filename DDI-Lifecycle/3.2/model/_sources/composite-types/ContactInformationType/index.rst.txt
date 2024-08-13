@@ -1,0 +1,36 @@
+ContactInformationType
+----------------------
+
+Contact information for the individual or organization including location specification, address, URL, phone numbers, and other means of communication access. Address, location, telephone, and other means of communication can be repeated to express multiple means of a single type or change over time. Each major piece of contact information (with exception of URL contains the element EffectiveDates in order to date stamp the period for which the information is valid.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "LocationName",":doc:`/composite-types/LocationNameType/index`","0..n",". May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Address",":doc:`/composite-types/AddressType/index`","0..n","Location address identifying each part of the address as separate elements."
+   "Telephone",":doc:`/composite-types/TelephoneType/index`","0..n","Telephone number for the location"
+   "URL",":doc:`/composite-types/URLType/index`","0..n","URL for the location's website."
+   "Email",":doc:`/composite-types/EmailType/index`","0..n","Generic email address for the location"
+   "InstantMessaging",":doc:`/composite-types/InstantMessagingType/index`","0..n","Instant Messaging identification for the location"
+   "RegionalCoverage",":doc:`/composite-types/CodeValueType/index`","0..1","The geographic region for which this location operates. For example, the Kansas City office of the United States Bureau of the Census has responsibility for a region covering a number of states."
+   "TypeOfLocation",":doc:`/composite-types/CodeValueType/index`","0..1","Type of location e.g. home, primary office, alternate office etc."
+   "Privacy","string","0..1","A basic set of privacy codes for the parent element. These may be stricter than the general access restrictions for the overall metadata. If available codes are insufficient this may also contain any string."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Individual/index`
+* :doc:`/item-types/Organization/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ContactInformationType.svg
+

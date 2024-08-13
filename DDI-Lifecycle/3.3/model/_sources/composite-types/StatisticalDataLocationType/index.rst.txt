@@ -1,0 +1,28 @@
+StatisticalDataLocationType
+---------------------------
+
+References a PhysicalInstance module that describes a data file containing the summary and/or category statistics OR contains the statistics in-line.  For example, when the same data are stored as an ASCII file and as an ORACLE file, the summary and category statistics would only be listed in one of the physical instance files, and referenced in the other(s).
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "PhysicalInstanceReference",":doc:`/item-types/PhysicalInstance/index`","0..1","References a physical instance containing the statistics inline or that identifies the data file which contains the statistics."
+   "IsInline","boolean","1..1","Set to ""true"" if the summary/category statistics are found inline in the referenced physical instance. Set to ""false"" if they are in the data file associated with the physical instance."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/StatisticalSummaryType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/StatisticalDataLocationType.svg
+

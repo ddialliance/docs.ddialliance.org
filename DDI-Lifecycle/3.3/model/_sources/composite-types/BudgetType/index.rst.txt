@@ -1,0 +1,32 @@
+BudgetType
+----------
+
+A description of the budget for any of the main publication types that can contain a reference to an external budget document.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the overall budget of the project. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "BudgetDocument",":doc:`/composite-types/BudgetDocumentType/index`","0..n","References to one or more external budget documents."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/ResourcePackage/index`
+* :doc:`/item-types/StudyUnit/index`
+* :doc:`/composite-types/ArchiveSpecificType/index`
+* :doc:`/composite-types/CostStructureType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/BudgetType.svg
+

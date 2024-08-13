@@ -1,0 +1,38 @@
+SystemMissingValueExpression
+----------------------------
+
+Represents the a missing value in a statistical system.
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **SystemMissingValueExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SystemMissingValueExpression.svg
+
+Properties
+~~~~~~~~~~
+
+MissingValueSymbol
+******************
+
+Type
+    string
+Cardinality
+    0..1
+
+The symbol used to represent the missing value.
+
+
+

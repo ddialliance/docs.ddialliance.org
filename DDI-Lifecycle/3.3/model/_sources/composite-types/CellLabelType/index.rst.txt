@@ -1,0 +1,57 @@
+CellLabelType
+-------------
+
+Provide a label to be included inside of a grid cell and defines the cell or cells that contain it. Supports multiple language versions of the same content as well as optional formatting of the content.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "GridAttachment",":doc:`/composite-types/GridAttachmentType/index`","0..n","Identifies the cell or cells in a grid to which the label is attached by a reference to a specific cell coordinate in a grid or by identifying a range of values along a dimension."
+
+Properties Inherited from LabelType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfLabel",":doc:`/composite-types/CodeValueType/index`","0..1","A brief description of the label type. Supports the use of a controlled vocabulary."
+   "LocationVariant","string","0..1","Indicate if the content is intended to be used in a specific location. For example if the Label is specific to use within a sub-region of a country that uses the same language but may have unique terminology. For example some regions of the United States use the term “water fountain” and others use “bubbler”."
+   "ValidForStartDate","cogsDate","0..1","Allows for the specification of a starting date for the period that this label is valid. The date must be formatted according to ISO 8601."
+   "ValidForEndDate","cogsDate","0..1","Allows for the specification of a ending date for the period that this label is valid. The date must be formatted according to ISO 8601."
+   "MaxLength","nonNegativeInteger","0..1","A positive integer indicating the maximum number of characters in the label."
+
+Properties Inherited from StructuredStringType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Content",":doc:`/composite-types/ContentType/index`","0..n","Supports the optional use of XHTML formatting tags within the string structure. In addition to the language designation and information regarding translation, the attribute isPlain can be set to true to indicate that the content should be treated as plain unstructured text, including any XHTML formatting tags. Repeat the content element to provide multiple language versions of the same content."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/StructuredStringType/index`
+    * :doc:`/composite-types/LabelType/index`
+        * **CellLabelType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/QuestionGrid/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CellLabelType.svg
+

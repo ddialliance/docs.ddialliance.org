@@ -1,0 +1,32 @@
+DataFileVersionType
+-------------------
+
+Provides the version information for the data file related to this physical instance. Note that while Physical Instance allows for multiple copies of the same data file (such as backup copies) the assumption is that they are identical in terms of content, layout, format and version. The minimum information required is the versionNumber. Additional information on the versionDate, the type of version number when multiple types are supported by an agency, as well as information on VersionResponsibility (inline or by reference) and VersionRationale are available to provide additional information for process tracking and/or informing users of the differences between this and the previous version of the file.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfVersionNumber","string","0..1","This is the name of the versioning scheme as defined by the user's system, in cases where the user's system employs more than one versioning scheme."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference",":doc:`/item-types/Agent/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for a version change."
+   "VersionNumber","string","1..1","The version number of the data file identified by this physical instance."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/PhysicalInstance/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DataFileVersionType.svg
+

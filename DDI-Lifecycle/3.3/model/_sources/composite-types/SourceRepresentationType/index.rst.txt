@@ -1,0 +1,32 @@
+SourceRepresentationType
+------------------------
+
+Provides a reference to the managed content of a representation which may be a ManagedRepresentation or a specific CodeList, GeographicRepresentation, or GeographicLocation. Allows for the optional reference to a Concept when context is important. For example, a ManagedNumericRepresentation within the context of Age.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ManagedRepresentationReference",":doc:`/item-types/ManagedRepresentation/index`","0..1","Substitution group head for referencing Managed Representations. For example, ManagedTextRepresentationReference, ManagedNumericRepresentationReference, etc."
+   "CategorySchemeReference",":doc:`/item-types/CategoryScheme/index`","0..1","A reference to a CategoryScheme as the managed component of a representation."
+   "CodeListReference",":doc:`/item-types/CodeList/index`","0..1","A reference to a CodeList as the managed component of a representation."
+   "GeographicStructureReference",":doc:`/item-types/GeographicStructure/index`","0..1","A reference to a GeographicStructure as the managed component of a representation."
+   "GeographicLocationReference",":doc:`/item-types/GeographicLocation/index`","0..1","A reference to a GeographicLocation as the managed component of a representation."
+   "ConceptReference",":doc:`/item-types/Concept/index`","0..1","Reference to a Concept which provides a context for the representation, e.g. Age for a numeric representation."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/RepresentationMap/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SourceRepresentationType.svg
+

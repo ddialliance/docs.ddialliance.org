@@ -1,0 +1,30 @@
+SizeType
+--------
+
+Consists of an integer value and specification of the unit. The unit may be specified using a controlled vocabulary.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "UnitTypeReference",":doc:`/item-types/UnitType/index`","0..1","Reference to an existing UnitType using the Reference structure. TypeOfObject should be set to UnitType."
+   "NumberOfUnits","nonNegativeInteger","0..1","Indicate the number of units of the UnitType specified."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Sample/index`
+* :doc:`/composite-types/PopulationSizeType/index`
+* :doc:`/composite-types/TargetSampleSizeType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SizeType.svg
+

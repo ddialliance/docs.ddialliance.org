@@ -1,0 +1,40 @@
+URLType
+-------
+
+A web site URL
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Privacy","string","0..1","A basic set of privacy codes for the parent element. These may be stricter than the general access restrictions for the overall metadata. If available codes are insufficient this may also contain any string."
+   "IsPreferred","boolean","0..1","Set to ""true"" if this is the preferred URL."
+
+Properties Inherited from anyURI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* anyURI
+    * **URLType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ContactInformationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/URLType.svg
+

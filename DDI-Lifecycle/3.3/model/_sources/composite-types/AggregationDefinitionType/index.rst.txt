@@ -1,0 +1,29 @@
+AggregationDefinitionType
+-------------------------
+
+Identifies the independent (denominator) and dependent (numerator) dimensions for calculating aggregate measures such as percent. When two or more independent or dependent dimensions are listed here, the value is defined as the intersection of the listed dimensions.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "IndependentDimension","nonNegativeInteger","0..n","The rank of a dimension that acts as the denominator (independent variable)."
+   "DependentDimension","nonNegativeInteger","0..n","The rank of a dimension that acts as the numerator (dependent variable)."
+   "IsNCubeUniverse","boolean","0..1","When true indicates that total count of the NCube as described by the universe acts as the independent variable (denominator) and that all dimensions are used to define the dependent variable (numerator). When false, use the IndependentDimension and DependentDimension elements to assign each rank to its appropriate role."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/MeasureDefinitionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AggregationDefinitionType.svg
+

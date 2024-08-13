@@ -1,0 +1,39 @@
+NotUsedType
+-----------
+
+Identifies DDI objects expressed as an XPath that are not supported by the system or agency using this profile.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Xpath","string","1..1","Contains an XPath which points to an element or attribute in DDI instances which is not used by the profile. All subelements of an unused element are assumed to be included unless explicitly addressed by the profile. The number of supported repetitions may be included in the XPath expression."
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * **NotUsedType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DDIProfile/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/NotUsedType.svg
+

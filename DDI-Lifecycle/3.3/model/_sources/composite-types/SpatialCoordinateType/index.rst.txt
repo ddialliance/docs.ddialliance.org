@@ -1,0 +1,28 @@
+SpatialCoordinateType
+---------------------
+
+Lists the value and format type for the coordinate value. Note that this is a single value (X coordinate or Y coordinate) rather than a coordinate pair.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CoordinateValue","string","0..1","The value of the coordinate expressed as a string."
+   "CoordinateType","string","1..1","Identifies the type of point coordinate system using a controlled vocabulary. Point formats include decimal degree, degrees minutes seconds, decimal minutes, meters, and feet."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/PointType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SpatialCoordinateType.svg
+

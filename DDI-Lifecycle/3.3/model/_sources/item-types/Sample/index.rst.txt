@@ -1,0 +1,71 @@
+Sample
+------
+
+Describes a sample created by the implementation of a sample plan.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfSample",":doc:`/composite-types/CodeValueType/index`","0..1","A generic means of classifying a SamplingProcedure. Supports the use of an external controlled vocabulary."
+   "SampleName",":doc:`/composite-types/NameType/index`","0..n","A name for the sample. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the sample. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","Full description of the sample. Supports structured content and multiple language content."
+   "PopulationOfConcern",":doc:`/composite-types/PopulationType/index`","0..n","Describe the population being sampled through a combination of textual description and reference to a structured Universe."
+   "OverallTargetSampleSize",":doc:`/composite-types/PopulationSizeType/index`","0..n","The target value of the sample size for the primary and any secondary or sub-population."
+   "OverallSampleSize",":doc:`/composite-types/SizeType/index`","0..1","The size of the overall sample actually used."
+   "ApplicationDetails",":doc:`/composite-types/ApplicationDetailsType/index`","0..n","Provides sample stage level details where needed. Repeat for individual stages or sub-stages."
+   "DateOfSample",":doc:`/composite-types/DateType/index`","0..n","Date the sample was taken. May be expressed as a single date or range. If the sample was created using multiple extractions at different dates, repeat for each date."
+   "SampleLocationReference",":doc:`/item-types/OtherMaterial/index`","0..n","Description of general limitations of the frame, including  over/under-coverage and update schedules and procedures."
+   "SamplingPlanImplementedReference",":doc:`/item-types/SamplingPlan/index`","0..n","A reference to the SamplingPlan implemented to creating the sample. Target object should be SamplingPlan"
+   "SampleFrameUsedReference",":doc:`/item-types/SampleFrame/index`","0..n","A reference to the SampleFrame used for creating the sample. Target object should be SampleFrame"
+   "ComponentSampleReference",":doc:`/item-types/Sample/index`","0..n","A reference to a previously created sample that was used as a component of the current sample. Target object should be Sample."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference",":doc:`/item-types/Agent/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "RelatedOtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..n","The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+   "IsPublished","boolean","0..1","Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * **Sample**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/SamplingInformationGroup/index`
+* :doc:`/item-types/SamplingInformationScheme/index`
+* :doc:`/item-types/Weighting/index`
+* :doc:`/composite-types/CollectionEventType/index`
+* :doc:`/composite-types/SamplingProcedureType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Sample.svg
+

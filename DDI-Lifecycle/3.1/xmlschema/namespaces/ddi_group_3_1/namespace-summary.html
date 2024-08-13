@@ -1,0 +1,794 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<!-- Generated with DocFlex/XML SDK 1.7.2 on Tue Oct 20 11:18:32 CEST 2009 -->
+<STYLE TYPE="text/css">
+A:link {text-decoration: underline; color: #0000FF}
+.p1 { padding: 3pt 5pt 3pt 5pt; background-color:#EEEEEE; border: 1px solid #4477AA }
+.p2 { margin-top:12pt }
+.p3 { margin:0pt }
+.p4 { margin-top:6pt }
+.p5 { line-height:110%; margin-right:7pt }
+.p6 { line-height:110% }
+.p7 { margin-top:8pt }
+.p8 { margin-top:2pt }
+.f1 { font-family: "Arial", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; color: black }
+.f2 { font-family: "Verdana", sans-serif; font-size: 130%; font-weight: bold; color: #4477AA }
+.f3 { font-family: "Verdana", sans-serif; font-size: 130%; font-style: italic; font-weight: bold; color: #4477AA }
+.f4 { font-family: "Arial", sans-serif; font-size: 90%; font-weight: bold }
+.f5 { font-family: "Arial", sans-serif; font-size: 90% }
+.f6 { font-size: 120%; font-weight: bold }
+.f7 { font-weight: bold }
+.f8 { font-family: "Courier New", monospace; font-size: 80% }
+.f9 { font-family: "Verdana", sans-serif; font-size: 80% }
+.f10 { font-family: "Courier New", monospace; font-size: 90%; font-weight: bold }
+.f11 { font-family: "Arial", sans-serif; font-size: 80%; font-weight: bold }
+.f12 { font-family: "Arial", sans-serif; font-size: 80% }
+.brdr1 { padding:3pt }
+.brdr2 { border: 1px solid #999999 }
+.hr1 { border-width:0px; border-top: 2px dotted #B2B2B2; height:2px }
+</STYLE>
+</HEAD>
+<BODY>
+
+<DIV CLASS="f1">
+  <div style="margin-bottom:0.25em;padding-bottom:0.25em;font-size: 130%" CLASS="p1">
+    <span CLASS="f2"">
+    DDI 3.1 XML Schema Documentation (2009-10-18)
+    </span>
+    <br/>
+    <span style="font-size:70%">
+    &copy; <a href="http://www.ddialliance.org/">DDI Alliance</a> 2009 - licensed under the terms of the <a href="http://www.gnu.org/licenses/lgpl.txt">GNU Lesser General Public License</a>
+    </span>
+  </div>
+<DIV CLASS="p1"><SPAN CLASS="f2">Namespace </SPAN><SPAN CLASS="f3">&quot;ddi:group:3_1&quot;</SPAN></DIV><DIV CLASS="p2"><SPAN CLASS="f4">Targeting Schemas (1):</SPAN></DIV><DL CLASS="p3"><DD>
+<DIV><SPAN CLASS="f5"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A></SPAN></DIV></DD></DL>
+<DIV CLASS="p4"><SPAN CLASS="f4">Targeting Components:</SPAN></DIV><DL CLASS="p3"><DD>
+<DIV><SPAN CLASS="f5">16&nbsp;<A HREF="#r1">global&nbsp;elements</A>, 9&nbsp;<A HREF="#r2">complexTypes</A>, 6&nbsp;<A HREF="#r3">simpleTypes</A></SPAN></DIV></DD></DL>
+<DIV CLASS="p2">
+<TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="4" BORDER="1">
+<COLGROUP SPAN="3"></COLGROUP>
+<TR BGCOLOR="#CCCCFF">
+<TD COLSPAN="3" CLASS="brdr1"><SPAN CLASS="f6">Schema Summary</SPAN></TD>
+</TR>
+<TR>
+<TD WIDTH="1%" VALIGN="top" CLASS="brdr1"><SPAN CLASS="f7"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f4">Target Namespace:</SPAN><DL CLASS="p3"><DD>
+<DIV><SPAN CLASS="f8"><A HREF="#">ddi:group:3_1</A></SPAN></DIV></DD></DL>
+<DIV CLASS="p4"><SPAN CLASS="f4">Defined Components:</SPAN></DIV><DL CLASS="p3"><DD>
+<DIV><SPAN CLASS="f5">16&nbsp;global&nbsp;elements, 9&nbsp;complexTypes, 6&nbsp;simpleTypes</SPAN></DIV></DD></DL>
+<DIV CLASS="p4"><SPAN CLASS="f4">Default Namespace-Qualified Form:</SPAN></DIV><DL CLASS="p3"><DD>
+<DIV><SPAN CLASS="f9">Local Elements: qualified; Local Attributes: unqualified</SPAN></DIV></DD></DL>
+<DIV CLASS="p4"><SPAN CLASS="f4">Schema Location:</SPAN></DIV><DL CLASS="p3"><DD>
+<DIV><SPAN CLASS="f9">http://www.ddialliance.org/DDI/schema/ddi3.1/group.xsd, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html#r144">XML source</A></SPAN></DIV></DD></DL>
+<DIV CLASS="p4"><SPAN CLASS="f4">Imports Schemas (10):</SPAN></DIV><DL CLASS="p3"><DD>
+<DIV><SPAN CLASS="f5"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/archive_xsd/schema-summary.html">archive.xsd</A>, <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/comparative_xsd/schema-summary.html">comparative.xsd</A>, <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/conceptualcomponent_xsd/schema-summary.html">conceptualcomponent.xsd</A>, <A href="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/datacollection_xsd/schema-summary.html">datacollection.xsd</A>, <A HREF="../../ddiprofile_xsd/schema-summary.html">ddiprofile.xsd</A>, <A HREF="../../logicalproduct_xsd/schema-summary.html">logicalproduct.xsd</A>, <A HREF="../../physicaldataproduct_xsd/schema-summary.html">physicaldataproduct.xsd</A>, <A HREF="../../physicalinstance_xsd/schema-summary.html">physicalinstance.xsd</A>, <A HREF="../../reusable_xsd/schema-summary.html">reusable.xsd</A>, <A HREF="../../studyunit_xsd/schema-summary.html">studyunit.xsd</A></SPAN></DIV></DD></DL>
+<DIV CLASS="p4"><SPAN CLASS="f4">Imported by Schema:</SPAN></DIV><DL CLASS="p3"><DD>
+<DIV><SPAN CLASS="f5"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/instance_xsd/schema-summary.html">instance.xsd</A></SPAN></DIV></DD></DL>
+</TD>
+</TR>
+</TABLE></DIV>
+<A NAME="r1"></A><DIV CLASS="p2">
+<TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="4" BORDER="1">
+<COLGROUP SPAN="3"></COLGROUP>
+<TR BGCOLOR="#CCCCFF">
+<TD COLSPAN="3" CLASS="brdr1"><SPAN CLASS="f6">All Element Summary</SPAN></TD>
+</TR>
+<TR>
+<TD WIDTH="30%" VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Abstract.html" title="global element">Abstract</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">Human-readable summary of the grouped material.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/reusable_xsd/complexTypes/IdentifiedStructuredStringType.html" title="complexType">IdentifiedStructuredStringType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 5&nbsp;attributes, 2&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Abstract.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 3 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Abstract.html#r2">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Concepts.html" title="global element">Concepts</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">Lists, or references, the concepts describing the data that are being documented.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ConceptType.html" title="complexType">ConceptType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 2&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Concepts.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 3 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Concepts.html#r2">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DataCollection.html" title="global element">DataCollection</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">Shared documentation regarding data collection for all members of the group, subject to over-rides at a lower level.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/DataCollectionType.html" title="complexType">DataCollectionType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 2&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DataCollection.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 3 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DataCollection.html#r2">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DDIProfileReference.html" title="global element">DDIProfileReference</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">References a DDI Profile used by the group or resource package.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/reusable_xsd/complexTypes/ReferenceType.html" title="complexType">ReferenceType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 6&nbsp;attributes, 6&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DDIProfileReference.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 3 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DDIProfileReference.html#r2">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DepositoryGroupReference.html" title="global element">DepositoryGroupReference</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/reusable_xsd/complexTypes/ReferenceType.html" title="complexType">ReferenceType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 6&nbsp;attributes, 6&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DepositoryGroupReference.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DepositoryGroupReference.html#r2">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DepositoryStudyUnitReference.html" title="global element">DepositoryStudyUnitReference</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/reusable_xsd/complexTypes/ReferenceType.html" title="complexType">ReferenceType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 6&nbsp;attributes, 6&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DepositoryStudyUnitReference.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/DepositoryStudyUnitReference.html#r2">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Group.html" title="global element">Group</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">Groups are used to document related data.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/GroupType.html" title="complexType">GroupType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 20&nbsp;attributes, 22&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Group.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Group.html#r2">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/LocalAddedContent.html" title="global element">LocalAddedContent</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/studyunit_xsd/complexTypes/StudyUnitType.html" title="complexType">StudyUnitType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 11&nbsp;attributes, 30&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/LocalAddedContent.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/LocalAddedContent.html#r2">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/LocalHoldingPackage.html" title="global element">LocalHoldingPackage</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">LocalHoldingPackages are used to contain metadata added at a local level, without causing a versioning of the original metadata.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LocalHoldingPackageType.html" title="complexType">LocalHoldingPackageType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 11&nbsp;attributes, 6&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/LocalHoldingPackage.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/LocalHoldingPackage.html#r2">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/LogicalProduct.html" title="global element">LogicalProduct</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">Shared documentation regarding the logical data products of all members of the group, subject to over-rides at a lower level.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LogicalProductType.html" title="complexType">LogicalProductType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 2&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/LogicalProduct.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 3 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/LogicalProduct.html#r2">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/PhysicalDataProduct.html" title="global element">PhysicalDataProduct</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">Shared documentation regarding the physical data products of all members of the group, subject to over-rides at a lower level.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/PhysicalDataProductType.html" title="complexType">PhysicalDataProductType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 2&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/PhysicalDataProduct.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 3 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/PhysicalDataProduct.html#r2">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Purpose.html" title="global element">Purpose</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">Human-readable explanation of why the creator published these objects.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/reusable_xsd/complexTypes/IdentifiedStructuredStringType.html" title="complexType">IdentifiedStructuredStringType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 5&nbsp;attributes, 2&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Purpose.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 3 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Purpose.html#r2">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Reference.html" title="global element">Reference</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">References a module that is external to the group, sub-group, or resource package.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/reusable_xsd/complexTypes/ReferenceType.html" title="complexType">ReferenceType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 6&nbsp;attributes, 6&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Reference.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 6 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/Reference.html#r2">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/ResourcePackage.html" title="global element">ResourcePackage</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">The Resource is a specialized type of Group which is intended to hold re-usable metadata such as Category Schemes, Variables, etc.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ResourcePackageType.html" title="complexType">ResourcePackageType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 11&nbsp;attributes, 34&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/ResourcePackage.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/ResourcePackage.html#r2">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/StudyUnit.html" title="global element">StudyUnit</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">Description of an individual study being documented as a member of the group.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/StudyUnitType.html" title="complexType">StudyUnitType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 2&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/StudyUnit.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 2 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/StudyUnit.html#r2">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/SubGroup.html" title="global element">SubGroup</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="70.1%" CLASS="brdr1"><SPAN CLASS="f5">Subordinate group which inherits all the metadata provided in the higher-level groups and subgroups of which this subgroup is a member, subject to over-rides within the sub-group itself.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Type:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f8"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/SubGroupType.html" title="complexType">SubGroupType</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 16&nbsp;attributes, 23&nbsp;elements</SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/SubGroup.html#r3">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 2 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/elements/SubGroup.html#r2">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+</TABLE></DIV>
+<A NAME="r2"></A><DIV CLASS="p2">
+<TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="4" BORDER="1">
+<COLGROUP SPAN="3"></COLGROUP>
+<TR BGCOLOR="#CCCCFF">
+<TD COLSPAN="3" CLASS="brdr1"><SPAN CLASS="f6">Complex Type Summary</SPAN></TD>
+</TR>
+<TR>
+<TD WIDTH="1%" VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ConceptType.html" title="complexType">ConceptType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Allows for inclusion of a fully marked up Conceptual Components module or referencing such a module that is external to the instance.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 2&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ConceptType.html#r5">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ConceptType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Includes:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">definitions of 2&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ConceptType.html#r5">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ConceptType.html#r1">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/DataCollectionType.html" title="complexType">DataCollectionType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Allows for inclusion of data collection information that is common to all members of the group, or referencing external data collection information.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 2&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/DataCollectionType.html#r5">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/DataCollectionType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Includes:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">definitions of 2&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/DataCollectionType.html#r5">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/DataCollectionType.html#r1">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/GroupType.html" title="complexType">GroupType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Groups are used to document related data.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 20&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/GroupType.html#r12">attributes</A>, 22&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/GroupType.html#r32">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/GroupType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Includes:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">definitions of 9&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/GroupType.html#r12">attributes</A> and 19&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/GroupType.html#r32">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/GroupType.html#r1">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LocalHoldingPackageType.html" title="complexType">LocalHoldingPackageType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Allows a depository to hold the contents of a DDI StudyUnit, Group, or ResourcePackage as received while providing locally created value added material and processing information without having to alter the maintenance agency or version of the original material.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 11&nbsp;attributes, 6&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LocalHoldingPackageType.html#r6">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LocalHoldingPackageType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Includes:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">definitions of 3&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LocalHoldingPackageType.html#r6">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LocalHoldingPackageType.html#r1">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LogicalProductType.html" title="complexType">LogicalProductType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Allows for inclusion of a logical product that is common to all members of the group, or referencing an external logical product.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 2&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LogicalProductType.html#r5">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LogicalProductType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Includes:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">definitions of 2&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LogicalProductType.html#r5">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/LogicalProductType.html#r1">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/PhysicalDataProductType.html" title="complexType">PhysicalDataProductType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Allows for inclusion of a physical data product for reuse by reference.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 2&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/PhysicalDataProductType.html#r5">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/PhysicalDataProductType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Includes:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">definitions of 2&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/PhysicalDataProductType.html#r5">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/PhysicalDataProductType.html#r1">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ResourcePackageType.html" title="complexType">ResourcePackageType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">The Resource Package is a specialized structure which is intended to hold reusable metadata such as Category Schemes, Variable Schemes, etc.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 11&nbsp;attributes, 34&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ResourcePackageType.html#r34">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ResourcePackageType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Includes:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">definitions of 31&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ResourcePackageType.html#r34">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/ResourcePackageType.html#r1">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/StudyUnitType.html" title="complexType">StudyUnitType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Allows for inclusion of a study unit that belongs to the group as a direct child.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 2&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/StudyUnitType.html#r5">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/StudyUnitType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Includes:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">definitions of 2&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/StudyUnitType.html#r5">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/StudyUnitType.html#r1">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/SubGroupType.html" title="complexType">SubGroupType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">The subgroup element is a container for a group that is a child of a higher-level group described in this module, but may also be a parent to other (subordinate) groups.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Content:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">complex, 16&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/SubGroupType.html#r12">attributes</A>, 23&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/SubGroupType.html#r33">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/SubGroupType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Includes:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">definitions of 9&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/SubGroupType.html#r12">attributes</A> and 20&nbsp;<A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/SubGroupType.html#r33">elements</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 1 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/complexTypes/SubGroupType.html#r1">location</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+</TABLE></DIV>
+<A NAME="r3"></A><DIV CLASS="p2">
+<TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="4" BORDER="1">
+<COLGROUP SPAN="3"></COLGROUP>
+<TR BGCOLOR="#CCCCFF">
+<TD COLSPAN="3" CLASS="brdr1"><SPAN CLASS="f6">Simple Type Summary</SPAN></TD>
+</TR>
+<TR>
+<TD WIDTH="1%" VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/DataSetGroupCodeType.html" title="simpleType">DataSetGroupCodeType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Indicates how all members of the group are related in terms of physical data products in relation to data collection efforts.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/DataSetGroupCodeType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 2 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/DataSetGroupCodeType.html#r1">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/GeographyGroupCodeType.html" title="simpleType">GeographyGroupCodeType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Indicates how all members of the group are related along the dimension of geography.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/GeographyGroupCodeType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 2 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/GeographyGroupCodeType.html#r1">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/InstrumentGroupCodeType.html" title="simpleType">InstrumentGroupCodeType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Indicates how all members of the group are related in terms of the instruments used to collect data.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/InstrumentGroupCodeType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 2 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/InstrumentGroupCodeType.html#r1">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/LanguageGroupCodeType.html" title="simpleType">LanguageGroupCodeType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Indicates the panel relationships among all Study Units within the group and its sub-groups.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/LanguageGroupCodeType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 2 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/LanguageGroupCodeType.html#r1">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/PanelGroupCodeType.html" title="simpleType">PanelGroupCodeType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Indicates how all members of the group are related in terms of type of panel.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/PanelGroupCodeType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 2 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/PanelGroupCodeType.html#r1">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="brdr1"><SPAN CLASS="f10"><A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/TimeGroupCodeType.html" title="simpleType">TimeGroupCodeType</A></SPAN></TD>
+<TD COLSPAN="2" WIDTH="99%" CLASS="brdr1"><SPAN CLASS="f5">Indicates how all members of the group are related along the dimension of time.</SPAN><DIV CLASS="p4">
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<COLGROUP SPAN="2"></COLGROUP>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Defined:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">globally in <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/schema-summary.html">group.xsd</A>, see <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/TimeGroupCodeType.html#r2">XML source</A></SPAN></DIV></TD>
+</TR>
+<TR VALIGN="top">
+<TD><DIV CLASS="p5"><SPAN CLASS="f11">Used:</SPAN></DIV></TD>
+<TD><DIV CLASS="p6"><SPAN CLASS="f9">at 2 <A HREF="/Specification/DDI-Lifecycle/3.1/XMLSchema/FieldLevelDocumentation/group_xsd/simpleTypes/TimeGroupCodeType.html#r1">locations</A></SPAN></DIV></TD>
+</TR>
+</TABLE></DIV>
+</TD>
+</TR>
+</TABLE></DIV>
+<DIV CLASS="p7"><HR CLASS="hr1"></DIV>
+<DIV CLASS="p8">
+<TABLE WIDTH="100%" BGCOLOR="#E7EDF6" CELLSPACING="0" CELLPADDING="4" BORDER="0" CLASS="brdr2">
+<TR>
+<TD CLASS="brdr1"><SPAN CLASS="f12">XML schema documentation generated with <A HREF="http://www.filigris.com/products/docflex_xml/#docflex-xml-sdk" TARGET="_blank">DocFlex/XML SDK</A> 1.7.2 using <A HREF="http://www.filigris.com/products/docflex_xml/xsddoc/" TARGET="_blank">DocFlex/XML XSDDoc</A> 2.1.0 template set</SPAN></TD>
+</TR>
+</TABLE></DIV>
+</DIV>
+</BODY>
+</HTML>

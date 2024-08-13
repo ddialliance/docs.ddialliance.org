@@ -1,0 +1,28 @@
+CategoryValueType
+-----------------
+
+A category value for which one or more statistics are recorded. Each VariableCategory has one category value and any number of associated statistics.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CodeReference",":doc:`/composite-types/CodeType/index`","0..1","A reference to the coded value of the category as used by a CodeRepresentation."
+   "Value",":doc:`/composite-types/ValueType/index`","0..1","The value of the category."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/VariableCategoryType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CategoryValueType.svg
+

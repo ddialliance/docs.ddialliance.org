@@ -1,0 +1,27 @@
+VariableSetType
+---------------
+
+Storage format arranged variable by variable. Item values are listed in record order with the assumption that each record will occupy the position in each array.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableItem",":doc:`/composite-types/VariableItemType/index`","0..n","The set of values associated with a single variable (one for each record in storage order of records)."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DataSet/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VariableSetType.svg
+

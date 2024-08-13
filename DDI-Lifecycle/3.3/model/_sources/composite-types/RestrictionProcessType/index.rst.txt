@@ -1,0 +1,28 @@
+RestrictionProcessType
+----------------------
+
+Allows for a specific machine actionable description of the restriction process using a ProcessingInstructionReference, if one currently exists, or through a CommandCode. In the case of a physical instance, the RestrictionProcess would be the same as a case, record or variable selection process.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProcessingInstructionReference",":doc:`/item-types/ProcessingInstruction/index`","0..1","Reference to a ProcessingInstruction containing the process instructions for restricting a level of coverage."
+   "CommandCode",":doc:`/composite-types/CommandCodeType/index`","0..1","The process instructions for restricting a level of coverage expressed as a command code."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CoverageType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RestrictionProcessType.svg
+

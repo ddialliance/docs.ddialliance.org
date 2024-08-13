@@ -1,0 +1,27 @@
+UnfilteredCategoryStatisticsType
+--------------------------------
+
+The unfiltered values of any number of statistics by category value representing the full response distribution of the variable.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableCategory",":doc:`/composite-types/VariableCategoryType/index`","0..n","A structure that is repeated for each category value for which one or more statistics are recorded. Each VariableCategory has one category value and any number of associated statistics."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/VariableStatistics/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/UnfilteredCategoryStatisticsType.svg
+

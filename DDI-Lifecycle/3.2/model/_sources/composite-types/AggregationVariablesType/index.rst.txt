@@ -1,0 +1,49 @@
+AggregationVariablesType
+------------------------
+
+Identifies the independent and dependent variables used in the aggregation process. Note that in the case of calculating a percentage, mean, etc. of a dependent value against the total population of the cell, there is no independent variable.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "IndependentVariableReference",":doc:`/item-types/Variable/index`","0..n","A reference to a variable, which is an important constraint for the computed aggregation measure and has the potential to invoke a change in a dependent variable like sex for average of income. In the context of calculating percentages, the use of Sex as the independent variable would indicate that the percentages provided represent the percentage of the dependent variable associated with a specific value for Sex (i.e., the dependent variable expressed as a percentage of the total for Males). This would be opposed to the percent for the full population (the percent of the total grid population falling within that particular cell)."
+   "DependentVariableReference",":doc:`/item-types/Variable/index`","0..n","A reference to a variable, for which the aggregate measure is computed like average of income."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **AggregationVariablesType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/AggregationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AggregationVariablesType.svg
+

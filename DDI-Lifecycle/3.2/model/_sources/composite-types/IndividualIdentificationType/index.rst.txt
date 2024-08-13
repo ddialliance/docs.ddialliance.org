@@ -1,0 +1,30 @@
+IndividualIdentificationType
+----------------------------
+
+Identifying information about the individual including name, DDI Maintenance Agency IDs, Researcher IDs, an image and an effective period for the information.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "IndividualName",":doc:`/composite-types/IndividualNameType/index`","0..n","The name or names by which the individual is known. The legal or formal name of the individual should have the isFormal attribute set to true. The preferred name should be noted with the isPreferred attribute."
+   "DDIMaintenanceAgencyID",":doc:`/composite-types/DDIMaintenanceAgencyIDType/index`","0..n","Contains the official DDI ID of the maintenance agency as registered with the DDI registry by the parent organization or individual. A single organization or individual may have one or more DDI Maintenance Agency IDs registered within the DDI registry (i.e., an organization may have a DDI Maintenance Agency ID for each project managed by the organization) The structure of this string is described by Part I of the Technical Documentation and the content is registered within the DDI registry as a unique identifier."
+   "ResearcherID",":doc:`/composite-types/ResearcherIDType/index`","0..n","This is a formally registered unique identifier within a specific system such as a scholars directory. It is used to disambiguate individuals of similar names."
+   "IndividualImage",":doc:`/composite-types/PrivateImageType/index`","0..n","Image of the individual with date and privacy information."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Individual/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IndividualIdentificationType.svg
+

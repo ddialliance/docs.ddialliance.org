@@ -1,0 +1,29 @@
+EvaluatorType
+-------------
+
+Describes the type of evaluation, completion date, evaluation process and outcomes of the ExPost Evaluation. Allows identification of the Evaluator via reference to and organization or individual and provides for the optional use of a controlled vocabulary to define the specific role of the evaluator.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "EvaluatorReference_Organization",":doc:`/item-types/Organization/index`","0..1","Reference to an Organization or Individual involved in performing the evaluation."
+   "EvaluatorReference_Individual",":doc:`/item-types/Individual/index`","0..1","Reference to an Organization or Individual involved in performing the evaluation."
+   "EvaluatorRole",":doc:`/composite-types/CodeValueType/index`","0..n","Describes the role of the evaluator with optional use of a controlled vocabulary."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ExPostEvaluationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/EvaluatorType.svg
+

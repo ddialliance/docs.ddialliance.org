@@ -1,0 +1,74 @@
+Organization
+------------
+
+Details of an organization including name, contact information, a description, keywords to support searching, their regional affiliation, and any additional information. In addition the organization may capture how they manage version distinction. All agencies should be defined as an Organization and referenced by the Archive module. The organization and specific pieces of information regarding the individual may be tagged for information privacy.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OrganizationIdentification",":doc:`/composite-types/OrganizationIdentificationType/index`","0..1","Identification information on the Organization. The structure contains a OrganizationName which can be repeated to provide any number of OrganizationNames that have a) a specific contextual usage, or b) are of specific types (e.g. PreviousFormalName). The DDI Maintenance Agency ID and and organization images, such as a building picture or logo are found in OrganizationIdentification. Images and names can be individually date stamped."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the organization. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "Keyword",":doc:`/composite-types/InternationalCodeValueType/index`","0..n","Keyword used to classify the organization or its activities. Supports the use of an external controlled vocabulary."
+   "RegionalCoverage",":doc:`/composite-types/CodeValueType/index`","0..n","The geographic region within which this organization operates."
+   "AdditionalInformation",":doc:`/composite-types/AdditionalInformationType/index`","0..n","Any additional information you which to note about the organization. This is a structured string so it can be formatted and a privacy tag can be applied."
+   "VersionDistinction",":doc:`/composite-types/VersionDistinctionType/index`","0..n","Describes the data versioning scheme(s) used by an organization. If more than one, Name should differentiate between a standard versioning structure used by the organization and special structures used by specific projects or studies. Information on what drives and major and minor change and how they are structured."
+   "ContactInformation",":doc:`/composite-types/ContactInformationType/index`","0..n","Contact information for the organization including location specification, address, URL, phone numbers, and other means of communication access. Address, location, telephone, and other means of communication can be repeated to express multiple means of a single type or change over time. Each major piece of contact information (with exception of URL contains the element EffectiveDates in order to date stamp the period for which the information is valid."
+   "Privacy","string","0..1","A basic set of privacy codes for the parent element. These may be stricter than the general access restrictions for the overall metadata. If available codes are insufficient this may also contain any string."
+
+Properties Inherited from Agent
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference",":doc:`/item-types/Agent/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "RelatedOtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..n","The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+   "IsPublished","boolean","0..1","Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * :doc:`/item-types/Agent/index`
+        * **Organization**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/OrganizationGroup/index`
+* :doc:`/item-types/OrganizationScheme/index`
+* :doc:`/composite-types/CollectionType/index`
+* :doc:`/composite-types/ItemType/index`
+* :doc:`/composite-types/PublisherType/index`
+* :doc:`/composite-types/SourceObjectType/index`
+* :doc:`/composite-types/TargetObjectType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Organization.svg
+

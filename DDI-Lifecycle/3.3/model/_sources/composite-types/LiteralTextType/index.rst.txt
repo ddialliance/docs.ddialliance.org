@@ -1,0 +1,41 @@
+LiteralTextType
+---------------
+
+Literal (static) text to be used in the instrument using the StructuredString structure plus an attribute allowing for the specification of white space to be preserved.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Text",":doc:`/composite-types/TextType/index`","0..1","The value of the static text string. Supports the optional use of XHTML formatting tags within the string structure. If the content of a literal text contains more than one language, i.e. ""What is your understanding of the German word 'Gesundheit'?"", the foreign language element should be placed in a separate LiteralText component with the appropriate xml:lang value and, in this case, isTranslatable set to ""false"". If the existence of white space is critical to the understanding of the content (such as inclusion of a leading or trailing white space), set the attribute of Text xml:space to ""preserve""."
+
+Properties Inherited from TextContentType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the text segment. Supports multiple language versions of the same content as well as optional formatting of the content."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/TextContentType/index`
+    * **LiteralTextType**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LiteralTextType.svg
+

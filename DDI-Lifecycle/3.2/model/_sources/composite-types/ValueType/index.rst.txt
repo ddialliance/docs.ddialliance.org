@@ -1,0 +1,44 @@
+ValueType
+---------
+
+The Value expressed as an xs:string with the ability to preserve whitespace if critical to the understanding of the content.
+
+Properties
+~~~~~~~~~~
+
+This type contains no properties.
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * **ValueType**
+        * :doc:`/composite-types/RangeValueType/index`
+        * :doc:`/composite-types/RelatedValueType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/AttributeType/index`
+* :doc:`/composite-types/CategoryValueType/index`
+* :doc:`/composite-types/CodeType/index`
+* :doc:`/composite-types/DomainSpecificValueType/index`
+* :doc:`/composite-types/ItemValueType/index`
+* :doc:`/composite-types/ParameterType/index`
+* :doc:`/composite-types/RecordType/index`
+* :doc:`/composite-types/VariableItemType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ValueType.svg
+

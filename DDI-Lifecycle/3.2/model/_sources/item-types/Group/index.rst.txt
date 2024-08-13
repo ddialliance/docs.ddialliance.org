@@ -1,0 +1,108 @@
+Group
+-----
+
+A primary packaging and publication module within DDI containing a Group of StudyUnits. The Group structure allows metadata regarding multiple study units to be published as a structured entity. Studies may be grouped "by design" such as a repeated study with intended areas of commonality between each study, or "ad hoc" where studies are grouped for applied or administrative reasons. When grouping is done "by design", such as within a longitudinal study, common metadata such as shared methodology, common category schemes, etc. may be moved up from the individual studies into the Group and inherited by all the members of the group. Inherited metadata may be over-ridden at the lower levels. Inheritance may be turned "off" for groups of study units done on an ad-hoc basis, such as a set of studies used for a particular activity such as instruction. The purpose of groups is described using the attributes which summarize relationships along the dimensions of time, panel, geography, instrument and language. These attributes allow the purpose to be machine-actionable, while the group also includes an element for describing the purpose in human-readable format. As a publication package Group contains a Citation, Abstract, information on authorization, the universe of the group, series statement, quality statements, ex-post evaluation material, funding and budget, purpose, coverage, analysis units covered, kind of data, other materials, a list of required resource packages and embargo information. It then allows all maintainable structures within the StudyUnit to be expressed at the Group level along with individual StudyUnits. StudyUnits may also be grouped into SubGroups allowing for infinite nesting of StudyUnits.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Citation",":doc:`/composite-types/CitationType/index`","0..1","The citation for the group. DDI strongly recommends that at minimum a Title be provided."
+   "Abstract",":doc:`/composite-types/StructuredStringType/index`","0..1","An abstract of the group unit describing the nature and scope of the data collection, special characteristics of its content. Note that detailed information on the purpose of the group and structured coverage information are to be entered in Purpose and Coverage. Abstract supports multiple language versions of the same content as well as optional formatting of the content."
+   "AuthorizationSource",":doc:`/composite-types/AuthorizationSourceType/index`","0..n","Identifies the authorizing agency for the group and allows for the full text of the authorization (law, regulation, or other form of authorization). May be used to list authorizations from oversight committees and other regulatory agencies."
+   "UniverseReference",":doc:`/item-types/Universe/index`","0..1","Reference to the universe statement from the universe scheme, describing the group of persons or other elements that are the object of research and to which any analytic results refer. Age, nationality, and residence commonly help to delineate a given universe, but any of a number of factors may be involved, such as sex, race, income, veteran status, criminal convictions, etc. The universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. In general, it should be possible to tell from the description of the universe whether a given individual or element (hypothetical or real) is a member of the population under group. A universe may be described as ""inclusive"" or ""exclusive"". This group level reference is normally to the top level of the UniverseScheme."
+   "SeriesStatement",":doc:`/composite-types/SeriesStatementType/index`","0..n","A group, particularly one in a series, may be the result of two series merging into a single group. The new group belongs to both series. For example, Niger now fields the UNICEF Multiple Indicators Cluster Survey (MICS) and the Demographic and Health Survey as a single merged instrument."
+   "QualityStatementReference",":doc:`/item-types/QualityStatement/index`","0..n","A reference to a Quality Statement pertaining to the quality of the group overall, metadata, or data to which it is associated. Quality statements may be related to external quality standards."
+   "QualityStatementSchemeReference",":doc:`/item-types/QualityStatementScheme/index`","0..n","A scheme containing statements of quality related to the quality of methodologies, metadata, or data. Quality statements may be related to external quality standards."
+   "ExPostEvaluation",":doc:`/composite-types/ExPostEvaluationType/index`","0..n","An evaluation of the group process, often taking place after the completion of the group. These may include issues such as timing of the group, sequencing issues, cost/budget issues, relevance, institutional or legal arrangements etc. of the group. If the group is part of a series or group (i.e., a single wave in a longitudinal group) this may include evaluation of earlier waves which resulted in changes to the current wave."
+   "FundingInformation",":doc:`/composite-types/FundingInformationType/index`","0..n","Contains details of the group unit's funding, including information about grants, agencies, etc."
+   "ProjectBudget",":doc:`/composite-types/BudgetType/index`","0..n","This describes the overall budget of the group. It can be repeated for distinct budget activities. It contains a structured description and one or more budget documents described by an OtherMaterial type."
+   "Purpose",":doc:`/composite-types/StructuredStringType/index`","0..1","The purpose of the group, why the group took place. This should include detailed information on the investigator's primary group questions or hypotheses as well as information on any legal basis for the data collection, such as laws requiring the collection of census data for apportionment purposes. Legal or other authorization should be provided in detail within AuthorizationSource. Purpose supports multiple language versions of the same content as well as optional formatting of the content."
+   "Coverage",":doc:`/composite-types/CoverageType/index`","0..1","Describes the coverage of the group unit. Detailed information on Topical, Temporal, and Spatial Coverage is contained here. Note that Coverage at this level should be inclusive all lower level modules or section. Lower level descriptions serve to constrain coverage within the scope described here."
+   "AnalysisUnit",":doc:`/composite-types/CodeValueType/index`","0..n","Allows the use of a controlled vocabulary to list all of the units of analysis used in the group. Should be repeated to describe multiple units of analysis."
+   "AnalysisUnitsCovered",":doc:`/composite-types/InternationalStringType/index`","0..1","A narrative of the units of analysis in the group unit. Uses an InternationalString to support multiple languages."
+   "KindOfData",":doc:`/composite-types/KindOfDataType/index`","0..n","Briefly describes the kind of data documented in the logical product(s) of a group unit. Examples include survey data, census/enumeration data, administrative data, measurement data, assessment data, demographic data, voting data, etc. Supports the use of an external controlled vocabulary."
+   "OtherMaterial",":doc:`/composite-types/OtherMaterialType/index`","0..n","Contains references to other materials relevant to the group unit, whether in DDI form or external. Links can be made from items in this section to any identifiable element in the instance. Best practice is to include OtherMaterial inside the maintainable containing the objects that are related to the OtherMaterial."
+   "RequiredResourcePackages",":doc:`/composite-types/RequiredResourcePackagesType/index`","0..1","Specifies by reference the ResourcePackages required to resolve the group. This list is informational and assists in creating full transmissions of metadata or creating archival packages. Primarily used after the instance is relatively stable and published."
+   "Embargo",":doc:`/composite-types/EmbargoType/index`","0..n","Embargo information about the group unit. References to embargo information in this section can be made from individual variables."
+   "ConceptualComponentReference",":doc:`/item-types/ConceptualComponent/index`","0..n","ConceptualComponent applying to the group as a whole."
+   "DataCollectionReference",":doc:`/item-types/DataCollection/index`","0..n","DataCollection applying to the group as a whole."
+   "LogicalProductReference",":doc:`/item-types/BaseLogicalProduct/index`","0..n","LogicalProduct applying to the group as a whole."
+   "PhysicalDataProductReference",":doc:`/item-types/PhysicalDataProduct/index`","0..n","PhysicalDataProduct applying to the group as a whole."
+   "PhysicalInstanceReference",":doc:`/item-types/PhysicalInstance/index`","0..n","PhysicalInstance applying to the group as a whole."
+   "ArchiveReference",":doc:`/item-types/Archive/index`","0..n","Archive applying to the group as a whole."
+   "DDIProfileReference",":doc:`/item-types/DDIProfile/index`","0..n","DDIProfile applying to the group as a whole."
+   "ComparisonReference",":doc:`/item-types/Comparison/index`","0..n","In-line Comparison of differences between related objects in different study units or due to versioning."
+   "StudyUnitReference",":doc:`/item-types/StudyUnit/index`","0..n","A StudyUnit within the Group provided in-line."
+   "SubGroupReference",":doc:`/item-types/SubGroup/index`","0..n","A description of study units comprising a sub-group within the main Group."
+   "Time","string","0..1","Indicates how all members of the group are related along the dimension of time (for example single occurrence, multiple occurrence, etc.)."
+   "CaptureInstrument","string","0..1","Indicates how all members of the group are related in terms of the instruments used to collect data (single, multiple, etc.)."
+   "Panel","string","0..1","Indicates how all members of the group are related in terms of type of panel (single, rolling, etc.)."
+   "Geography","string","0..1","Indicates how all members of the group are related along the dimension of geography."
+   "DataProduct","string","0..1","Indicates how all members of the group are related in terms of physical data products in relation to data collection efforts."
+   "LanguageRelationship","string","0..1","Indicates how all members of the group are related in terms of language relationships such as parallel content in multiple languages, translations (full or partial), etc."
+   "UserDefinedGroupProperty","string","0..1","Provides a user-defined grouping property, different from those supplied in other attributes."
+   "UserDefinedGroupPropertyValue","string","0..1","Provides a value for the user-defined group property supplied in userDefinedGroupProperty."
+   "IsInheritable","boolean","0..1","Default is true, and allows for inheritance of all properties and modules, and the use of lower-level over-rides. If set to false, inheritance is switched off for specific groups."
+
+Properties Inherited from Maintainable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Note",":doc:`/composite-types/NoteType/index`","0..n","Note allows for the attachment of a piece of additional information to any object with an ID. Note facilitates capturing temporary processing notes such as ""Review and approval required"". A single note can be attached to multiple objects by reference to the objects. Note may also contain content for a needed object that has been reported for addition in a later version of the schema. Ideally this should be handled by a local extension, but Note can accommodate run-time extensions when required. The Note should be housed within the Maintainable object that contains the referenced objects. In this way the user is ensured of receiving all known Note attachments when the maintainable content is delivered. This means that if a Note references objects within multiple Maintainable objects, the Note should be repeated in each Maintainable and reference only those objects with that Maintainable."
+   "Software",":doc:`/composite-types/SoftwareType/index`","0..n","Indicate the software used to create and/or manage the metadata. This is repeatable to allow for multiple softwares or multiple functions. If this information is important it is advisable to provide it in each maintainable so that it does not become separated from the internal content if the metadata is re-factored."
+   "MetadataQuality",":doc:`/composite-types/MetadataQualityType/index`","0..n","An assessment of the quality of the metadata within the Maintainable object, e.g. the quality of the transcription, completeness, editing status, etc."
+   "ExternalReferenceDefaultURI","anyURI","0..1","Use to provide a default value for the URI of external references. Use of a URI in a reference within this maintainable overrides the value entered here. Nested maintainables should redeclare the contents of this attribute for clarity."
+   "IsPublished","boolean","0..1","Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing."
+   "Lang","language","0..1","This is used to designate the language of the metadata content of the maintainable. If a lower level xml:lang attribute conflicts with the content at the maintainable level, the object level value takes precedence."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference_Organization",":doc:`/item-types/Organization/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionResponsibilityReference_Individual",":doc:`/item-types/Individual/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * :doc:`/item-types/Maintainable/index`
+        * **Group**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DDIInstance/index`
+* :doc:`/item-types/LocalHoldingPackage/index`
+* :doc:`/composite-types/LocalAddedContentType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Group.svg
+

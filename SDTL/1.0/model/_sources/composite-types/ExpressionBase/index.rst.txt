@@ -1,0 +1,62 @@
+ExpressionBase
+--------------
+
+The SDTL types in  ExpressionBase are used in expressions, which may be numeric, text or logical. 
+
+
+Properties
+~~~~~~~~~~
+
+This type contains no properties.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **ExpressionBase**
+    * :doc:`/composite-types/BooleanConstantExpression/index`
+    * :doc:`/composite-types/DateTimeConstant/index`
+    * :doc:`/composite-types/FunctionCallExpression/index`
+    * :doc:`/composite-types/GroupedExpression/index`
+    * :doc:`/composite-types/IteratorSymbolExpression/index`
+    * :doc:`/composite-types/MissingValueConstantExpression/index`
+    * :doc:`/composite-types/NumberRangeExpression/index`
+    * :doc:`/composite-types/NumericConstantExpression/index`
+    * :doc:`/composite-types/NumericMaximumValueExpression/index`
+    * :doc:`/composite-types/NumericMinimumValueExpression/index`
+    * :doc:`/composite-types/StringConstantExpression/index`
+    * :doc:`/composite-types/StringRangeExpression/index`
+    * :doc:`/composite-types/TimeDurationConstant/index`
+    * :doc:`/composite-types/UnhandledValuesExpression/index`
+    * :doc:`/composite-types/ValueListExpression/index`
+    * :doc:`/composite-types/VariableReferenceBase/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/AppendFileDescription/index`
+* :doc:`/composite-types/CompositeVariableNameExpression/index`
+* :doc:`/composite-types/Compute/index`
+* :doc:`/composite-types/DoIf/index`
+* :doc:`/composite-types/DropCases/index`
+* :doc:`/composite-types/FunctionArgument/index`
+* :doc:`/composite-types/GroupedExpression/index`
+* :doc:`/composite-types/IfRows/index`
+* :doc:`/composite-types/IteratorDescription/index`
+* :doc:`/composite-types/KeepCases/index`
+* :doc:`/composite-types/LoopWhile/index`
+* :doc:`/composite-types/MergeFileDescription/index`
+* :doc:`/composite-types/NumberRangeExpression/index`
+* :doc:`/composite-types/RecodeRule/index`
+* :doc:`/composite-types/ReshapeItemDescription/index`
+* :doc:`/composite-types/SetMissingValues/index`
+* :doc:`/composite-types/ValueListExpression/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ExpressionBase.svg
+

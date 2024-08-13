@@ -1,0 +1,31 @@
+RenamePair
+----------
+
+Variable names before and after a variable is renamed.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OldVariable",":doc:`/composite-types/VariableSymbolExpression/index`","1..1","The old name of the variable."
+   "NewVariable",":doc:`/composite-types/VariableSymbolExpression/index`","1..1","The new name of the variable."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/AppendFileDescription/index`
+* :doc:`/composite-types/MergeFileDescription/index`
+* :doc:`/composite-types/Rename/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RenamePair.svg
+

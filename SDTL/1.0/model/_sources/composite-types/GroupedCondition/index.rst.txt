@@ -1,0 +1,38 @@
+GroupedCondition
+----------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ConditionBase/index`
+    * **GroupedCondition**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/GroupedCondition.svg
+
+Properties
+~~~~~~~~~~
+
+Condition
+*********
+
+Type
+    :doc:`/composite-types/ConditionBase/index`
+Cardinality
+    0..1
+
+TODO
+
+
+

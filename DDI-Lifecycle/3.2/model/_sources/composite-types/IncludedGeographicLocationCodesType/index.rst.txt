@@ -1,0 +1,30 @@
+IncludedGeographicLocationCodesType
+-----------------------------------
+
+Specifies the Geographic Location Codes included in the representation by providing a reference to the authorized source of the code, the GeographicLocation used, and any excluded values.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "AuthorizedSourceReference",":doc:`/composite-types/AuthorizedSourceType/index`","0..1","A reference to the Authorized Source of the value used by this representation. A GeographicLocation may have more than one Authorized Source included in the listing."
+   "GeographicLocationReference",":doc:`/item-types/GeographicLocation/index`","0..1","A reference to the GeographicLocation used by this representation."
+   "ExcludedLocationValueReference",":doc:`/composite-types/LocationValueType/index`","0..n","A reference to a location value that is excluded, not used by, this representation. May be repeated to exclude multiple location values."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/GeographicLocationCodeRepresentationBaseType/index`
+* :doc:`/composite-types/TargetRepresentationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IncludedGeographicLocationCodesType.svg
+

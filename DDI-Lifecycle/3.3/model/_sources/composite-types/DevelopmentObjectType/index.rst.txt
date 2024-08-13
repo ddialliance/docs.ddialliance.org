@@ -1,0 +1,32 @@
+DevelopmentObjectType
+---------------------
+
+A description of the development objects of a Development Implementation or Development Step. Supports a general description as well as specific references to allowed development objects.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the development objects that are the intended objects of a Development Plan or specific objects of a Development Step. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "QuestionReference",":doc:`/item-types/Question/index`","0..1","Reference to the Question type that is the target of the development work. TypeOfObject should be QuestionItem, QuestionGrid, or QuestionBlock."
+   "MeasurementReference",":doc:`/item-types/MeasurementItem/index`","0..1","Reference to the Measurement that is the target of the development work. TypeOfObject should be Measurement."
+   "InstrumentReference",":doc:`/item-types/Instrument/index`","0..1","Reference to the Instrument that is the target of the development work. TypeOfObject should be Instrument."
+   "ControlConstructReference",":doc:`/item-types/ControlConstruct/index`","0..1","Reference to the ControlConstruct that is the target of the development work. TypeOfObject should reflect the type of ControlConstruct being referenced. Value should be IfThenElse, RepeatUntil, RepeatWhile, Loop, Sequence, ComputationItem, StatementItem, MeasurementConstruct, QuestionConstruct, Split, SplitJoin, SamplingStage, SampleStep, DevelopmentStep."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DevelopmentImplementation/index`
+* :doc:`/item-types/DevelopmentStep/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DevelopmentObjectType.svg
+

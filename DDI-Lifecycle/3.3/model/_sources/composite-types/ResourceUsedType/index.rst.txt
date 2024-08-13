@@ -1,0 +1,29 @@
+ResourceUsedType
+----------------
+
+Provides a name, label and description for the Development Process and lists the individual development activities which should take place.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfResource",":doc:`/composite-types/CodeValueType/index`","0..1","Type of resource used. Supports the use of an external controlled vocabulary."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the Resource. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "ResourceObjectReference_Versionable",":doc:`/item-types/Versionable/index`","0..1","Reference to the resource object used by this development step. If it is an external object create a description as OtherMaterial and reference the OtherMaterial. Use the attribute ""objectLanguage"" to specify any language preference. Repeat for multiple development objects. TypeOfObject should relate to the object referenced."
+   "ResourceObjectReference_Maintainable",":doc:`/item-types/Maintainable/index`","0..1","Reference to the resource object used by this development step. If it is an external object create a description as OtherMaterial and reference the OtherMaterial. Use the attribute ""objectLanguage"" to specify any language preference. Repeat for multiple development objects. TypeOfObject should relate to the object referenced."
+   "ResourceUsage",":doc:`/composite-types/StructuredStringType/index`","0..1","The use of the resource within the DevelopmentProcessingStep. Supports multiple language versions of the same content as well as optional formatting of the content."
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ResourceUsedType.svg
+

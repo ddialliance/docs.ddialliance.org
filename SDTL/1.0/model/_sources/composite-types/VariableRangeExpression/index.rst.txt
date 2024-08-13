@@ -1,0 +1,46 @@
+VariableRangeExpression
+-----------------------
+
+A list of variables in adjacent columns defined by the variable names of first and last columns.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "First","string","1..1","Lowest variable name in range"
+   "Last","string","1..1","Highest variable name in range"
+
+Properties Inherited from VariableReferenceBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * :doc:`/composite-types/VariableReferenceBase/index`
+        * **VariableRangeExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/Recode/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VariableRangeExpression.svg
+

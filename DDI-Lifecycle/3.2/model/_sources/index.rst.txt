@@ -1,0 +1,21 @@
+DDI Data Documentation 3.2
+==========================
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Topics
+
+   topics/Study/index
+   topics/Data Capture/index
+   topics/Data Description/index
+   topics/Foundational/index
+   topics/Non-Packaging Items/index
+   topics/All Content Items/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Items and Fields
+
+   item-types/index
+   composite-types/index
+

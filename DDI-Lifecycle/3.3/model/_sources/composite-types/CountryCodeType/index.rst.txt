@@ -1,0 +1,56 @@
+CountryCodeType
+---------------
+
+Use of a Controlled Vocabulary is strongly recommended. Use of ISO 3166 Country Codes (2 character, 3 character, or Numeric) is preferred with or without attribution to a specific controlled vocabulary. If using some other coding system it is important to cite the source as the assumption will generally be that ISO 3166 codes have been used. Allows for an optional effective date for the country code. This can effect the actual geographic coverage or related name.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "EffectiveDate","dateTime","0..1","If it is important to specify the date that this code is effective in order to accurately capture a name or similar change, specify that here. This can effect the actual geographic coverage or related name."
+
+Properties Inherited from CodeValueType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ControlledVocabularyID","string","0..1","The ID of the controlled vocabulary that the content was taken from."
+   "ControlledVocabularyName","string","0..1","The name of the controlled vocabulary."
+   "ControlledVocabularyAgencyName","string","0..1","The name of the agency maintaining the controlled vocabulary."
+   "ControlledVocabularyVersionID","string","0..1","The version number of the controlled vocabulary."
+   "OtherValue","string","0..1","If the value of the string is ""Other"" or the equivalent from the controlled vocabulary, this attribute can provide a more specific value not found in the controlled vocabulary."
+   "ControlledVocabularyURN","string","0..1","The URN of the controlled vocabulary."
+   "ControlledVocabularySchemeURN","string","0..1","If maintained within a scheme, the URN of the scheme containing the controlled vocabulary."
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * :doc:`/composite-types/CodeValueType/index`
+        * **CountryCodeType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/AddressType/index`
+* :doc:`/composite-types/GeographicCoverageType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CountryCodeType.svg
+

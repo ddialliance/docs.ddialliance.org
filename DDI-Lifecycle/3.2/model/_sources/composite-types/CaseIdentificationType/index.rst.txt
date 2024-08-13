@@ -1,0 +1,29 @@
+CaseIdentificationType
+----------------------
+
+Describes the information needed to identify an individual case within a record type. This may be the variable or concatenated variable used to identify a unique case of a particular record type. Often referred to as a unique key. There may be more than one means of identifying a record. For example a US Census Summary File has a LogicalRecordIdentifer that is unique to the original file within which it was published. A specific geography has a set of fields that uniquely identify it.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "FixedIdentifier",":doc:`/composite-types/FixedIdentifierType/index`","0..1","Reference to the variable containing the unique identifier. This may be a concatenated variable which indicates the combination of variable required to create a unique identification. If more than one variable reference is included the combination of the variable field contents must be unique and all variables are required for case identification."
+   "ConditionalIdentifier",":doc:`/composite-types/ConditionalIdentifierType/index`","0..1","Describes the information needed to identify a specific record or case within a record type. Repeating the field allows multiple means of identifying a case referencing multiple variables."
+   "IsPrimary","boolean","0..1","Indicates whether the case identifier is the primary key."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LogicalRecordType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CaseIdentificationType.svg
+

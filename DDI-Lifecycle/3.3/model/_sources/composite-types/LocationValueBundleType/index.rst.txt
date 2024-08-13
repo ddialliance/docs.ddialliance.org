@@ -1,0 +1,28 @@
+LocationValueBundleType
+-----------------------
+
+A stack of LocationValueReferences to each of the locations bundled together for a specific purpose Includes a GeographicTime to allow for repetition for change over time.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "LocationValueReference",":doc:`/composite-types/LocationValueType/index`","0..n","Reference to the LocationValue of an included area."
+   "GeographicTime",":doc:`/composite-types/DateType/index`","0..1","The time period for which the LocationValues listed are a valid set."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LocationValueType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LocationValueBundleType.svg
+

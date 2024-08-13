@@ -1,0 +1,30 @@
+LineParameterType
+-----------------
+
+Specification of the line and offset for the beginning and end of the segment.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "StartLine","nonNegativeInteger","0..1","Number of lines from beginning of the document."
+   "StartOffset","nonNegativeInteger","0..1","Number of characters from start of the line specified in StartLine."
+   "EndLine","nonNegativeInteger","0..1","Number of lines from beginning of the document."
+   "EndOffset","int","0..1","Number of characters from the start of the line specified in EndLine."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/TextualType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LineParameterType.svg
+

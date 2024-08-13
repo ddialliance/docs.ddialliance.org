@@ -1,0 +1,62 @@
+ScaleDomainType
+---------------
+
+A response domain capturing a scale response which describes a 1..n dimensional scale of various display types for a question item. Includes standard response domain elements; OutParameter, designation of response cardinality, and a declaration of an offset date for the data content. May be replaced by a ScaleRepresentationRefererence.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the domain. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the domain. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "OutParameter",":doc:`/composite-types/ParameterType/index`","0..1","Allows for the response to be bound to one of the QuestionItem's OutParameters, so the collected information can be used elsewhere, for example as inputs to subsequent questions in an Instrument or to a GenerationInstruction. If multiple responses are possible, this would represent and ordered array of the responses."
+   "ResponseCardinality",":doc:`/composite-types/ResponseCardinalityType/index`","0..1","Allows the designation of the minimum and maximum number of responses allowed for this response domain."
+   "ContentDateOffset",":doc:`/composite-types/ContentDateOffsetType/index`","0..1","Identifies the difference between the date applied to the data as a whole and this specific item such as previous year's income or residence 5 years ago."
+
+Properties Inherited from ScaleRepresentationBaseType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ScaleDimension",":doc:`/composite-types/ScaleDimensionType/index`","0..n","A description of a dimension of the scale. Note that most scales will have only one dimension."
+   "DimensionIntersect",":doc:`/composite-types/DimensionIntersectType/index`","0..n","Identifies the point at which the scales of a multidimensional scale intersect."
+   "DisplayLayout",":doc:`/composite-types/CodeValueType/index`","0..1","Defines they layout such as containing a drawn scale line, a list of values only, an outline (the boundaries of the area defined by 2 or more intersecting scales such as a diamond of opposites), or some other layout design. Allows for the use of a controlled vocabulary."
+
+Properties Inherited from RepresentationType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RecommendedDataType",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides the recommended treatment of the data within an application. The value should come from a controlled vocabulary - recommended values include the set found in W3C XML Schema Part 2, but excluding string sub-types, QNAME, and NOTATION. The DDI Alliance has provided a controlled vocabulary (DataType) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "GenericOutputFormat",":doc:`/composite-types/CodeValueType/index`","0..1","This field provides a recommended generic treatment of the data for display by an application. The value should come from a controlled vocabulary."
+   "MeasurementUnit",":doc:`/composite-types/CodeValueType/index`","0..1","Records the measurement unit, for example, 'km', 'miles', etc. Supports the use of a controlled vocabulary."
+   "MissingValue","string","0..1","List the values used to represent missing data in a space delimited array. Use of MissingValuesReference is preferred. If this content does not match the values provided in the MissingValuesReference, the content of the MissingValuesReference overrides the content of this attribute."
+   "BlankIsMissingValue","boolean","0..1","When value is true a blank or empty variable content should be treated as a missing value.  Use of MissingValuesReference is preferred."
+   "ClassificationLevel","string","0..1","Indicates the type of relationship, nominal, ordinal, interval, ratio, or continuous. Use where appropriate for the representation type."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/RepresentationType/index`
+    * :doc:`/composite-types/ScaleRepresentationBaseType/index`
+        * **ScaleDomainType**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ScaleDomainType.svg
+

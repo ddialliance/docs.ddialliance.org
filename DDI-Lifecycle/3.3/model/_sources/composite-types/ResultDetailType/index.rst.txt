@@ -1,0 +1,30 @@
+ResultDetailType
+----------------
+
+Details of specific results of the development plan and process. May refer to specific development activities or DevelopmentSteps within a DevelopmentProcess.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfResult",":doc:`/composite-types/CodeValueType/index`","0..1","Identifies the specific type of result. Supports the use of an external controlled vocabulary."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the Results Detail. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "ResultsDate",":doc:`/composite-types/DateType/index`","0..1","The date or date range of obtaining results from the development work."
+   "RequirementsAssessment",":doc:`/composite-types/RequirementsAssessmentType/index`","0..n","Description of whether specific requirements for the activities providing these results were met."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DevelopmentResults/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ResultDetailType.svg
+

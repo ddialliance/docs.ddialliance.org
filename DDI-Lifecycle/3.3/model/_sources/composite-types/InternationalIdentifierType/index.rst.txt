@@ -1,0 +1,28 @@
+InternationalIdentifierType
+---------------------------
+
+An identifier whose scope of uniqueness is broader than the local archive. Common forms of an international identifier are ISBN, ISSN, DOI or similar designator. Provides both the value of the identifier and the agency who manages it.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "IdentifierContent","string","0..1","An identifier as it should be listed for identification purposes."
+   "ManagingAgency",":doc:`/composite-types/CodeValueType/index`","0..1","The identification of the Agency which assigns and manages the identifier, i.e., ISBN, ISSN, DOI, etc."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CitationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/InternationalIdentifierType.svg
+

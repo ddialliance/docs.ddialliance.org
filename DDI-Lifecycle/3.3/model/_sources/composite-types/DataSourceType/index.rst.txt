@@ -1,0 +1,30 @@
+DataSourceType
+--------------
+
+Describes the source of the data. This may be a population group, an environmental object, a registry, published or unpublished data source, etc. Describes and provides a classification of the source, a citation of the origin if applicable, and a listing of any characteristics of the data source that may affect understanding of the data.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SourceDescription",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the data source. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "SourceType",":doc:`/composite-types/CodeValueType/index`","0..n","Brief classification of the data source. Supports the use of an external controlled vocabulary. May be repeated to represent different forms of classification. The DDI Alliance has provided a controlled vocabulary (DataSourceType) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "Origin",":doc:`/composite-types/OriginType/index`","0..n","A citation or URI for the source of the data. Note that this is an external reference, and should not be used to point to DDI descriptions of the data, or to DDI-encoded data."
+   "SourceCharacteristic",":doc:`/composite-types/StructuredStringType/index`","0..1","A significant characteristic of the data source that may affect understanding or collection of the data. This will include the level of documentation of the source data. For example: 'Legibility of data source affected due to water damage,' or 'solar flares during the data collection period may have affected the consistency of the data during the following period.' Supports multiple language versions of the same content as well as optional formatting of the content."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CollectionEventType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DataSourceType.svg
+

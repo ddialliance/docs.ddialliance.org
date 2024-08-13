@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="section1.html">1.0 Document Description</a></li><li><a href="section2.html">2.0 Study Description</a></li><li><a href="section3.html">3.0 File Description</a></li><li><a href="section4.html">4.0 Variable Description</a></li><li><a href="section5.html">5.0 Other Material</a></li><li><a href="sectionall.html">Single file for printing</a> (slow)</li></ul><h2>&lt;fileDscr&gt;&#160;Data Files Description</h2><ul><li>Optional</li><li>Repeatable</li><li>Attributes: <a href="codeBook.html">ID, xml:lang, source</a>, URI, sdatrefs, methrefs, pubrefs, access</li></ul><div style="padding-left:25px;"><p><em>Description:</em></p>
+                        <p>Information about the data file(s) that comprises a collection. This
+                            section can be repeated for collections with multiple files. </p>
+                        <p>The "URI" attribute may be a URN or a URL that can be used to
+                            retrieve the file. The "sdatrefs" are summary data description
+                            references that record the ID values of all elements within the summary
+                            data description section of the Study Description that might apply to
+                            the file. These elements include: time period covered, date of
+                            collection, nation or country, geographic coverage, geographic unit,
+                            unit of analysis, universe, and kind of data. The "methrefs" are
+                            methodology and processing references that record the ID values of all
+                            elements within the study methodology and processing section of the
+                            Study Description that might apply to the file. These elements include
+                            information on data collection and data appraisal (e.g., sampling,
+                            sources, weighting, data cleaning, response rates, and sampling error
+                            estimates). The "pubrefs" attribute provides a link to
+                            publication/citation references and records the ID values of all
+                            citations elements within Other Study Description Materials or Other
+                            Study-Related Materials that pertain to this file. "Access" records the
+                            ID values of all elements in the Data Access section that describe
+                            access conditions for this file.</p>
+                        <p>Remarks: When a codebook documents two different physical
+                            instantiations of a data file, e.g., logical record length (or OSIRIS)
+                            and card-image version, the Data File Description should be repeated to
+                            describe the two separate files. An ID should be assigned to each file
+                            so that in the Variable section the location of each variable on the two
+                            files can be distinguished using the unique file IDs. </p>
+                    </div><div style="padding-left:25px;"><p><em>Example(s):</em></p><pre>&lt;fileDscr ID="CARD-IMAGE" URI="www.icpsr.umich.edu/cgi-bin/archive.prl?path=ICPSR&amp;num=7728"/&gt; 
+
+&lt;fileDscr ID="LRECL" URI="www.icpsr.umich.edu/cgi-bin/archive.prl?path=ICPSR&amp;num=7728"/&gt; 
+                    </pre></div></body></html>

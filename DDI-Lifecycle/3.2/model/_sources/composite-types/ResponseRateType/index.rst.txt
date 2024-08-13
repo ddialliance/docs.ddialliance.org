@@ -1,0 +1,30 @@
+ResponseRateType
+----------------
+
+A specific rate of response and/or a description of the rate of response for a specific processing event that includes data appraisal.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SampleSize","int","0..1","The size of the sample from whom data was requested."
+   "NumberOfResponses","int","0..1","The number of responses within the specified sample."
+   "SpecificResponseRate","decimal","0..1","The specific rate of response expressed as a percent."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the rate of response including any information pertinent to understanding the specified rate of response."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/DataAppraisalInformationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ResponseRateType.svg
+

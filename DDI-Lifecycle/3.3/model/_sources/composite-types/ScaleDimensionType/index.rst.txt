@@ -1,0 +1,35 @@
+ScaleDimensionType
+------------------
+
+Defines a dimension of a scale providing it with a label, a numeric or character based range, the attachment of a category label at one or more of the scale values, the frequency of increment markers, and the frequency of value labels on marked or unmarked increments.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the scale. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "NumberRange",":doc:`/composite-types/NumberRangeType/index`","0..1","Indicates the high and low values (endpoints) of a numeric scale."
+   "Range",":doc:`/composite-types/RangeType/index`","0..1","Indicates the high and low values (endpoints) of a non-numeric scale."
+   "Anchor",":doc:`/composite-types/AnchorType/index`","0..n","Allows for the attachment of a category label at any anchor point."
+   "MarkedIncrement",":doc:`/composite-types/BasicIncrementType/index`","0..1","Identifies the frequency for increment markers (with or without value attachments)."
+   "ValueIncrement",":doc:`/composite-types/BasicIncrementType/index`","0..1","Identifies the frequency for value labels on marked or unmarked increments."
+   "DimensionNumber","nonNegativeInteger","0..1","A number used to identify this dimension when describing its intersect point with one or more dimensions in the same scale representation. The dimension is denoted with a 1-based indexing. Dimension in the scale are numbered (1,2,n)."
+   "DegreeSlopeFromHorizontal","int","0..1","A horizontal line is described as a 0 (zero) slope. Expressed as the number of degrees positive (right end angle above the horizontal line) or degrees positive (right end descending below the horizontal line). "
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ManagedScaleRepresentation/index`
+* :doc:`/composite-types/ScaleRepresentationBaseType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ScaleDimensionType.svg
+

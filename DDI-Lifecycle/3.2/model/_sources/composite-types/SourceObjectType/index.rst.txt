@@ -1,0 +1,29 @@
+SourceObjectType
+----------------
+
+Identifies the Source organization or individual in the relationship. References either an Organization or an Individual and specifies their relationship in terms of parent, child, or sibling.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OrganizationReference",":doc:`/item-types/Organization/index`","0..1","A reference to an Organization described in DDI."
+   "IndividualReference",":doc:`/item-types/Individual/index`","0..1","A reference to an Individual described in DDI."
+   "RelationshipCode","string","0..1","A specification of the relationship of the Source to the Target in terms of Parent (superior), Child (subordinate), or Sibling (on par)."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Relation/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SourceObjectType.svg
+

@@ -1,0 +1,53 @@
+LifecycleEventType
+------------------
+
+Documents an event in the life cycle of a study or group of studies. A life cycle event can be any event which is judged to be significant enough to document by the agency maintaining the documentation for a particular set of data. The element EventType indicates the type of event, using a typology meaningful to the documenter.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A label for the LifecycleEvent. May be repeated to provide different labels needed due to system or application constraints."
+   "EventType",":doc:`/composite-types/CodeValueType/index`","0..1","Indicates the type of LifecycleEvent, using a typology meaningful to the documenter. Supports the use of a controlled vocabulary. The DDI Alliance has provided a controlled vocabulary (LifecycleEventType) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "Date",":doc:`/composite-types/DateType/index`","0..1","The date or date range of the LifecycleEvent."
+   "AgencyOrganizationReference",":doc:`/item-types/Agent/index`","0..n","Reference to an organization or individual, defined in the organization scheme, responsible for the life cycle event."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the event such as what the event included, its importance, or other significant information. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "Relationship",":doc:`/composite-types/RelationshipType/index`","0..n","Allows linking a lifecycle event to one or more sections of metadata. If no relationship is noted the lifecycle event relates to its full parent StudyUnit, Group, or Resource Package."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **LifecycleEventType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LifecycleInformationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LifecycleEventType.svg
+

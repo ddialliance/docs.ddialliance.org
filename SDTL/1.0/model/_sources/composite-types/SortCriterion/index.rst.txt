@@ -1,0 +1,29 @@
+SortCriterion
+-------------
+
+Describes a criterion by which cases are sorted, including the variable name and whether to sort ascending or descending.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Variable",":doc:`/composite-types/VariableReferenceBase/index`","1..1","The variable used to sort."
+   "SortDirection","string","1..1","The direction in which to sort. Valid values include: Ascending, Descending"
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/SortCases/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SortCriterion.svg
+

@@ -1,0 +1,68 @@
+ContentDateOffsetType
+---------------------
+
+Identifies the difference between the date applied to the data as a whole and this specific item such as previous year's income or residence 5 years ago. A value of true for the attribute isNegativeOffset indicates that the offset is the specified number of declared units prior to the date of the data as a whole and false indicates information regarding a future state.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "NumberOfUnits","nonNegativeInteger","0..1","The number of units to off-set the date for this item expressed as a decimal."
+   "IsNegativeOffset","boolean","0..1","If set to ""true"" the date is offset the number of units specified PRIOR to the default date of the data. A setting of ""false"" indicates a date the specified number of units in the FUTURE from the default date of the data."
+
+Properties Inherited from CodeValueType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ControlledVocabularyID","string","0..1","The ID of the controlled vocabulary that the content was taken from."
+   "ControlledVocabularyName","string","0..1","The name of the controlled vocabulary."
+   "ControlledVocabularyAgencyName","string","0..1","The name of the agency maintaining the controlled vocabulary."
+   "ControlledVocabularyVersionID","string","0..1","The version number of the controlled vocabulary."
+   "OtherValue","string","0..1","If the value of the string is ""Other"" or the equivalent from the controlled vocabulary, this attribute can provide a more specific value not found in the controlled vocabulary."
+   "ControlledVocabularyURN","string","0..1","The URN of the controlled vocabulary."
+   "ControlledVocabularySchemeURN","string","0..1","If maintained within a scheme, the URN of the scheme containing the controlled vocabulary."
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * :doc:`/composite-types/CodeValueType/index`
+        * **ContentDateOffsetType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CategoryDomainType/index`
+* :doc:`/composite-types/CodeDomainType/index`
+* :doc:`/composite-types/DateTimeDomainType/index`
+* :doc:`/composite-types/DistributionDomainType/index`
+* :doc:`/composite-types/GeographicLocationCodeDomainType/index`
+* :doc:`/composite-types/GeographicStructureCodeDomainType/index`
+* :doc:`/composite-types/LocationDomainType/index`
+* :doc:`/composite-types/NominalDomainType/index`
+* :doc:`/composite-types/NumericDomainType/index`
+* :doc:`/composite-types/RankingDomainType/index`
+* :doc:`/composite-types/ScaleDomainType/index`
+* :doc:`/composite-types/TextDomainType/index`
+* :doc:`/composite-types/VariableRepresentationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ContentDateOffsetType.svg
+

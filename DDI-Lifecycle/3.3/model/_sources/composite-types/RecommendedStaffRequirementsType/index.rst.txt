@@ -1,0 +1,29 @@
+RecommendedStaffRequirementsType
+--------------------------------
+
+Specify requirements for type of staffing needed to complete activity including the class of staff participating in the activity, requirements for those participants, and the recruitment process.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "StaffClass",":doc:`/composite-types/CodeValueType/index`","0..1","Specify the class of the staff participating in the activity. Supports the use of a controlled vocabulary."
+   "ParticipantRequirements",":doc:`/composite-types/StructuredStringType/index`","0..1","Describe any special or specific requirements for participating staff."
+   "RecruitmentProcess",":doc:`/composite-types/StructuredStringType/index`","0..1","Describe the process to be used for staff recruitment in this class."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DevelopmentActivity/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RecommendedStaffRequirementsType.svg
+

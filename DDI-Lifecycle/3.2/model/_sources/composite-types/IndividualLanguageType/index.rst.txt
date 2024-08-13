@@ -1,0 +1,31 @@
+IndividualLanguageType
+----------------------
+
+Use to specify the languages known by the individual in terms of their ability to  speak, read, and write the language. May be repeated to cover multiple languages. This information is useful for foreign contacts in determining the language of communication to use with this individual.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Language",":doc:`/composite-types/CodeValueType/index`","0..1","Specifies the language (and optionally the locale) of the individual. The language identifier is defined by IETF RFC 4646 or its successor. The base sub-tag is the ISO 639 2 or 3 digit language code."
+   "Read",":doc:`/composite-types/CodeValueType/index`","0..1","Indicates reading knowledge of the language specified. Supports an optional controlled vocabulary."
+   "Write",":doc:`/composite-types/CodeValueType/index`","0..1","Indicates writing knowledge of the language specified. Supports an optional controlled vocabulary."
+   "Speak",":doc:`/composite-types/CodeValueType/index`","0..1","Indicates speaking knowledge of the language specified. Supports an optional controlled vocabulary."
+   "EffectivePeriod",":doc:`/composite-types/DateType/index`","0..1","Clarifies when the identification information is accurate."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Individual/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IndividualLanguageType.svg
+

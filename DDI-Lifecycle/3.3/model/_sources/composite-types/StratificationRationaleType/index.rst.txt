@@ -1,0 +1,29 @@
+StratificationRationaleType
+---------------------------
+
+Describe the purpose for stratifying your sample frame prior to sampling.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A full description of the purpose for stratifying your sample frame prior to sampling"
+   "UniverseReference",":doc:`/item-types/Universe/index`","0..n","Reference each sub universe which defines a strata of the population. For example if you are stratifying on gender there would be 2 Universe references, one to Males and one to Females."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/SamplingPlan/index`
+* :doc:`/composite-types/StratificationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/StratificationRationaleType.svg
+

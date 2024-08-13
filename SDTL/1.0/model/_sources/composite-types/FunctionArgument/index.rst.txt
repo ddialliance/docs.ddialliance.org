@@ -1,0 +1,31 @@
+FunctionArgument
+----------------
+
+Describes the arguments in a function as specified in the SDTL Function Library.   
+Notes:
+1. The argumentName property must always be present.   
+2. The argumentValue property is required, and it must be a single object.  When the argumentValue is a list of items in the source language, the ValueListExpression or VariableListExpression should be used. 
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ArgumentName","string","1..1","The name of the parameter."
+   "ArgumentValue",":doc:`/composite-types/ExpressionBase/index`","1..1","The value of the parameter."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/FunctionCallExpression/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/FunctionArgument.svg
+

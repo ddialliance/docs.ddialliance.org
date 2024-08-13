@@ -1,0 +1,30 @@
+LimitedCodeSegmentCapturedType
+------------------------------
+
+When the code is a concatenation this structure allows you to limit the portion of the concatenated code that this object captures. Provides an description of the segment, declares the array base used, the start position of the segment and its length.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the segment used. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "ArrayBase","int","0..1","The array base is the value of the designation for the first item in an array and is generally set to either 0 or 1. Unix based systems and most current programming systems use an array base of 0. Traditional codebooks normally set the array base at 1, for example the first data item in a fixed format ASCII file record begins at character 1."
+   "StartPosition","nonNegativeInteger","0..1","The start position of the first character expressed as an integer."
+   "Length","nonNegativeInteger","0..1","The length of the segment expressed as an integer."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/GeographicLocationCodeRepresentationBaseType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LimitedCodeSegmentCapturedType.svg
+

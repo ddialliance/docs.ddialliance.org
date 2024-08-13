@@ -1,0 +1,48 @@
+Recode
+------
+
+Describes recoding values in one or more variables according to a specified mapping.
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/TransformBase/index`
+    * **Recode**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Recode.svg
+
+Properties
+~~~~~~~~~~
+
+RecodedVariables
+****************
+
+Type
+    :doc:`/reusable-types/RecodeVariable/index`
+Cardinality
+    0..n
+
+The variables that will have their values recoded
+
+Rules
+*****
+
+Type
+    :doc:`/reusable-types/RecodeRule/index`
+Cardinality
+    0..n
+
+A mapping describing which values will be recoded to which new values
+
+
+

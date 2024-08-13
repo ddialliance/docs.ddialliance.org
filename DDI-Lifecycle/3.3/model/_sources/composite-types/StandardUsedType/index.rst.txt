@@ -1,0 +1,27 @@
+StandardUsedType
+----------------
+
+Provide the citation and location of the published standard using the OtherMaterialType.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..1","Description and link to the StandardUsed using the DDI Other Material structure."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/QualityStandard/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/StandardUsedType.svg
+

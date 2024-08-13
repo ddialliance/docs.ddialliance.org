@@ -1,0 +1,30 @@
+MetadataQualityType
+-------------------
+
+An assessment of the quality of the metadata within the Maintainable object, e.g. the quality of the transcription, completeness, editing status, etc. It indicates the type of metadata quality being assesed, the purpose of providing the measure, and either a value for the quality from a controlled vocabulary and/or a description of the value.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfMetadataQuality",":doc:`/composite-types/CodeValueType/index`","0..1","A brief statement of the metadata quality being measured. Supports the use of an external controlled vocabulary. Use of a controlled vocabulary is strongly recommended."
+   "MeasurePurpose",":doc:`/composite-types/StructuredStringType/index`","0..1","The purpose of the type of metadata quality measure and its value. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "MeasureValue",":doc:`/composite-types/CodeValueType/index`","0..1","A value representing the measurement of this set of metadata within the context of the TypeOfMetadataQuality indicated. Supports the use of an external controlled vocabulary."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A textual description of the quality of this set of metadata which expands on or is provided in lieu of other objects within MetadataQuality. Supports multiple language versions of the same content as well as optional formatting of the content."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Maintainable/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/MetadataQualityType.svg
+

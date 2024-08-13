@@ -1,0 +1,28 @@
+IncludedCodeType
+----------------
+
+Specifies the codes to include in the representation by providing the references to the included Codes or a range of Values from the Code.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "CodeReference",":doc:`/composite-types/CodeType/index`","0..n","Reference to the Code within the CodeList used by the representation. Repeat for including multiple values."
+   "Range",":doc:`/composite-types/RangeType/index`","0..n","Use when multiple values are included. This uses the unique Value provided for the Code as a means of identification. Provides the range of Values used by the representation. Repeat for non-contiguous values."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CodeSubsetInformationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IncludedCodeType.svg
+

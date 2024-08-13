@@ -1,0 +1,535 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PhysicalInstance &mdash; DDI Data Documentation 3.3 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="DataRelationship" href="../DataRelationship/" />
+    <link rel="prev" title="Variable" href="../Variable/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> DDI Data Documentation 3.3
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Topics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Study/">Study</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Classification/">Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Data Capture/">Data Capture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Data Description/">Data Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Foundational/">Foundational</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Agent/">Agent</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../topics/Non-Packaging Items/">Non-Packaging Items</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../topics/Non-Packaging Items/#item-types">Item Types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Category/">Category</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../CodeList/">CodeList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ComputationItem/">ComputationItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Concept/">Concept</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ConceptualVariable/">ConceptualVariable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DataCollection/">DataCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DataRelationship/">DataRelationship</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GeneralInstruction/">GeneralInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GenerationInstruction/">GenerationInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Group/">Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IfThenElse/">IfThenElse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Individual/">Individual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Instruction/">Instruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Instrument/">Instrument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Loop/">Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedDateTimeRepresentation/">ManagedDateTimeRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedMissingValuesRepresentation/">ManagedMissingValuesRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedNumericRepresentation/">ManagedNumericRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedScaleRepresentation/">ManagedScaleRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ManagedTextRepresentation/">ManagedTextRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../MeasurementItem/">MeasurementItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Methodology/">Methodology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../NCube/">NCube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Organization/">Organization</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">PhysicalInstance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties-inherited-from-maintainable">Properties Inherited from Maintainable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties-inherited-from-versionable">Properties Inherited from Versionable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#item-type-hierarchy">Item Type Hierarchy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#relationships">Relationships</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ProcessingEvent/">ProcessingEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QualityStatement/">QualityStatement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QuestionBlock/">QuestionBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QuestionConstruct/">QuestionConstruct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QuestionGrid/">QuestionGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QuestionItem/">QuestionItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Relation/">Relation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RepeatUntil/">RepeatUntil</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RepeatWhile/">RepeatWhile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RepresentedVariable/">RepresentedVariable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Sequence/">Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../StatementItem/">StatementItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../StudyUnit/">StudyUnit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Universe/">Universe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Variable/">Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../VariableStatistics/">VariableStatistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Weighting/">Weighting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/All Content Items/">All Content Items</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../">All Item Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite-types/">All Composite Types</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">DDI Data Documentation 3.3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../">Docs</a> &raquo;</li>
+        
+          <li><a href="../../topics/Data Description/">Data Description</a> &raquo;</li>
+        
+      <li>PhysicalInstance</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/item-types/PhysicalInstance/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="physicalinstance">
+<h1>PhysicalInstance<a class="headerlink" href="#physicalinstance" title="Permalink to this headline">¶</a></h1>
+<p>Includes information about the physical instance of a data product (an actual data file). It completes the documentation contained in the Physical Data Product module that is specific to the individual file and serves as a descriptive record of the external data file. Physical Instance provides a citation for the data file, a link to the RecordLayout(s) used by the files records, a description of it coverage (as a constraint if different from the study), check figures for quality control (e.g. digital fingerprint, record count, etc.), and a statistical summary of the data in the file at both the variable and category level.</p>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 4%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Citation</p></td>
+<td><p><a class="reference internal" href="../../composite-types/CitationType/"><span class="doc">CitationType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>A citation for the physical instance of a data set. Note that a DOI or similar unique identifier for the data file should be placed in InternationalIdentifier. It is strongly recommended that use of a Citation in this location includes the use of the optional sub-element Title.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DataFingerprint</p></td>
+<td><p><a class="reference internal" href="../../composite-types/DataFingerprintType/"><span class="doc">DataFingerprintType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Allows for assigning a hash value (digital fingerprint) to the data or data file. Set the attribute flag to “data” when the hash value provides a digital fingerprint to the data contained in the file regardless of the storage format (ASCII, SAS, binary, etc.). One approach to compute a data fingerprint is the Universal Numerical Fingerprint (UNF). Set the attribute flag to “dataFile” if the digital fingerprint is only for the data file in its current storage format.</p></td>
+</tr>
+<tr class="row-even"><td><p>Coverage</p></td>
+<td><p><a class="reference internal" href="../../composite-types/CoverageType/"><span class="doc">CoverageType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Includes information about the topical, spatial, and temporal coverage of the physical instance. May be expressed as a restriction of the parent study coverage.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DataRelationshipReference</p></td>
+<td><p><a class="reference internal" href="../DataRelationship/"><span class="doc">DataRelationship</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Reference to the DataRelationship containing the LogicalRecord to which the RecordLayout refers. Repeat for cases where LogicalRecords are described in multiple DataRelationship structures. Note that this does not imply that all of the LogicalRecords described in the DataRelationship are contained, wholly or in part in the PhysicalInstance. This reference allows for a direct path between the PhysicalInstance and the related content found in a LogicalProduct.</p></td>
+</tr>
+<tr class="row-even"><td><p>VariableGroupReference</p></td>
+<td><p><a class="reference internal" href="../VariableGroup/"><span class="doc">VariableGroup</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Reference to a grouping of variables that are included in the PhysicalInstance. Variable Groups may represent hierarchical relationships of variables, topical groupings, or administrative groupings.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RecordLayoutReference</p></td>
+<td><p><a class="reference internal" href="../RecordLayout/"><span class="doc">RecordLayout</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>References the record layout of the data documented in the physical instance.</p></td>
+</tr>
+<tr class="row-even"><td><p>DefaultMissingValuesReference</p></td>
+<td><p><a class="reference internal" href="../ManagedMissingValuesRepresentation/"><span class="doc">ManagedMissingValuesRepresentation</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>References the content of the default missing values used in the file. The content of this file overrides default missing value information provided in the LogicalRecord. Allows for the specification that is a Systems Missing Value.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DataFileIdentification</p></td>
+<td><p><a class="reference internal" href="../../composite-types/DataFileIdentificationType/"><span class="doc">DataFileIdentificationType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Identifies the data file documented in the physical instance and provides information about its location.</p></td>
+</tr>
+<tr class="row-even"><td><p>DataFileVersion</p></td>
+<td><p><a class="reference internal" href="../../composite-types/DataFileVersionType/"><span class="doc">DataFileVersionType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Provides the version information for the data file related to this physical instance. Note that while Physical Instance allows for multiple copies of the same data file (such as backup copies) the assumption is that they are identical in terms of content, layout, format and version.</p></td>
+</tr>
+<tr class="row-odd"><td><p>InformationClassificationReference</p></td>
+<td><p><a class="reference internal" href="../InformationClassification/"><span class="doc">InformationClassification</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Used to describe the rules and guidelines on how the data is allowed to be handled, transferred, stored and disposed. These confidentiality policies are often dictated by national laws and/or data owners on handling of personal, proprietary, and other sensitive information.</p></td>
+</tr>
+<tr class="row-even"><td><p>QualityStatementReference</p></td>
+<td><p><a class="reference internal" href="../QualityStatement/"><span class="doc">QualityStatement</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>A reference to a Quality Statement pertaining to the quality of the study methodology, metadata, or data to which it is associated. Quality statements may be related to external quality standards.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GrossFileStructure</p></td>
+<td><p><a class="reference internal" href="../../composite-types/GrossFileStructureType/"><span class="doc">GrossFileStructureType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Includes information about the file structure, as well as other characteristics that are specific to the physical instance.</p></td>
+</tr>
+<tr class="row-even"><td><p>ProprietaryInfo</p></td>
+<td><p><a class="reference internal" href="../../composite-types/ProprietaryInfoType/"><span class="doc">ProprietaryInfoType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Contains information proprietary to the software package which produced the data file. This is expressed as a set of name-value pairs. The value may be taken from a controlled vocabulary.</p></td>
+</tr>
+<tr class="row-odd"><td><p>StatisticalSummary</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StatisticalSummaryType/"><span class="doc">StatisticalSummaryType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Includes variable and category statistics data documented in the physical instance, or a reference to a physical instance where the statistics are described or located in line.</p></td>
+</tr>
+<tr class="row-even"><td><p>ByteOrder</p></td>
+<td><p><a class="reference internal" href="../../composite-types/CodeValueType/"><span class="doc">CodeValueType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Contains a term from a controlled vocabulary indicating the byte ordering.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties-inherited-from-maintainable">
+<h2>Properties Inherited from Maintainable<a class="headerlink" href="#properties-inherited-from-maintainable" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 4%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Note</p></td>
+<td><p><a class="reference internal" href="../../composite-types/NoteType/"><span class="doc">NoteType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Note allows for the attachment of a piece of additional information to any object with an ID. Note facilitates capturing temporary processing notes such as “Review and approval required”. A single note can be attached to multiple objects by reference to the objects. Note may also contain content for a needed object that has been reported for addition in a later version of the schema. Ideally this should be handled by a local extension, but Note can accommodate run-time extensions when required. The Note should be housed within the Maintainable object that contains the referenced objects. In this way the user is ensured of receiving all known Note attachments when the maintainable content is delivered. This means that if a Note references objects within multiple Maintainable objects, the Note should be repeated in each Maintainable and reference only those objects with that Maintainable.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Software</p></td>
+<td><p><a class="reference internal" href="../../composite-types/SoftwareType/"><span class="doc">SoftwareType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Indicate the software used to create and/or manage the metadata. This is repeatable to allow for multiple softwares or multiple functions. If this information is important it is advisable to provide it in each maintainable so that it does not become separated from the internal content if the metadata is re-factored.</p></td>
+</tr>
+<tr class="row-even"><td><p>MetadataQuality</p></td>
+<td><p><a class="reference internal" href="../../composite-types/MetadataQualityType/"><span class="doc">MetadataQualityType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>An assessment of the quality of the metadata within the Maintainable object, e.g. the quality of the transcription, completeness, editing status, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ExternalReferenceDefaultURI</p></td>
+<td><p>anyURI</p></td>
+<td><p>0..1</p></td>
+<td><p>Use to provide a default value for the URI of external references. Use of a URI in a reference within this maintainable overrides the value entered here. Nested maintainables should redeclare the contents of this attribute for clarity.</p></td>
+</tr>
+<tr class="row-even"><td><p>Lang</p></td>
+<td><p>language</p></td>
+<td><p>0..1</p></td>
+<td><p>This is used to designate the language of the metadata content of the maintainable. If a lower level xml:lang attribute conflicts with the content at the maintainable level, the object level value takes precedence.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties-inherited-from-versionable">
+<h2>Properties Inherited from Versionable<a class="headerlink" href="#properties-inherited-from-versionable" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 4%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>URN</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Agency</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Version</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>UserID</p></td>
+<td><p><a class="reference internal" href="../../composite-types/UserIDType/"><span class="doc">UserIDType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure.</p></td>
+</tr>
+<tr class="row-odd"><td><p>UserAttributePair</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StandardKeyValuePairType/"><span class="doc">StandardKeyValuePairType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended.</p></td>
+</tr>
+<tr class="row-even"><td><p>VersionResponsibility</p></td>
+<td><p>string</p></td>
+<td><p>0..1</p></td>
+<td><p>Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use.</p></td>
+</tr>
+<tr class="row-odd"><td><p>VersionResponsibilityReference</p></td>
+<td><p><a class="reference internal" href="../Agent/"><span class="doc">Agent</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use.</p></td>
+</tr>
+<tr class="row-even"><td><p>VersionRationale</p></td>
+<td><p><a class="reference internal" href="../../composite-types/VersionRationaleType/"><span class="doc">VersionRationaleType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object.</p></td>
+</tr>
+<tr class="row-odd"><td><p>BasedOnObject</p></td>
+<td><p><a class="reference internal" href="../../composite-types/BasedOnObjectType/"><span class="doc">BasedOnObjectType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary.</p></td>
+</tr>
+<tr class="row-even"><td><p>RelatedOtherMaterialReference</p></td>
+<td><p><a class="reference internal" href="../OtherMaterial/"><span class="doc">OtherMaterial</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem.</p></td>
+</tr>
+<tr class="row-odd"><td><p>VersionDate</p></td>
+<td><p>cogsDate</p></td>
+<td><p>0..1</p></td>
+<td><p>Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser.</p></td>
+</tr>
+<tr class="row-even"><td><p>IsPublished</p></td>
+<td><p>boolean</p></td>
+<td><p>0..1</p></td>
+<td><p>Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="item-type-hierarchy">
+<h2>Item Type Hierarchy<a class="headerlink" href="#item-type-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="../Versionable/"><span class="doc">Versionable</span></a></dt><dd><ul>
+<li><dl class="simple">
+<dt><a class="reference internal" href="../Maintainable/"><span class="doc">Maintainable</span></a></dt><dd><ul>
+<li><p><strong>PhysicalInstance</strong></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="relationships">
+<h2>Relationships<a class="headerlink" href="#relationships" title="Permalink to this headline">¶</a></h2>
+<p>The following types reference this type.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../Group/"><span class="doc">Group</span></a></p></li>
+<li><p><a class="reference internal" href="../PhysicalInstanceGroup/"><span class="doc">PhysicalInstanceGroup</span></a></p></li>
+<li><p><a class="reference internal" href="../ResourcePackage/"><span class="doc">ResourcePackage</span></a></p></li>
+<li><p><a class="reference internal" href="../StudyUnit/"><span class="doc">StudyUnit</span></a></p></li>
+<li><p><a class="reference internal" href="../../composite-types/StatisticalDataLocationType/"><span class="doc">StatisticalDataLocationType</span></a></p></li>
+</ul>
+<div class="image docutils container">
+<p><img alt="stub" src="../../_images/PhysicalInstance.svg" /></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../DataRelationship/" class="btn btn-neutral float-right" title="DataRelationship" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Variable/" class="btn btn-neutral float-left" title="Variable" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright TODO
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

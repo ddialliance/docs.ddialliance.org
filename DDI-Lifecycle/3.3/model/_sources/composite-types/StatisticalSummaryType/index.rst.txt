@@ -1,0 +1,28 @@
+StatisticalSummaryType
+----------------------
+
+Provides a statistical summary of the data in the related file as a set of variable level and category level statistics. May refer to a set of statistics provided in another physical instance (for example if the same data is held in multiple storage formats) or if the summary statistics are held as a separate data set.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "StatisticalDataLocation",":doc:`/composite-types/StatisticalDataLocationType/index`","0..n","Reference to a PhysicalInstance that describes a data file containing the summary and/or category statistics OR contains the statistics in-line as in the case of the same data stored as an ASCII file and as an ORACLE file where the summary and category statistics are listed only in one of the physical instance files."
+   "VariableStatisticsReference",":doc:`/item-types/VariableStatistics/index`","0..n","One or more statistical measures that describe the responses to a particular variable. Include both variable and category level statistics."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/PhysicalInstance/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/StatisticalSummaryType.svg
+

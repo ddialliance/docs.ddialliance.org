@@ -1,0 +1,31 @@
+LevelType
+---------
+
+Used to describe the levels of the code list hierarchy. The level describes the nesting structure of a hierarchical coding structure. A level could have data attached to it (summary of its children) or no data attached to it (the equivalent of creating a category group in 2.0 and earlier versions Note that the attribute levelNumber is used for referencing specific codes to their level identifier. Although Code Lists can be physically nested, the use of a Level description and the level number on a specific code is needed to specify subsets of the CodeList for use in CodeRepresentations by level specification. Provides a name, description and level number. Specifies the relationship between the categories at that level and interval value if the relationship has the value of Interval.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "LevelName",":doc:`/composite-types/NameType/index`","0..n","Name of a level in a code scheme. This should be short and explicit, such as Major Industrial Groups (2 digit SIC Codes) or NUTS 1. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the code Level. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "CategoryRelationship","string","0..1","Describes the relationships among categories at that respective level. Possible values are either Nominal, Ordinal, or Interval. Note that different levels may have different types of relationships within the same hierarchy. For example, Level 1 items may be ordinal and Level 2 (the children of Level 1 items) may be nominal."
+   "IntervalIncrement",":doc:`/composite-types/BasicIncrementType/index`","0..1","Identifies the interval between each value of the codes at this level. Used only for codes with interval relationship."
+   "LevelNumber","nonNegativeInteger","1..1","Designated identifier for the level; generally increases as the level of indention for nesting increases."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/CodeList/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LevelType.svg
+

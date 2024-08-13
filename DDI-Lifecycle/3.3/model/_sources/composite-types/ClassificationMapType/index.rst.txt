@@ -1,0 +1,31 @@
+ClassificationMapType
+---------------------
+
+A Map is an expression of the relation between a Classification Item in a source Statistical Classification and a corresponding Classification Item in the target Statistical Classification. The Map should specify whether the relationship between the two Classification Items is partial or complete. Depending on the relationship type of the Correspondence Table, there may be several Maps for a single source or target Classification Item. 
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SourceClassificationItemReference",":doc:`/item-types/ClassificationItem/index`","0..1","The source item refers to the Classification Item in the source Statistical Classification. TypeOfObject should be set to ClassificationItem."
+   "TargetClassificationItemReference",":doc:`/item-types/ClassificationItem/index`","0..1","The target item refers to the Classification Item in the target Statistical Classification. TypeOfObject should be set to ClassificationItem."
+   "IsComplete","boolean","0..1","Specifies whether the relationship between the two Classification Items is partial or complete."
+   "ValidFrom","cogsDate","0..1","Date from which the Map became valid. The date must be defined if the Map belongs to a floating Correspondence Table."
+   "ValidTo","cogsDate","0..1","Date at which the Map became invalid. The date must be defined if the Map belongs to a floating Correspondence Table and is no longer valid."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ClassificationCorrespondenceTable/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ClassificationMapType.svg
+

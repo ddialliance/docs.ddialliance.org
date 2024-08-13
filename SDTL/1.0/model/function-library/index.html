@@ -1,0 +1,757 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>SDTL Function Library &mdash; Structured Data Transform Language 0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="SDTL Pseudocode Library Schema" href="../pseudocode-library/" />
+    <link rel="prev" title="SDTL Command Language" href="../command-language/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> Structured Data Transform Language
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components/">Components of SDTL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../use-cases/">SDTL Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command-language/">SDTL Command Language </a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SDTL Function Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example-random-number-functions-in-sdtl-spss-and-python">Example: Random Number Functions in SDTL, SPSS, and Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#links-to-related-documents">Links to related documents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pseudocode-library/">SDTL Pseudocode Library Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../best-practices/">SDTL Best Practices and Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits/#copyright-and-license">Copyright and License</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../topics/All/">All</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../item-types/">All Item Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../composite-types/">All Composite Types</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Structured Data Transform Language</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>SDTL Function Library</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/function-library/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sdtl-function-library">
+<h1>SDTL Function Library<a class="headerlink" href="#sdtl-function-library" title="Permalink to this headline">¶</a></h1>
+<p><strong>SDTL version 0.4;
+Revised Nov. 4, 2020</strong></p>
+<p>The function library is stored in a JSON file that describes how to
+translate functions in various source languages into their SDTL
+equivalents.</p>
+<p>Functions are frequently used in statistical languages to perform common
+calculations. Most functions require at least one parameter or argument
+used in the calculation, which may be specified as a variable name or a
+constant. Functions are usually specified as a function name followed by
+a list of parameters surrounded by parentheses, like “log(x)”.
+Parameters may be identified by the order in which they appear, by
+preceding the value with a name (e.g. “cut(groups=4)”), or a combination
+of position and names.</p>
+<p>SDTL uses functions to describe arithmetic operations (addition,
+subtraction, etc.) and logical comparisons (“x&gt;y”).</p>
+<p>SDTL functions are grouped into four types shown in Table 1.
+“Horizontal” functions return a value for each row in a dataframe by
+using constants or variables found on the same row. “Vertical” functions
+are used in the SDTL Aggregate command, which adds new variables to
+every row in a group without changing the number of rows in the
+dataframe. The SDTL Collapse command also aggregates across rows, but it
+returns only one row per group. Although every function in SDTL has a
+unique name, source languages sometimes use the same function name in
+more than one way. For example, “mean()” may be used to compute the
+average of several variables on each row (horizontal) or to compute the
+mean of a single variable across groups of rows (vertical or collapse).</p>
+<p>Table 1. SDTL function types</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>horizontal</td>
+<td>Horizontal functions perform
+actions on one or more variables on
+each row.</td>
+</tr>
+<tr class="row-even"><td>vertical</td>
+<td>Vertical functions create a new
+variable by acting upon multiple
+rows in an SDTL <strong>Aggregate</strong>
+command. A new variable is added to
+every row in the dataframe within
+groups specified by a
+<strong>groupByVariables</strong> property.</td>
+</tr>
+<tr class="row-odd"><td>collapse</td>
+<td>Collapse functions create a new
+variable by acting upon multiple
+rows in an SDTL <strong>Collapse</strong>
+command. A new dataframe is created
+with one row per group as defined
+by a <strong>groupByVariables</strong> property.</td>
+</tr>
+<tr class="row-even"><td>logical</td>
+<td>Logical functions are used in
+conditions.</td>
+</tr>
+</tbody>
+</table>
+<p>The Function Library maps the SDTL version of a function to the same
+function in various source languages. Table 2 shows the JSON properties
+used to describe the SDTL version of a function. The “pseudocode”
+property is used to translate an SDTL function into natural language.
+For example, the SDTL modulo function is described as “Remainder of EXP1
+divided by EXP2”. “EXP1” and “EXP2” are names of parameters that will be
+replaced by variable names or values. For example, if “mod(varX,3)” is
+found in a source script, the natural language translation will be:
+“Remainder of varX divided by 3.” “ReturnType” is the data type of the
+result of the function.</p>
+<p>Each parameter in the SDTL version of a command is described by three
+properties. “Param” is the name of the property in SDTL. For
+convenience, we use EXP1, EXP2, etc. for parameter names. The “type” of
+an SDTL parameter may be a data type, like numeric or string, or it may
+be the type of an element in SDTL. SDTL types VariableListExpression and
+ValueListExpression play an important role in the Function Library,
+which is discussed below.</p>
+<p>Table 2. SDTL properties in the Function Library</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>SDTLname</td>
+<td>Name of the function
+in SDTL</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>Pseudocode</td>
+<td>A template for
+representing this
+function in natural
+language</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>definition</td>
+<td>A description of the
+computation
+performed by the
+function</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>notes</td>
+<td>Notes about using
+the function</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>n_arguments</td>
+<td>Number of parameters</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>returnType</td>
+<td>Data type returned
+by this function:
+numeric, string,
+boolean</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>parameters</td>
+<td>Parameters used in
+the function. Each
+parameter is
+described by these
+properties:</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>param</td>
+<td>parameter name:
+EXP1, EXP2, …</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>isRequired</td>
+<td>Whether this
+parameter must be
+present (true) or
+is optional (false).</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>defaultValue</td>
+<td>The default value
+is used when a
+value of this
+parameter is null.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>type</td>
+<td>This field is used
+when a specific
+SDTL $type must be
+used.  For example,
+if the parameter is
+a list of variable
+names, the type
+must be
+ValueListExpression.</td>
+</tr>
+</tbody>
+</table>
+<p>The SDTL properties of a function are followed by arrays of source
+language functions in each of the supported source languages: SPSS,
+Stata, SAS, R, and Python. Every SDTL function may correspond to one or
+more functions in each source language. Properties defining a source
+language function are shown in Table 3.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Table 3. Properties
+of Source Language
+function definitions
+in the Function
+Library</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>“function_name”</td>
+<td>Name of the function
+in the source
+language.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>“syntax”</td>
+<td>Syntax used in the
+source language.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>“URL”</td>
+<td>URL of a description
+of the function in a
+source language.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>“parameters”</td>
+<td>A list of parameters
+used in the
+function. Each
+parameter has the
+following
+properties:</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>isRequired</td>
+<td>This parameter is
+required in the
+source language:
+true or false.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>defaultValue</td>
+<td>Value to use when
+no value is given.
+Note that the
+default value for
+a source language
+may be different
+from the default
+in SDTL.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>param</td>
+<td>Name of the
+parameter in SDTL:
+EXP1, EXP2, … in the
+order specified in
+SDTL.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>name</td>
+<td>Name of the
+parameter in the
+source language.
+Omitted or set to
+null for parameters
+identified by
+position only.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>position</td>
+<td>Position of the
+parameter in the
+source language. May
+be omitted or set to
+null for parameters
+identified by name
+only.   When a
+parameter is given
+before the function
+name, eg.,
+“param.function()”,
+it is assigned
+position 0.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>index_offset</td>
+<td>Used with Python to
+indicate when the
+parameter must be
+converted from
+0-indexing to
+1-indexing.</td>
+</tr>
+</tbody>
+</table>
+<p>The name of the function in the source language is given in the
+“function_name” property.</p>
+<p>The “syntax” and “URL” properties are included as aids to programmers.
+We use “syntax” to provide a template for translating the source
+language function into its SDTL equivalent, such as “RND(EXP1, EXP2)”.</p>
+<p>Parameters used in the source language versions of functions are
+described with four properties: “required”, “param”, “name”, “position”.
+“Param” is the SDTL name for the parameter (EXP1, EXP2, etc.), which is
+used to match it to the SDTL version of the command. The “required”
+property describes whether the parameter is required for conversion to
+SDTL. When a parameter takes a default value if it is omitted, the
+“required” property is set to the default value. Parameters are always
+given in the order specified in SDTL (EXP1, EXP2, EXP3…), and the
+“position” property is used to show the order in the source language.</p>
+<p>Function arguments in source languages may be identified by the order in
+which they appear, by name, or both. In Python, parameters to functions
+may be identified by position or name, but references by position may
+not follow references by name. For example, we can generate a random
+number between .5 and .7 using the numpy library of Python with either
+“numpy.random.uniform(.5,.7)” or “numpy.random.uniform(low=.5,high=.7)”.</p>
+<p>Some functions operate on a list of variables or values, which are
+described in SDTL with <strong>VariableListExpression</strong> or
+<strong>ValueListExpression</strong>. For example, the Stata command</p>
+<blockquote>
+<div>egen varAvg =rowmean(varA - var99)</div></blockquote>
+<p>sets varAvg equal to the average of all variables from varA to var99.
+The number of variables included in the average depends upon the number
+and ordering of variables in the data set. It would be impossible to
+specify this function in SDTL if every variable was considered a
+parameter. In SDTL a list of variables of any length can be described by
+a <strong>VariableListExpression</strong>, which allows us to treat variable lists as
+a single parameter in the Function Library.</p>
+<p>Table 4 illustrates in tabular form the description of a complicated
+function in the R language, which corresponds to the SDTL “str_replace”
+function.</p>
+<ul class="simple">
+<li>Note that the order of the parameters in R is different from the
+order in SDTL. We can see this in the “syntax” property, which begins
+“sub(EXP2, EXP3, EXP1, …”. Parameters are given in SDTL order in the
+Function Library, but the “position” properties show that the order
+in R is different.</li>
+<li>The “required” property shows that EXP4 and EXP5 have default values
+that are used in SDTL when these parameters are omitted in the R
+script.</li>
+<li>Parameters EXP4 and EXP5 are named properties in R, “ignore.case=”
+and “fixed=” respectively.</li>
+<li>The syntax field shows that the R function has two parameters
+(“perl=” and “useBytes=”) that are not currently implemented in SDTL.</li>
+<li>Note that the value “true” for “required” in parameter EXP5 is a
+default value to be used if the “fixed=” parameter is omitted in the
+R script. We use “yes” and “no” as values for “required”, because
+“true” and “false” are used as default values for boolean variables.</li>
+</ul>
+<p>Table 4. Example Source Language function definitions</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="17%" />
+<col width="13%" />
+<col width="13%" />
+<col width="17%" />
+<col width="14%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>“function
+_name”</td>
+<td>“sub”</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>“syntax”</td>
+<td colspan="5">“sub(EXP2, EXP3, EXP1, ignore.case = EXP4,
+perl = FALSE, fixed = EXP5, useBytes = FALSE)”</td>
+</tr>
+<tr class="row-odd"><td>“URL”</td>
+<td colspan="5">“<a class="reference external" href="https://www.rdocumentation.org/packages/base/">https://www.rdocumentation.org/packages/base/</a>
+versions/3.6.2/topics/grep”</td>
+</tr>
+<tr class="row-even"><td>“parameters”</td>
+<td colspan="5">&#160;</td>
+</tr>
+<tr class="row-odd"><td>“isRequired”</td>
+<td>“true”</td>
+<td>“true”</td>
+<td>“true”</td>
+<td>“false”</td>
+<td>“false”</td>
+</tr>
+<tr class="row-even"><td>“defaultValue”</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>“false”</td>
+<td>“true”</td>
+</tr>
+<tr class="row-odd"><td>“param”</td>
+<td>“EXP1”</td>
+<td>“EXP2”</td>
+<td>“EXP3”</td>
+<td>“EXP4”</td>
+<td>“EXP5”</td>
+</tr>
+<tr class="row-even"><td>“name”</td>
+<td>null</td>
+<td>null</td>
+<td>null</td>
+<td><dl class="first last docutils">
+<dt>“ignore.</dt>
+<dd>case”</dd>
+</dl>
+</td>
+<td>“fixed”</td>
+</tr>
+<tr class="row-odd"><td>“position”</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>Python differs from the other languages in the way that it refers to
+elements in sequences. Python is “0 indexed,” which means that the index
+of the first element in a sequence is 0. The other languages use 1 for
+the first element in a sequence. In addition, ranges of elements in
+Python, such as “4:7”, are inclusive on the left and exclusive on the
+right, where other languages are inclusive on both sides. The SDTL
+function “substr_by_position” illustrates this difference. Substring is
+a common function used to extract part of a larger string. In R
+“str_sub(“ABCDEFGH”, 4,7)” will return the part of the string “ABCDEFGH”
+beginning at position 4 and ending at position 7, i.e. “DEFG”. The
+equivalent function in Python “str.slice(start=4, stop=7)” returns
+“EFG”. In Python the “A” in “ABCDEFGH” is at position 0, which puts “E”
+in position 4, and “stop=7” tells Python to exclude the letter at
+position 7. We signal this difference in Python by adding an
+<strong>index_offset</strong> property that may be used with any parameter in the
+Python section of the Function Library.</p>
+<div class="section" id="example-random-number-functions-in-sdtl-spss-and-python">
+<h2>Example: Random Number Functions in SDTL, SPSS, and Python<a class="headerlink" href="#example-random-number-functions-in-sdtl-spss-and-python" title="Permalink to this headline">¶</a></h2>
+<div class="code json highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;horizontal&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;SDTLname&quot;</span><span class="p">:</span> <span class="s2">&quot;random_variable_uniform&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Pseudocode&quot;</span><span class="p">:</span> <span class="s2">&quot;random number between EXP1 and EXP2 with a uniform distribution&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;n_arguments&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;returnType&quot;</span><span class="p">:</span> <span class="s2">&quot;numeric&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="s2">&quot;EXP1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;num&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="s2">&quot;EXP2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;num&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;SPSS&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;function_name&quot;</span><span class="p">:</span> <span class="s2">&quot;RAND_NUM&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;syntax&quot;</span><span class="p">:</span> <span class="s2">&quot;RAND_NUM(EXP1, EXP2)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;URL&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                            <span class="s2">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                            <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="s2">&quot;EXP1&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                            <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                            <span class="s2">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                            <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="s2">&quot;EXP2&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                            <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;function_name&quot;</span><span class="p">:</span> <span class="s2">&quot;RV.UNIFORM&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;syntax&quot;</span><span class="p">:</span> <span class="s2">&quot;RV.UNIFORM(EXP1, EXP2)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;URL&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                            <span class="s2">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                            <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="s2">&quot;EXP1&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                            <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                            <span class="s2">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                            <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="s2">&quot;EXP2&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                            <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;Python&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;function_name&quot;</span><span class="p">:</span> <span class="s2">&quot;numpy.random.uniform&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;syntax&quot;</span><span class="p">:</span> <span class="s2">&quot;numpy.random.uniform(low=EXP1, high=EXP2)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;URL&quot;</span><span class="p">:</span> <span class="s2">&quot;https://numpy.org/devdocs/reference/random/generated/numpy.random.uniform.html#numpy.random.uniform&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                            <span class="s2">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+                            <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="s2">&quot;EXP1&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;low&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                            <span class="s2">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+                            <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="s2">&quot;EXP2&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;vertical&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;...&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;collapse&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;...&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;logical&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;...&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="links-to-related-documents">
+<h2>Links to related documents<a class="headerlink" href="#links-to-related-documents" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="Cut_Function/"><span class="doc">Notes on the cut() function:</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../pseudocode-library/" class="btn btn-neutral float-right" title="SDTL Pseudocode Library Schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../command-language/" class="btn btn-neutral float-left" title="SDTL Command Language" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Copyright (c) 2020 C2Metadata Contributors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+OrCondition
+-----------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ConditionBase/index`
+    * **OrCondition**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/OrCondition.svg
+
+Properties
+~~~~~~~~~~
+
+Operands
+********
+
+Type
+    :doc:`/composite-types/ConditionBase/index`
+Cardinality
+    0..n
+
+TODO
+
+
+

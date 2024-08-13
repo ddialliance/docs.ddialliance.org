@@ -1,0 +1,34 @@
+AuthorizationSourceType
+-----------------------
+
+Identifies the authorizing agency for the study and allows for the full text of the authorization (law, regulation, or other form of authorization). May be used to list authorizations from oversight committees and other regulatory agencies.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "AuthorizingAgencyReference_Organization",":doc:`/item-types/Organization/index`","0..n","References the authorizing agency, organization, or individual."
+   "AuthorizingAgencyReference_Individual",":doc:`/item-types/Individual/index`","0..n","References the authorizing agency, organization, or individual."
+   "StatementOfAuthorization",":doc:`/composite-types/StructuredStringType/index`","0..n","Text of the authorization. May be repeated for multiple languages."
+   "LegalMandate","string","0..n","Provide a legal citation to a law authorizing the study/data collection. For example, a legal citation for a law authorizing a country's census."
+   "AuthorizationDate","cogsDate","0..1","Identifies the date of Authorization."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/ResourcePackage/index`
+* :doc:`/item-types/StudyUnit/index`
+* :doc:`/item-types/SubGroup/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AuthorizationSourceType.svg
+

@@ -1,0 +1,32 @@
+ExPostEvaluationType
+--------------------
+
+Evaluation for the purpose of reviewing the study, data collection, data processing, or management processes. Results may feed into a revision process for future data collection or management. Identifies the type of evaluation undertaken, who did the evaluation, the evaluation process, outcomes and completion date.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfEvaluation",":doc:`/composite-types/CodeValueType/index`","0..n","Brief identification of the type of evaluation. Supports the use of an external controlled vocabulary."
+   "Evaluator",":doc:`/composite-types/EvaluatorType/index`","0..n","Identifies the evaluator and specifies the role of the evaluator using an external controlled vocabulary."
+   "EvaluationProcess",":doc:`/composite-types/StructuredStringType/index`","0..n","Describes the evaluation process. Supports multi-lingual content. Allows the optional use of structured content."
+   "Outcomes",":doc:`/composite-types/StructuredStringType/index`","0..n","Describes the outcomes of the evaluation process. Supports multi-lingual content. Allows the optional use of structured content."
+   "CompletionDate","cogsDate","0..1","Identifies the date the evaluation was completed."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/StudyUnit/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ExPostEvaluationType.svg
+

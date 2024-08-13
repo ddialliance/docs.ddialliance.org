@@ -1,0 +1,30 @@
+DelimiterType
+-------------
+
+Defines the delimiter used to separate variables in a delimited record. Valid values include, space, tab, comma, semicolon, colon, pipe, and other. If "other" is used the characters used for separating (delimiting) objects should be entered in the attribute otherValue. Spaces and binary characters are not allowed. The attribute treatConsecutiveDelimiterAsOne indicates how consecutive delimiters should be handed by the software. The default value of "false" indicates that each delimiter should be treated as a valid delimiter.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OtherValue","string","0..1","When the value of Delimiter is ""other"" provide the character used for delimiting values here. Spaces and binary values are not allowed."
+   "TreatConsecutiveDelimiterAsOne","boolean","0..1","Defines the default value for the delimiter used to separate variables in a delimited record. The attribute treatConsecutiveDelimiterAsOne indicates how consecutive delimiters should be handed by the software."
+   "DelimiterTypeValue","string","1..1",""
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/PhysicalStructure/index`
+* :doc:`/composite-types/PhysicalLocationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DelimiterType.svg
+

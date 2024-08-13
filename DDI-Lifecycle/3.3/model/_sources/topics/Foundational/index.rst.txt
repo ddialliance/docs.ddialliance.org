@@ -1,0 +1,20 @@
+Foundational
+------------
+
+
+
+Item Types
+**********
+
+DDI has 6 item types related to Foundational.
+
+.. toctree::
+   :maxdepth: 1
+
+   ../../item-types/Category/index
+   ../../item-types/CodeList/index
+   ../../item-types/Concept/index
+   ../../item-types/Organization/index
+   ../../item-types/Universe/index
+   ../../item-types/UnitType/index
+

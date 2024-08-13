@@ -1,0 +1,493 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ClassificationItem &mdash; DDI Data Documentation 3.3 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="ClassificationCorrespondenceTable" href="../ClassificationCorrespondenceTable/" />
+    <link rel="prev" title="ClassificationLevel" href="../ClassificationLevel/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> DDI Data Documentation 3.3
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Topics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Study/">Study</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../topics/Classification/">Classification</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../topics/Classification/#item-types">Item Types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ClassificationFamily/">ClassificationFamily</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ClassificationSeries/">ClassificationSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../StatisticalClassification/">StatisticalClassification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ClassificationLevel/">ClassificationLevel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ClassificationItem</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties-inherited-from-describable">Properties Inherited from Describable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties-inherited-from-versionable">Properties Inherited from Versionable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#item-type-hierarchy">Item Type Hierarchy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#relationships">Relationships</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ClassificationCorrespondenceTable/">ClassificationCorrespondenceTable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ClassificationIndex/">ClassificationIndex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Data Capture/">Data Capture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Data Description/">Data Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Foundational/">Foundational</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Agent/">Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/Non-Packaging Items/">Non-Packaging Items</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/All Content Items/">All Content Items</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../">All Item Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite-types/">All Composite Types</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">DDI Data Documentation 3.3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../">Docs</a> &raquo;</li>
+        
+          <li><a href="../../topics/Classification/">Classification</a> &raquo;</li>
+        
+      <li>ClassificationItem</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/item-types/ClassificationItem/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="classificationitem">
+<h1>ClassificationItem<a class="headerlink" href="#classificationitem" title="Permalink to this headline">¶</a></h1>
+<p>A Classification Item represents a Category at a certain Level within a Statistical Classification. It defines the content and the borders of the category. An object/unit can be classified to one and only one Classification Item at each Level of a Statistical Classification.</p>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 4%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ItemCode</p></td>
+<td><p>string</p></td>
+<td><p>0..1</p></td>
+<td><p>A Classification Item is identified by an alphabetical, numerical or alphanumerical code, which is in line with the code structure of the Level. The code is unique within the Statistical Classification to which the Classification Item belongs.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DefiningConceptReference</p></td>
+<td><p><a class="reference internal" href="../Concept/"><span class="doc">Concept</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>A concept which describes the Classification Item. TypeOfObject should be set to Concept.</p></td>
+</tr>
+<tr class="row-even"><td><p>Includes</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StructuredStringType/"><span class="doc">StructuredStringType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Specifies the contents of the category. Supports multiple languages and use of structured content.</p></td>
+</tr>
+<tr class="row-odd"><td><p>IncludesAlso</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StructuredStringType/"><span class="doc">StructuredStringType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>A list of borderline cases, which belong to the described category. Supports multiple languages and use of structured content.</p></td>
+</tr>
+<tr class="row-even"><td><p>Excludes</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StructuredStringType/"><span class="doc">StructuredStringType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>A list of borderline cases, which do not belong to the described category. Excluded cases may contain a reference to the Classification Items to which the excluded cases belong. Supports multiple languages and use of structured content.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ExcludedClassificationItemReference</p></td>
+<td><p><a class="reference internal" href="#"><span class="doc">ClassificationItem</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>A reference to the Classification Items to which the excluded cases belong. TypeOfObject should be set to ClassificationItem.</p></td>
+</tr>
+<tr class="row-even"><td><p>IsGenerated</p></td>
+<td><p>boolean</p></td>
+<td><p>0..1</p></td>
+<td><p>Indicates whether or not the Classification Item has been generated to make the Level to which it belongs complete.</p></td>
+</tr>
+<tr class="row-odd"><td><p>IsValid</p></td>
+<td><p>boolean</p></td>
+<td><p>0..1</p></td>
+<td><p>If updates are allowed in the Statistical Classification, a Classification Item may be restricted in its validity, i.e. it may become valid or invalid after the Statistical Classification has been released. Indicates whether or not the Classification Item is currently valid.</p></td>
+</tr>
+<tr class="row-even"><td><p>ValidFrom</p></td>
+<td><p>cogsDate</p></td>
+<td><p>0..1</p></td>
+<td><p>Date from which the Classification Item became valid. The date must be defined if the Classification Item belongs to a floating Statistical Classification.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ValidTo</p></td>
+<td><p>cogsDate</p></td>
+<td><p>0..1</p></td>
+<td><p>Date at which the Classification Item became invalid. The date must be defined if the Classification Item belongs to a floating Statistical Classification and is no longer valid.</p></td>
+</tr>
+<tr class="row-even"><td><p>FutureEvents</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StructuredStringType/"><span class="doc">StructuredStringType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>The future events describe a change (or a number of changes) related to an invalid Classification Item. These changes may e.g. have turned the now invalid Classification Item into one or several successor Classification Items. In describing these changes, terminology from the Typology of item changes, found in Appendix 3 should be used. This allows the possibility to follow successors of the Classification Item in the future. Supports the use of multiple languages and structured content.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SuccessorClassificationItemReference</p></td>
+<td><p><a class="reference internal" href="#"><span class="doc">ClassificationItem</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Future events may e.g. have turned the now invalid Classification Item into one or several successor Classification Items, listed here. TypeOfObject should be set to ClassificationItem.</p></td>
+</tr>
+<tr class="row-even"><td><p>ChangesFromPriorVersion</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StructuredStringType/"><span class="doc">StructuredStringType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Describes the changes, which the Classification Item has been subject to from the previous version to the actual Statistical Classification. In describing these changes, terminology from the Typology of item changes, found in Appendix 3 of GSIM should be used. Supports the use of multiple languages and structured content.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Updates</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StructuredStringType/"><span class="doc">StructuredStringType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Describes the changes, which the Classification Item has been subject to during the life time of the actual Statistical Classification. Supports the use of multiple languages and structured content.</p></td>
+</tr>
+<tr class="row-even"><td><p>ParentClassificationItemReference</p></td>
+<td><p><a class="reference internal" href="#"><span class="doc">ClassificationItem</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>The Classification Item at the next higher Level of the Statistical Classification of which the actual Classification Item is a sub item. TypeOfObject should be set to ClassificationItem.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CaseLaw</p></td>
+<td><p><a class="reference internal" href="../../composite-types/CaseLawType/"><span class="doc">CaseLawType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Refers to one or more case law rulings related to the Classification Item.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties-inherited-from-describable">
+<h2>Properties Inherited from Describable<a class="headerlink" href="#properties-inherited-from-describable" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 4%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p><a class="reference internal" href="../../composite-types/NameType/"><span class="doc">NameType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>A name for the item. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Label</p></td>
+<td><p><a class="reference internal" href="../../composite-types/LabelType/"><span class="doc">LabelType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>A display label for the item. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations.</p></td>
+</tr>
+<tr class="row-even"><td><p>Description</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StructuredStringType/"><span class="doc">StructuredStringType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>A description of the content and purpose of the item. May be expressed in multiple languages and supports the use of structured content.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties-inherited-from-versionable">
+<h2>Properties Inherited from Versionable<a class="headerlink" href="#properties-inherited-from-versionable" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 4%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>URN</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Agency</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Version</p></td>
+<td><p>string</p></td>
+<td><p>1..1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>UserID</p></td>
+<td><p><a class="reference internal" href="../../composite-types/UserIDType/"><span class="doc">UserIDType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure.</p></td>
+</tr>
+<tr class="row-odd"><td><p>UserAttributePair</p></td>
+<td><p><a class="reference internal" href="../../composite-types/StandardKeyValuePairType/"><span class="doc">StandardKeyValuePairType</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended.</p></td>
+</tr>
+<tr class="row-even"><td><p>VersionResponsibility</p></td>
+<td><p>string</p></td>
+<td><p>0..1</p></td>
+<td><p>Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use.</p></td>
+</tr>
+<tr class="row-odd"><td><p>VersionResponsibilityReference</p></td>
+<td><p><a class="reference internal" href="../Agent/"><span class="doc">Agent</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use.</p></td>
+</tr>
+<tr class="row-even"><td><p>VersionRationale</p></td>
+<td><p><a class="reference internal" href="../../composite-types/VersionRationaleType/"><span class="doc">VersionRationaleType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object.</p></td>
+</tr>
+<tr class="row-odd"><td><p>BasedOnObject</p></td>
+<td><p><a class="reference internal" href="../../composite-types/BasedOnObjectType/"><span class="doc">BasedOnObjectType</span></a></p></td>
+<td><p>0..1</p></td>
+<td><p>Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary.</p></td>
+</tr>
+<tr class="row-even"><td><p>RelatedOtherMaterialReference</p></td>
+<td><p><a class="reference internal" href="../OtherMaterial/"><span class="doc">OtherMaterial</span></a></p></td>
+<td><p>0..n</p></td>
+<td><p>The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem.</p></td>
+</tr>
+<tr class="row-odd"><td><p>VersionDate</p></td>
+<td><p>cogsDate</p></td>
+<td><p>0..1</p></td>
+<td><p>Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser.</p></td>
+</tr>
+<tr class="row-even"><td><p>IsPublished</p></td>
+<td><p>boolean</p></td>
+<td><p>0..1</p></td>
+<td><p>Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="item-type-hierarchy">
+<h2>Item Type Hierarchy<a class="headerlink" href="#item-type-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference internal" href="../Versionable/"><span class="doc">Versionable</span></a></dt><dd><ul>
+<li><dl class="simple">
+<dt><a class="reference internal" href="../Describable/"><span class="doc">Describable</span></a></dt><dd><ul>
+<li><p><strong>ClassificationItem</strong></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="relationships">
+<h2>Relationships<a class="headerlink" href="#relationships" title="Permalink to this headline">¶</a></h2>
+<p>The following types reference this type.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../composite-types/ClassificationIndexEntryType/"><span class="doc">ClassificationIndexEntryType</span></a></p></li>
+<li><p><a class="reference internal" href="../../composite-types/ClassificationMapType/"><span class="doc">ClassificationMapType</span></a></p></li>
+<li><p><a class="reference internal" href="../../composite-types/LevelContextType/"><span class="doc">LevelContextType</span></a></p></li>
+</ul>
+<div class="image docutils container">
+<p><img alt="stub" src="../../_images/ClassificationItem.svg" /></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ClassificationCorrespondenceTable/" class="btn btn-neutral float-right" title="ClassificationCorrespondenceTable" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../ClassificationLevel/" class="btn btn-neutral float-left" title="ClassificationLevel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright TODO
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

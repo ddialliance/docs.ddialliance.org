@@ -1,0 +1,30 @@
+PolygonType
+-----------
+
+A closed plane figure bounded by three or more line segments, representing a geographic area. Contains either the URI of the file containing the polygon, a specific link code for the shape within the file, and a file format, or a minimum of 4 points to describe the polygon in-line. Note that the first and last point must be identical in order to close the polygon. A triangle has 4 points. A geographic time designating the time period that the shape is valid should be included. If the date range is unknown use a SingleDate indicating a date that the shape was known to be valid.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ExternalURI","anyURI","0..1","Note that ExternalURI points to the boundary file location."
+   "PolygonLinkCode","string","0..1","The PolygonLinkCode is the identifier of the specific polygon within the file. For example in an NHGIS file the LinkCodeForPolygon for Tract 101.01 in Hennepin County in Minnesota is 2700530010101."
+   "ShapeFileFormat",":doc:`/composite-types/CodeValueType/index`","0..1","The format of the shape file existing at the location indicated by the sibling ExternalURI element."
+   "Point",":doc:`/composite-types/PointType/index`","4..n","A geographic point defined by a latitude and longitude. A minimum of 4 points is required as the first and last point should be identical in order to close the polygon. Note that a triangle has three sides and requires 3 unique points plus a fourth point replicating the first point in order to close the polygon."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/GeographicBoundaryType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/PolygonType.svg
+

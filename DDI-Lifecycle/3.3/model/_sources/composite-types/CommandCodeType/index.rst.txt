@@ -1,0 +1,54 @@
+CommandCodeType
+---------------
+
+Contains information on the command used for processing data. Contains a description of the command which should clarify for the user the purpose and process of the command, an in-line provision of the command itself, a reference to an external version of the command such as a coding script, and the option for attaching an extension to DDI to permit insertion of a command code in a foreign namespace. Both Command and CommandFile may be repeated to provide command information in additional programming languages. Multiple Command and CommandFile contents are differentiated by the content of the contained element ProgramLanguage.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the purpose and use of the command code provided. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "Command",":doc:`/composite-types/CommandType/index`","0..n","This is an in-line provision of the command itself."
+   "CommandFile",":doc:`/composite-types/CommandFileType/index`","0..n","Identifies and provides a link to an external copy of the command, for example, a SAS Command Code script."
+   "StructuredCommand",":doc:`/composite-types/StructuredCommandType/index`","0..1","The is an extension stub to allow for the insertion of command code using an external namespace."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **CommandCodeType**
+    * :doc:`/composite-types/CreateSummaryType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ComputationItem/index`
+* :doc:`/item-types/GeneralInstruction/index`
+* :doc:`/item-types/GenerationInstruction/index`
+* :doc:`/item-types/IfThenElse/index`
+* :doc:`/item-types/Loop/index`
+* :doc:`/item-types/RepeatUntil/index`
+* :doc:`/item-types/RepeatWhile/index`
+* :doc:`/item-types/SampleStep/index`
+* :doc:`/item-types/Universe/index`
+* :doc:`/composite-types/ConditionalTextType/index`
+* :doc:`/composite-types/ElseIfTextType/index`
+* :doc:`/composite-types/ElseIfType/index`
+* :doc:`/composite-types/GenerationType/index`
+* :doc:`/composite-types/IfThenElseTextType/index`
+* :doc:`/composite-types/RestrictionProcessType/index`
+* :doc:`/composite-types/RosterType/index`
+* :doc:`/composite-types/SpecificSequenceType/index`
+* :doc:`/composite-types/UsageGuideType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CommandCodeType.svg
+

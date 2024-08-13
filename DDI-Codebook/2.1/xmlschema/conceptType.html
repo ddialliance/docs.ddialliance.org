@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="section1.html">1.0 Document Description</a></li><li><a href="section2.html">2.0 Study Description</a></li><li><a href="section3.html">3.0 File Description</a></li><li><a href="section4.html">4.0 Variable Description</a></li><li><a href="section5.html">5.0 Other Material</a></li><li><a href="sectionall.html">Single file for printing</a> (slow)</li></ul><h2>&lt;concept&gt;&#160;Concept</h2><ul><li>Mandatory</li><li>Not Repeatable</li><li>Attributes: <a href="codeBook.html">ID, xml:lang, source</a>, vocab, vocabURI</li></ul><div style="padding-left:25px;"><p><em>Description:</em>&#160;The general subject to which the parent element
+                        may be seen as pertaining. This element serves the same purpose as the
+                        keywords and topic classification elements, but at the data description
+                        level. The "vocab" attribute is provided to indicate the controlled
+                        vocabulary, if any, used in the element, e.g., LCSH (Library of Congress
+                        Subject Headings), MeSH (Medical Subject Headings), etc. The "vocabURI"
+                        attribute specifies the location for the full controlled vocabulary. </p></div><div style="padding-left:25px;"><p><em>Example(s):</em></p><pre>&lt;nCubeGrp&gt;&lt;concept&gt;Income&lt;/concept&gt;&lt;/nCubeGrp&gt; 
+
+&lt;nCubeGrp&gt;&lt;concept vocab="LCSH" vocabURI="http://lcweb.loc.gov/catdir/cpso/lcco/lcco.html" source="archive"&gt;
+more experience&lt;/concept&gt;&lt;/nCubeGrp&gt;
+
+&lt;var&gt;&lt;concept&gt;Income&lt;/concept&gt;&lt;/var&gt; 
+
+&lt;var&gt;&lt;concept vocab="LCSH" vocabURI= "http://lcweb.loc.gov/catdir/cpso/lcco/lcco.html" source="archive"&gt;
+SF: 311-312 draft horses&lt;/concept&gt;&lt;/var&gt; 
+                    </pre></div></body></html>

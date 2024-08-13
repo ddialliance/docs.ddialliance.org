@@ -1,0 +1,32 @@
+RosterType
+----------
+
+A roster is an unlabeled list of numbered rows or columns depending upon orientation. The numbers may or may not be displayed but will be used as information for creating the cell coordinate address. The Roster defines the numbering used for the coordinate system, sets a minimum and maximum number of values, and provides the condition for continuation. The Roster label is used in the same way as the label of the CodeDomain, providing a dimension level header or label.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Label",":doc:`/composite-types/LabelType/index`","0..1","A display label for the roster. May be expressed in multiple languages. Repeat for labels with different content, for example, labels with differing length limitations."
+   "ConditionForContinuation",":doc:`/composite-types/CommandCodeType/index`","0..1","Provides the condition for continuing to add another iteration to the roster. This may be a human readable condition and/or a machine-actionable command."
+   "BaseCodeValue","int","1..1","A base value for the first item on the Roster (normally 0 or 1 but can be set to any value especially when the use of a roster extends an enumerated list expressed as an integer."
+   "CodeIterationValue","int","1..1","The value added to the last used value to create the iteration value for the current row or column expressed as an integer."
+   "MinimumRequired","int","0..1","The minimum number of rows or columns required expressed as an integer."
+   "MaximumAllowed","int","0..1","The maximum number of rows or columns allowed expressed as an integer. Leaving this attribute with no value implies that the maximum allowed is unbounded."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/GridDimensionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RosterType.svg
+

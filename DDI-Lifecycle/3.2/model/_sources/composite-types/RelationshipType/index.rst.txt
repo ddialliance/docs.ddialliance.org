@@ -1,0 +1,32 @@
+RelationshipType
+----------------
+
+Relationship specification between this item and the item to which it is related. Provides a reference to any identifiable object and a description of the relationship.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RelatedToReference_IdentifiableType",":doc:`/composite-types/IdentifiableType/index`","0..1","Reference to the item within the DDI Instance to which this item is related."
+   "RelatedToReference_Versionable",":doc:`/item-types/Versionable/index`","0..1","Reference to the item within the DDI Instance to which this item is related."
+   "RelatedToReference_Maintainable",":doc:`/item-types/Maintainable/index`","0..1","Reference to the item within the DDI Instance to which this item is related."
+   "RelationshipDescription",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the nature of the relationship between the parent element of the relationship item and the DDI object to which it is related."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LifecycleEventType/index`
+* :doc:`/composite-types/NoteType/index`
+* :doc:`/composite-types/OtherMaterialType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RelationshipType.svg
+

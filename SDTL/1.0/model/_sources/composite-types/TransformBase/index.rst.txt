@@ -1,0 +1,73 @@
+TransformBase
+-------------
+
+TransformBase defines properties available for transform commands.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProducesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform produces."
+   "ConsumesDataframe",":doc:`/composite-types/DataframeDescription/index`","0..n","Signify the dataframe which this transform acts upon."
+
+Properties Inherited from CommandBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","0..n","Information about the source of the command."
+   "MessageText","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/CommandBase/index`
+    * **TransformBase**
+        * :doc:`/composite-types/Aggregate/index`
+        * :doc:`/composite-types/AppendDatasets/index`
+        * :doc:`/composite-types/Collapse/index`
+        * :doc:`/composite-types/Compute/index`
+        * :doc:`/composite-types/DoIf/index`
+        * :doc:`/composite-types/DropCases/index`
+        * :doc:`/composite-types/DropVariables/index`
+        * :doc:`/composite-types/Execute/index`
+        * :doc:`/composite-types/IfRows/index`
+        * :doc:`/composite-types/KeepCases/index`
+        * :doc:`/composite-types/KeepVariables/index`
+        * :doc:`/composite-types/Load/index`
+        * :doc:`/composite-types/LoopOverList/index`
+        * :doc:`/composite-types/LoopWhile/index`
+        * :doc:`/composite-types/MergeDatasets/index`
+        * :doc:`/composite-types/NewDataframe/index`
+        * :doc:`/composite-types/Recode/index`
+        * :doc:`/composite-types/Rename/index`
+        * :doc:`/composite-types/ReshapeLong/index`
+        * :doc:`/composite-types/ReshapeWide/index`
+        * :doc:`/composite-types/Save/index`
+        * :doc:`/composite-types/SetDatasetProperty/index`
+        * :doc:`/composite-types/SetDataType/index`
+        * :doc:`/composite-types/SetDisplayFormat/index`
+        * :doc:`/composite-types/SetMissingValues/index`
+        * :doc:`/composite-types/SetValueLabels/index`
+        * :doc:`/composite-types/SetVariableLabel/index`
+        * :doc:`/composite-types/SortCases/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TransformBase.svg
+

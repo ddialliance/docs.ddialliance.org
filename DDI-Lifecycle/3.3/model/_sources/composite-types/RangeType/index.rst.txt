@@ -1,0 +1,42 @@
+RangeType
+---------
+
+Indicates the range of items expressed as a string, such as an alphabetic range.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the text range. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "CollationAlgorithm",":doc:`/composite-types/CodeValueType/index`","0..1","The algorithm used to determine the sort order of the text content. This includes whether the text is left to right, right to left, handling of spaces an capitalization, and ordering of text characters. Supports the use of a controlled vocabulary."
+   "RangeUnit","string","0..1","Specifies the units in the range."
+   "MinimumValue",":doc:`/composite-types/RangeValueType/index`","0..1","Minimum value in the range."
+   "MaximumValue",":doc:`/composite-types/RangeValueType/index`","0..1","Maximum value in the range."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **RangeType**
+    * :doc:`/composite-types/RankingRangeType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ManagedDateTimeRepresentation/index`
+* :doc:`/composite-types/CohortType/index`
+* :doc:`/composite-types/DateTimeRepresentationBaseType/index`
+* :doc:`/composite-types/IncludedCodeType/index`
+* :doc:`/composite-types/ScaleDimensionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RangeType.svg
+

@@ -1,0 +1,58 @@
+LoopOverVariables
+-----------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/TransformBase/index`
+    * **LoopOverVariables**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LoopOverVariables.svg
+
+Properties
+~~~~~~~~~~
+
+Variables
+*********
+
+Type
+    :doc:`/composite-types/VariableReferenceBase/index`
+Cardinality
+    0..n
+
+A list of variable against which each command will be performed
+
+IteratorVariable
+****************
+
+Type
+    :doc:`/composite-types/VariableSymbolExpression/index`
+Cardinality
+    1..1
+
+The locally scoped variable that represents the current variable being acted upon.
+
+Commands
+********
+
+Type
+    :doc:`/composite-types/TransformBase/index`
+Cardinality
+    0..n
+
+The list of commands to be performed against each variable.
+
+
+

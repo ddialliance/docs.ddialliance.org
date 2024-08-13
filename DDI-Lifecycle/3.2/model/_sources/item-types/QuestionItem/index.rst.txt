@@ -1,0 +1,78 @@
+QuestionItem
+------------
+
+Structure a single Question which may contain one or more response domains (i.e., a list of valid category responses where if "Other" is indicated a text response can be used to specify the intent of "Other"). The structure provides detail on the intent of the question, the text of the question, the valid response options and the number of allowed responses, references to external aids and instructions, and an estimation of the time needed to respond to the question. Note that the QuestionItem is a reusable format for use in any number of applied uses. External aids, instructions, response sequencing etc. should contain information consistent with the general use of the QuestionItem. Additional materials and information can be added within the QuestionConstruct which is the applied use of a question.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "QuestionItemName",":doc:`/composite-types/NameType/index`","0..n","A name for the QuestionItem. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "InParameter",":doc:`/composite-types/InParameterType/index`","0..n","Provides an identity for input objects required for the QuestionItem."
+   "OutParameter",":doc:`/composite-types/ParameterType/index`","0..n","Provides an identify for the output objects of the QuestionItem."
+   "Binding",":doc:`/composite-types/BindingType/index`","0..n","A structure used to bind the content of a parameter declared as the source to a parameter declared as the target. For example, binding the OutParameter of one Question to the InParameter of another Question in order to personalize a question text. Care should be taken to bind only reusable information at this level. Binding is also available at the QuestionConstruct to reflect bindings particular to the use of the question in a specific question flow or instrument."
+   "QuestionText",":doc:`/composite-types/DynamicTextType/index`","0..n","The text of a question. Supports the use of DynamicText. Note that when using QuestionText, the full QuestionText must be repeated for multi-language versions of the content. Different languages may handle the dynamic portions in different locations and/or with different content. Therefore languages cannot be mixed within a dynamic text except when the full text itself has multiple language sections, for example, a foreign language term in a text. The DisplayText may also be repeated to provide a dynamic and plain text version of the display. This allows for accurate rendering of the QuestionText in a non-dynamic environment like print."
+   "QuestionIntent",":doc:`/composite-types/StructuredStringType/index`","0..1","The purpose of the QuestionItem in terms of what it is designed to measure."
+   "ResponseDomain",":doc:`/composite-types/RepresentationType/index`","0..1","Contains a response domain for the question item. Typically used to describe simple response domains (textual, numeric, etc.)."
+   "ResponseDomainReference_ManagedMissingValuesRepresentation",":doc:`/item-types/ManagedMissingValuesRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "ResponseDomainReference_ManagedScaleRepresentation",":doc:`/item-types/ManagedScaleRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "ResponseDomainReference_ManagedNumericRepresentation",":doc:`/item-types/ManagedNumericRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "ResponseDomainReference_ManagedDateTimeRepresentation",":doc:`/item-types/ManagedDateTimeRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "ResponseDomainReference_ManagedTextRepresentation",":doc:`/item-types/ManagedTextRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "StructuredMixedResponseDomain",":doc:`/composite-types/StructuredMixedResponseDomainType/index`","0..1","Use in cases where the question requires the option for multiple response domains, such as a category response and a text response to specify a value for ""Other"", or when text needs to be inserted before, after, or between response options for the question."
+   "ResponseCardinality",":doc:`/composite-types/ResponseCardinalityType/index`","0..1","Allows the designation of the minimum and maximum number of responses allowed for this question. Note that each response domain has its own response cardinality."
+   "ConceptReference",":doc:`/item-types/Concept/index`","0..n","A reference to the concept associated with the response to the question."
+   "ExternalAid",":doc:`/composite-types/OtherMaterialType/index`","0..n","A pointer to an external aid presented by the instrument such as a text card, image, audio, or audiovisual aid. Typically a URN. Use type attribute to describe the type of external aid provided. Example of terms to use would include: imageOnly audioOnly audioVisual multiMedia."
+   "ExternalInterviewerInstruction",":doc:`/composite-types/ExternalInterviewerInstructionType/index`","0..1","External reference to an interviewer instruction not expressed as DDI XML using OtherMaterial."
+   "InterviewerInstructionReference",":doc:`/item-types/Instruction/index`","0..1","Reference to an interviewer instruction expressed as DDI XML."
+   "EstimatedSecondsResponseTime","decimal","0..1","The estimated amount of time required to answer a question expressed in seconds. Decimal values should be used to define fractions of seconds."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference_Organization",":doc:`/item-types/Organization/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionResponsibilityReference_Individual",":doc:`/item-types/Individual/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * **QuestionItem**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/GenerationInstruction/index`
+* :doc:`/item-types/QuestionBlock/index`
+* :doc:`/item-types/QuestionConstruct/index`
+* :doc:`/item-types/QuestionGroup/index`
+* :doc:`/item-types/QuestionScheme/index`
+* :doc:`/item-types/Variable/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/QuestionItem.svg
+

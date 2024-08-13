@@ -1,0 +1,31 @@
+GeographicBoundaryType
+----------------------
+
+A choice of a BoundingBox and/or a set of BoundingPolygons and ExcludingPolygons that describe an area for a specific time period.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "AreaCoverage",":doc:`/composite-types/AreaCoverageType/index`","0..n","Use to specify the area of land, water, total or other area coverage in terms of square miles/kilometers or other measures."
+   "BoundingBox",":doc:`/composite-types/BoundingBoxType/index`","0..1","A BoundingBox (North, South Latitude and East, West Longitude) of the LocationValue for the time period specified with the GeographicBoundary."
+   "BoundingPolygon",":doc:`/composite-types/PolygonType/index`","0..n","A description of the boundaries of the polygon either in-line or by a reference to an external file containing the boundaries. Repeatable to describe non-contiguous areas such as islands or Native American Reservations in some parts of the United States."
+   "ExcludingPolygon",":doc:`/composite-types/PolygonType/index`","0..n","A description of a the boundaries of a polygon internal to the bounding polygon which should be excluded. For example, for the bounding polygon describing the State of Brandenburg in Germany, the Excluding Polygon would describe the boundary of Berlin, creating hole within Brandenburg which is occupied by Berlin."
+   "GeographicTime",":doc:`/composite-types/DateType/index`","0..1","A time for which the polygon is an accurate description of the area. This may be a range (without an end date if currently still valid) or a single date when the shape was know to be valid if a range is not available."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LocationValueType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/GeographicBoundaryType.svg
+

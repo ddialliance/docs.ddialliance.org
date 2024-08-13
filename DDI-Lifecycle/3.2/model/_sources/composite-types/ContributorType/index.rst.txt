@@ -1,0 +1,29 @@
+ContributorType
+---------------
+
+Holds the name of the contributor, their role, and optional reference to the contributor as described within a DDI Organization scheme. Repeat this element for multiple creators.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ContributorName",":doc:`/composite-types/BibliographicNameType/index`","0..1","Full name of the contributor. Language equivalents should be expressed within the International String structure."
+   "ContributorRole",":doc:`/composite-types/CodeValueType/index`","0..n","The role of the contributor. Language equivalents should be expressed within the International String structure."
+   "ContributorReference",":doc:`/item-types/Individual/index`","0..1","Reference to a creator as described within a DDI Organization Scheme."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CitationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ContributorType.svg
+

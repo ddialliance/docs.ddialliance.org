@@ -1,0 +1,34 @@
+LinkingMapType
+--------------
+
+Provides a link from a local object to a deposited object via reference and designates if the added material should Override, act as AddedContent, or DeleteContent in the original deposited material. A description of the link or reason for new material may be provided.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "LocalObjectReference_IdentifiableType",":doc:`/composite-types/IdentifiableType/index`","0..1","A reference to the local object that is to be related to a depository object. If the relationship action is set to delete then no local object needs to be designated."
+   "LocalObjectReference_Versionable",":doc:`/item-types/Versionable/index`","0..1","A reference to the local object that is to be related to a depository object. If the relationship action is set to delete then no local object needs to be designated."
+   "LocalObjectReference_Maintainable",":doc:`/item-types/Maintainable/index`","0..1","A reference to the local object that is to be related to a depository object. If the relationship action is set to delete then no local object needs to be designated."
+   "DepositoryObjectReference_IdentifiableType",":doc:`/composite-types/IdentifiableType/index`","0..1","A reference to the deposited object."
+   "DepositoryObjectReference_Versionable",":doc:`/item-types/Versionable/index`","0..1","A reference to the deposited object."
+   "DepositoryObjectReference_Maintainable",":doc:`/item-types/Maintainable/index`","0..1","A reference to the deposited object."
+   "RelationshipAction",":doc:`/composite-types/CodeValueType/index`","0..1","Provides a structured means of stating if the local object overrides (replaces) the depository object, adds information to the deposited object, deletes the content of the depository object without replacing it. or restricts access the deposited object by attaching an embargo or access restriction to it. Supports the use of a controlled vocabulary."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the link such as the reason for adding or changing local content. Supports multiple language versions of the same content as well as optional formatting of the content."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ContentLinkingMapType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LinkingMapType.svg
+

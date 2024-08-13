@@ -1,0 +1,30 @@
+NCubesInRecordType
+------------------
+
+Identifies the NCubes and any variables in the record external to NCube structures such as case identification variables that are contained in the logical record by indicating that all NCubes contained in the logical product are included, inclusion of a NCubeScheme to include, or listing individual NCubes to include. When the attribute allNCubesInLogicalProduct is set to "false" use the NCubeSchemeReference (which allows for exclusions) and NCubeReference to specify the included variables. A nested VariablesInRecord structure is used to include non-NCube variables in the record.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariablesInRecord",":doc:`/composite-types/VariablesInRecordType/index`","0..1","Use VariablesInRecord to describe any variables in the record that are external to the NCube such as case identifiers."
+   "NCubeSchemeReference",":doc:`/item-types/NCubeScheme/index`","0..n","Reference to an NCubeScheme whose members are included in the logical record. Note that individual items may be excluded from the scheme if not used by the logical record."
+   "NCubeReference",":doc:`/item-types/NCube/index`","0..n","Reference to an NCube to include in the logical record. This may be used to supplement the contents of an included NCubeScheme or to list all the variables individually."
+   "AllNCubesInLogicalProduct","boolean","0..1","When the value is true, then the logical record contains all listed NCubes in the logical product module."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LogicalRecordType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/NCubesInRecordType.svg
+

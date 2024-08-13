@@ -1,0 +1,41 @@
+IteratorSymbolExpression
+------------------------
+
+The name of an iterator symbol used as an index in describing the actions of 
+a loop.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Name","string","1..1","A name used for the index variable that takes different values inside a loop."
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **IteratorSymbolExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/IteratorDescription/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IteratorSymbolExpression.svg
+

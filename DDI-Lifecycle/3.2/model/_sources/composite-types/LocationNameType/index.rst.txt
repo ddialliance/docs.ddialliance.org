@@ -1,0 +1,54 @@
+LocationNameType
+----------------
+
+Name of the location using the DDI Name structure and the ability to add an effective date.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "EffectivePeriod",":doc:`/composite-types/DateType/index`","0..1","The time period for which this name is accurate and in use."
+
+Properties Inherited from NameType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "IsPreferred","boolean","0..1","If more than one name for the object is provided, use the isPreferred attribute to indicate which is the preferred name content. All other names should be set to isPreferred=""false""."
+   "Context","string","0..1","A name may be specific to a particular context, i.e., a type of software, or a section of a registry. Identify the context related to the specified name."
+
+Properties Inherited from InternationalStringType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "String",":doc:`/composite-types/StringType/index`","0..n","A non-formatted string of text with an attribute that designates the language of the text. Repeat this object to express the same content in another language."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/InternationalStringType/index`
+    * :doc:`/composite-types/NameType/index`
+        * **LocationNameType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/ContactInformationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LocationNameType.svg
+

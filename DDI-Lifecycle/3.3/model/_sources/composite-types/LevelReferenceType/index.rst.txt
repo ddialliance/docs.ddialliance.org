@@ -1,0 +1,28 @@
+LevelReferenceType
+------------------
+
+Contains a Reference to a GeographicLevel if available and a name for the level. Only one reference can be provided but multiple name provided.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "GeographicLevelReference",":doc:`/composite-types/GeographicLevelType/index`","0..1","Reference to the Geographic Level as described in the GeographicStructure. TypeOfObject should be set to GeographicLevel."
+   "GeographicLevelName",":doc:`/composite-types/NameType/index`","0..1","Name of a geographic level. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/GeographicCoverageType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LevelReferenceType.svg
+

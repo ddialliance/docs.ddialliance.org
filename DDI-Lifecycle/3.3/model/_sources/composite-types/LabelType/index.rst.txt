@@ -1,0 +1,175 @@
+LabelType
+---------
+
+A structured display label for the element. Label provides display content of a fully human readable display for the identification of the element. DDI does not impose any length limitations on Label. If length of Label is constrained due to use of the element in a specific application, the maximum length supported should be noted in the attribute maxLength. TypeOfLabel should be used to indicate the application either directly or as an identified type, such as “systems with an 8 character label length limitation”. The label may also indicate its applicability to a specific locale using the attribute locationVariant. Label may be repeated to provide content for different uses or situations. Language variants should be made within the Label using the internal structure of the Structured String type. The assumption is that replication of Label is done to provide different intellectual content or content specific to differing systems or applications.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfLabel",":doc:`/composite-types/CodeValueType/index`","0..1","A brief description of the label type. Supports the use of a controlled vocabulary."
+   "LocationVariant","string","0..1","Indicate if the content is intended to be used in a specific location. For example if the Label is specific to use within a sub-region of a country that uses the same language but may have unique terminology. For example some regions of the United States use the term “water fountain” and others use “bubbler”."
+   "ValidForStartDate","cogsDate","0..1","Allows for the specification of a starting date for the period that this label is valid. The date must be formatted according to ISO 8601."
+   "ValidForEndDate","cogsDate","0..1","Allows for the specification of a ending date for the period that this label is valid. The date must be formatted according to ISO 8601."
+   "MaxLength","nonNegativeInteger","0..1","A positive integer indicating the maximum number of characters in the label."
+
+Properties Inherited from StructuredStringType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Content",":doc:`/composite-types/ContentType/index`","0..n","Supports the optional use of XHTML formatting tags within the string structure. In addition to the language designation and information regarding translation, the attribute isPlain can be set to true to indicate that the content should be treated as plain unstructured text, including any XHTML formatting tags. Repeat the content element to provide multiple language versions of the same content."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/StructuredStringType/index`
+    * **LabelType**
+        * :doc:`/composite-types/CellLabelType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Archive/index`
+* :doc:`/item-types/BaseLogicalProduct/index`
+* :doc:`/item-types/Category/index`
+* :doc:`/item-types/CategoryGroup/index`
+* :doc:`/item-types/CategoryScheme/index`
+* :doc:`/item-types/ClassificationFamily/index`
+* :doc:`/item-types/CodeList/index`
+* :doc:`/item-types/CodeListGroup/index`
+* :doc:`/item-types/CodeListScheme/index`
+* :doc:`/item-types/Comparison/index`
+* :doc:`/item-types/Concept/index`
+* :doc:`/item-types/ConceptGroup/index`
+* :doc:`/item-types/ConceptScheme/index`
+* :doc:`/item-types/ConceptualComponent/index`
+* :doc:`/item-types/ConceptualVariable/index`
+* :doc:`/item-types/ConceptualVariableGroup/index`
+* :doc:`/item-types/ConceptualVariableScheme/index`
+* :doc:`/item-types/ControlConstruct/index`
+* :doc:`/item-types/ControlConstructGroup/index`
+* :doc:`/item-types/ControlConstructScheme/index`
+* :doc:`/item-types/DataCaptureDevelopment/index`
+* :doc:`/item-types/DataCollection/index`
+* :doc:`/item-types/DataRelationship/index`
+* :doc:`/item-types/DDIProfile/index`
+* :doc:`/item-types/Describable/index`
+* :doc:`/item-types/DevelopmentActivity/index`
+* :doc:`/item-types/DevelopmentActivityGroup/index`
+* :doc:`/item-types/DevelopmentActivityScheme/index`
+* :doc:`/item-types/DevelopmentImplementation/index`
+* :doc:`/item-types/DevelopmentPlan/index`
+* :doc:`/item-types/DevelopmentResults/index`
+* :doc:`/item-types/GenericMap/index`
+* :doc:`/item-types/GeographicLocation/index`
+* :doc:`/item-types/GeographicLocationGroup/index`
+* :doc:`/item-types/GeographicLocationScheme/index`
+* :doc:`/item-types/GeographicStructure/index`
+* :doc:`/item-types/GeographicStructureGroup/index`
+* :doc:`/item-types/GeographicStructureScheme/index`
+* :doc:`/item-types/Instruction/index`
+* :doc:`/item-types/InstructionGroup/index`
+* :doc:`/item-types/Instrument/index`
+* :doc:`/item-types/InstrumentGroup/index`
+* :doc:`/item-types/InstrumentScheme/index`
+* :doc:`/item-types/InterviewerInstructionScheme/index`
+* :doc:`/item-types/ManagedDateTimeRepresentation/index`
+* :doc:`/item-types/ManagedMissingValuesRepresentation/index`
+* :doc:`/item-types/ManagedNumericRepresentation/index`
+* :doc:`/item-types/ManagedRepresentationGroup/index`
+* :doc:`/item-types/ManagedRepresentationScheme/index`
+* :doc:`/item-types/ManagedScaleRepresentation/index`
+* :doc:`/item-types/ManagedTextRepresentation/index`
+* :doc:`/item-types/MeasurementGroup/index`
+* :doc:`/item-types/MeasurementItem/index`
+* :doc:`/item-types/MeasurementScheme/index`
+* :doc:`/item-types/Methodology/index`
+* :doc:`/item-types/NCube/index`
+* :doc:`/item-types/NCubeGroup/index`
+* :doc:`/item-types/NCubeScheme/index`
+* :doc:`/item-types/OrganizationGroup/index`
+* :doc:`/item-types/OrganizationScheme/index`
+* :doc:`/item-types/OtherMaterialGroup/index`
+* :doc:`/item-types/OtherMaterialScheme/index`
+* :doc:`/item-types/PhysicalDataProduct/index`
+* :doc:`/item-types/PhysicalInstanceGroup/index`
+* :doc:`/item-types/PhysicalStructure/index`
+* :doc:`/item-types/PhysicalStructureGroup/index`
+* :doc:`/item-types/PhysicalStructureScheme/index`
+* :doc:`/item-types/ProcessingEvent/index`
+* :doc:`/item-types/ProcessingEventGroup/index`
+* :doc:`/item-types/ProcessingEventScheme/index`
+* :doc:`/item-types/ProcessingInstructionGroup/index`
+* :doc:`/item-types/ProcessingInstructionScheme/index`
+* :doc:`/item-types/QualityScheme/index`
+* :doc:`/item-types/QualityStandard/index`
+* :doc:`/item-types/QualityStandardGroup/index`
+* :doc:`/item-types/QualityStatement/index`
+* :doc:`/item-types/QualityStatementGroup/index`
+* :doc:`/item-types/QuestionBlock/index`
+* :doc:`/item-types/QuestionGrid/index`
+* :doc:`/item-types/QuestionGroup/index`
+* :doc:`/item-types/QuestionItem/index`
+* :doc:`/item-types/QuestionScheme/index`
+* :doc:`/item-types/RecordLayoutGroup/index`
+* :doc:`/item-types/RecordLayoutScheme/index`
+* :doc:`/item-types/RepresentationMap/index`
+* :doc:`/item-types/RepresentedVariable/index`
+* :doc:`/item-types/RepresentedVariableGroup/index`
+* :doc:`/item-types/RepresentedVariableScheme/index`
+* :doc:`/item-types/Sample/index`
+* :doc:`/item-types/SampleFrame/index`
+* :doc:`/item-types/SamplingInformationGroup/index`
+* :doc:`/item-types/SamplingInformationScheme/index`
+* :doc:`/item-types/SamplingPlan/index`
+* :doc:`/item-types/SubUniverseClass/index`
+* :doc:`/item-types/UnitTypeGroup/index`
+* :doc:`/item-types/UnitTypeScheme/index`
+* :doc:`/item-types/Universe/index`
+* :doc:`/item-types/UniverseGroup/index`
+* :doc:`/item-types/UniverseScheme/index`
+* :doc:`/item-types/Variable/index`
+* :doc:`/item-types/VariableGroup/index`
+* :doc:`/item-types/VariableScheme/index`
+* :doc:`/composite-types/AccessType/index`
+* :doc:`/composite-types/CategoryDomainType/index`
+* :doc:`/composite-types/CodeDomainType/index`
+* :doc:`/composite-types/CollectionEventType/index`
+* :doc:`/composite-types/CoordinateRegionType/index`
+* :doc:`/composite-types/CreateSummaryType/index`
+* :doc:`/composite-types/DateTimeDomainType/index`
+* :doc:`/composite-types/DistributionDomainType/index`
+* :doc:`/composite-types/EmbargoType/index`
+* :doc:`/composite-types/GeographicDomainType/index`
+* :doc:`/composite-types/GeographicLocationCodeDomainType/index`
+* :doc:`/composite-types/GeographicStructureCodeDomainType/index`
+* :doc:`/composite-types/LifecycleEventType/index`
+* :doc:`/composite-types/LocationDomainType/index`
+* :doc:`/composite-types/LogicalRecordType/index`
+* :doc:`/composite-types/NominalDomainType/index`
+* :doc:`/composite-types/NumberRangeType/index`
+* :doc:`/composite-types/NumericDomainType/index`
+* :doc:`/composite-types/RangeType/index`
+* :doc:`/composite-types/RankingDomainType/index`
+* :doc:`/composite-types/RecordRelationshipType/index`
+* :doc:`/composite-types/RosterType/index`
+* :doc:`/composite-types/ScaleDimensionType/index`
+* :doc:`/composite-types/ScaleDomainType/index`
+* :doc:`/composite-types/TextDomainType/index`
+* :doc:`/composite-types/VersionDistinctionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LabelType.svg
+

@@ -1,0 +1,53 @@
+AuthorizedSourceType
+--------------------
+
+A stack of LocationValueReferences to each of the locations of the specified PrimaryComponentLevel type that make up the Component Area. Includes a GeographicTime to allow for repetition for change over time.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..1","A description of the authorization source using OtherMaterial. The TypeOfOtherMaterial should state AuthorizationSource. An authorization source should differentiate between codes derived for different purposes within the same agency."
+   "IdentifierParsingInformation",":doc:`/composite-types/IdentifierParsingInformationType/index`","0..1","Provides structural information for parsing the identification code structure of the Authorized Source into its separate parts."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **AuthorizedSourceType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/GeographicLocation/index`
+* :doc:`/item-types/GeographicStructure/index`
+* :doc:`/composite-types/GeographicLocationIdentifierType/index`
+* :doc:`/composite-types/IncludedGeographicLocationCodesType/index`
+* :doc:`/composite-types/IncludedGeographicStructureCodesType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AuthorizedSourceType.svg
+

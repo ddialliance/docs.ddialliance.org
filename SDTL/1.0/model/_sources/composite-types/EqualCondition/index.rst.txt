@@ -1,0 +1,38 @@
+EqualCondition
+--------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ConditionBase/index`
+    * **EqualCondition**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/EqualCondition.svg
+
+Properties
+~~~~~~~~~~
+
+Operands
+********
+
+Type
+    :doc:`/composite-types/ExpressionBase/index`
+Cardinality
+    0..2
+
+TODO
+
+
+

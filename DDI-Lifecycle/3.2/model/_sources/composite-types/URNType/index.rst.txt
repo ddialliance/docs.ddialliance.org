@@ -1,0 +1,26 @@
+URNType
+-------
+
+Container for a URN following the pattern designed by DDIURNType. Provides a fixed type attribute signifying that it is a URN.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Type","string","0..1","Specifies that this URI is a URN. In future, other types of URI may be allowed here."
+   "TypeOfIdentifier","string","0..1","Identifies the format of the DDI URN as being canonical or deprecated."
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/URNType.svg
+

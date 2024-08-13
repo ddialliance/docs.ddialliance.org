@@ -1,0 +1,29 @@
+SummaryStatisticType
+--------------------
+
+Describes a summary statistic for a variable.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfSummaryStatistic",":doc:`/composite-types/CodeValueType/index`","0..1","Type of summary statistic, such as count, mean, mode, median, etc. Supports the use of an external controlled vocabulary. DDI strongly recommends the use of a controlled vocabulary. The DDI Alliance has provided a controlled vocabulary (SummaryStatisticType) to support this element at http://www.ddialliance.org/controlled-vocabularies."
+   "Statistic",":doc:`/composite-types/StatisticType/index`","0..1","The value (expressed as a decimal) of the statistics and whether it is weighted and/or includes missing values."
+   "StatisticDouble",":doc:`/composite-types/StatisticDoubleType/index`","0..1","The value (expressed as a double) of the statistics and whether it is weighted and/or includes missing values."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/VariableStatistics/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SummaryStatisticType.svg
+

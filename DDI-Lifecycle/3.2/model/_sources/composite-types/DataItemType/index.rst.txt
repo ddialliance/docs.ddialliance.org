@@ -1,0 +1,28 @@
+DataItemType
+------------
+
+Describes a single data item within the record, linking its description in a variable to its physical location in the stored record.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableReference",":doc:`/item-types/Variable/index`","0..1","Reference to the Variable describing this data item."
+   "PhysicalLocation",":doc:`/composite-types/PhysicalLocationType/index`","0..1","Description of the physical location of the value of the object in the data file."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/RecordLayout/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DataItemType.svg
+

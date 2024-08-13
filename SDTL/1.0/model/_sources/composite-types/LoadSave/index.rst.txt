@@ -1,0 +1,88 @@
+LoadSave
+--------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/TransformBase/index`
+    * **LoadSave**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LoadSave.svg
+
+Properties
+~~~~~~~~~~
+
+FileName
+********
+
+Type
+    string
+Cardinality
+    0..1
+
+The name of the file
+
+Software
+********
+
+Type
+    string
+Cardinality
+    0..1
+
+The name of the file format, or the software package that works with the file.
+
+IsCompressed
+************
+
+Type
+    boolean
+Cardinality
+    0..1
+
+Indicates whether the file format is compressed.
+
+DropVariables
+*************
+
+Type
+    string
+Cardinality
+    0..n
+
+A list of names of variables that will be dropped during the save operation.
+
+KeepVariables
+*************
+
+Type
+    string
+Cardinality
+    0..n
+
+A list of names of variables that will be kept during the save operation. All other variables will be dropped.
+
+RenameVariables
+***************
+
+Type
+    :doc:`/composite-types/RenamePair/index`
+Cardinality
+    0..n
+
+A list of variables that will be renamed as part of the save operation.
+
+
+

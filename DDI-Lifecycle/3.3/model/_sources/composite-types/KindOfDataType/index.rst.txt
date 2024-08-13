@@ -1,0 +1,56 @@
+KindOfDataType
+--------------
+
+Describes, with a string or a term from a controlled vocabulary, the kind of data documented in the logical product(s) of a study unit. Examples include survey data, census/enumeration data, administrative data, measurement data, assessment data, demographic data, voting data, etc.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Type","string","0..1","Provides a description of the types of data described by the KindOfData element."
+
+Properties Inherited from CodeValueType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ControlledVocabularyID","string","0..1","The ID of the controlled vocabulary that the content was taken from."
+   "ControlledVocabularyName","string","0..1","The name of the controlled vocabulary."
+   "ControlledVocabularyAgencyName","string","0..1","The name of the agency maintaining the controlled vocabulary."
+   "ControlledVocabularyVersionID","string","0..1","The version number of the controlled vocabulary."
+   "OtherValue","string","0..1","If the value of the string is ""Other"" or the equivalent from the controlled vocabulary, this attribute can provide a more specific value not found in the controlled vocabulary."
+   "ControlledVocabularyURN","string","0..1","The URN of the controlled vocabulary."
+   "ControlledVocabularySchemeURN","string","0..1","If maintained within a scheme, the URN of the scheme containing the controlled vocabulary."
+
+Properties Inherited from string
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* string
+    * :doc:`/composite-types/CodeValueType/index`
+        * **KindOfDataType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/StudyUnit/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/KindOfDataType.svg
+

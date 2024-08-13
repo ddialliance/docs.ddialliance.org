@@ -1,0 +1,51 @@
+SamplingProcedureType
+---------------------
+
+Describes a sampling procedure. If multiple sampling procedures were used repeat this element for each.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfSamplingProcedure",":doc:`/composite-types/CodeValueType/index`","0..1","A generic means of classifying a SamplingProcedure. Supports the use of an external controlled vocabulary."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","Full description of the sampling procedure. Supports structured content and multiple language content."
+   "SamplingPlanReference",":doc:`/item-types/SamplingPlan/index`","0..1","Reference to sample plan which describes a process for achieving the sample. TypeOfObject should be SamplingPlan."
+   "SampleReference",":doc:`/item-types/Sample/index`","0..1","Reference to sample created using sampling procedure. TypeOfObject should be Sample."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **SamplingProcedureType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Methodology/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SamplingProcedureType.svg
+

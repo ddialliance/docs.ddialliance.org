@@ -1,0 +1,34 @@
+UsedType
+--------
+
+Specifies a DDI object and all its sub-objects supported by the DDIProfile. May specify an alternate local name and description of an object, instructions for its use, and set limits on its allowed usage.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "AlternateName",":doc:`/composite-types/InternationalStringType/index`","0..1","Provides an alternate name for the element, for presentation purposes (not for use in the XML instance). It may be supplied in several language-versions."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the object. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "Instructions",":doc:`/composite-types/StructuredStringType/index`","0..1","Instructions for the use of the object within the context of the profile. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "DefaultValue",":doc:`/composite-types/ValueType/index`","0..1","This field provides a default value for the specified element or attribute if it holds simple content, and the value must be a valid one per the DDI schemas. This assumes that the value is not specified in the DDI instance itself, which would override the default. The value should also be provided as part of the XPath expression supplied for the field."
+   "IsRequired","boolean","0..1","If true indicates that an element described as optional in DDI is required by the profile."
+   "Xpath","string","1..1","Contains an XPath which points to an element or attribute in DDI instances which is used by the profile. All subelements of a used element are assumed to be supported unless explicitly addressed by the profile. The number of supported repetitions may be included in the XPath expression."
+   "LimitMaxOccurs","string","0..1","This field allows for limiting the maximum occurrences of this field. If the number is greater than the maxOccurs value in DDI it will be ignored and the DDI specification will remain in use."
+   "FixedValue","boolean","0..1","This field, if set to true, provides an indication that the default value supplied in the fixedValue attribute is the only one which is allowed for the profile - other values will be overridden with the default (a warning should be issued to the creator of the instance); the value must be a valid one per the DDI schemas."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DDIProfile/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/UsedType.svg
+

@@ -1,0 +1,29 @@
+PublicationType
+---------------
+
+Description and link to the Publication using the DDI Other Material structure.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..1","Description and link to the Publication using the DDI Other Material structure."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ClassificationCorrespondenceTable/index`
+* :doc:`/item-types/ClassificationIndex/index`
+* :doc:`/item-types/StatisticalClassification/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/PublicationType.svg
+

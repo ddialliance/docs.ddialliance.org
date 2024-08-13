@@ -1,0 +1,31 @@
+StandardKeyValuePairType
+------------------------
+
+A basic data representation for computing systems and applications expressed as a tuple (attribute key, value). Attribute keys may or may not be unique.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "AttributeKey",":doc:`/composite-types/CodeValueType/index`","0..1","This key (sometimes referred to as a name) expressed as a string. Supports the use of an external controlled vocabulary which is the recommended approach."
+   "AttributeValue",":doc:`/composite-types/CodeValueType/index`","0..1","The value assigned to the named Key expressed as a string. Supports the use of an external controlled vocabulary."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Versionable/index`
+* :doc:`/composite-types/CorrespondenceType/index`
+* :doc:`/composite-types/IdentifiableType/index`
+* :doc:`/composite-types/ProprietaryInfoType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/StandardKeyValuePairType.svg
+

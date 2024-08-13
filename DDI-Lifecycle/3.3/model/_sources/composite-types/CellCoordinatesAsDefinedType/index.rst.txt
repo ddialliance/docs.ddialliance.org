@@ -1,0 +1,27 @@
+CellCoordinatesAsDefinedType
+----------------------------
+
+Defines one or more cells by defining the applicable values of each dimension as "all values", a "specific value" or a range. For example in a simple 2 dimensional grid where dimension rank-1 is displayed as rows and dimension rank-2 as columns and the first column contains a NumericDomain; SelectDimension rank="1" allValues="true" and SelectDimension rank="2" specificValue="1" would result in the NumericDomain being attached to the first column of the grid only.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SelectDimension",":doc:`/composite-types/SelectDimensionType/index`","0..n","For each dimension in the grid define the applicable values as ""all values"", a ""specific value"" or a range. If a rangeMinimum or rangeMaximum is provided without the other, the assumption is unbounded for the object not included."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/GridAttachmentType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CellCoordinatesAsDefinedType.svg
+

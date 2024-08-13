@@ -1,0 +1,57 @@
+OrganizationNameType
+--------------------
+
+Names by which the organization is known. Use the attribute isFormal="true" to designate the legal or formal name of the Organization. The preferred name should be noted with the isPreferred attribute. Names may be typed with TypeOfOrganizationName to indicate their appropriate usage.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Abbreviation",":doc:`/composite-types/InternationalStringType/index`","0..1","An abbreviation or acronym for the name. This may be expressed in multiple languages. It is assumed that if only a single language is provided that it may be used in any of the other languages within which the name itself is expressed."
+   "TypeOfOrganizationName",":doc:`/composite-types/CodeValueType/index`","0..1","The type of organization name provided. the use of a controlled vocabulary is strongly recommended. At minimum this should include, e.g. PreviousFormalName, Nickname (or CommonName), Other."
+   "EffectivePeriod",":doc:`/composite-types/DateType/index`","0..1","The time period for which this name is accurate and in use."
+   "IsFormal","boolean","0..1","The legal or formal name of the organization should have the isFormal attribute set to true. To avoid confusion only one organization name should have the isFormal attribute set to true. Use the TypeOfOrganizationName to further differentiate the type and applied usage when multiple names are provided."
+
+Properties Inherited from NameType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "IsPreferred","boolean","0..1","If more than one name for the object is provided, use the isPreferred attribute to indicate which is the preferred name content. All other names should be set to isPreferred=""false""."
+   "Context","string","0..1","A name may be specific to a particular context, i.e., a type of software, or a section of a registry. Identify the context related to the specified name."
+
+Properties Inherited from InternationalStringType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "String",":doc:`/composite-types/StringType/index`","0..n","A non-formatted string of text with an attribute that designates the language of the text. Repeat this object to express the same content in another language."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/InternationalStringType/index`
+    * :doc:`/composite-types/NameType/index`
+        * **OrganizationNameType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/OrganizationIdentificationType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/OrganizationNameType.svg
+

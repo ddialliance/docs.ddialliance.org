@@ -1,0 +1,28 @@
+RequiredResourcePackagesType
+----------------------------
+
+Specifies by reference the ResourcePackages required to resolve the module.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ResourcePackageReference",":doc:`/item-types/ResourcePackage/index`","0..n","References a resource package used by the module."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Group/index`
+* :doc:`/item-types/StudyUnit/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/RequiredResourcePackagesType.svg
+

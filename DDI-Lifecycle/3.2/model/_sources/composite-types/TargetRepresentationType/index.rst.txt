@@ -1,0 +1,36 @@
+TargetRepresentationType
+------------------------
+
+Provides a reference to a codified representation. Supports the ability to limit code coverage as appropriate for the coding structure referenced.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ManagedRepresentationReference_ManagedMissingValuesRepresentation",":doc:`/item-types/ManagedMissingValuesRepresentation/index`","0..1","Substitution group head for referencing Managed Representations. For example, ManagedTextRepresentationReference, ManagedNumericRepresentationReference, etc."
+   "ManagedRepresentationReference_ManagedScaleRepresentation",":doc:`/item-types/ManagedScaleRepresentation/index`","0..1","Substitution group head for referencing Managed Representations. For example, ManagedTextRepresentationReference, ManagedNumericRepresentationReference, etc."
+   "ManagedRepresentationReference_ManagedNumericRepresentation",":doc:`/item-types/ManagedNumericRepresentation/index`","0..1","Substitution group head for referencing Managed Representations. For example, ManagedTextRepresentationReference, ManagedNumericRepresentationReference, etc."
+   "ManagedRepresentationReference_ManagedDateTimeRepresentation",":doc:`/item-types/ManagedDateTimeRepresentation/index`","0..1","Substitution group head for referencing Managed Representations. For example, ManagedTextRepresentationReference, ManagedNumericRepresentationReference, etc."
+   "ManagedRepresentationReference_ManagedTextRepresentation",":doc:`/item-types/ManagedTextRepresentation/index`","0..1","Substitution group head for referencing Managed Representations. For example, ManagedTextRepresentationReference, ManagedNumericRepresentationReference, etc."
+   "CategorySchemeReference",":doc:`/item-types/CategoryScheme/index`","0..1","A reference to a CategoryScheme as the managed component of a representation."
+   "CodeListReference",":doc:`/item-types/CodeList/index`","0..1","A reference to a CodeList as the managed component of a representation."
+   "CodeSubsetInformation",":doc:`/composite-types/CodeSubsetInformationType/index`","0..1","Allows further specification of the codes to use from the CodeList."
+   "IncludedGeographicStructureCodes",":doc:`/composite-types/IncludedGeographicStructureCodesType/index`","0..1","Identifies the Geographic Structure codes included by the Authorized source of the code, the geographic location being used and the locations to exclude."
+   "IncludedGeographicLocationCodes",":doc:`/composite-types/IncludedGeographicLocationCodesType/index`","0..1","Identifies the Geographic Location codes included by the Authorized source of the code, the geographic location being used and the locations to exclude."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/RepresentationMap/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TargetRepresentationType.svg
+

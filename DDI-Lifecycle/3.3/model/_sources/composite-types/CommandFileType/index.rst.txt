@@ -1,0 +1,32 @@
+CommandFileType
+---------------
+
+Identifies and provides a link to an external copy of the command, for example, a SAS Command Code script. Designates the programming language of the command file, designates input and output parameters, binding information between input and output parameters, a description of the location of the file , and a URN or URL for the command file.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProgramLanguage",":doc:`/composite-types/CodeValueType/index`","0..1","Designates the programming language used for the command. Supports the use of a controlled vocabulary."
+   "InParameter",":doc:`/composite-types/InParameterType/index`","0..n","Describes the information used by the command as it is identified within the command structure. Use of the Alias may be needed to tie the designated input parameter content to its use in the external command file."
+   "OutParameter",":doc:`/composite-types/ParameterType/index`","0..n","Describes the information that results from the command that may be used as input by another object. Use of the Alias may be needed to tie the designated output parameter content to its use in the external command file."
+   "Binding",":doc:`/composite-types/BindingType/index`","0..n","Defines the link between the output of an external object to an InParameter described above."
+   "Location",":doc:`/composite-types/InternationalStringType/index`","0..1","A description of the location of the file. This may not be machine actionable. It supports a description expressed in multiple languages."
+   "URI","anyURI","0..1","The URL or URN of the command file."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CommandCodeType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CommandFileType.svg
+

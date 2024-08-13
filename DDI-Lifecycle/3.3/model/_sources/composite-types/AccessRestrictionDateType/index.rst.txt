@@ -1,0 +1,50 @@
+AccessRestrictionDateType
+-------------------------
+
+The date or date range of the access restriction for all or portions of the data. Includes a reason for the access restriction as well as the user group to which the restriction applies.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Reason",":doc:`/composite-types/StructuredStringType/index`","0..1","The reason for the access restriction. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "User",":doc:`/composite-types/StructuredStringType/index`","0..1","The user group to whom the restriction applies. Supports multiple language versions of the same content as well as optional formatting of the content."
+
+Properties Inherited from DateType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "SimpleDate","cogsDate","0..1","A single point in time. If a duration is expressed as a SimpleDate it is defining a period of time without a designated Start or End date."
+   "HistoricalDate",":doc:`/composite-types/HistoricalDateType/index`","0..1","A simple date expressed in a historical date format, including a specification of the date format and calendar used."
+   "StartDate","cogsDate","0..1","Start of a date range. If there is a start date with no end date provided, this implies that the end date is unknown but that the date being recorded is not just a simple date but a range of unknown duration."
+   "HistoricalStartDate",":doc:`/composite-types/HistoricalDateType/index`","0..1","A start date expressed in a historical date format, including a specification of the date format and calendar used."
+   "EndDate","cogsDate","0..1","End of a date range with a known start date."
+   "HistoricalEndDate",":doc:`/composite-types/HistoricalDateType/index`","0..1","An end date expressed in a historical date format, including a specification of the date format and calendar used."
+   "Cycle","int","0..1","Use to indicate occurrence of this range within a series of ranges as an integer identifying the cycle, i.e. the 4th wave of a data collection cycle would have 4."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/DateType/index`
+    * **AccessRestrictionDateType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/AccessType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AccessRestrictionDateType.svg
+

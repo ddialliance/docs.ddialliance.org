@@ -1,0 +1,78 @@
+MeasurementItem
+---------------
+
+Structure a single Measurement which may contain one or more response domains (i.e., a list of valid category responses where if "Other" is indicated a text response can be used to specify the intent of "Other"). The structure provides detail on the intent of the measurement, they type of capture, the valid response options and the number of allowed responses, references to external aids and instructions, and an estimation of the time needed to respond to the measurement. Note that the MeasurementItem is a reusable format for use in any number of applied uses. Additional materials and information can be added within the MeasurementConstruct which is the applied use of a measurement.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "MeasurementItemName",":doc:`/composite-types/NameType/index`","0..n","A name for the MeasurementItem. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the MeasurementItem. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the MeasurementItem. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "InParameter",":doc:`/composite-types/InParameterType/index`","0..n","Provides an identity for input objects required for the MeasurementItem."
+   "OutParameter",":doc:`/composite-types/ParameterType/index`","0..n","Provides an identify for the output objects of the MeasurementItem."
+   "Binding",":doc:`/composite-types/BindingType/index`","0..n","A structure used to bind the content of a parameter declared as the source to a parameter declared as the target."
+   "TypeOfMeasurementItem",":doc:`/composite-types/CodeValueType/index`","0..n","A brief term defining the type of MeasurementItem. Supports the use of an external controlled vocabulary."
+   "MeasurementItemIntent",":doc:`/composite-types/StructuredStringType/index`","0..1","The purpose of the MeasurementItem in terms of what it is designed to measure."
+   "ResponseDomain",":doc:`/composite-types/RepresentationType/index`","0..1","Contains a response domain for the measurement item. Typically used to describe simple response domains (textual, numeric, etc.)."
+   "ResponseDomainReference",":doc:`/item-types/ManagedRepresentation/index`","0..1","The inclusion of a response domain by reference (must be supported by a managed representation). An abstract element. May be substituted by any valid object of substitution type ResponseDomainReference."
+   "StructuredMixedResponseDomain",":doc:`/composite-types/StructuredMixedResponseDomainType/index`","0..1","Use in cases where the measurement requires the option for multiple response domains."
+   "ResponseCardinality",":doc:`/composite-types/ResponseCardinalityType/index`","0..1","Allows the designation of the minimum and maximum number of responses allowed for this measurement. Note that each response domain has its own response cardinality."
+   "ConceptReference",":doc:`/item-types/Concept/index`","0..n","A reference to the concept associated with the response to the measurement."
+   "ExternalAid",":doc:`/composite-types/ExternalAidType/index`","0..n","A pointer to an external aid presented by the instrument such as a text card, image, audio, or audiovisual aid. Typically a URN. Use type attribute to describe the type of external aid provided. Example of terms to use would include: imageOnly audioOnly audioVisual multiMedia."
+   "ExternalInterviewerInstruction",":doc:`/composite-types/ExternalInterviewerInstructionType/index`","0..1","External reference to an interviewer instruction not expressed as DDI XML using OtherMaterial."
+   "InterviewerInstructionReference",":doc:`/item-types/Instruction/index`","0..1","Reference to an interviewer instruction expressed as DDI XML."
+   "RepresentedVariableReference",":doc:`/item-types/RepresentedVariable/index`","0..n","Reference to the RepresentedVariable that describes the data to be collected by this measurement. The RepresentedVariable contains the broad reusable specification of the Variable, i.e., concept, universe, and value representation. When more than one ResponseDomain exists, one RepresentedVariable should be created for each ResponseDomain in the same order as the corresponding ResponseDomain. TypeOfObject should be set to RepresentedVariable."
+   "DevelopmentResultsReference",":doc:`/item-types/DevelopmentResults/index`","0..n","Reference to the development implementation results which gave rise to this version of the object. TypeOfObject should be DevelopmentResults."
+   "EstimatedSecondsResponseTime","decimal","0..1","The estimated amount of time required to perform the measurement expressed in seconds. Decimal values should be used to define fractions of seconds."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference",":doc:`/item-types/Agent/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "RelatedOtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..n","The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+   "IsPublished","boolean","0..1","Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * **MeasurementItem**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/GenerationInstruction/index`
+* :doc:`/item-types/MeasurementConstruct/index`
+* :doc:`/item-types/MeasurementGroup/index`
+* :doc:`/item-types/MeasurementScheme/index`
+* :doc:`/item-types/Variable/index`
+* :doc:`/composite-types/DevelopmentObjectType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/MeasurementItem.svg
+

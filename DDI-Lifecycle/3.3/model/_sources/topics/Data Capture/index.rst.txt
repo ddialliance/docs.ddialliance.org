@@ -1,0 +1,31 @@
+Data Capture
+------------
+
+
+
+Item Types
+**********
+
+DDI has 17 item types related to Data Capture.
+
+.. toctree::
+   :maxdepth: 1
+
+   ../../item-types/ComputationItem/index
+   ../../item-types/DataCollection/index
+   ../../item-types/IfThenElse/index
+   ../../item-types/Instruction/index
+   ../../item-types/Instrument/index
+   ../../item-types/Loop/index
+   ../../item-types/Methodology/index
+   ../../item-types/QuestionItem/index
+   ../../item-types/QuestionBlock/index
+   ../../item-types/QuestionGrid/index
+   ../../item-types/QuestionConstruct/index
+   ../../item-types/MeasurementItem/index
+   ../../item-types/MeasurementConstruct/index
+   ../../item-types/RepeatUntil/index
+   ../../item-types/RepeatWhile/index
+   ../../item-types/Sequence/index
+   ../../item-types/StatementItem/index
+

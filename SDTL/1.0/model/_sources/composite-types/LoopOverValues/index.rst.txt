@@ -1,0 +1,68 @@
+LoopOverValues
+--------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/TransformBase/index`
+    * **LoopOverValues**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LoopOverValues.svg
+
+Properties
+~~~~~~~~~~
+
+StartExpression
+***************
+
+Type
+    :doc:`/composite-types/ExpressionBase/index`
+Cardinality
+    0..1
+
+TODO
+
+EndExpression
+*************
+
+Type
+    :doc:`/composite-types/ExpressionBase/index`
+Cardinality
+    0..1
+
+TODO
+
+IteratorVariable
+****************
+
+Type
+    :doc:`/composite-types/VariableSymbolExpression/index`
+Cardinality
+    1..1
+
+The locally scoped variable that represents the current loop value.
+
+Commands
+********
+
+Type
+    :doc:`/composite-types/TransformBase/index`
+Cardinality
+    0..n
+
+The list of commands to be performed against each variable.
+
+
+

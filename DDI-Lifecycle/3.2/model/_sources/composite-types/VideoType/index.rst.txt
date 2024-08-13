@@ -1,0 +1,29 @@
+VideoType
+---------
+
+Describes the type and length of the video segment.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfVideoClip",":doc:`/composite-types/CodeValueType/index`","0..1","The type of video clip provided. Supports the use of a controlled vocabulary."
+   "VideoClipBegin","string","0..1","The point to begin the video clip. If no point is provided the assumption is that the start point is the beginning of the clip provided."
+   "VideoClipEnd","string","0..1","The point to end the video clip. If no point is provided the assumption is that the end point is the end of the clip provided."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/SegmentType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VideoType.svg
+

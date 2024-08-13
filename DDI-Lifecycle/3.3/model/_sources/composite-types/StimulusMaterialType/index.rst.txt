@@ -1,0 +1,27 @@
+StimulusMaterialType
+--------------------
+
+Description and link to the StimulusMaterial using the DDI Other Material structure.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..1","Description and link to the StimulusMaterial using the DDI Other Material structure."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/QuestionBlock/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/StimulusMaterialType.svg
+

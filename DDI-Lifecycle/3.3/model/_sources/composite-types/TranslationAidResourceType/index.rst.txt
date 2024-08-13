@@ -1,0 +1,27 @@
+TranslationAidResourceType
+--------------------------
+
+Provides a reference to the translation aid resource using the structure of OtherMaterial.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..1","Description and link to the complexType using the DDI Other Material structure."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/TranslationAidType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TranslationAidResourceType.svg
+

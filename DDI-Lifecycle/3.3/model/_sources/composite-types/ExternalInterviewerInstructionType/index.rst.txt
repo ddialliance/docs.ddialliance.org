@@ -1,0 +1,33 @@
+ExternalInterviewerInstructionType
+----------------------------------
+
+Specification of an external interviewer instruction not structured in DDI. Uses the structure of OtherMaterial to provide a citation, description, and locator for the object.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "OtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..1","Specification of an external interviewer instruction not structured in DDI. Uses the structure of OtherMaterial to provide a citation, description, and locator for the object. TypeOfOtherMaterial should be set to ExternalInterviewInstruction."
+   "InstructionAttachmentLocation",":doc:`/composite-types/InstructionAttachmentLocationType/index`","0..n","Allows attachment of an instruction to a specific item in a question structure. For example, to a Label, QuestionText, ResponseDomain, Response domain value, or grid cell."
+   "IsDisplayed","boolean","0..1","If set to ""true"" indicates that the instruction should always be displayed, not just upon need."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ControlConstruct/index`
+* :doc:`/item-types/MeasurementItem/index`
+* :doc:`/item-types/QuestionBlock/index`
+* :doc:`/item-types/QuestionGrid/index`
+* :doc:`/item-types/QuestionItem/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ExternalInterviewerInstructionType.svg
+

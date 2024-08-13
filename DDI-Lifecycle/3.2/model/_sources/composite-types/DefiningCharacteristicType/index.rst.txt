@@ -1,0 +1,28 @@
+DefiningCharacteristicType
+--------------------------
+
+Use to attach one or more characteristics to the parent object. The defining characteristic supports the use of a controlled vocabulary and may provide a time period for which the classification is valid.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Characteristic",":doc:`/composite-types/CodeValueType/index`","0..1","A characteristic which defines the area. These are often useful in terms of selection. For example a U.S. Block may be classified as Urban, Rural, or Mixed. The characteristic supports the use of a controlled vocabulary."
+   "GeographicTime",":doc:`/composite-types/DateType/index`","0..1","The time period for which the characteristic is valid."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/LocationValueType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DefiningCharacteristicType.svg
+

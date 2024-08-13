@@ -1,0 +1,48 @@
+VariableSymbolExpression
+------------------------
+
+A reference to a variable.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "VariableName","string","1..1","The name of a variable"
+
+Properties Inherited from VariableReferenceBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * :doc:`/composite-types/VariableReferenceBase/index`
+        * **VariableSymbolExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/Aggregate/index`
+* :doc:`/composite-types/Collapse/index`
+* :doc:`/composite-types/RenamePair/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VariableSymbolExpression.svg
+

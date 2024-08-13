@@ -1,0 +1,41 @@
+AggregationOperation
+--------------------
+
+TODO
+
+
+.. contents::
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AggregationOperation.svg
+
+Properties
+~~~~~~~~~~
+
+GroupByVariables
+****************
+
+Type
+    :doc:`/composite-types/VariableReferenceBase/index`
+Cardinality
+    0..n
+
+TODO
+
+AggregationFunction
+*******************
+
+Type
+    :doc:`/composite-types/Compute/index`
+Cardinality
+    0..n
+
+The compute expression that generates a new, aggregated value. The expression will use an aggregation function.
+
+
+

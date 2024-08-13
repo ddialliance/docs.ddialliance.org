@@ -1,0 +1,37 @@
+ImageType
+---------
+
+A reference to an image, with a description of its properties and type.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ImageLocation","anyURI","0..1","A reference to the location of the image using a URI."
+   "TypeOfImage",":doc:`/composite-types/CodeValueType/index`","0..1","Brief description of the image type. Supports the use of an external controlled vocabulary."
+   "Dpi","nonNegativeInteger","0..1","Provides the resolution of the image in dots per inch to assist in selecting the appropriate image for various uses."
+   "LanguageOfImage","language","0..1","Language of image."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* **ImageType**
+    * :doc:`/composite-types/PrivateImageType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Instruction/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ImageType.svg
+

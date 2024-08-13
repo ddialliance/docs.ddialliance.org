@@ -1,0 +1,74 @@
+DDIInstance
+-----------
+
+DDIInstance is the top-level publication wrapper for any DDI document. All DDI content published as XML (with the exception of a Fragment intended for transmission) has DDIInstance as its top level structure. In addition to a citation and coverage statement for the instance, the DDIInstance can contain a Group, ResourcePackage, LocalHoldingPackage or StudyUnit. Additional OtherMaterial content may be added but in general OtherMaterial should be listed in the maintainable object containing the objects the OtherMaterial is related to. The instance can provide an applicable DDIProfile either in-line or by reference and can contain overall translation information.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Citation",":doc:`/composite-types/CitationType/index`","0..1","Citation for the Instance. Note that the citation is optional, because the DDI Instance may contain only reusable component pieces of metadata sets, which are not directly concerned with a single study or studies."
+   "Coverage",":doc:`/composite-types/CoverageType/index`","0..1","This element contains descriptions of temporal, geographic and topical coverage. At the instance level these descriptions should be inclusive of the coverage of all modules in the instance. The element is available within individual modules and can be used to refine the coverage to that of the individual module."
+   "GroupReference",":doc:`/item-types/Group/index`","0..n","A publication of a Group of StudyUnits in-line."
+   "ResourcePackageReference",":doc:`/item-types/ResourcePackage/index`","0..n","A publication of a set of maintainables (modules or schemes) intended for reuse between studies in-line."
+   "LocalHoldingPackageReference",":doc:`/item-types/LocalHoldingPackage/index`","0..n","A publication package containing a deposited publication as well as local value added or processing information in-line."
+   "StudyUnitReference",":doc:`/item-types/StudyUnit/index`","0..n","A publication of a study unit representing the purpose, background, development, data capture, and data products related to a study in-line."
+   "DDIProfileReference",":doc:`/item-types/DDIProfile/index`","0..n","A DDIProfile applicable to the instance."
+   "TranslationInformation",":doc:`/composite-types/TranslationType/index`","0..1","TranslationInformation contains information about the translation of the content of the DDI Instance. This includes human-readable information about which language(s) are involved in the translation."
+
+Properties Inherited from Maintainable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Note",":doc:`/composite-types/NoteType/index`","0..n","Note allows for the attachment of a piece of additional information to any object with an ID. Note facilitates capturing temporary processing notes such as ""Review and approval required"". A single note can be attached to multiple objects by reference to the objects. Note may also contain content for a needed object that has been reported for addition in a later version of the schema. Ideally this should be handled by a local extension, but Note can accommodate run-time extensions when required. The Note should be housed within the Maintainable object that contains the referenced objects. In this way the user is ensured of receiving all known Note attachments when the maintainable content is delivered. This means that if a Note references objects within multiple Maintainable objects, the Note should be repeated in each Maintainable and reference only those objects with that Maintainable."
+   "Software",":doc:`/composite-types/SoftwareType/index`","0..n","Indicate the software used to create and/or manage the metadata. This is repeatable to allow for multiple softwares or multiple functions. If this information is important it is advisable to provide it in each maintainable so that it does not become separated from the internal content if the metadata is re-factored."
+   "MetadataQuality",":doc:`/composite-types/MetadataQualityType/index`","0..n","An assessment of the quality of the metadata within the Maintainable object, e.g. the quality of the transcription, completeness, editing status, etc."
+   "ExternalReferenceDefaultURI","anyURI","0..1","Use to provide a default value for the URI of external references. Use of a URI in a reference within this maintainable overrides the value entered here. Nested maintainables should redeclare the contents of this attribute for clarity."
+   "Lang","language","0..1","This is used to designate the language of the metadata content of the maintainable. If a lower level xml:lang attribute conflicts with the content at the maintainable level, the object level value takes precedence."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference",":doc:`/item-types/Agent/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "RelatedOtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..n","The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+   "IsPublished","boolean","0..1","Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * :doc:`/item-types/Maintainable/index`
+        * **DDIInstance**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DDIInstance.svg
+

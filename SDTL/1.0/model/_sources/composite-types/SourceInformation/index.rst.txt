@@ -1,0 +1,33 @@
+SourceInformation
+-----------------
+
+SourceInformation defines information about the original source of a data transform.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "LineNumberStart","int","0..1","The line number of the beginning of the transform code"
+   "LineNumberEnd","int","0..1","The line number of the end of the transform code"
+   "SourceStartIndex","int","0..1","The character index of the beginning of the transform code"
+   "SourceStopIndex","int","0..1","The character index of the end of the transform code"
+   "OriginalSourceText","string","0..1","The original source code of the data transform code"
+   "ProcessedSourceText","string","0..1","The source code of the data transform code after processing macros or loops"
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CommandBase/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SourceInformation.svg
+

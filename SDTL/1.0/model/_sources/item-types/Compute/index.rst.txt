@@ -1,0 +1,58 @@
+Compute
+-------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/TransformBase/index`
+    * **Compute**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Compute.svg
+
+Properties
+~~~~~~~~~~
+
+Target
+******
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+Expression
+**********
+
+Type
+    :doc:`/reusable-types/Expression/index`
+Cardinality
+    0..1
+
+TODO
+
+Condition
+*********
+
+Type
+    :doc:`/reusable-types/Expression/index`
+Cardinality
+    0..1
+
+TODO
+
+
+

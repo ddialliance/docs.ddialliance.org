@@ -1,0 +1,28 @@
+XMLPrefixMapType
+----------------
+
+Maps a specified prefix to a namespace. For each XML namespace used in the profile's XPath expressions, the XML namespaces must have their prefix specified using this element.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "XMLPrefix","string","0..1","Specify the exact prefix used."
+   "XMLNamespace","string","0..1","Specify the namespace which the prefix represents."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DDIProfile/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/XMLPrefixMapType.svg
+

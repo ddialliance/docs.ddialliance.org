@@ -1,0 +1,29 @@
+VersionRationaleType
+--------------------
+
+Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "RationaleDescription",":doc:`/composite-types/InternationalStringType/index`","0..1","Textual description of the rationale/purpose for the version change to inform users as to the extent and implication of the version change. May be expressed in multiple languages."
+   "RationaleCode",":doc:`/composite-types/CodeValueType/index`","0..1","RationaleCode is primarily for internal processing flags within an organization or system. Supports the use of an external controlled vocabulary."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/Versionable/index`
+* :doc:`/composite-types/DataFileVersionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/VersionRationaleType.svg
+

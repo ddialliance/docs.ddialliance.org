@@ -1,0 +1,28 @@
+TextualType
+-----------
+
+Defines the segment of textual content used by the parent object. Can identify a set of lines and or characters used to define the segment.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "LineParameter",":doc:`/composite-types/LineParameterType/index`","0..1","Specification of the line and offset for the beginning and end of the segment."
+   "CharacterParameter",":doc:`/composite-types/CharacterParameterType/index`","0..1","Specification of the character offset for the beginning and end of the segment."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/SegmentType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/TextualType.svg
+

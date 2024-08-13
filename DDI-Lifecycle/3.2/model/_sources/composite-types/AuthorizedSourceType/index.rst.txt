@@ -1,0 +1,70 @@
+AuthorizedSourceType
+--------------------
+
+A stack of LocationValueReferences to each of the locations of the specified PrimaryComponentLevel type that make up the Component Area. Includes a GeographicTime to allow for repetition for change over time.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "IdentifierParsingInformation",":doc:`/composite-types/IdentifierParsingInformationType/index`","0..1","Provides structural information for parsing the identification code structure of the Authorized Source into its separate parts."
+
+Properties Inherited from OtherMaterialType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "TypeOfMaterial",":doc:`/composite-types/CodeValueType/index`","0..1","Designation of the type of material being described. Supports the use of a controlled vocabulary."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the referenced material. This field can map to a Dublin Core abstract. Note that Dublin Core does not support structure within the abstract element. Supports multiple languages and optional structured content."
+   "Citation",":doc:`/composite-types/CitationType/index`","0..1","Bibliographic citation for the external resource."
+   "ExternalURLReference","anyURI","0..n","Contains a URL which indicates the location of the cited external resource."
+   "ExternalURNReference","anyURI","0..1","Contains a URN which identifies the cited external resource."
+   "Relationship",":doc:`/composite-types/RelationshipType/index`","0..n","Reference to the item within the DDI Instance to which the external resource is related."
+   "MIMEType",":doc:`/composite-types/CodeValueType/index`","0..1","Provides a standard Internet MIME type for use by processing applications."
+   "Segment",":doc:`/composite-types/SegmentType/index`","0..n","Can describe a segment within a larger object such as a text or video segment."
+   "Lang","language","0..1","Language of the metadata describing the other material."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * :doc:`/composite-types/OtherMaterialType/index`
+        * **AuthorizedSourceType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/GeographicLocation/index`
+* :doc:`/item-types/GeographicStructure/index`
+* :doc:`/composite-types/GeographicLocationIdentifierType/index`
+* :doc:`/composite-types/IncludedGeographicLocationCodesType/index`
+* :doc:`/composite-types/IncludedGeographicStructureCodesType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/AuthorizedSourceType.svg
+

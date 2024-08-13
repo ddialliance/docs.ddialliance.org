@@ -1,0 +1,41 @@
+Operator
+--------
+
+TODO
+
+
+.. contents::
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/Operator.svg
+
+Properties
+~~~~~~~~~~
+
+OperatorSymbol
+**************
+
+Type
+    string
+Cardinality
+    0..1
+
+TODO
+
+Operands
+********
+
+Type
+    :doc:`/reusable-types/Expression/index`
+Cardinality
+    0..n
+
+TODO
+
+
+

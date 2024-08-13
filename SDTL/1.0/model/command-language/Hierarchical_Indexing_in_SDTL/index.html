@@ -1,0 +1,436 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>&lt;no title&gt; &mdash; Structured Data Transform Language 0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> Structured Data Transform Language
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../summary/">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components/">Components of SDTL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../use-cases/">SDTL Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../">SDTL Command Language </a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../function-library/">SDTL Function Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pseudocode-library/">SDTL Pseudocode Library Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../best-practices/">SDTL Best Practices and Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../credits/#copyright-and-license">Copyright and License</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/All/">All</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../item-types/">All Item Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite-types/">All Composite Types</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Structured Data Transform Language</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/command-language/Hierarchical_Indexing_in_SDTL.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Revised: 5 June 2020</p>
+<p>This document shows how data with hierarchical indexes (aka data cubes
+aka Ncubes aka multi-indexes) may be described in SDTL. Properties have
+been included in the SDTL <strong>DataframeDescription</strong> type to describe
+hierarchical indexes. SDTL describes data with hierarchical indexes in a
+general way intended to facilitate sharing data among different
+statistical software applications. Functionality for assuring the
+integrity of these indexes must be in the software used to create and
+use them. Although operations on hierarchically indexed data often
+involve specialized syntax and processing procedures, these operations
+can be described by standard SDTL commands.</p>
+<p>Data cubes are often used to speed the analysis of large databases. Data
+cubes are defined by “dimensions,” which represent attributes used for
+classification of the data, and “measures,” which are often aggregations
+like counts and means. Although data cubes may have any number of
+dimensions, we show below that they can be represented as
+two-dimensional data matrices.</p>
+<p>The Python language allows dataframes to have multiple hierarchical
+indexes – multi-indexes. In Python both rows and columns can be
+multi-indexed, which differs from the Ncube model where only rows have
+hierarchical indexes. Some data transformations in Python, notably
+aggregation (SDTL <strong>Collapse</strong>), produce dataframes with multi-indexes.</p>
+<p>Figure 1 shows a multi-index created by the Python commands:</p>
+<blockquote>
+<div><p>fruitprice = prices.groupby([‘Fruit’, ‘Color’]).agg( { ‘Price’ :
+[‘mean’, ‘count’] } )</p>
+<p>fruitprice[ (‘Total’,’sum’)] = fruitprice[‘Price’,’mean’] *
+fruitprice[‘Price’,’count’]</p>
+</div></blockquote>
+<p>The dataframe produced by these commands has two row dimensions (Fruit,
+Color) and two column dimensions (Price, Total).</p>
+<p>Figure 1. A multi-index in Python<a class="reference internal" href="command-language\media/image1.png"><img alt="image0" src="command-language\media/image1.png" style="width: 3.11458in; height: 1.48958in;" /></a></p>
+<blockquote>
+<div><p><a class="reference internal" href="command-language\media/image3.png"><img alt="image1" src="command-language\media/image3.png" style="width: 3.34375in; height: 1.67708in;" /></a></p>
+<p>Figure 2. Multi-index saved to CSV file</p>
+</div></blockquote>
+<p>When this dataframe is saved as a CSV file, it is rendered as in Figure
+2. Notice that the row dimensions (Fruit, Color) are now columns, and
+that “Price” has been added to the column headers for both “mean” and
+“count”.</p>
+<p><a class="reference internal" href="command-language\media/image2.png"><img alt="image2" src="command-language\media/image2.png" style="width: 6.5in; height: 1.48611in;" /></a></p>
+<p>Figure 3. Multi-index saved to Stata dta file</p>
+<p>When the Python dataframe is saved to a Stata .dta file, we get Figure
+3. Since Stata does not allow hierarchical indexes, variables are given
+compound names that include both parts of the column index, such as
+“Price_mean” and “Price_count”.</p>
+<p>This example shows that data with hierarchical indexes can be
+represented as rectangular datasets. Row indexes are variables. Column
+indexes can be replaced by compound variable names.</p>
+<p>Hierarchical indexes do provide additional functionality to languages
+like Python. For example, this expression returns only the row where
+“Fruit”=”Apple” and “Color”=”Red”:</p>
+<p>fruitprice.loc[‘Apple’, ‘Red’]</p>
+<p>We can select the columns “mean” and “count” by referring to the “Price”
+index, like this</p>
+<blockquote>
+<div>Fruit price[ ‘Price’]</div></blockquote>
+<p>Notice that selection of rows and columns operates differently. Rows are
+selected by specifying a value. Columns are selected by using one or
+more index names. In other words, as the translation to Stata shows,
+column indexes are variable names.</p>
+<p>Solutions for SDTL:</p>
+<ol class="arabic simple">
+<li>Syntax for referring to columns in a multi-index</li>
+</ol>
+<blockquote>
+<div><p>The levels in a column index can be treated as a variable name</p>
+<p>The recommended syntax for combining indexes into variable names is:</p>
+<p>“index1.index2.variablename”.</p>
+<p>Using the example above, the columns would be:</p>
+<p>“Price.mean”, “Price.count”, “Total.sum”</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Defining hierarchical indexes</li>
+</ol>
+<blockquote>
+<div><p>Use SDTL element: <strong>DataframeDescription</strong></p>
+<p>Properties:</p>
+</div></blockquote>
+<ol class="lowerroman simple">
+<li><strong>rowDimensions</strong>: an ordered list of variables used as row indexes</li>
+<li><dl class="first docutils">
+<dt><strong>columnDimensions</strong>: an ordered list of variable names created from</dt>
+<dd>column indexes</dd>
+</dl>
+</li>
+</ol>
+<blockquote>
+<div><p>The example above would be represented as</p>
+<p>{“$type”: “DataframeDescription”,</p>
+<p>“dataframeName”: “fruitprice”,</p>
+<p>“variableInventory”: [“Price.mean”, “Price.count”, “Total.sum”].</p>
+<p>“rowDimensions”: [“Fruit”, “Color”],</p>
+<p>“columnDimensions”:[“Price”, “Total”]</p>
+<p>}</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><dl class="first docutils">
+<dt>Selecting by row indexes is the same as a selecting using the values</dt>
+<dd>of variables in an SDTL <strong>IfRows</strong> command</dd>
+</dl>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Python syntax</th>
+<th class="head">SPSS</th>
+<th class="head">SDTL</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>fru
+itprice.loc[‘Apple’,
+(‘varX’)] = 2</td>
+<td>IF (Fruit=’Apple’)
+varX=2.</td>
+<td><p class="first">{ “$type”: “IfRows”,</p>
+<p>“command”: “ifRows”,</p>
+<p>“condition”: {</p>
+<p>“$type”:
+“Func
+tionCallExpression”,</p>
+<p>“function”: “eq”,</p>
+<p>“isSdtlName”: true,</p>
+<p>“arguments”: [</p>
+<p>{type”:
+“FunctionArgument”,</p>
+<p>“argumentValue”: {</p>
+<p>“$type”:
+“Variab
+leSymbolExpression”,</p>
+<p>“variableName”:
+“Fruit” }</p>
+<p>},</p>
+<p>{type”:
+“FunctionArgument”,</p>
+<p>“argumentValue”: {</p>
+<p>“$type”:
+“String
+ConstantExpression”,</p>
+<p>“value”: “Apple” }</p>
+<p>}</p>
+<p>]</p>
+<p>},</p>
+<p>“thenCommands”: [</p>
+<p>{ type”: “Compute”,</p>
+<p>“command”:
+“compute”,</p>
+<p>”
+originalSourceText”:
+“IF (Fruit=’Apple’)
+varX=2.”</p>
+<p>},</p>
+<p>“variable”: {type”:
+“Variab
+leSymbolExpression”,</p>
+<p>“variableName”:
+“varX” },</p>
+<p>“expression”: {
+type”:
+“Numeric
+ConstantExpression”,</p>
+<p>“value”: “2”,</p>
+<p>“numericType”: “int”
+}</p>
+<p>}</p>
+<p>]</p>
+<p class="last">}</p>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="4">
+<li><dl class="first docutils">
+<dt>Selecting columns is the same as a <strong>VariableRange</strong> expression in</dt>
+<dd>SDTL</dd>
+</dl>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Python syntax</th>
+<th class="head">SPSS</th>
+<th class="head">SDTL</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>fruitprice[ ‘Price’]</td>
+<td>Price_mean to
+Price_count</td>
+<td><p class="first">{type”:
+“Varia
+bleRangeExpression”,</p>
+<p>“first”:
+“Price.mean”,</p>
+<p>“last”:
+“Price.count”</p>
+<p class="last">}</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Copyright (c) 2020 C2Metadata Contributors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

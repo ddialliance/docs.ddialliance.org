@@ -1,0 +1,42 @@
+ConditionalTextType
+-------------------
+
+Text which has a changeable value depending on a stated condition, response to earlier questions, or as input from a set of metrics (pre-supplied data).
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Expression",":doc:`/composite-types/CommandCodeType/index`","0..1","The condition on which the associated text varies expressed by a command code. For example, a command that inserts an age by calculating the difference between today’s date and a previously defined date of birth."
+   "SourceParameterReference",":doc:`/composite-types/ParameterType/index`","0..1","This allows for the simple insert of a piece of information from another specified parameter. For example, if the text of the item using conditional text included the respondent’s name use SourceParameterReference to reference the InParameter of the question that is bound to the OutParameter of the question: “What is your name?”"
+
+Properties Inherited from TextContentType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the text segment. May be expressed in multiple languages and supports the use of structured content."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/TextContentType/index`
+    * **ConditionalTextType**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ConditionalTextType.svg
+

@@ -1,0 +1,32 @@
+SegmentType
+-----------
+
+A structure used to express explicit segments or regions within different types of external materials (Textual, Audio, Video, XML, and Image). Provides the appropriate start, stop, or region definitions for each type.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Textual",":doc:`/composite-types/TextualType/index`","0..n","Defines the segment of textual content used by the parent object. Can identify a set of lines and or characters used to define the segment."
+   "Audio",":doc:`/composite-types/AudioType/index`","0..n","Describes the type and length of the audio segment."
+   "Video",":doc:`/composite-types/VideoType/index`","0..n","Describes the type and length of the video segment."
+   "XML","string","0..n","An X-Pointer expression identifying a node in the XML document."
+   "ImageArea",":doc:`/composite-types/ImageAreaType/index`","0..n","Defines the shape and area of an image used as part of a location representation. The shape is defined as a Rectangle, Circle, or Polygon and Coordinates provides the information required to define it."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/OtherMaterial/index`
+* :doc:`/composite-types/ActionType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/SegmentType.svg
+

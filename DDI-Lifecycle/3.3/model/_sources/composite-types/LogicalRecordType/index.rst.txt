@@ -1,0 +1,60 @@
+LogicalRecordType
+-----------------
+
+A logical record is a description of all of the elements (variables or NCubes) related to a single case or analysis unit. Required to link a description of a physical record structure to its logical record. In addition to the standard name, label, and description, the structure identifies the variable designating its record type, describes case identification within the record type, indicates support for multiple storage segments, and defines a default set of missing values used by the record. In a data set with multiple records repeat to describe each logical record, such as a household, family, person, or event, record. A LogicalRecord is required to link a description of a physical record structure to its logical record.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "LogicalRecordName",":doc:`/composite-types/NameType/index`","0..n","A name for the LogicalRecord. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the LogicalRecord. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the LogicalRecord. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "VariableValueReference",":doc:`/composite-types/VariableValueReferenceType/index`","0..1","A reference the variable containing the record type locator and the value being used. Files with single record types or which store records in different files may not have a record type locator. If this element is used set the attribute hasLocator to ""true""."
+   "SupportForMultipleSegments",":doc:`/composite-types/VariableValueReferenceType/index`","0..1","Information concerning support for breaking the logical record into segments for storage purposes. Some files may be broken into record segments for storage but lack variables to support identification of specific segments. In this case segments are identified by their physical order within the storage file."
+   "CaseIdentification",":doc:`/composite-types/CaseIdentificationType/index`","0..n","Describes the information needed to identify an individual case within a record type. This may be the variable or concatenated variable used to identify a unique case of a particular record type. Often referred to as a unique key. There may be more than one means of identifying a record. For example a US Census Summary File has a LogicalRecordIdentifier that is unique to the original file within which it was published. A specific geography has a set of fields that uniquely identify it."
+   "VariablesInRecord",":doc:`/composite-types/VariablesInRecordType/index`","0..1","List of all variables used in the record, either directly or as found in a defined VariableGroup; note that a variable can be used in multiple records. The variables in the logical record can be noted by inclusion or exclusion to facilitate listing. The attribute allVariablesInLogicalProduct, when set to 'true', includes all variables in the LogicalProduct. VariableSchemeReference can then be used to exclude individual Variables schemes or include schemes from other logical products. In the same way VariableReference can be used to exclude specific variables from the previously defined variable set or include variables not already included. The simplest LogicalProduct descriptions with a single LogicalRecord can be described using only the attribute allVariablesInLogicalProduct with a value of true."
+   "NCubesInRecord",":doc:`/composite-types/NCubesInRecordType/index`","0..1","List of all NCubes used in the record, either directly or as found in a defined NCubeGroup; note that an NCube can be used in multiple records. The NCubes in the logical record can be noted by inclusion or exclusion to facilitate listing. The attribute allNCubesInLogicalProduct, when set to 'true', includes all NCubes in the LogicalProduct. NCubeSchemeReference can then be used to exclude individual NCubes schemes or include schemes from other logical products. In the same way NCubeReference can be used to exclude specific variables from the previously defined variable set or include variables not already included. The simplest LogicalProduct descriptions with a single LogicalRecord can be described using only the attribute allNCubesInLogicalProduct with a value of true."
+   "DefaultMissingValues",":doc:`/composite-types/DefaultMissingValuesType/index`","0..1","Identifies the default missing value parameter for the this logical record by referencing a ManagedMissingValuesRepresentation or by stating that there is a default missing values parameter used but it is undocumented. Note that a conflicting DefaultMissingValues definition in a PhysicalInstance will override that found in the LogicalRecord."
+   "HasLocator","boolean","0..1","If ""true"" indicates that the record type has a field which identifies its record type. In logical structures with a single record type there is generally no identifier. Most multi-record files will have a variable that identifies the record type."
+   "VariableQuantity","nonNegativeInteger","0..1","Number of variables in the logical record. Caution in using optional checksums is recommended. Conflict between checksums and the items being counted can cause problems with warning flags during processing. If using checksum to capture information for internal processing purposes, the use of automatically generated check sums is strongly urged."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **LogicalRecordType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DataRelationship/index`
+* :doc:`/composite-types/GrossRecordStructureType/index`
+* :doc:`/composite-types/RecordRelationshipType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/LogicalRecordType.svg
+

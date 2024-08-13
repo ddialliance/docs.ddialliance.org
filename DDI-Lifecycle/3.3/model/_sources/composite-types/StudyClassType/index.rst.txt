@@ -1,0 +1,29 @@
+StudyClassType
+--------------
+
+An archive specific classification. This may be a topical classification, a classification of intended processing levels, or information on the processing status. Consists of a description of the study class and a term used to specify the class type.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the purpose in classifying the object and how it conforms to the classification. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "ClassType",":doc:`/composite-types/CodeValueType/index`","0..1","A term used to classify the study class. As these are archive specific, DDI strongly recommends the use of a controlled vocabulary."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CollectionType/index`
+* :doc:`/composite-types/ItemType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/StudyClassType.svg
+

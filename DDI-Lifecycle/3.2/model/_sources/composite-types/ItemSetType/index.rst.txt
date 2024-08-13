@@ -1,0 +1,27 @@
+ItemSetType
+-----------
+
+Storage format for random order item variables. Each ItemValue references it's defining variable, it's record identifier, and the it's value.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ItemValue",":doc:`/composite-types/ItemValueType/index`","0..n","Each value in the data set linked to it's variable and record identification."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/DataSet/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ItemSetType.svg
+

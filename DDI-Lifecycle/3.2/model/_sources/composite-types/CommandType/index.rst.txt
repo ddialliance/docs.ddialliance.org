@@ -1,0 +1,31 @@
+CommandType
+-----------
+
+Provides the following information on the command: The content of the command, the programming language used, the pieces of information (InParameters) used by the command, the pieces of information created by the command (OutParameters) and the source of the information used by the InParameters (Binding).
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ProgramLanguage",":doc:`/composite-types/CodeValueType/index`","0..1","Designates the programming language used for the command. Supports the use of a controlled vocabulary."
+   "InParameter",":doc:`/composite-types/InParameterType/index`","0..n","Describes the information used by the command as it is identified within the command structure."
+   "OutParameter",":doc:`/composite-types/ParameterType/index`","0..n","Describes the information that results from the command that may be used as input by another object."
+   "Binding",":doc:`/composite-types/BindingType/index`","0..n","Defines the link between the output of an external object to an InParameter described above."
+   "CommandContent","string","0..1","Content of the command itself expressed in the language designated in Programming Language."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/CommandCodeType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/CommandType.svg
+

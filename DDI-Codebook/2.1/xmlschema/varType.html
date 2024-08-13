@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="section1.html">1.0 Document Description</a></li><li><a href="section2.html">2.0 Study Description</a></li><li><a href="section3.html">3.0 File Description</a></li><li><a href="section4.html">4.0 Variable Description</a></li><li><a href="section5.html">5.0 Other Material</a></li><li><a href="sectionall.html">Single file for printing</a> (slow)</li></ul><h2>&lt;var&gt;&#160;Variable</h2><ul><li>Optional</li><li>Repeatable</li><li>Attributes: <a href="codeBook.html">ID, xml:lang, source</a>, name, wgt, wgt-var, weight, qstn, files, vendor, dcml, intrvl, rectype, sdatrefs, methrefs, pubrefs, access, aggrMeth, measUnit, scale, origin, nature, additivity, temporal, geog, geoVocab, catQnty</li></ul><div style="padding-left:25px;"><p><em>Description:</em></p>
+                        <p>This element describes all of the features of a single variable in a
+                            social science data file. It includes the following attributes: </p>
+                        <p>The attribute "name" usually contains the so-called "short label" for
+                            the variable, limited to eight characters in many statistical analysis
+                            systems such as SAS or SPSS. </p>
+                        <p>The attribute "wgt" indicates whether the variable is a weight. </p>
+                        <p>The attribute "wgt-var" references the weight variable(s) for this
+                            variable. </p>
+                        <p>The attribute "qstn" is a reference to the question ID for the
+                            variable. </p>
+                        <p>The attribute "files" is the IDREF identifying the file(s) to which
+                            the variable belongs. </p>
+                        <p>The attribute "vendor" is the origin of the proprietary format and
+                            includes SAS, SPSS, ANSI, and ISO. </p>
+                        <p>The attribute "dcml" refers to the number of decimal points in the
+                            variable. </p>
+                        <p>The attribute "intrvl" indicates the interval type; options are
+                            discrete or continuous.</p>
+                        <p>The "rectype" attribute refers to the record type to which the
+                            variable belongs. </p>
+                        <p>The "sdatrefs" are summary data description references which record
+                            the ID values of all elements within the summary data description
+                            section of the Study Description which might apply to the variable.
+                            These elements include: time period covered, date of collection, nation
+                            or country, geographic coverage, geographic unit, unit of analysis,
+                            universe, and kind of data. </p>
+                        <p>The "methrefs" are methodology and processing references which record
+                            the ID values of all elements within the study methodology and
+                            processing section of the Study Description which might apply to the
+                            variable. These elements include information on data collection and data
+                            appraisal (e.g., sampling, sources, weighting, data cleaning, response
+                            rates, and sampling error estimates). </p>
+                        <p>The "pubrefs" attribute provides a link to publication/citation
+                            references and records the ID values of all citations elements within
+                            Other Study Description Materials or Other Study-Related Materials that
+                            pertain to this variable. </p>
+                        <p>The attribute "access" records the ID values of all elements in the
+                            Data Access section that describe access conditions for this variable. </p>
+                        <p>The "aggrMeth" attribute indicates the type of aggregation method
+                            used, for example 'sum', 'average', 'count'.</p>
+                        <p>The attribute "measUnit" records the measurement unit, for example
+                            'km', 'miles', etc. </p>
+                        <p>The "scale" attribute records unit of scale, for example 'x1',
+                            'x1000', etc.</p>
+                        <p>The attribute "origin" records the point of origin for anchored scales.</p>
+                        <p>The "nature" attribute records the nature of the variable, whether it
+                            is 'nominal', 'ordinal', 'interval', or 'ratio'.</p>
+                        <p>The attribute "additivity" records type of additivity, such as
+                            'stock', 'flow', 'non-additive'. </p>
+                        <p>The attribute "temporal" indicates whether the variable relays
+                            time-related information. </p>
+                        <p>The "geog" attribute indicates whether the variable relays geographic information.</p>
+                        <p>The attribute "geoVocab" records the coding scheme used in the variable.</p>
+                        <p>The attribute "catQnty" records the number of categories found in the
+                            variable, and is used primarily for aggregate data files for verifying
+                            cell counts in nCubes.</p>
+                    </div></body></html>

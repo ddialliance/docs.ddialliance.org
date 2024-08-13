@@ -1,0 +1,503 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>SDTL Best Practices and Conventions &mdash; Structured Data Transform Language 0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Credits" href="../credits/" />
+    <link rel="prev" title="SDTL Pseudocode Library Schema" href="../pseudocode-library/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> Structured Data Transform Language
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components/">Components of SDTL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../use-cases/">SDTL Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command-language/">SDTL Command Language </a></li>
+<li class="toctree-l1"><a class="reference internal" href="../function-library/">SDTL Function Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pseudocode-library/">SDTL Pseudocode Library Schema</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SDTL Best Practices and Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits/#copyright-and-license">Copyright and License</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../topics/All/">All</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Items and Fields</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../item-types/">All Item Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../composite-types/">All Composite Types</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Structured Data Transform Language</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>SDTL Best Practices and Conventions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/best-practices/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sdtl-best-practices-and-conventions">
+<h1>SDTL Best Practices and Conventions<a class="headerlink" href="#sdtl-best-practices-and-conventions" title="Permalink to this headline">¶</a></h1>
+<p>This section provides information on best practices for using SDTL.</p>
+<ol class="arabic">
+<li><p class="first"><strong>“$type” and “command” properties.</strong> Commands and other items in
+SDTL are usually identified by the “$type” property. There are two
+important exceptions.</p>
+<ol class="loweralpha simple">
+<li>Both “$type” and “command” are required in CommandBase. SDTL
+commands in CommandBase inherit the “command” property, which
+gives the name of the SDTL command. Even though the command name
+is also given in the “$type” property, both “$type” and “command”
+are required. This redundancy is due to a limitation in JSON, and
+it is needed to be sure that SDTL JSON is rendered correctly in
+other formats, such as XML.</li>
+<li>Command names should be spelled the same way in both “$type”
+and “command” properties, including capitalization.</li>
+<li>“$type” can be omitted when only one SDTL type is allowed. A
+number of SDTL types are used to specify complex properties of
+commands. If only one SDTL type can be used in a property, “$type”
+may be omitted. For example, the Rename command has a property
+called “renames” which is an array of “RenamePair”. Since only a
+“RenamePair” can be used in a “Rename.renames” property, the
+“$type”: “RenamePair” may be omitted.</li>
+</ol>
+</li>
+<li><p class="first"><strong>Execute</strong>. Some statistical packages require an explicit command to
+“execute” or “run” a group of commands. Execute is included in SDTL
+for information, but it has no functions at this time.</p>
+</li>
+<li><p class="first"><strong>Data Types and Formats.</strong> SDTL does not have a feature for setting
+default data types and display formats. The SetDataType and Set
+DisplayFormat should be used whenever the type or format are known.</p>
+</li>
+<li><p class="first"><strong>Lists and Ranges</strong></p>
+<ol class="loweralpha simple">
+<li>Many commands involve lists of variables or values. SDTL includes
+types for representing lists and ranges of variables and values.
+For example, a SetDisplayFormat command may declare that a long
+list of variables should be displayed with two decimal places.</li>
+<li>A “variable range” refers to a group of variables in consecutive
+columns, such as “varC to varK”. A list may include both
+individual variables/values and ranges of variables/values.</li>
+<li>A list or a range is considered a single element in SDTL. For
+example, most languages have a “max” function that returns the
+maximum value from a list of variables. The SDTL “max” function
+has only one parameter which must be a VariableListExpression.
+Although the SPSS expression “MAX( varX, varY, varZ)” appears to
+have three parameters, it is translated into a
+VariableListExpression pointing to “varX, varY, varZ”, which is
+one parameter in SDTL.</li>
+</ol>
+</li>
+<li><p class="first"><strong>Loops and Macros</strong></p>
+<ol class="loweralpha simple">
+<li>Most loops have an index parameter that changes in each pass
+through the loop. The index parameter may be controlled by a list
+of variable names or by a list of values.</li>
+<li>Whenever possible, loops should be expanded in SDTL scripts by
+repeating commands within the loop with each value of a parameter
+that changes. In general, it is much easier to expand loops over
+variables than loops over values, because the latter may depend on
+the state of the dataset.</li>
+<li>Even if a loop is expanded, an SDTL version of the loop should be
+provided for reference, and the original code of the full loop
+should be given in the SourceInformation parameter
+originalSourceText.</li>
+<li>When loops have been expanded, the “processedSourceText’’ in the
+sourceInformation property is used to identify source code after
+expansion. Comparison of the “originalSourceText” and
+“processedSourceText” shows how the macro or loop has been
+expanded.</li>
+</ol>
+</li>
+<li><p class="first"><strong>DoIf</strong></p>
+<ol class="loweralpha simple">
+<li>Used when the logical expression is evaluated once for the entire
+dataset before execution of the enclosed commands.</li>
+<li>SourceInformation includes the entire If/Else group of commands.
+SourceInformation for subcommands in both the Then block and the
+Else block describe only one command.</li>
+</ol>
+</li>
+<li><p class="first"><strong>IfRows</strong>,</p>
+<ol class="loweralpha simple">
+<li>Used when the logical expression is evaluated once on each row.
+Commands are executed row by row.</li>
+<li>SourceInformation includes the entire If/Else group of commands.
+SourceInformation for subcommands in both the Then block and the
+Else block describe only one command.</li>
+</ol>
+</li>
+<li><p class="first"><strong>MergeDatasets</strong>
+Examples of MergeDatasets can be found in the SDTL Merge Gallery:</p>
+<blockquote>
+<div></div></blockquote>
+</li>
+<li><p class="first"><strong>MergeFileDescription</strong></p>
+<p>Options for <strong>MergeFileDescription</strong> are also in this :: _document:  <span class="xref std std-doc">/CompositeTypes/MergeDatasets/Merge_options.markdown</span></p>
+<ol class="loweralpha simple">
+<li><strong>mergeType</strong><ol class="lowerroman">
+<li>Sequential: Match rows from each input dataframe in
+sequential order.</li>
+<li>OneToOne: Create one row for each value of the
+<strong>mergeByVariables</strong>. If a combination of the
+<strong>mergeByVariables</strong> is repeated, only one row is matched.
+Rows with repeated combinations of the MergeByVariables may
+or may not be included in the output file depending on the
+<strong>newRow</strong> property.</li>
+<li>OneToMany: Create a row in the output dataframe by matching
+rows in this dataframe to every row in other dataframes with
+the same value of MergeByVariables. Note that OneToMany
+implies that one of the other input datarames is set to
+ManyToOne.</li>
+<li>ManyToOne: Create a row in the output dataframe by matching
+all rows in this dataframe to the one row in the other
+dataframe with the same value of MergeByVariables.</li>
+<li>Cartesian: Create a new row in the output dataframe for
+every possible combination of rows having the same value of
+MergeByVariables. This is equivalent to a many to many
+merge. R and Python use a model derived from SQL, which is
+based on Cartesian joins.</li>
+<li>Unmatched: Create a new row for every row that cannot be
+matched on the MergeByVariables</li>
+<li>SASmatchMerge: SAS uses a merging approach that combines
+matching keys and sequential merges within groups.</li>
+</ol>
+</li>
+<li><strong>update</strong><ol class="lowerroman">
+<li>Master: This dataframe is the Master dataframe.</li>
+<li>Ignore: If a column with the same name exists in the Master
+dataframe, ignore the values in this dataframe.</li>
+<li>FillNew: If a column with the same name exists in the Master
+dataframe, use the values from this dataframe only in new
+rows created from this dataframe.</li>
+<li>UpdateMissing: If a column with the same name exists in the
+Master dataframe, use values from this dataframe when the
+value in the Master dataframe is missing. Rows not in the
+Master dataframe are filled from this dataframe.</li>
+<li>Replace: If a column with the same name exists in the Master
+dataframe, use values from this dataframe.</li>
+</ol>
+</li>
+<li><strong>newRow</strong><ol class="lowerroman">
+<li>TRUE: Every row in the dataframe generates a new row in the
+output dataframe.</li>
+<li>FALSE: Only rows that are matched generate a new row in the
+output dataframe.</li>
+</ol>
+</li>
+<li><strong>mergeFlagVariable</strong><ol class="lowerroman">
+<li><strong>mergeFlagVariable</strong> creates a new variable describing
+whether a row was derived from this file.</li>
+<li>SPSS creates separate merge flag variables for each input
+file. These variables are binary (0,1).</li>
+<li>Stata and Python create a categorical variable indicating
+which files contributed to each row.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p class="first"><strong>Use of VariableListExpression in the Function Library</strong>. The
+Function Library operates by mapping parameters from other languages
+to a common set of parameters for the SDTL version of the function.
+Some functions operate on a list of variables, such as “mean(varX,
+varY, varZ). It would be impossible to specify parameters in the
+Function Library if every variable in a list was considered a
+parameter. So, VariableListExpression allows us to use one SDTL
+parameter for a list of variables.</p>
+</li>
+<li><p class="first"><strong>Character strings in statistical packages.</strong>
+There are two different ways that statistical packages handle
+variables consisting of text. SPSS and SAS operate primarily on
+fixed length character variables. If the user assigns a string
+shorter than the declared length of the variable, it is padded
+with blanks on the right side. Stata, R, and Python were designed
+to work with string variables that vary in length.</p>
+</li>
+<li><p class="first"><strong>FunctionCallExpression: argumentName property required</strong>.</p>
+<p>a. The <strong>argumentName property</strong> in a <strong>FunctionCallExpression</strong>
+must be present.</p>
+</li>
+<li><p class="first"><strong>Commands versus Functions</strong>
+Some source language commands may be translated as functions in
+SDTL and vice versa. For example, the Python function
+“df.rename()” renames variables. In SDTL Rename is a command not
+a function.</p>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Parsing Comments</strong></dt>
+<dd><p class="first last">Comments in the source languages are delimited by certain special
+characters which may differ depending on the language; some languages
+also differentiate between single-line and multi-line comments with a
+different set of delimiting characters (for example, in Python, a
+single-line comment starts with a # symbol and ends with a new line,
+but a multi-line comment starts and ends with three quotation marks).
+Parsers should take care not to include comment delimiting characters
+in the commentText property of the corresponding SDTL Comment command
+because not all source languages use the same characters for that
+purpose and a comment delimiting character in one language may have
+an unintended side effect if the SDTL is used to translate the comment
+into another source language.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first"><strong>variableInventory</strong></p>
+</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><strong>variableInventory</strong>, a property of <strong>DataframeDescription</strong>, is
+used to provide an ordered list of the variables in a dataframe.
+All SDTL commands include <strong>variableInventory</strong>, because it is a
+sub-property of both <strong>consumesDataframe</strong> and
+<strong>producesDataframe</strong>, which are inherited from <strong>CommandBase</strong>.</li>
+<li>Parsers are encouraged to use <strong>variableInventory</strong> after any
+command that changes the number or order of variables in a dataframe.
+Most source languages allow variable ranges (SDTL
+<strong>VariableRangeExpression</strong>) in various commands. Since a variable
+range depends upon the order of variables in a dataframe, the parser
+should include that information in the SDTL script for use by
+updaters and other applications.</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="16">
+<li><strong>Collapse</strong> and <strong>Aggregate</strong></li>
+</ol>
+<blockquote>
+<div><p>Some aggregation functions (e.g. mean) cannot be performed on text variables.
+However, users may apply these functions to a range of variables that
+includes text variables.  Our tests in several source languages suggest that
+parsers can transfer the variable range in the user-supplied script to SDTL
+even when it includes text variables.  When this happens, the statistical
+packages will either ignore text variables and aggregate only the numeric
+variables, or it will halt with an error message.</p>
+<p>See <span class="xref std std-doc">Collapse: Handling of Non-numeric Variables</span></p>
+</div></blockquote>
+<ol class="arabic simple" start="17">
+<li><strong>Variable names in case-insensitive languages</strong></li>
+</ol>
+<blockquote>
+<div><p>a. If the source language is case insensitive, the parser will change all
+variable names to either all caps or all lower case.  The
+originalSourceText property of the SourceInformation element will
+show capitalization as it appears in the original script.</p>
+<p>b. A Message command at the beginning of the SDTL script should say
+that variable names have been standardized.</p>
+<p>c. Standardization of variable names is necessary for compatibility
+between case sensitive and insensitive languages.</p>
+</div></blockquote>
+<ol class="arabic simple" start="18">
+<li><strong>Omitting optional properties in SDTL JSON</strong></li>
+</ol>
+<blockquote>
+<div><p>There are three acceptable ways of omitting an optional property
+from an SDTL JSON file:</p>
+<blockquote>
+<div><ol class="lowerroman simple">
+<li>The property is omitted – used for single objects or arrays</li>
+<li>“property”:null  – used for single objects or arrays</li>
+<li>“property”:[]  – only used for arrays</li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+<ol class="arabic simple" start="19">
+<li><strong>sourceInformation is an array</strong></li>
+</ol>
+<blockquote>
+<div>The <strong>sourceInformation</strong> property in <strong>CommandBase</strong> is an array,
+which can describe more than one command in the source script.  This
+supports cases where two or more commands in the source script
+contribute to a single SDTL command.</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../credits/" class="btn btn-neutral float-right" title="Credits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../pseudocode-library/" class="btn btn-neutral float-left" title="SDTL Pseudocode Library Schema" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Copyright (c) 2020 C2Metadata Contributors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

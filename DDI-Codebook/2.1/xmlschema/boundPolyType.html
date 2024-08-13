@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="us-ascii"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:doc="http://www.icpsr.umich.edu/doc" xmlns:xs="http://www.w3.org/2001/XMLSchema"><head><title>XML Schema</title></head><body lang="en-US" bgcolor="#ffffff"><h1>XML Schema Tag Library -- Version 2.1</h1><ul><li><a href="DDI2-1-tree.html">Schema Outline</a></li><li><a href="section1.html">1.0 Document Description</a></li><li><a href="section2.html">2.0 Study Description</a></li><li><a href="section3.html">3.0 File Description</a></li><li><a href="section4.html">4.0 Variable Description</a></li><li><a href="section5.html">5.0 Other Material</a></li><li><a href="sectionall.html">Single file for printing</a> (slow)</li></ul><h2>&lt;boundPoly&gt;&#160;Geographic Bounding Polygon</h2><ul><li>Optional</li><li>Not Repeatable</li><li>Attributes: <a href="codeBook.html">ID, xml:lang, source</a></li></ul><div style="padding-left:25px;"><p><em>Description:</em></p>
+                        <p>This field allows the creation of multiple polygons to describe in a
+                            more detailed manner the geographic area covered by the dataset. It
+                            should only be used to define the outer boundaries of a covered area.
+                            For example, in the United States, such polygons can be created to
+                            define boundaries for Hawaii, Alaska, and the continental United States,
+                            but not interior boundaries for the contiguous states. This field is
+                            used to refine a coordinate-based search, not to actually map an area. </p>
+                        <p>If the boundPoly element is used, then geoBndBox MUST be present, and
+                            all points enclosed by the boundPoly MUST be contained within the
+                            geoBndBox. Elements westBL, eastBL, southBL, and northBL of the
+                            geoBndBox should each be represented in at least one point of the
+                            boundPoly description. </p>
+                    </div><div style="padding-left:25px;"><p><em>Example(s):</em></p><pre>&lt;geogCover&gt;Nevada State&lt;/geogCover&gt;
+
+&lt;boundPoly&gt;
+
+&lt;polygon&gt;
+    &lt;point&gt;&lt;gringLat&gt;42.002207&lt;/gringLat&gt;&lt;gringLon&gt;-120.005729004&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;42.002207&lt;/gringLat&gt;&lt;gringLon&gt;-114.039663&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;35.9&lt;/gringLat&gt;&lt;gringLon&gt;-114.039663&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;36.080&lt;/gringLat&gt;&lt;gringLon&gt;-114.544&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;35.133&lt;/gringLat&gt;&lt;gringLon&gt;-114.542&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;35.00208499998&lt;/gringLat&gt;&lt;gringLon&gt;-114.63288&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;35.00208499998&lt;/gringLat&gt;&lt;gringLon&gt;-114.63323&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;38.999&lt;/gringLat&gt;&lt;gringLon&gt;-120.005729004&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;42.002207&lt;/gringLat&gt;&lt;gringLon&gt;-120.005729004&lt;/gringLon&gt;&lt;/point&gt;
+
+&lt;/polygon&gt;
+
+&lt;/boundPoly&gt;  
+
+&lt;geogCover&gt;Norway&lt;/geogCover&gt;
+
+&lt;boundPoly&gt;
+
+&lt;polygon&gt;
+
+&lt;point&gt;&lt;gringLat&gt;80.76416&lt;/gringLat&gt;&lt;gringLon&gt;33.637497&lt;/gringLon&gt;&lt;/point&gt;
+ &lt;point&gt;&lt;gringLat&gt;80.76416&lt;/gringLat&gt;&lt;gringLon&gt;10.2&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;62.48395&lt;/gringLat&gt;&lt;gringLon&gt;4.789583&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;57.987915&lt;/gringLat&gt;&lt;gringLon&gt;4.789583&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;57.987915&lt;/gringLat&gt;&lt;gringLon&gt;11.8&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;61.27794&lt;/gringLat&gt;&lt;gringLon&gt;13.2336&lt;/gringLon&gt;&lt;/point&gt;
+ &lt;point&gt;&lt;gringLat&gt;63.19012&lt;/gringLat&gt;&lt;gringLon&gt;13.2336&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;67.28615&lt;/gringLat&gt;&lt;gringLon&gt;17.24580&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;68.14297&lt;/gringLat&gt;&lt;gringLon&gt;21.38362&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;68.14297&lt;/gringLat&gt;&lt;gringLon&gt;25.50054&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;69.39685&lt;/gringLat&gt;&lt;gringLon&gt;27.38137&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;68.76991&lt;/gringLat&gt;&lt;gringLon&gt;28.84424&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;68.76991&lt;/gringLat&gt;&lt;gringLon&gt;31.31021&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;71.42&lt;/gringLat&gt;&lt;gringLon&gt;31.31021&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;71.42&lt;/gringLat&gt;&lt;gringLon&gt;33.637497&lt;/gringLon&gt;&lt;/point&gt;
+    &lt;point&gt;&lt;gringLat&gt;80.76416&lt;/gringLat&gt;&lt;gringLon&gt;33.637497&lt;/gringLon&gt;&lt;/point&gt;
+
+&lt;/polygon&gt;
+
+&lt;/boundPoly&gt;  
+
+                    </pre></div></body></html>

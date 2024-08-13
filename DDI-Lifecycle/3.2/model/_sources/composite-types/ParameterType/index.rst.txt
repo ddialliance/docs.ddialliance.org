@@ -1,0 +1,77 @@
+ParameterType
+-------------
+
+A parameter is a structure that specifically identifies a source of input or output information so that it can be use pragmatically.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "ParameterName",":doc:`/composite-types/NameType/index`","0..n","A name for the Parameter. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Alias","string","0..1","If the content of the parameter is being used in a generic set of code as an alias for the value of an object in a formula (for example source code for a statistical program) enter that name here. This provides a link from the identified parameter to the alias in the code."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the Parameter. May be expressed in multiple languages and supports the use of structured content."
+   "ValueRepresentation",":doc:`/composite-types/RepresentationType/index`","0..1","If the content of the parameter contains representational content, such as codes, provide the representation here. ValueRepresentation is the abstract head of a substitution group and may be replaced with any valid substitution for ValueRepresentation. Inclusion of the ValueRepresentation is recommended if you will be sharing data with others as it provides information on the structure of what they can expect to receive when the parameter is processed."
+   "ValueRepresentationReference","RepresentationReferenceType","0..1","Allows for the use of a ManagedRepresentation by reference. ValueRepresentationReference is the abstract head of a substitution group and may be replaced with any valid substitution for ValueRepresentationReference."
+   "DefaultValue",":doc:`/composite-types/ValueType/index`","0..1","Provides a default value for the parameter if there is no value provided by the object it is bound to or the process that was intended to produce a value."
+   "IsArray","boolean","0..1","If set to ""true"" indicates that the content of the parameter is a delimited array rather than a single object and should be processed as such."
+
+Properties Inherited from IdentifiableType
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "InheritanceAction","string","0..1","The attribute ""action"" is used for inheritance situations where there is an override at the local level (within a grouped StudyUnit) which is not available for further inheritance. There are three possible values for ""action"": Add - A new identifiable object (an Identifiable, Versionable, or Maintainable element) is provided locally with a new identifier (one that is not inherited). All properties (elements and attributes contained in the object) of the object are as specified. If an object with an existing id is created, this is an error.; Update - An object is provided locally with the SAME id as the inherited object. For each type of property that is specified locally, a full set of those properties is specified for local use. These properties replace any properties of this type which were inherited. Unspecified properties are used as inherited.; Delete - An object is provided locally with the SAME id as the inherited object. All properties specified locally in this object will be deleted if their types and values match those inherited. Note that to completely delete an object at the local level, all properties of the inherited object must be listed."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/IdentifiableType/index`
+    * **ParameterType**
+        * :doc:`/composite-types/InParameterType/index`
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/ComputationItem/index`
+* :doc:`/item-types/ControlConstruct/index`
+* :doc:`/item-types/Loop/index`
+* :doc:`/item-types/QuestionBlock/index`
+* :doc:`/item-types/QuestionGrid/index`
+* :doc:`/item-types/QuestionItem/index`
+* :doc:`/item-types/Variable/index`
+* :doc:`/composite-types/BindingType/index`
+* :doc:`/composite-types/CategoryDomainType/index`
+* :doc:`/composite-types/CodeDomainType/index`
+* :doc:`/composite-types/CommandFileType/index`
+* :doc:`/composite-types/CommandType/index`
+* :doc:`/composite-types/ConditionalTextType/index`
+* :doc:`/composite-types/DateTimeDomainType/index`
+* :doc:`/composite-types/DistributionDomainType/index`
+* :doc:`/composite-types/GeographicLocationCodeDomainType/index`
+* :doc:`/composite-types/GeographicStructureCodeDomainType/index`
+* :doc:`/composite-types/LocationDomainType/index`
+* :doc:`/composite-types/NominalDomainType/index`
+* :doc:`/composite-types/NumericDomainType/index`
+* :doc:`/composite-types/RankingDomainType/index`
+* :doc:`/composite-types/ScaleDomainType/index`
+* :doc:`/composite-types/TextDomainType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/ParameterType.svg
+

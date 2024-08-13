@@ -1,0 +1,38 @@
+IntConstantExpression
+---------------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **IntConstantExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/IntConstantExpression.svg
+
+Properties
+~~~~~~~~~~
+
+IntValue
+********
+
+Type
+    int
+Cardinality
+    0..1
+
+TODO
+
+
+

@@ -1,0 +1,66 @@
+PhysicalStructure
+-----------------
+
+Description of a PhysicalStructure providing the primary link to the LogicalRecord and general structural information. Each description can apply to one or more data files containing the same logical records in the same overall structure.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "PhysicalStructureName",":doc:`/composite-types/NameType/index`","0..n","A name for the PhysicalStructure. May be expressed in multiple languages. Repeat the element to express names with different content, for example different names for different systems."
+   "Label",":doc:`/composite-types/LabelType/index`","0..n","A display label for the PhysicalStructure. Supports multiple language versions of the same content as well as optional formatting of the content. Repeat for labels with different content, for example, labels with differing length limitations."
+   "Description",":doc:`/composite-types/StructuredStringType/index`","0..1","A description of the content and purpose of the PhysicalStructure. Supports multiple language versions of the same content as well as optional formatting of the content."
+   "FileFormat",":doc:`/composite-types/CodeValueType/index`","0..1","A brief textual description or classification of the format of the file (e.g., SAS save file, Delimited file, Fixed format file, DDI DataSet). Supports the use of an external controlled vocabulary. DDI recommends the use of a controlled vocabulary."
+   "DefaultDataType",":doc:`/composite-types/CodeValueType/index`","0..1","Defines the data type to use unless otherwise specified. Supports the use of an external controlled vocabulary. Similar content to RecommendedDataType."
+   "DefaultDelimiter",":doc:`/composite-types/DelimiterType/index`","0..1","Delimiter definition for delimited (free field) data that is applied to the majority of the data items reducing the amount of repetitive markup required. It can be overridden at the data item level. Allowed values are: Empty (default), Tab, Blank, AnyString. If a delimiter is used, free field (delimited data) is assumed; binary formats are not allowed.."
+   "DefaultDecimalPositions","int","0..1","Number of decimal places (expressed as an integer) for data with an implied decimal separator that is applied to the majority of the data items reducing the amount of repetitive markup required. It can be overridden at the data item level. Another expression is the decimal scaling factor (SAS). Default: 0."
+   "DefaultDecimalSeparator","string","0..1","The character used to separate the integer and the fraction part of a number (if an explicit separator is used in the data) that is applied to the majority of the data items reducing the amount of repetitive markup required. It can be overridden at the data item level. Allowed values are: None (default), Dot, Comma, Other. On the basis of the data definition in DDI documents, data processing tools could compute the necessary precision width on the basis of the format width and the existence of separators. Appropriate data types could be used, i.e. float or double, short or long. The decimal separator definition only makes sense with some XML Schema primitives. This is a default which may be overridden in specific cases."
+   "DefaultDigitGroupSeparator","string","0..1","The character used to separate groups of digits (if an explicit separator is used in the data) that is applied to the majority of the data items reducing the amount of repetitive markup required. It can be overridden at the data item level. Allowed values are: None (default), Dot, Comma, Other. The decimal separator definition makes only sense with some XML Schema primitives. This is a default which may be overridden in specific cases."
+   "GrossRecordStructure",":doc:`/composite-types/GrossRecordStructureType/index`","0..n","The gross or macro level structures of the record structure including the link to the LogicalRecord and information on the number and ordering of each Physical Segment of the LogicalRecord as stored in the data file."
+
+Properties Inherited from Versionable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "URN","string","1..1",""
+   "Agency","string","1..1",""
+   "ID","string","1..1",""
+   "Version","string","1..1",""
+   "UserID",":doc:`/composite-types/UserIDType/index`","0..n","Allows for the specification of identifiers other than the specified DDI identification of the object. This may be a legacy ID from DDI-C, a system specific ID such as for a database or registry, or a non-DDI unique identifier. As the identifier is specific to a system the system must be identified with the UserID structure."
+   "UserAttributePair",":doc:`/composite-types/StandardKeyValuePairType/index`","0..n","A system specific user defined property of the object expressed as a key/value pair. As this is specific to an individual system the use of controlled vocabularies for the key is strongly recommended."
+   "VersionResponsibility","string","0..1","Person or organization within the MaintenanceAgency responsible for the version change. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, it may be included in this notation. This is primarily intended for internal use."
+   "VersionResponsibilityReference",":doc:`/item-types/Agent/index`","0..1","Reference person or organization within the MaintenanceAgency responsible for the version change, as described in an OrganizationScheme. If it is important to retain the affiliation between and individual responsible for the version and his/her agency, a Relation should be created between the individual referenced here and his/her organization. This is primarily intended for internal use."
+   "VersionRationale",":doc:`/composite-types/VersionRationaleType/index`","0..1","Textual description of the rationale/purpose for the version change and a coded value to provide an internal processing flag within and organization or system. Note that versioning can only take place on objects owned by the specified DDI Agency. If you are creating a local instance of an object from another agency for current or future modification use BasedOnObject. If the changes being made result in what you determine to be new object rather than a version of a previous object, i.e. the change is too extensive to consider it a version of the existing object, create a new object and use BasedOnObject to provide a link to the object or objects that were a basis for the new object."
+   "BasedOnObject",":doc:`/composite-types/BasedOnObjectType/index`","0..1","Use when creating an object that is based on an existing object or objects that are managed by a different agency or when the new object is NOT simply a version change but you wish to maintain a reference to the object that served as a basis for the new object. BasedOnObject may contain references to any number of objects which serve as a basis for this object, a BasedOnRationalDescription of how the content of the referenced object was incorporated or altered, and a BasedOnRationalCode to allow for specific typing of the BasedOnReference according to an external controlled vocabulary."
+   "RelatedOtherMaterialReference",":doc:`/item-types/OtherMaterial/index`","0..n","The inclusion of an existing OtherMaterial by reference. Use for any type of OtherMaterial not specifically addressed by an inline description for such as ExternalAid in QuestionItem."
+   "VersionDate","cogsDate","0..1","Date of version using the union set BaseDateType. Duration should not be used in this field, even though allowed by the ISO format enforced by the parser."
+   "IsPublished","boolean","0..1","Indicates that the maintainable will not be changed without versioning, and is a stable target for referencing."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/item-types/Versionable/index`
+    * **PhysicalStructure**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/BaseRecordLayout/index`
+* :doc:`/item-types/PhysicalStructureGroup/index`
+* :doc:`/item-types/PhysicalStructureScheme/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/PhysicalStructure.svg
+

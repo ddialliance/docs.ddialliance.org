@@ -1,0 +1,38 @@
+GroupedExpression
+-----------------
+
+A group of expressions to be evaluated before expressions outside of the group.  Used to control the order of operations in a formula.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Expression",":doc:`/composite-types/ExpressionBase/index`","1..1","Expression to be evaluated."
+
+Properties Inherited from ExpressionBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ExpressionBase/index`
+    * **GroupedExpression**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/GroupedExpression.svg
+

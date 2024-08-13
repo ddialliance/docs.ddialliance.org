@@ -1,0 +1,39 @@
+DoubleNumberRangeValueType
+--------------------------
+
+Describes a bounding value for a number range expressed as an xs:double.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "IsInclusive","boolean","0..1","Indicates that the value is included in the range. Set to false if the range includes numbers up to but no including the designated value."
+
+Properties Inherited from double
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No properties are inherited.
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* double
+    * **DoubleNumberRangeValueType**
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/NumberRangeType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DoubleNumberRangeValueType.svg
+

@@ -1,0 +1,28 @@
+FixedCellValueType
+------------------
+
+Provides the ability to fix the value of a grid cell and defines the cell or cells. Designates the fixed value to be used and the location of the cell or cells within the grid.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Value",":doc:`/composite-types/ValueType/index`","0..1","Identifies the value to which the cell(s) defined in GridAttachment should be fixed. Supports the use of meaningful leading or trailing spaces. Note that care should be taken to make sure this is a valid value within the response domain of the cell."
+   "GridAttachment",":doc:`/composite-types/GridAttachmentType/index`","0..n","Identifies the cell or cells in a grid to which the label is attached by a reference to a specific cell coordinate in a grid or by identifying a range of values along a dimension."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/QuestionGrid/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/FixedCellValueType.svg
+

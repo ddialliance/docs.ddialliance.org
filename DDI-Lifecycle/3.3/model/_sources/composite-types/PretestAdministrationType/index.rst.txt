@@ -1,0 +1,29 @@
+PretestAdministrationType
+-------------------------
+
+Description of the method and mode of data collection in administering the pretest. Notes any additional data collected in the administration of the pretest.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "MethodOfAdministration",":doc:`/composite-types/MethodOfAdministrationType/index`","0..1","Describes the method of pretest administration using a controlled vocabulary and description."
+   "ModeOfPretestCollection",":doc:`/composite-types/ModeOfPretestCollectionType/index`","0..n","Describes the mode of collection used in the pretest. Repeat of multiple modes of collection were used. Indicate the primary mode using isPrimary attribute if applicable."
+   "AdditionalDataCollection",":doc:`/composite-types/AdditionalDataCollectionType/index`","0..n","Description of the method and mode of data collection in administering the pretest. Notes any additional data collected in the administration of the pretest."
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/item-types/PretestActivity/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/PretestAdministrationType.svg
+

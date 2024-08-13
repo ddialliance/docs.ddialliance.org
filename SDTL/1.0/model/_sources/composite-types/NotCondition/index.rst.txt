@@ -1,0 +1,38 @@
+NotCondition
+------------
+
+TODO
+
+
+.. contents::
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/ConditionBase/index`
+    * **NotCondition**
+
+
+Relationships
+~~~~~~~~~~~~~
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/NotCondition.svg
+
+Properties
+~~~~~~~~~~
+
+Condition
+*********
+
+Type
+    :doc:`/composite-types/ConditionBase/index`
+Cardinality
+    0..1
+
+TODO
+
+
+

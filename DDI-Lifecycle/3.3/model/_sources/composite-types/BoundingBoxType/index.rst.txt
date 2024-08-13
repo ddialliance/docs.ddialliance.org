@@ -1,0 +1,31 @@
+BoundingBoxType
+---------------
+
+Set of north, south, east, west coordinates defining a rectangle that encompasses the full extent of geographic coverage.
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "WestLongitude","decimal","0..1","West longitude of the bounding box. (xmin)"
+   "EastLongitude","decimal","0..1","East longitude of the bounding box. (xmax)"
+   "SouthLatitude","decimal","0..1","South latitude of the bounding box. (ymin)"
+   "NorthLatitude","decimal","0..1","North latitude of the bounding box. (ymax)"
+
+
+Relationships
+~~~~~~~~~~~~~
+The following types reference this type.
+
+* :doc:`/composite-types/GeographicBoundaryType/index`
+* :doc:`/composite-types/GeographicCoverageType/index`
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/BoundingBoxType.svg
+

@@ -1,0 +1,46 @@
+DeleteVariables
+---------------
+
+Deletes variables from the data.
+
+
+Properties
+~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Variables",":doc:`/composite-types/VariableReferenceBase/index`","0..n","The variables to be deleted."
+
+Properties Inherited from TransformBase
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table::
+   :header: "Name","Type","","Description"
+   :widths: 15,10,5,100
+
+   "Command","string","1..1","The type of transform command"
+   "SourceInformation",":doc:`/composite-types/SourceInformation/index`","1..1","Information about the source of the transform command."
+   "ProducesDataframe","string","0..n","Signify the dataframe which this transform produces."
+   "ConsumesDataframe","string","0..n","Signify the dataframe which this transform acts upon."
+   "Message","string","0..n","Adds a message that can be displayed with the command."
+
+
+Item Type Hierarchy
+~~~~~~~~~~~~~~~~~~~
+
+* :doc:`/composite-types/TransformBase/index`
+    * **DeleteVariables**
+
+
+Relationships
+~~~~~~~~~~~~~
+
+
+.. container:: image
+
+   |stub|
+
+.. |stub| image:: ../../images/DeleteVariables.svg
+
